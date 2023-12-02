@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "151221629308",
+    "project_id": "hasanati-85079",
+    "storage_bucket": "hasanati-85079.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151221629308:android:0887c823210fb3f00ab4f9",
+        "android_client_info": {
+          "package_name": "com.mycompany.hasanati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151221629308-ckj7u8ot0fs9uhn9u3a22i06pdhri6c2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.hasanati",
+            "certificate_hash": "60d3ea391f80a2d4d27c55467ad31e0a319d2c57"
+          }
+        },
+        {
+          "client_id": "151221629308-tod2kfkt6vj3r81f2fnqdnovl7gbn5s8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.hasanati",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "151221629308-1ls76l1jpmlctfrmsolevsq0f2n4mdbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLc4oLH18cOWz0rHkhJ7Yc1SWUK5qSlxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151221629308-1ls76l1jpmlctfrmsolevsq0f2n4mdbh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "151221629308-n7cppt45n2r00fbtf0r5koqml2ivffoo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.hasanati"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
