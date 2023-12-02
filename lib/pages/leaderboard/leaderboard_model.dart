@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
+import '/components/leaderboard_skeleton_container_widget.dart';
 import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -61,6 +62,8 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
 
   int hitsPerPage = 5;
 
+  bool pageLoading = true;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -81,17 +84,22 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
 
   int carouselCurrentIndex = 0;
 
+  // Model for LeaderboardSkeletonContainer component.
+  late LeaderboardSkeletonContainerModel leaderboardSkeletonContainerModel;
   // Model for Navbar component.
   late NavbarModel navbarModel;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
+    leaderboardSkeletonContainerModel =
+        createModel(context, () => LeaderboardSkeletonContainerModel());
     navbarModel = createModel(context, () => NavbarModel());
   }
 
   void dispose() {
     unfocusNode.dispose();
+    leaderboardSkeletonContainerModel.dispose();
     navbarModel.dispose();
   }
 
