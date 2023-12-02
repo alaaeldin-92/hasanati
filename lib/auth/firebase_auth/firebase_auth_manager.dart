@@ -284,20 +284,27 @@ class FirebaseAuthManager extends AuthManager
     Future<UserCredential?> Function() signInFunc,
     String authProvider,
   ) async {
-    try {
-      final userCredential = await signInFunc();
-      if (userCredential?.user != null) {
-        await maybeCreateUser(userCredential!.user!);
-      }
-      return userCredential == null
-          ? null
-          : HasanatiFirebaseUser.fromUserCredential(userCredential);
-    } on FirebaseAuthException catch (e) {
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message!}')),
-      );
-      return null;
+    // try {
+    //   final userCredential = await signInFunc();
+    //   if (userCredential?.user != null) {
+    //     await maybeCreateUser(userCredential!.user!);
+    //   }
+    //   return userCredential == null
+    //       ? null
+    //       : HasanatiFirebaseUser.fromUserCredential(userCredential);
+    // } on FirebaseAuthException catch (e) {
+    //   ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //     SnackBar(content: Text('Error: ${e.code!}')),
+    //   );
+    //   return null;
+    // }
+    final userCredential = await signInFunc();
+    if (userCredential?.user != null) {
+      await maybeCreateUser(userCredential!.user!);
     }
+    return userCredential == null
+        ? null
+        : HasanatiFirebaseUser.fromUserCredential(userCredential);
   }
 }
