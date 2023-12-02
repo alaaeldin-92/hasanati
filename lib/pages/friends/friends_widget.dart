@@ -5,6 +5,7 @@ import '/backend/push_notifications/push_notifications_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -308,339 +309,328 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                     final searchHitItem =
                                                         searchHit[
                                                             searchHitIndex];
-                                                    return Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  15.0),
-                                                      child: InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          context.pushNamed(
-                                                            'Profile',
-                                                            queryParameters: {
-                                                              'userId':
-                                                                  serializeParam(
-                                                                getJsonField(
-                                                                  searchHitItem,
-                                                                  r'''$.uid''',
-                                                                ).toString(),
-                                                                ParamType
-                                                                    .String,
-                                                              ),
-                                                            }.withoutNulls,
-                                                          );
-                                                        },
-                                                        child: Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0.00,
-                                                                      0.00),
-                                                              child: Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        20.0,
-                                                                        0.0,
-                                                                        20.0,
-                                                                        0.0),
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Container(
-                                                                      width:
-                                                                          60.0,
-                                                                      height:
-                                                                          60.0,
-                                                                      child:
-                                                                          Stack(
-                                                                        children: [
-                                                                          Container(
-                                                                            width:
-                                                                                45.0,
-                                                                            height:
-                                                                                45.0,
-                                                                            clipBehavior:
-                                                                                Clip.antiAlias,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              shape: BoxShape.circle,
-                                                                            ),
-                                                                            child:
-                                                                                Image.network(
-                                                                              getJsonField(
-                                                                                searchHitItem,
-                                                                                r'''$.photo_url''',
-                                                                              ),
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                          Align(
-                                                                            alignment:
-                                                                                AlignmentDirectional(1.00, 1.00),
-                                                                            child:
-                                                                                Container(
-                                                                              width: 30.0,
-                                                                              height: 30.0,
-                                                                              decoration: BoxDecoration(
-                                                                                borderRadius: BorderRadius.circular(100.0),
-                                                                              ),
-                                                                              child: ClipRRect(
-                                                                                borderRadius: BorderRadius.circular(100.0),
-                                                                                child: Image.network(
-                                                                                  'https://flagcdn.com/w40/${getJsonField(
-                                                                                    searchHitItem,
-                                                                                    r'''$.nationality''',
-                                                                                  ).toString()}.png',
-                                                                                  width: 30.0,
-                                                                                  height: 30.0,
-                                                                                  fit: BoxFit.contain,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ],
-                                                                      ),
-                                                                    ),
-                                                                    Expanded(
-                                                                      child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                        ),
+                                                    return Visibility(
+                                                      visible: functions
+                                                              .jsonToString(
+                                                                  getJsonField(
+                                                            searchHitItem,
+                                                            r'''$.uid''',
+                                                          )) !=
+                                                          currentUserUid,
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    15.0),
+                                                        child: InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
+                                                          onTap: () async {
+                                                            context.pushNamed(
+                                                              'Profile',
+                                                              queryParameters: {
+                                                                'userId':
+                                                                    serializeParam(
+                                                                  getJsonField(
+                                                                    searchHitItem,
+                                                                    r'''$.uid''',
+                                                                  ).toString(),
+                                                                  ParamType
+                                                                      .String,
+                                                                ),
+                                                              }.withoutNulls,
+                                                            );
+                                                          },
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    AlignmentDirectional(
+                                                                        0.00,
+                                                                        0.00),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          20.0,
+                                                                          0.0,
+                                                                          20.0,
+                                                                          0.0),
+                                                                  child: Row(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    mainAxisAlignment:
+                                                                        MainAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Container(
+                                                                        width:
+                                                                            60.0,
+                                                                        height:
+                                                                            60.0,
                                                                         child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
+                                                                            Stack(
                                                                           children: [
-                                                                            Expanded(
-                                                                              child: Html(
-                                                                                data: getJsonField(
+                                                                            Container(
+                                                                              width: 45.0,
+                                                                              height: 45.0,
+                                                                              clipBehavior: Clip.antiAlias,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                              ),
+                                                                              child: Image.network(
+                                                                                getJsonField(
                                                                                   searchHitItem,
-                                                                                  r'''$._highlightResult.display_name.value''',
-                                                                                ).toString(),
+                                                                                  r'''$.photo_url''',
+                                                                                ),
+                                                                                fit: BoxFit.cover,
+                                                                              ),
+                                                                            ),
+                                                                            Align(
+                                                                              alignment: AlignmentDirectional(1.00, 1.00),
+                                                                              child: Container(
+                                                                                width: 30.0,
+                                                                                height: 30.0,
+                                                                                decoration: BoxDecoration(
+                                                                                  borderRadius: BorderRadius.circular(100.0),
+                                                                                ),
+                                                                                child: ClipRRect(
+                                                                                  borderRadius: BorderRadius.circular(100.0),
+                                                                                  child: Image.network(
+                                                                                    'https://flagcdn.com/w40/${getJsonField(
+                                                                                      searchHitItem,
+                                                                                      r'''$.nationality''',
+                                                                                    ).toString()}.png',
+                                                                                    width: 30.0,
+                                                                                    height: 30.0,
+                                                                                    fit: BoxFit.contain,
+                                                                                  ),
+                                                                                ),
                                                                               ),
                                                                             ),
                                                                           ],
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                    if (containerFriendRequestNotificationRecordList
-                                                                            .where((e) =>
-                                                                                e.receiver ==
-                                                                                getJsonField(
-                                                                                  searchHitItem,
-                                                                                  r'''$.uid''',
-                                                                                ))
-                                                                            .toList()
-                                                                            .length ==
-                                                                        0)
-                                                                      FFButtonWidget(
-                                                                        onPressed:
-                                                                            () async {
-                                                                          _model.userToAdd =
-                                                                              await queryUsersRecordOnce(
-                                                                            queryBuilder: (usersRecord) =>
-                                                                                usersRecord.where(
-                                                                              'uid',
-                                                                              isEqualTo: getJsonField(
-                                                                                searchHitItem,
-                                                                                r'''$.uid''',
-                                                                              ).toString(),
-                                                                            ),
-                                                                            singleRecord:
-                                                                                true,
-                                                                          ).then((s) => s.firstOrNull);
-
-                                                                          await FriendRequestNotificationRecord
-                                                                              .collection
-                                                                              .doc()
-                                                                              .set(createFriendRequestNotificationRecordData(
-                                                                                sender: currentUserUid,
-                                                                                receiver: _model.userToAdd?.uid,
-                                                                                accepted: false,
-                                                                                createdAt: getCurrentTimestamp.secondsSinceEpoch,
-                                                                              ));
-                                                                          _model.targetUserRef =
-                                                                              await queryUsersRecordOnce(
-                                                                            queryBuilder: (usersRecord) =>
-                                                                                usersRecord.where(
-                                                                              'uid',
-                                                                              isEqualTo: getJsonField(
-                                                                                searchHitItem,
-                                                                                r'''$.uid''',
-                                                                              ).toString(),
-                                                                            ),
-                                                                            singleRecord:
-                                                                                true,
-                                                                          ).then((s) => s.firstOrNull);
-
-                                                                          await _model
-                                                                              .targetUserRef!
-                                                                              .reference
-                                                                              .update(createUsersRecordData(
-                                                                            notificationsRead:
-                                                                                false,
-                                                                          ));
-                                                                          triggerPushNotification(
-                                                                            notificationTitle:
-                                                                                'Hasanati',
-                                                                            notificationText:
-                                                                                '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
-                                                                            notificationImageUrl:
-                                                                                'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
-                                                                            notificationSound:
-                                                                                'default',
-                                                                            userRefs: [
-                                                                              _model.userToAdd!.reference
+                                                                      Expanded(
+                                                                        child:
+                                                                            Container(
+                                                                          decoration:
+                                                                              BoxDecoration(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).secondaryBackground,
+                                                                          ),
+                                                                          child:
+                                                                              Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceBetween,
+                                                                            children: [
+                                                                              Expanded(
+                                                                                child: Html(
+                                                                                  data: getJsonField(
+                                                                                    searchHitItem,
+                                                                                    r'''$._highlightResult.display_name.value''',
+                                                                                  ).toString(),
+                                                                                ),
+                                                                              ),
                                                                             ],
-                                                                            initialPageName:
-                                                                                'Notification',
-                                                                            parameterData: {},
-                                                                          );
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children: [
+                                                                          if (containerFriendRequestNotificationRecordList
+                                                                                  .where((e) =>
+                                                                                      (e.receiver ==
+                                                                                          getJsonField(
+                                                                                            searchHitItem,
+                                                                                            r'''$.uid''',
+                                                                                          )) &&
+                                                                                      (e.accepted == true))
+                                                                                  .toList()
+                                                                                  .length ==
+                                                                              1)
+                                                                            FFButtonWidget(
+                                                                              onPressed: () {
+                                                                                print('Button pressed ...');
+                                                                              },
+                                                                              text: FFLocalizations.of(context).getText(
+                                                                                'vbhqiyxr' /* Friends */,
+                                                                              ),
+                                                                              options: FFButtonOptions(
+                                                                                height: 30.0,
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                      fontFamily: 'Readex Pro',
+                                                                                      color: Color(0xFF009BDD),
+                                                                                      fontSize: 12.0,
+                                                                                      fontWeight: FontWeight.normal,
+                                                                                    ),
+                                                                                borderSide: BorderSide(
+                                                                                  color: Color(0xFF009BDD),
+                                                                                  width: 1.0,
+                                                                                ),
+                                                                                borderRadius: BorderRadius.circular(8.0),
+                                                                              ),
+                                                                            ),
+                                                                          if (containerFriendRequestNotificationRecordList
+                                                                                  .where((e) =>
+                                                                                      e.receiver ==
+                                                                                      getJsonField(
+                                                                                        searchHitItem,
+                                                                                        r'''$.uid''',
+                                                                                      ))
+                                                                                  .toList()
+                                                                                  .length ==
+                                                                              0)
+                                                                            FFButtonWidget(
+                                                                              onPressed: () async {
+                                                                                _model.userToAdd = await queryUsersRecordOnce(
+                                                                                  queryBuilder: (usersRecord) => usersRecord.where(
+                                                                                    'uid',
+                                                                                    isEqualTo: getJsonField(
+                                                                                      searchHitItem,
+                                                                                      r'''$.uid''',
+                                                                                    ).toString(),
+                                                                                  ),
+                                                                                  singleRecord: true,
+                                                                                ).then((s) => s.firstOrNull);
 
-                                                                          setState(
-                                                                              () {});
-                                                                        },
-                                                                        text: FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          'vbhqiyxr' /* Add Friend */,
-                                                                        ),
-                                                                        options:
-                                                                            FFButtonOptions(
-                                                                          height:
-                                                                              30.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              12.0,
-                                                                              0.0,
-                                                                              12.0,
-                                                                              0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          color:
-                                                                              Color(0xFF009BDD),
-                                                                          textStyle: FlutterFlowTheme.of(context)
-                                                                              .titleSmall
-                                                                              .override(
-                                                                                fontFamily: 'Readex Pro',
-                                                                                color: Colors.white,
-                                                                                fontSize: 12.0,
-                                                                                fontWeight: FontWeight.normal,
+                                                                                await FriendRequestNotificationRecord.collection.doc().set(createFriendRequestNotificationRecordData(
+                                                                                      sender: currentUserUid,
+                                                                                      receiver: _model.userToAdd?.uid,
+                                                                                      accepted: false,
+                                                                                      createdAt: getCurrentTimestamp.secondsSinceEpoch,
+                                                                                    ));
+                                                                                _model.targetUserRef = await queryUsersRecordOnce(
+                                                                                  queryBuilder: (usersRecord) => usersRecord.where(
+                                                                                    'uid',
+                                                                                    isEqualTo: getJsonField(
+                                                                                      searchHitItem,
+                                                                                      r'''$.uid''',
+                                                                                    ).toString(),
+                                                                                  ),
+                                                                                  singleRecord: true,
+                                                                                ).then((s) => s.firstOrNull);
+
+                                                                                await _model.targetUserRef!.reference.update(createUsersRecordData(
+                                                                                  notificationsRead: false,
+                                                                                ));
+                                                                                triggerPushNotification(
+                                                                                  notificationTitle: 'Hasanati',
+                                                                                  notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
+                                                                                  notificationImageUrl: 'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                                                  notificationSound: 'default',
+                                                                                  userRefs: [
+                                                                                    _model.userToAdd!.reference
+                                                                                  ],
+                                                                                  initialPageName: 'Notification',
+                                                                                  parameterData: {},
+                                                                                );
+
+                                                                                setState(() {});
+                                                                              },
+                                                                              text: FFLocalizations.of(context).getText(
+                                                                                'wl7cuwpy' /* Add Friend */,
                                                                               ),
-                                                                          borderSide:
-                                                                              BorderSide(
-                                                                            color:
-                                                                                Colors.transparent,
-                                                                          ),
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
-                                                                        ),
-                                                                      ),
-                                                                    if (containerFriendRequestNotificationRecordList
-                                                                            .where((e) =>
-                                                                                e.receiver ==
-                                                                                getJsonField(
-                                                                                  searchHitItem,
-                                                                                  r'''$.uid''',
-                                                                                ))
-                                                                            .toList()
-                                                                            .length ==
-                                                                        1)
-                                                                      FFButtonWidget(
-                                                                        onPressed:
-                                                                            () {
-                                                                          print(
-                                                                              'Button pressed ...');
-                                                                        },
-                                                                        text: FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          'vxuggf1k' /* Request Sent */,
-                                                                        ),
-                                                                        options:
-                                                                            FFButtonOptions(
-                                                                          height:
-                                                                              30.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              12.0,
-                                                                              0.0,
-                                                                              12.0,
-                                                                              0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).alternate,
-                                                                          textStyle: FlutterFlowTheme.of(context)
-                                                                              .titleSmall
-                                                                              .override(
-                                                                                fontFamily: 'Readex Pro',
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
-                                                                                fontSize: 12.0,
-                                                                                fontWeight: FontWeight.normal,
+                                                                              options: FFButtonOptions(
+                                                                                height: 30.0,
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                color: Color(0xFF009BDD),
+                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                      fontFamily: 'Readex Pro',
+                                                                                      color: Colors.white,
+                                                                                      fontSize: 12.0,
+                                                                                      fontWeight: FontWeight.normal,
+                                                                                    ),
+                                                                                borderSide: BorderSide(
+                                                                                  color: Colors.transparent,
+                                                                                ),
+                                                                                borderRadius: BorderRadius.circular(8.0),
                                                                               ),
-                                                                          borderSide:
-                                                                              BorderSide(
-                                                                            color:
-                                                                                Color(0xFFEEEEEE),
-                                                                          ),
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
-                                                                        ),
+                                                                            ),
+                                                                          if (containerFriendRequestNotificationRecordList
+                                                                                  .where((e) =>
+                                                                                      (e.receiver ==
+                                                                                          getJsonField(
+                                                                                            searchHitItem,
+                                                                                            r'''$.uid''',
+                                                                                          )) &&
+                                                                                      (e.accepted == false))
+                                                                                  .toList()
+                                                                                  .length ==
+                                                                              1)
+                                                                            FFButtonWidget(
+                                                                              onPressed: () {
+                                                                                print('Button pressed ...');
+                                                                              },
+                                                                              text: FFLocalizations.of(context).getText(
+                                                                                'vxuggf1k' /* Request Sent */,
+                                                                              ),
+                                                                              options: FFButtonOptions(
+                                                                                height: 30.0,
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                color: FlutterFlowTheme.of(context).alternate,
+                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                      fontFamily: 'Readex Pro',
+                                                                                      color: FlutterFlowTheme.of(context).primaryText,
+                                                                                      fontSize: 12.0,
+                                                                                      fontWeight: FontWeight.normal,
+                                                                                    ),
+                                                                                borderSide: BorderSide(
+                                                                                  color: Color(0xFFEEEEEE),
+                                                                                ),
+                                                                                borderRadius: BorderRadius.circular(8.0),
+                                                                              ),
+                                                                            ),
+                                                                        ],
                                                                       ),
-                                                                  ].divide(SizedBox(
-                                                                      width:
-                                                                          10.0)),
+                                                                    ].divide(SizedBox(
+                                                                        width:
+                                                                            10.0)),
+                                                                  ),
                                                                 ),
                                                               ),
-                                                            ),
-                                                            Container(
-                                                              width: MediaQuery
-                                                                          .sizeOf(
-                                                                              context)
-                                                                      .width *
-                                                                  1.0,
-                                                              height: 1.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: Color(
-                                                                    0xFFE8E8E8),
+                                                              Container(
+                                                                width: MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width *
+                                                                    1.0,
+                                                                height: 1.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Color(
+                                                                      0xFFE8E8E8),
+                                                                ),
                                                               ),
-                                                            ),
-                                                          ].divide(SizedBox(
-                                                              height: 8.0)),
+                                                            ].divide(SizedBox(
+                                                                height: 8.0)),
+                                                          ),
                                                         ),
                                                       ),
                                                     );

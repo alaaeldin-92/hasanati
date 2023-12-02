@@ -572,6 +572,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                       await containerUsersRecord!
                                                           .reference
                                                           .update({
+                                                        ...createUsersRecordData(
+                                                          notificationsRead:
+                                                              false,
+                                                        ),
                                                         ...mapToFirestore(
                                                           {
                                                             'friends': FieldValue
@@ -598,7 +602,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                             'Friends',
                                                         parameterData: {},
                                                       );
-                                                      _model.toDeleteRef =
+                                                      _model.toUpdateRef =
                                                           await queryFriendRequestNotificationRecordOnce(
                                                         queryBuilder:
                                                             (friendRequestNotificationRecord) =>
@@ -617,9 +621,13 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                         singleRecord: true,
                                                       ).then((s) =>
                                                               s.firstOrNull);
-                                                      await _model.toDeleteRef!
+
+                                                      await _model.toUpdateRef!
                                                           .reference
-                                                          .delete();
+                                                          .update(
+                                                              createFriendRequestNotificationRecordData(
+                                                        accepted: true,
+                                                      ));
 
                                                       setState(() {});
                                                     },
@@ -707,7 +715,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    '99ma0su5' /* No Notifications */,
+                                    'idq7lfve' /* No Notifications */,
                                   ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
@@ -722,7 +730,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'ajqwhbrp' /* You currently have no notifica... */,
+                                      '9pn9ziyn' /* You currently have no notifica... */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)

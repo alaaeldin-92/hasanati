@@ -734,6 +734,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'سورة، آية، ترجمة، تفسير',
     },
     'vbhqiyxr': {
+      'en': 'Friends',
+      'ar': '',
+    },
+    'wl7cuwpy': {
       'en': 'Add Friend',
       'ar': '',
     },
@@ -1360,11 +1364,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Accept',
       'ar': '',
     },
-    '99ma0su5': {
+    'idq7lfve': {
       'en': 'No Notifications',
       'ar': '',
     },
-    'ajqwhbrp': {
+    '9pn9ziyn': {
       'en':
           'You currently have no notifications. Come back again some other time.',
       'ar': '',
