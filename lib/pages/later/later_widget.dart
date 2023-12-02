@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'later_model.dart';
 export 'later_model.dart';
@@ -2451,6 +2452,583 @@ class _LaterWidgetState extends State<LaterWidget> {
                       ),
                     ],
                   ),
+                  if (false)
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        if (false)
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 20.0, 20.0, 20.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFE3F7FE),
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          15.0, 15.0, 15.0, 15.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'ylsoyux1' /* Qur'an Tracking */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF0E4051),
+                                                          fontSize: 18.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                              ),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xFF2883A9),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          100.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 5.0, 10.0, 5.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'serb6kxk' /* Total: 2 min */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 12.0,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xFF6BB9DB),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(15.0, 10.0,
+                                                          15.0, 10.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'tfqy7f6t' /* 0 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color: Colors.white,
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xFF6BB9DB),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(15.0, 10.0,
+                                                          15.0, 10.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'l3zvqlt0' /* 0 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color: Colors.white,
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'xj664owp' /* : */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Color(0xFF0E4051),
+                                                      fontSize: 22.0,
+                                                    ),
+                                              ),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xFF6BB9DB),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(15.0, 10.0,
+                                                          15.0, 10.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'lvlra6ay' /* 0 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color: Colors.white,
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xFF6BB9DB),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(15.0, 10.0,
+                                                          15.0, 10.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'kkymj7sy' /* 0 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color: Colors.white,
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ].divide(SizedBox(width: 10.0)),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Flexible(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.0),
+                                                  ),
+                                                  child: LinearPercentIndicator(
+                                                    percent: 0.5,
+                                                    lineHeight: 10.0,
+                                                    animation: false,
+                                                    animateFromLastPercent:
+                                                        true,
+                                                    progressColor:
+                                                        Color(0xFF009BDF),
+                                                    backgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .accent4,
+                                                    barRadius:
+                                                        Radius.circular(20.0),
+                                                    padding: EdgeInsets.zero,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'b4vceu9n' /* 5/10 */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
+                                              ),
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '2bkcnpog' /* 5 verses left */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
+                                              ),
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'qrnzilom' /* Hello World */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
+                                              ),
+                                            ].divide(SizedBox(width: 15.0)),
+                                          ),
+                                        ].divide(SizedBox(height: 10.0)),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 30.0, 0.0, 0.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              if ((currentUserDocument?.friends?.toList() ?? [])
+                                      .length !=
+                                  0)
+                                AuthUserStreamWidget(
+                                  builder: (context) => Stack(
+                                    children: [
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                1.0,
+                                        height: 110.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0xFF009BDD),
+                                        ),
+                                        child: StreamBuilder<List<UsersRecord>>(
+                                          stream: queryUsersRecord(
+                                            queryBuilder: (usersRecord) =>
+                                                usersRecord.where(
+                                              'friends',
+                                              arrayContains: currentUserUid,
+                                            ),
+                                          ),
+                                          builder: (context, snapshot) {
+                                            // Customize what your widget looks like when it's loading.
+                                            if (!snapshot.hasData) {
+                                              return Center(
+                                                child: SizedBox(
+                                                  width: 50.0,
+                                                  height: 50.0,
+                                                  child:
+                                                      CircularProgressIndicator(
+                                                    valueColor:
+                                                        AlwaysStoppedAnimation<
+                                                            Color>(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primary,
+                                                    ),
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            List<UsersRecord>
+                                                containerUsersRecordList =
+                                                snapshot.data!;
+                                            return Container(
+                                              decoration: BoxDecoration(
+                                                color: Color(0xFF00191F),
+                                                borderRadius: BorderRadius.only(
+                                                  bottomLeft:
+                                                      Radius.circular(0.0),
+                                                  bottomRight:
+                                                      Radius.circular(0.0),
+                                                  topLeft:
+                                                      Radius.circular(30.0),
+                                                  topRight:
+                                                      Radius.circular(30.0),
+                                                ),
+                                              ),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20.0,
+                                                                20.0,
+                                                                20.0,
+                                                                0.0),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Container(
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            100.0),
+                                                              ),
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            7.5,
+                                                                            7.5,
+                                                                            7.5,
+                                                                            7.5),
+                                                                child: FaIcon(
+                                                                  FontAwesomeIcons
+                                                                      .userFriends,
+                                                                  color: Color(
+                                                                      0xFF009BDF),
+                                                                  size: 12.0,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Text(
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'bcpm8t8y' /* Online Friends */,
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Readex Pro',
+                                                                    color: Colors
+                                                                        .white,
+                                                                  ),
+                                                            ),
+                                                          ].divide(SizedBox(
+                                                              width: 10.0)),
+                                                        ),
+                                                        Text(
+                                                          '${containerUsersRecordList.where((e) => e.online == true).toList().length.toString()}/${(currentUserDocument?.friends?.toList() ?? []).length.toString()} Online',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(20.0, 0.0,
+                                                                20.0, 0.0),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Builder(
+                                                              builder:
+                                                                  (context) {
+                                                                final friends =
+                                                                    containerUsersRecordList
+                                                                        .toList()
+                                                                        .take(5)
+                                                                        .toList();
+                                                                return Stack(
+                                                                  children: List
+                                                                      .generate(
+                                                                          friends
+                                                                              .length,
+                                                                          (friendsIndex) {
+                                                                    final friendsItem =
+                                                                        friends[
+                                                                            friendsIndex];
+                                                                    return Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          25.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            30.0,
+                                                                        height:
+                                                                            30.0,
+                                                                        clipBehavior:
+                                                                            Clip.antiAlias,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          shape:
+                                                                              BoxShape.circle,
+                                                                        ),
+                                                                        child: Image
+                                                                            .network(
+                                                                          friendsItem
+                                                                              .photoUrl,
+                                                                          fit: BoxFit
+                                                                              .cover,
+                                                                        ),
+                                                                      ),
+                                                                    );
+                                                                  }),
+                                                                );
+                                                              },
+                                                            ),
+                                                          ].divide(SizedBox(
+                                                              width: 10.0)),
+                                                        ),
+                                                        FFButtonWidget(
+                                                          onPressed: () {
+                                                            print(
+                                                                'Button pressed ...');
+                                                          },
+                                                          text: FFLocalizations
+                                                                  .of(context)
+                                                              .getText(
+                                                            '9t6lv6i2' /* See All */,
+                                                          ),
+                                                          options:
+                                                              FFButtonOptions(
+                                                            height: 35.0,
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        12.0,
+                                                                        0.0,
+                                                                        12.0,
+                                                                        0.0),
+                                                            iconPadding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0),
+                                                            color: Color(
+                                                                0xFF009BDF),
+                                                            textStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Readex Pro',
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          14.0,
+                                                                    ),
+                                                            elevation: 3.0,
+                                                            borderSide:
+                                                                BorderSide(
+                                                              color: Colors
+                                                                  .transparent,
+                                                              width: 1.0,
+                                                            ),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        8.0),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ].divide(
+                                                    SizedBox(height: 10.0)),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                 ].divide(SizedBox(height: 25.0)),
               ),
             ),

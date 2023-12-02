@@ -66,6 +66,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
       await _model.updateLikesAndMem(context);
       setState(() {});
       FFAppState().quranVerseTraverseUpdated = true;
+      setState(() {
+        _model.pageLoading = false;
+      });
       while (true) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
@@ -302,10 +305,13 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                     ),
                                   ),
                                 ),
-                                FaIcon(
-                                  FontAwesomeIcons.ellipsisH,
-                                  color: Colors.white,
-                                  size: 24.0,
+                                Opacity(
+                                  opacity: 0.2,
+                                  child: FaIcon(
+                                    FontAwesomeIcons.ellipsisH,
+                                    color: Colors.white,
+                                    size: 24.0,
+                                  ),
                                 ),
                               ],
                             ),
@@ -1361,112 +1367,186 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                     ),
                                   ],
                                 ),
-                                Flexible(
-                                  child: SingleChildScrollView(
-                                    primary: false,
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.end,
-                                          children: [
-                                            Expanded(
-                                              child: Container(
-                                                width: 100.0,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                ),
-                                                child: Text(
-                                                  getJsonField(
-                                                    quranAyahQuranFontImlaeiResponse
-                                                        .jsonBody,
-                                                    r'''$.verses[:].text_imlaei''',
-                                                  ).toString(),
-                                                  textAlign: TextAlign.end,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Muhammadi ',
-                                                        fontSize: 28.0,
-                                                        useGoogleFonts: false,
-                                                      ),
+                                if (!_model.pageLoading)
+                                  Flexible(
+                                    child: SingleChildScrollView(
+                                      primary: false,
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              Expanded(
+                                                child: Container(
+                                                  width: 100.0,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryBackground,
+                                                  ),
+                                                  child: Text(
+                                                    getJsonField(
+                                                      quranAyahQuranFontImlaeiResponse
+                                                          .jsonBody,
+                                                      r'''$.verses[:].text_imlaei''',
+                                                    ).toString(),
+                                                    textAlign: TextAlign.end,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Muhammadi ',
+                                                          fontSize: 28.0,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Flexible(
-                                              child: Container(
-                                                width:
-                                                    MediaQuery.sizeOf(context)
-                                                            .width *
-                                                        1.0,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                ),
-                                                child: FutureBuilder<
-                                                    ApiCallResponse>(
-                                                  future: VerseKeyCall.call(
-                                                    chapter: _model.surahID,
-                                                    verse: _model.verseID,
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Flexible(
+                                                child: Container(
+                                                  width:
+                                                      MediaQuery.sizeOf(context)
+                                                              .width *
+                                                          1.0,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryBackground,
                                                   ),
-                                                  builder: (context, snapshot) {
-                                                    // Customize what your widget looks like when it's loading.
-                                                    if (!snapshot.hasData) {
-                                                      return Center(
-                                                        child: SizedBox(
-                                                          width: 50.0,
-                                                          height: 50.0,
-                                                          child:
-                                                              CircularProgressIndicator(
-                                                            valueColor:
-                                                                AlwaysStoppedAnimation<
-                                                                    Color>(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .primary,
+                                                  child: FutureBuilder<
+                                                      ApiCallResponse>(
+                                                    future: VerseKeyCall.call(
+                                                      chapter: _model.surahID,
+                                                      verse: _model.verseID,
+                                                    ),
+                                                    builder:
+                                                        (context, snapshot) {
+                                                      // Customize what your widget looks like when it's loading.
+                                                      if (!snapshot.hasData) {
+                                                        return Center(
+                                                          child: SizedBox(
+                                                            width: 50.0,
+                                                            height: 50.0,
+                                                            child:
+                                                                CircularProgressIndicator(
+                                                              valueColor:
+                                                                  AlwaysStoppedAnimation<
+                                                                      Color>(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                              ),
                                                             ),
                                                           ),
-                                                        ),
+                                                        );
+                                                      }
+                                                      final textVerseKeyResponse =
+                                                          snapshot.data!;
+                                                      return Text(
+                                                        functions
+                                                            .extractFromJson(
+                                                                getJsonField(
+                                                          textVerseKeyResponse
+                                                              .jsonBody,
+                                                          r'''$.verse.words''',
+                                                        )),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium,
                                                       );
-                                                    }
-                                                    final textVerseKeyResponse =
-                                                        snapshot.data!;
-                                                    return Text(
-                                                      functions.extractFromJson(
-                                                          getJsonField(
-                                                        textVerseKeyResponse
-                                                            .jsonBody,
-                                                        r'''$.verse.words''',
-                                                      )),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium,
-                                                    );
-                                                  },
+                                                    },
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                      ].divide(SizedBox(height: 15.0)),
+                                            ],
+                                          ),
+                                        ].divide(SizedBox(height: 15.0)),
+                                      ),
                                     ),
                                   ),
-                                ),
+                                if (_model.pageLoading)
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                1.0,
+                                        height: 20.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0x65E6E6E6),
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.85,
+                                        height: 20.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0x65E6E6E6),
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.8,
+                                        height: 20.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0x65E6E6E6),
+                                        ),
+                                      ),
+                                    ].divide(SizedBox(height: 10.0)),
+                                  ),
+                                if (_model.pageLoading)
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                1.0,
+                                        height: 20.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0x65E6E6E6),
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.85,
+                                        height: 20.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0x65E6E6E6),
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.8,
+                                        height: 20.0,
+                                        decoration: BoxDecoration(
+                                          color: Color(0x65E6E6E6),
+                                        ),
+                                      ),
+                                    ].divide(SizedBox(height: 10.0)),
+                                  ),
                               ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
@@ -1745,8 +1825,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                 borderWidth: 4.0,
                                                 buttonSize: 60.0,
                                                 fillColor: Colors.white,
-                                                icon: Icon(
-                                                  Icons.check,
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.check,
                                                   color: Color(0xFF0E4051),
                                                   size: 30.0,
                                                 ),

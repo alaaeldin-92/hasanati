@@ -916,6 +916,58 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'See All',
       'ar': '',
     },
+    'ylsoyux1': {
+      'en': 'Qur\'an Tracking',
+      'ar': '',
+    },
+    'serb6kxk': {
+      'en': 'Total: 2 min',
+      'ar': '',
+    },
+    'tfqy7f6t': {
+      'en': '0',
+      'ar': '',
+    },
+    'l3zvqlt0': {
+      'en': '0',
+      'ar': '',
+    },
+    'xj664owp': {
+      'en': ':',
+      'ar': '',
+    },
+    'lvlra6ay': {
+      'en': '0',
+      'ar': '',
+    },
+    'kkymj7sy': {
+      'en': '0',
+      'ar': '',
+    },
+    'x0f46geu': {
+      'en': '',
+      'ar': '',
+    },
+    'b4vceu9n': {
+      'en': '5/10',
+      'ar': '',
+    },
+    '2bkcnpog': {
+      'en': '5 verses left',
+      'ar': '',
+    },
+    'qrnzilom': {
+      'en': 'Hello World',
+      'ar': '',
+    },
+    'bcpm8t8y': {
+      'en': 'Online Friends',
+      'ar': '',
+    },
+    '9t6lv6i2': {
+      'en': 'See All',
+      'ar': '',
+    },
     'dz6rgo8v': {
       'en': 'Home',
       'ar': '',
@@ -1265,54 +1317,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // QuranPage
   {
-    'q5gvm4yt': {
-      'en': 'Qur\'an Tracking',
-      'ar': '',
-    },
-    'yo69phw7': {
-      'en': 'Total: 2 min',
-      'ar': '',
-    },
-    'fzad6rbq': {
-      'en': '0',
-      'ar': '',
-    },
-    'p8wsfo06': {
-      'en': '0',
-      'ar': '',
-    },
-    'vb7h79bl': {
-      'en': ':',
-      'ar': '',
-    },
-    'guuvkw83': {
-      'en': '0',
-      'ar': '',
-    },
-    '8gtdkeb6': {
-      'en': '0',
-      'ar': '',
-    },
-    'azn6kesk': {
-      'en': '',
-      'ar': '',
-    },
-    'b68ztibm': {
-      'en': '5/10',
-      'ar': '',
-    },
-    '6308zoly': {
-      'en': '5 verses left',
-      'ar': '',
-    },
-    'p3yf2l60': {
-      'en': 'Online Friends',
-      'ar': '',
-    },
-    'ewfd24ov': {
-      'en': 'See All',
-      'ar': '',
-    },
     'zve0y5zc': {
       'en': 'Verse',
       'ar': '',

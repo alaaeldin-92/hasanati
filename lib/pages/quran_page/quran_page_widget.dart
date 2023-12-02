@@ -57,6 +57,9 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
 
       FFAppState().quranVerseTraverseUpdated = true;
       await _model.updateMemorized(context);
+      setState(() {
+        _model.pageLoading = false;
+      });
       while (true) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
@@ -325,675 +328,14 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                           ),
                                         ),
                                       ),
-                                      FaIcon(
-                                        FontAwesomeIcons.ellipsisH,
-                                        color: Colors.white,
-                                        size: 24.0,
+                                      Opacity(
+                                        opacity: 0.2,
+                                        child: FaIcon(
+                                          FontAwesomeIcons.ellipsisH,
+                                          color: Colors.white,
+                                          size: 24.0,
+                                        ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 20.0, 20.0, 20.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context)
-                                                    .width *
-                                                1.0,
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFFE3F7FE),
-                                              borderRadius:
-                                                  BorderRadius.circular(20.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 15.0, 15.0, 15.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    children: [
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'q5gvm4yt' /* Qur'an Tracking */,
-                                                        ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Outfit',
-                                                              color: Color(
-                                                                  0xFF0E4051),
-                                                              fontSize: 18.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                            ),
-                                                      ),
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFF2883A9),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      100.0),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      10.0,
-                                                                      5.0,
-                                                                      10.0,
-                                                                      5.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'yo69phw7' /* Total: 2 min */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize:
-                                                                      12.0,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFF6BB9DB),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      10.0),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      15.0,
-                                                                      10.0,
-                                                                      15.0,
-                                                                      10.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'fzad6rbq' /* 0 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFF6BB9DB),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      10.0),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      15.0,
-                                                                      10.0,
-                                                                      15.0,
-                                                                      10.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'p8wsfo06' /* 0 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'vb7h79bl' /* : */,
-                                                        ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
-                                                              color: Color(
-                                                                  0xFF0E4051),
-                                                              fontSize: 22.0,
-                                                            ),
-                                                      ),
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFF6BB9DB),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      10.0),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      15.0,
-                                                                      10.0,
-                                                                      15.0,
-                                                                      10.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'guuvkw83' /* 0 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFF6BB9DB),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      10.0),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      15.0,
-                                                                      10.0,
-                                                                      15.0,
-                                                                      10.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              '8gtdkeb6' /* 0 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ].divide(
-                                                        SizedBox(width: 10.0)),
-                                                  ),
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Flexible(
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: Colors.white,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20.0),
-                                                          ),
-                                                          child:
-                                                              LinearPercentIndicator(
-                                                            percent: functions.divide(
-                                                                functions.add(
-                                                                    _model
-                                                                        .verseID!,
-                                                                    -1)!,
-                                                                _model
-                                                                    .versesCount!)!,
-                                                            lineHeight: 10.0,
-                                                            animation: false,
-                                                            animateFromLastPercent:
-                                                                true,
-                                                            progressColor:
-                                                                Color(
-                                                                    0xFF009BDF),
-                                                            backgroundColor:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .accent4,
-                                                            barRadius:
-                                                                Radius.circular(
-                                                                    20.0),
-                                                            padding:
-                                                                EdgeInsets.zero,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    children: [
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'b68ztibm' /* 5/10 */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
-                                                      ),
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '6308zoly' /* 5 verses left */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
-                                                      ),
-                                                      Text(
-                                                        '${functions.round(functions.multiply(functions.divide(functions.add(_model.verseID!, -1)!, _model.versesCount!)!, 100.0)!).toString()}%',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
-                                                      ),
-                                                    ].divide(
-                                                        SizedBox(width: 15.0)),
-                                                  ),
-                                                ].divide(
-                                                    SizedBox(height: 10.0)),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 30.0, 0.0, 0.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      if ((currentUserDocument?.friends
-                                                      ?.toList() ??
-                                                  [])
-                                              .length !=
-                                          0)
-                                        AuthUserStreamWidget(
-                                          builder: (context) => Stack(
-                                            children: [
-                                              Container(
-                                                width:
-                                                    MediaQuery.sizeOf(context)
-                                                            .width *
-                                                        1.0,
-                                                height: 110.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xFF009BDD),
-                                                ),
-                                                child: StreamBuilder<
-                                                    List<UsersRecord>>(
-                                                  stream: queryUsersRecord(
-                                                    queryBuilder:
-                                                        (usersRecord) =>
-                                                            usersRecord.where(
-                                                      'friends',
-                                                      arrayContains:
-                                                          currentUserUid,
-                                                    ),
-                                                  ),
-                                                  builder: (context, snapshot) {
-                                                    // Customize what your widget looks like when it's loading.
-                                                    if (!snapshot.hasData) {
-                                                      return Center(
-                                                        child: SizedBox(
-                                                          width: 50.0,
-                                                          height: 50.0,
-                                                          child:
-                                                              CircularProgressIndicator(
-                                                            valueColor:
-                                                                AlwaysStoppedAnimation<
-                                                                    Color>(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .primary,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }
-                                                    List<UsersRecord>
-                                                        containerUsersRecordList =
-                                                        snapshot.data!;
-                                                    return Container(
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFF00191F),
-                                                        borderRadius:
-                                                            BorderRadius.only(
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  0.0),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  0.0),
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  30.0),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  30.0),
-                                                        ),
-                                                      ),
-                                                      child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        20.0,
-                                                                        20.0,
-                                                                        20.0,
-                                                                        0.0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceBetween,
-                                                              children: [
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Container(
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .secondaryBackground,
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(100.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            7.5,
-                                                                            7.5,
-                                                                            7.5,
-                                                                            7.5),
-                                                                        child:
-                                                                            FaIcon(
-                                                                          FontAwesomeIcons
-                                                                              .userFriends,
-                                                                          color:
-                                                                              Color(0xFF009BDF),
-                                                                          size:
-                                                                              12.0,
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'p3yf2l60' /* Online Friends */,
-                                                                      ),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Readex Pro',
-                                                                            color:
-                                                                                Colors.white,
-                                                                          ),
-                                                                    ),
-                                                                  ].divide(SizedBox(
-                                                                      width:
-                                                                          10.0)),
-                                                                ),
-                                                                Text(
-                                                                  '${containerUsersRecordList.where((e) => e.online == true).toList().length.toString()}/${(currentUserDocument?.friends?.toList() ?? []).length.toString()} Online',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .secondaryText,
-                                                                      ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        20.0,
-                                                                        0.0,
-                                                                        20.0,
-                                                                        0.0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceBetween,
-                                                              children: [
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Builder(
-                                                                      builder:
-                                                                          (context) {
-                                                                        final friends = containerUsersRecordList
-                                                                            .toList()
-                                                                            .take(5)
-                                                                            .toList();
-                                                                        return Stack(
-                                                                          children: List.generate(
-                                                                              friends.length,
-                                                                              (friendsIndex) {
-                                                                            final friendsItem =
-                                                                                friends[friendsIndex];
-                                                                            return Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 0.0),
-                                                                              child: Container(
-                                                                                width: 30.0,
-                                                                                height: 30.0,
-                                                                                clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
-                                                                                  shape: BoxShape.circle,
-                                                                                ),
-                                                                                child: Image.network(
-                                                                                  friendsItem.photoUrl,
-                                                                                  fit: BoxFit.cover,
-                                                                                ),
-                                                                              ),
-                                                                            );
-                                                                          }),
-                                                                        );
-                                                                      },
-                                                                    ),
-                                                                  ].divide(SizedBox(
-                                                                      width:
-                                                                          10.0)),
-                                                                ),
-                                                                FFButtonWidget(
-                                                                  onPressed:
-                                                                      () {
-                                                                    print(
-                                                                        'Button pressed ...');
-                                                                  },
-                                                                  text: FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    'ewfd24ov' /* See All */,
-                                                                  ),
-                                                                  options:
-                                                                      FFButtonOptions(
-                                                                    height:
-                                                                        35.0,
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            12.0,
-                                                                            0.0,
-                                                                            12.0,
-                                                                            0.0),
-                                                                    iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    color: Color(
-                                                                        0xFF009BDF),
-                                                                    textStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .titleSmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Readex Pro',
-                                                                          color:
-                                                                              Colors.white,
-                                                                          fontSize:
-                                                                              14.0,
-                                                                        ),
-                                                                    elevation:
-                                                                        3.0,
-                                                                    borderSide:
-                                                                        BorderSide(
-                                                                      color: Colors
-                                                                          .transparent,
-                                                                      width:
-                                                                          1.0,
-                                                                    ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ].divide(SizedBox(
-                                                            height: 10.0)),
-                                                      ),
-                                                    );
-                                                  },
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
                                     ],
                                   ),
                                 ),
@@ -1003,307 +345,349 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                           Expanded(
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Color(0xFF00191F),
+                                color: Color(0xFF009BDD),
                               ),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(0.0),
-                                    bottomRight: Radius.circular(0.0),
-                                    topLeft: Radius.circular(30.0),
-                                    topRight: Radius.circular(30.0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 30.0, 0.0, 0.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(0.0),
+                                      topLeft: Radius.circular(30.0),
+                                      topRight: Radius.circular(30.0),
+                                    ),
                                   ),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 20.0, 20.0, 0.0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                  color: Color(0x4DFFFFFF),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          100.0),
-                                                ),
-                                                child: Stack(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  children: [
-                                                    if (!_model.audioPlaying)
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          _model.audioPageJSON =
-                                                              await VerseAudioPageCall
-                                                                  .call(
-                                                            page: _model.page,
-                                                          );
-                                                          _model.totalDuration =
-                                                              await actions
-                                                                  .getTotalAudioLength(
-                                                            getJsonField(
-                                                              (_model.audioPageJSON
-                                                                      ?.jsonBody ??
-                                                                  ''),
-                                                              r'''$.audio_files''',
-                                                              true,
-                                                            )!,
-                                                          );
-                                                          setState(() {
-                                                            _model.audioDuration =
-                                                                _model
-                                                                    .totalDuration;
-                                                          });
-                                                          setState(() {
-                                                            _model.audioPlaying =
-                                                                true;
-                                                          });
-                                                          setState(() {
-                                                            _model.totalRecords =
-                                                                getJsonField(
-                                                              (_model.audioPageJSON
-                                                                      ?.jsonBody ??
-                                                                  ''),
-                                                              r'''$.pagination.total_records''',
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        20.0, 20.0, 20.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0x4DFFFFFF),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            100.0),
+                                                  ),
+                                                  child: Stack(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    children: [
+                                                      if (!_model.audioPlaying)
+                                                        InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
+                                                          onTap: () async {
+                                                            _model.audioPageJSON =
+                                                                await VerseAudioPageCall
+                                                                    .call(
+                                                              page: _model.page,
                                                             );
-                                                          });
-                                                          setState(() {
-                                                            _model.tempCounter =
-                                                                0;
-                                                          });
-                                                          while (_model
-                                                                  .audioIndexForPage <
+                                                            _model.totalDuration =
+                                                                await actions
+                                                                    .getTotalAudioLength(
                                                               getJsonField(
                                                                 (_model.audioPageJSON
                                                                         ?.jsonBody ??
                                                                     ''),
-                                                                r'''$.pagination.total_records''',
-                                                              )) {
-                                                            _model.soundPlayer ??=
-                                                                AudioPlayer();
-                                                            if (_model
-                                                                .soundPlayer!
-                                                                .playing) {
-                                                              await _model
-                                                                  .soundPlayer!
-                                                                  .stop();
-                                                            }
-                                                            _model.soundPlayer!
-                                                                .setVolume(1.0);
-                                                            _model.soundPlayer!
-                                                                .setUrl(
-                                                                    'https://verses.quran.com/${functions.getValueFromJsonArray(getJsonField(
-                                                                          (_model.audioPageJSON?.jsonBody ??
-                                                                              ''),
-                                                                          r'''$.audio_files''',
-                                                                          true,
-                                                                        )!, _model.audioIndexForPage, 'url')}')
-                                                                .then((_) => _model
-                                                                    .soundPlayer!
-                                                                    .play());
-
-                                                            _model.durationSingle =
-                                                                await actions
-                                                                    .getAudioLength(
-                                                              'https://verses.quran.com/${functions.getValueFromJsonArray(getJsonField(
-                                                                    (_model.audioPageJSON
-                                                                            ?.jsonBody ??
-                                                                        ''),
-                                                                    r'''$.audio_files''',
-                                                                    true,
-                                                                  )!, _model.audioIndexForPage, 'url')}',
+                                                                r'''$.audio_files''',
+                                                                true,
+                                                              )!,
                                                             );
                                                             setState(() {
-                                                              _model.audioSingleDuration =
+                                                              _model.audioDuration =
                                                                   _model
-                                                                      .durationSingle!;
+                                                                      .totalDuration;
+                                                            });
+                                                            setState(() {
+                                                              _model.audioPlaying =
+                                                                  true;
+                                                            });
+                                                            setState(() {
+                                                              _model.totalRecords =
+                                                                  getJsonField(
+                                                                (_model.audioPageJSON
+                                                                        ?.jsonBody ??
+                                                                    ''),
+                                                                r'''$.pagination.total_records''',
+                                                              );
                                                             });
                                                             setState(() {
                                                               _model.tempCounter =
                                                                   0;
                                                             });
                                                             while (_model
-                                                                    .tempCounter! <
-                                                                _model
-                                                                    .audioSingleDuration) {
-                                                              await Future.delayed(
-                                                                  const Duration(
-                                                                      milliseconds:
-                                                                          1000));
+                                                                    .audioIndexForPage <
+                                                                getJsonField(
+                                                                  (_model.audioPageJSON
+                                                                          ?.jsonBody ??
+                                                                      ''),
+                                                                  r'''$.pagination.total_records''',
+                                                                )) {
+                                                              _model.soundPlayer ??=
+                                                                  AudioPlayer();
+                                                              if (_model
+                                                                  .soundPlayer!
+                                                                  .playing) {
+                                                                await _model
+                                                                    .soundPlayer!
+                                                                    .stop();
+                                                              }
+                                                              _model
+                                                                  .soundPlayer!
+                                                                  .setVolume(
+                                                                      1.0);
+                                                              _model
+                                                                  .soundPlayer!
+                                                                  .setUrl(
+                                                                      'https://verses.quran.com/${functions.getValueFromJsonArray(getJsonField(
+                                                                            (_model.audioPageJSON?.jsonBody ??
+                                                                                ''),
+                                                                            r'''$.audio_files''',
+                                                                            true,
+                                                                          )!, _model.audioIndexForPage, 'url')}')
+                                                                  .then((_) => _model
+                                                                      .soundPlayer!
+                                                                      .play());
+
+                                                              _model.durationSingle =
+                                                                  await actions
+                                                                      .getAudioLength(
+                                                                'https://verses.quran.com/${functions.getValueFromJsonArray(getJsonField(
+                                                                      (_model.audioPageJSON
+                                                                              ?.jsonBody ??
+                                                                          ''),
+                                                                      r'''$.audio_files''',
+                                                                      true,
+                                                                    )!, _model.audioIndexForPage, 'url')}',
+                                                              );
                                                               setState(() {
-                                                                _model.timeCounter =
-                                                                    _model.timeCounter! +
-                                                                        1.0;
+                                                                _model.audioSingleDuration =
+                                                                    _model
+                                                                        .durationSingle!;
                                                               });
                                                               setState(() {
                                                                 _model.tempCounter =
-                                                                    _model.tempCounter! +
+                                                                    0;
+                                                              });
+                                                              while (_model
+                                                                      .tempCounter! <
+                                                                  _model
+                                                                      .audioSingleDuration) {
+                                                                await Future.delayed(
+                                                                    const Duration(
+                                                                        milliseconds:
+                                                                            1000));
+                                                                setState(() {
+                                                                  _model.timeCounter =
+                                                                      _model.timeCounter! +
+                                                                          1.0;
+                                                                });
+                                                                setState(() {
+                                                                  _model.tempCounter =
+                                                                      _model.tempCounter! +
+                                                                          1;
+                                                                });
+                                                              }
+                                                              setState(() {
+                                                                _model.audioIndexForPage =
+                                                                    _model.audioIndexForPage +
                                                                         1;
                                                               });
                                                             }
+                                                            await Future.delayed(
+                                                                const Duration(
+                                                                    milliseconds:
+                                                                        1000));
                                                             setState(() {
-                                                              _model.audioIndexForPage =
-                                                                  _model.audioIndexForPage +
-                                                                      1;
+                                                              _model.audioPlaying =
+                                                                  false;
                                                             });
-                                                          }
-                                                          await Future.delayed(
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000));
-                                                          setState(() {
-                                                            _model.audioPlaying =
-                                                                false;
-                                                          });
-                                                          setState(() {
-                                                            _model.timeCounter =
-                                                                0.0;
-                                                          });
-                                                          _model.audioIndexForPage =
-                                                              0;
-
-                                                          setState(() {});
-                                                        },
-                                                        child: Icon(
-                                                          Icons.play_arrow,
-                                                          color:
-                                                              Color(0xFF2F2F2F),
-                                                          size: 24.0,
-                                                        ),
-                                                      ),
-                                                    if (_model.audioPlaying)
-                                                      CircularPercentIndicator(
-                                                        percent: functions
-                                                            .divideDouble(
-                                                                _model
-                                                                    .timeCounter!,
-                                                                _model
-                                                                    .audioDuration!),
-                                                        radius: 22.5,
-                                                        lineWidth: 5.0,
-                                                        animation: false,
-                                                        animateFromLastPercent:
-                                                            true,
-                                                        progressColor:
-                                                            Color(0xFF009BDF),
-                                                        startAngle: 0.0,
-                                                      ),
-                                                    if (_model.audioPlaying)
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          _model.soundPlayer
-                                                              ?.stop();
-                                                          setState(() {
-                                                            _model.audioPlaying =
-                                                                false;
-                                                          });
-                                                          setState(() {
-                                                            _model.timeCounter =
-                                                                0.0;
-                                                          });
-                                                          setState(() {
+                                                            setState(() {
+                                                              _model.timeCounter =
+                                                                  0.0;
+                                                            });
                                                             _model.audioIndexForPage =
                                                                 0;
-                                                          });
-                                                          setState(() {
-                                                            _model.tempCounter =
-                                                                0;
-                                                          });
-                                                        },
-                                                        child: Icon(
-                                                          Icons.pause_sharp,
-                                                          color:
+
+                                                            setState(() {});
+                                                          },
+                                                          child: Icon(
+                                                            Icons.play_arrow,
+                                                            color: Color(
+                                                                0xFF2F2F2F),
+                                                            size: 24.0,
+                                                          ),
+                                                        ),
+                                                      if (_model.audioPlaying)
+                                                        CircularPercentIndicator(
+                                                          percent: functions.divideDouble(
+                                                              _model
+                                                                  .timeCounter!,
+                                                              _model
+                                                                  .audioDuration!),
+                                                          radius: 22.5,
+                                                          lineWidth: 5.0,
+                                                          animation: false,
+                                                          animateFromLastPercent:
+                                                              true,
+                                                          progressColor:
                                                               Color(0xFF009BDF),
-                                                          size: 24.0,
+                                                          startAngle: 0.0,
+                                                        ),
+                                                      if (_model.audioPlaying)
+                                                        InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
+                                                          onTap: () async {
+                                                            _model.soundPlayer
+                                                                ?.stop();
+                                                            setState(() {
+                                                              _model.audioPlaying =
+                                                                  false;
+                                                            });
+                                                            setState(() {
+                                                              _model.timeCounter =
+                                                                  0.0;
+                                                            });
+                                                            setState(() {
+                                                              _model.audioIndexForPage =
+                                                                  0;
+                                                            });
+                                                            setState(() {
+                                                              _model.tempCounter =
+                                                                  0;
+                                                            });
+                                                          },
+                                                          child: Icon(
+                                                            Icons.pause_sharp,
+                                                            color: Color(
+                                                                0xFF009BDF),
+                                                            size: 24.0,
+                                                          ),
+                                                        ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ].divide(SizedBox(width: 8.0)),
+                                            ),
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                color: Color(0xFFEEEEEE),
+                                                borderRadius:
+                                                    BorderRadius.circular(50.0),
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        5.0, 5.0, 5.0, 5.0),
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                          'QuranAyah',
+                                                          queryParameters: {
+                                                            'surahID':
+                                                                serializeParam(
+                                                              1,
+                                                              ParamType.int,
+                                                            ),
+                                                            'ayahNumber':
+                                                                serializeParam(
+                                                              1,
+                                                              ParamType.int,
+                                                            ),
+                                                            'surahName':
+                                                                serializeParam(
+                                                              'Al-Fatiha',
+                                                              ParamType.String,
+                                                            ),
+                                                            'versesCount':
+                                                                serializeParam(
+                                                              7,
+                                                              ParamType.int,
+                                                            ),
+                                                          }.withoutNulls,
+                                                        );
+                                                      },
+                                                      child: Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0x00FFFFFF),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      50.0),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.00, 0.00),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      15.0,
+                                                                      5.0,
+                                                                      15.0,
+                                                                      5.0),
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'zve0y5zc' /* Verse */,
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium,
+                                                          ),
                                                         ),
                                                       ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ].divide(SizedBox(width: 8.0)),
-                                          ),
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFFEEEEEE),
-                                              borderRadius:
-                                                  BorderRadius.circular(50.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(5.0, 5.0, 5.0, 5.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      context.pushNamed(
-                                                        'QuranAyah',
-                                                        queryParameters: {
-                                                          'surahID':
-                                                              serializeParam(
-                                                            1,
-                                                            ParamType.int,
-                                                          ),
-                                                          'ayahNumber':
-                                                              serializeParam(
-                                                            1,
-                                                            ParamType.int,
-                                                          ),
-                                                          'surahName':
-                                                              serializeParam(
-                                                            'Al-Fatiha',
-                                                            ParamType.String,
-                                                          ),
-                                                          'versesCount':
-                                                              serializeParam(
-                                                            7,
-                                                            ParamType.int,
-                                                          ),
-                                                        }.withoutNulls,
-                                                      );
-                                                    },
-                                                    child: Container(
+                                                    ),
+                                                    Container(
                                                       decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x00FFFFFF),
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(50.0),
@@ -1323,7 +707,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'zve0y5zc' /* Verse */,
+                                                            'v6lv8ne4' /* Page */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1331,123 +715,175 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                         ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  Container(
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              50.0),
-                                                    ),
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            0.00, 0.00),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  15.0,
-                                                                  5.0,
-                                                                  15.0,
-                                                                  5.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'v6lv8ne4' /* Page */,
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            Text(
+                                              '${_model.page.toString()}/604',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                        if (!_model.pageLoading)
+                                          Flexible(
+                                            child: SingleChildScrollView(
+                                              primary: false,
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    children: [
+                                                      Expanded(
+                                                        child: Container(
+                                                          width: 100.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryBackground,
+                                                          ),
+                                                          child: Text(
+                                                            functions.concatenatVersesTextWithNum(
+                                                                quranPageQuranFontImlaeiPageResponse
+                                                                    .jsonBody),
+                                                            textAlign:
+                                                                TextAlign.end,
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Muhammadi ',
+                                                                  fontSize:
+                                                                      28.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
                                                         ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
                                                       ),
-                                                    ),
+                                                    ],
                                                   ),
-                                                ],
+                                                  Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Expanded(
+                                                        child: Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryBackground,
+                                                          ),
+                                                          child: Text(
+                                                            functions.getConcatenatedText(
+                                                                stackQuranTranslationPageResponse
+                                                                    .bodyText),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ].divide(
+                                                    SizedBox(height: 15.0)),
                                               ),
                                             ),
                                           ),
-                                          Text(
-                                            '${_model.page.toString()}/604',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
-                                          ),
-                                        ],
-                                      ),
-                                      Flexible(
-                                        child: SingleChildScrollView(
-                                          primary: false,
-                                          child: Column(
+                                        if (_model.pageLoading)
+                                          Column(
                                             mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             crossAxisAlignment:
-                                                CrossAxisAlignment.center,
+                                                CrossAxisAlignment.end,
                                             children: [
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
-                                                children: [
-                                                  Expanded(
-                                                    child: Container(
-                                                      width: 100.0,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                      ),
-                                                      child: Text(
-                                                        functions
-                                                            .concatenatVersesTextWithNum(
-                                                                quranPageQuranFontImlaeiPageResponse
-                                                                    .jsonBody),
-                                                        textAlign:
-                                                            TextAlign.end,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Muhammadi ',
-                                                              fontSize: 28.0,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height: 20.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x65E6E6E6),
+                                                ),
                                               ),
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Expanded(
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                      ),
-                                                      child: Text(
-                                                        functions
-                                                            .getConcatenatedText(
-                                                                stackQuranTranslationPageResponse
-                                                                    .bodyText),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.85,
+                                                height: 20.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x65E6E6E6),
+                                                ),
                                               ),
-                                            ].divide(SizedBox(height: 15.0)),
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.8,
+                                                height: 20.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x65E6E6E6),
+                                                ),
+                                              ),
+                                            ].divide(SizedBox(height: 10.0)),
                                           ),
-                                        ),
-                                      ),
-                                    ].divide(SizedBox(height: 20.0)),
+                                        if (_model.pageLoading)
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height: 20.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x65E6E6E6),
+                                                ),
+                                              ),
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.85,
+                                                height: 20.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x65E6E6E6),
+                                                ),
+                                              ),
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.8,
+                                                height: 20.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x65E6E6E6),
+                                                ),
+                                              ),
+                                            ].divide(SizedBox(height: 10.0)),
+                                          ),
+                                      ].divide(SizedBox(height: 25.0)),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -1674,8 +1110,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                       borderWidth: 4.0,
                                                       buttonSize: 60.0,
                                                       fillColor: Colors.white,
-                                                      icon: Icon(
-                                                        Icons.check,
+                                                      icon: FaIcon(
+                                                        FontAwesomeIcons.check,
                                                         color:
                                                             Color(0xFF0E4051),
                                                         size: 30.0,
