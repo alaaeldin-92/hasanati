@@ -382,6 +382,7 @@ class _AuthCompleteProfile2WidgetState
                                             Expanded(
                                               child: Container(
                                                 width: 100.0,
+                                                height: 50.0,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xFFEEEEEE),
                                                 ),
@@ -410,18 +411,16 @@ class _AuthCompleteProfile2WidgetState
                                                           MainAxisAlignment
                                                               .start,
                                                       children: [
-                                                        ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      0.0),
-                                                          child: Image.network(
-                                                            'https://flagcdn.com/w40/${functions.lowerCaseLetters(_model.country)}.png',
-                                                            width: 30.0,
-                                                            height: 50.0,
-                                                            fit: BoxFit
-                                                                .scaleDown,
-                                                          ),
+                                                        Text(
+                                                          _model.country,
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                fontSize: 16.0,
+                                                              ),
                                                         ),
                                                         Text(
                                                           _model.countryName,
@@ -941,7 +940,7 @@ class _AuthCompleteProfile2WidgetState
                                                     _model.country =
                                                         getJsonField(
                                                       countryItemItem,
-                                                      r'''$.code''',
+                                                      r'''$.emoji''',
                                                     ).toString();
                                                   });
                                                   setState(() {
@@ -993,7 +992,12 @@ class _AuthCompleteProfile2WidgetState
                                                           ).toString(),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .bodyMedium,
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                fontSize: 16.0,
+                                                              ),
                                                         ),
                                                         Expanded(
                                                           child: Container(
