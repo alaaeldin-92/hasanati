@@ -11,7 +11,6 @@ import 'package:collection/collection.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'friends_model.dart';
@@ -128,6 +127,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                           _model.searchRes =
                                               await SearchFriendsCall.call(
                                             query: _model.textController.text,
+                                            filter:
+                                                'NOT username:  ${valueOrDefault(currentUserDocument?.username, '')}',
                                           );
                                           if ((_model.searchRes?.succeeded ??
                                               true)) {
@@ -186,6 +187,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                           .call(
                                                     query: _model
                                                         .textController.text,
+                                                    filter:
+                                                        'NOT username:  ${valueOrDefault(currentUserDocument?.username, '')}',
                                                   );
                                                   if ((_model.searchRes
                                                           ?.succeeded ??
@@ -383,9 +386,9 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                     children: [
                                                                       Container(
                                                                         width:
-                                                                            60.0,
+                                                                            50.0,
                                                                         height:
-                                                                            60.0,
+                                                                            55.0,
                                                                         child:
                                                                             Stack(
                                                                           children: [
@@ -407,8 +410,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                             Align(
                                                                               alignment: AlignmentDirectional(1.00, 1.00),
                                                                               child: Container(
-                                                                                width: 30.0,
-                                                                                height: 30.0,
+                                                                                width: 25.0,
+                                                                                height: 25.0,
                                                                                 decoration: BoxDecoration(
                                                                                   borderRadius: BorderRadius.circular(100.0),
                                                                                 ),
@@ -419,8 +422,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                       searchHitItem,
                                                                                       r'''$.nationality''',
                                                                                     ).toString()}.png',
-                                                                                    width: 30.0,
-                                                                                    height: 30.0,
+                                                                                    width: 25.0,
+                                                                                    height: 25.0,
                                                                                     fit: BoxFit.contain,
                                                                                   ),
                                                                                 ),
@@ -444,13 +447,32 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                             mainAxisAlignment:
                                                                                 MainAxisAlignment.spaceBetween,
                                                                             children: [
-                                                                              Expanded(
-                                                                                child: Html(
-                                                                                  data: getJsonField(
-                                                                                    searchHitItem,
-                                                                                    r'''$._highlightResult.display_name.value''',
-                                                                                  ).toString(),
-                                                                                ),
+                                                                              Column(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                children: [
+                                                                                  Text(
+                                                                                    getJsonField(
+                                                                                      searchHitItem,
+                                                                                      r'''$.username''',
+                                                                                    ).toString(),
+                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                          fontFamily: 'Readex Pro',
+                                                                                          fontWeight: FontWeight.w500,
+                                                                                        ),
+                                                                                  ),
+                                                                                  Text(
+                                                                                    getJsonField(
+                                                                                      searchHitItem,
+                                                                                      r'''$.display_name''',
+                                                                                    ).toString(),
+                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                          fontFamily: 'Readex Pro',
+                                                                                          color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                          fontSize: 12.0,
+                                                                                        ),
+                                                                                  ),
+                                                                                ].divide(SizedBox(height: 2.5)),
                                                                               ),
                                                                             ],
                                                                           ),
@@ -612,7 +634,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                       ),
                                                                     ].divide(SizedBox(
                                                                         width:
-                                                                            10.0)),
+                                                                            12.5)),
                                                                   ),
                                                                 ),
                                                               ),
