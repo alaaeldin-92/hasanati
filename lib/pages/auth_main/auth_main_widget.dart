@@ -533,18 +533,25 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         .primaryText,
                                                     size: 24.0,
                                                   ),
-                                                  Text(
-                                                    _model.authErrorSignIn!,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                        ),
+                                                  Expanded(
+                                                    child: Container(
+                                                      decoration:
+                                                          BoxDecoration(),
+                                                      child: Text(
+                                                        _model.authErrorSignIn!,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                ),
+                                                      ),
+                                                    ),
                                                   ),
                                                 ].divide(SizedBox(width: 10.0)),
                                               ),
@@ -1304,18 +1311,25 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         .primaryText,
                                                     size: 24.0,
                                                   ),
-                                                  Text(
-                                                    _model.authErrorSignUp,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                        ),
+                                                  Expanded(
+                                                    child: Container(
+                                                      decoration:
+                                                          BoxDecoration(),
+                                                      child: Text(
+                                                        _model.authErrorSignUp,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                ),
+                                                      ),
+                                                    ),
                                                   ),
                                                 ].divide(SizedBox(width: 10.0)),
                                               ),

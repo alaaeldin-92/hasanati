@@ -64,7 +64,7 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Align(
                 alignment: AlignmentDirectional(-1.00, 0.00),
