@@ -707,7 +707,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    '38fl7cd4' /* No Notifications */,
+                                    '99ma0su5' /* No Notifications */,
                                   ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
@@ -722,7 +722,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'hakvzo4l' /* You currently have no notifica... */,
+                                      'ajqwhbrp' /* You currently have no notifica... */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
