@@ -105,11 +105,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'Login',
-          path: '/login',
-          builder: (context, params) => LoginWidget(),
-        ),
-        FFRoute(
           name: 'SearchQuran',
           path: '/searchQuran',
           builder: (context, params) => SearchQuranWidget(),

@@ -121,7 +121,6 @@ final parametersBuilderMap =
           'surahName': getParameter<String>(data, 'surahName'),
         },
       ),
-  'Login': ParameterData.none(),
   'SearchQuran': ParameterData.none(),
   'Settings': ParameterData.none(),
   'Leaderboard': ParameterData.none(),

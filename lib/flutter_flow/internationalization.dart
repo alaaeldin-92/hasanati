@@ -207,49 +207,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'بيت',
     },
   },
-  // Login
-  {
-    'xp7os8yn': {
-      'en': 'Sign In',
-      'ar': 'تسجيل الدخول',
-    },
-    'd7ldx561': {
-      'en': 'Use the account below to sign in.',
-      'ar': 'استخدم الحساب أدناه لتسجيل الدخول.',
-    },
-    'rw543b69': {
-      'en': 'Email',
-      'ar': 'بريد إلكتروني',
-    },
-    'w99btm5c': {
-      'en': 'Password',
-      'ar': 'كلمة المرور',
-    },
-    'yayu6o9t': {
-      'en': 'Sign In',
-      'ar': 'تسجيل الدخول',
-    },
-    'mng0yqpt': {
-      'en': 'Forgot Password',
-      'ar': 'هل نسيت كلمة السر',
-    },
-    'vc4hgsfe': {
-      'en': 'Or sign up with',
-      'ar': 'أو قم بالتسجيل مع',
-    },
-    'jziep71b': {
-      'en': 'Continue with Google',
-      'ar': 'تواصل مع جوجل',
-    },
-    'tok9tzr5': {
-      'en': 'Continue with Apple',
-      'ar': 'تواصل مع أبل',
-    },
-    '5my8x6bo': {
-      'en': 'Home',
-      'ar': 'بيت',
-    },
-  },
   // SearchQuran
   {
     's88aebgs': {
@@ -1401,6 +1358,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '37mikjdi': {
       'en': 'Accept',
+      'ar': '',
+    },
+    '3qcpz9zy': {
+      'en': 'No Notifications',
+      'ar': '',
+    },
+    '4ilvut69': {
+      'en':
+          'You currently have no notifications. Come back again some other time.',
       'ar': '',
     },
     '97vd0np7': {
