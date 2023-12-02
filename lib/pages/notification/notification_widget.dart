@@ -556,7 +556,49 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                   ),
                                                   FFButtonWidget(
                                                     onPressed: () async {
-                                                      _model.toUpdateRef =
+                                                      await currentUserReference!
+                                                          .update({
+                                                        ...mapToFirestore(
+                                                          {
+                                                            'friends': FieldValue
+                                                                .arrayUnion([
+                                                              containerUsersRecord
+                                                                  ?.uid
+                                                            ]),
+                                                          },
+                                                        ),
+                                                      });
+
+                                                      await containerUsersRecord!
+                                                          .reference
+                                                          .update({
+                                                        ...mapToFirestore(
+                                                          {
+                                                            'friends': FieldValue
+                                                                .arrayUnion([
+                                                              currentUserUid
+                                                            ]),
+                                                          },
+                                                        ),
+                                                      });
+                                                      triggerPushNotification(
+                                                        notificationTitle:
+                                                            'Hasanati',
+                                                        notificationText:
+                                                            '${currentUserDisplayName} has accepted your friend request',
+                                                        notificationImageUrl:
+                                                            'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                        notificationSound:
+                                                            'default',
+                                                        userRefs: [
+                                                          containerUsersRecord!
+                                                              .reference
+                                                        ],
+                                                        initialPageName:
+                                                            'Friends',
+                                                        parameterData: {},
+                                                      );
+                                                      _model.toDeleteRef =
                                                           await queryFriendRequestNotificationRecordOnce(
                                                         queryBuilder:
                                                             (friendRequestNotificationRecord) =>
@@ -575,30 +617,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                         singleRecord: true,
                                                       ).then((s) =>
                                                               s.firstOrNull);
-
-                                                      await _model.toUpdateRef!
+                                                      await _model.toDeleteRef!
                                                           .reference
-                                                          .update(
-                                                              createFriendRequestNotificationRecordData(
-                                                        accepted: true,
-                                                      ));
-                                                      triggerPushNotification(
-                                                        notificationTitle:
-                                                            'Hasanati',
-                                                        notificationText:
-                                                            '${currentUserDisplayName} has accepted your friend request',
-                                                        notificationImageUrl:
-                                                            'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
-                                                        notificationSound:
-                                                            'default',
-                                                        userRefs: [
-                                                          containerUsersRecord!
-                                                              .reference
-                                                        ],
-                                                        initialPageName:
-                                                            'Friends',
-                                                        parameterData: {},
-                                                      );
+                                                          .delete();
 
                                                       setState(() {});
                                                     },
@@ -686,7 +707,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    '3qcpz9zy' /* No Notifications */,
+                                    '38fl7cd4' /* No Notifications */,
                                   ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
@@ -701,7 +722,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      '4ilvut69' /* You currently have no notifica... */,
+                                      'hakvzo4l' /* You currently have no notifica... */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
@@ -716,7 +737,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                 ),
                               ].divide(SizedBox(height: 5.0)),
                             ),
-                          ].divide(SizedBox(height: 10.0)),
+                          ].divide(SizedBox(height: 15.0)),
                         ),
                       ),
                     ),

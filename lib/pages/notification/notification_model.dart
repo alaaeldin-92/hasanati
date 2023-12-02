@@ -19,7 +19,7 @@ class NotificationModel extends FlutterFlowModel<NotificationWidget> {
 
   final unfocusNode = FocusNode();
   // Stores action output result for [Firestore Query - Query a collection] action in Button widget.
-  FriendRequestNotificationRecord? toUpdateRef;
+  FriendRequestNotificationRecord? toDeleteRef;
 
   /// Initialization and disposal methods.
 
