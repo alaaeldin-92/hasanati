@@ -1,7 +1,6 @@
 // Export pages
 export '/pages/home/home_widget.dart' show HomeWidget;
 export '/pages/quran_ayah/quran_ayah_widget.dart' show QuranAyahWidget;
-export '/pages/login/login_widget.dart' show LoginWidget;
 export '/pages/search_quran/search_quran_widget.dart' show SearchQuranWidget;
 export '/pages/settings/settings_widget.dart' show SettingsWidget;
 export '/pages/leaderboard/leaderboard_widget.dart' show LeaderboardWidget;
