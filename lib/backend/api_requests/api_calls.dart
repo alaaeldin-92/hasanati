@@ -223,11 +223,10 @@ class SearchFriendsCall {
   static Future<ApiCallResponse> call({
     String? query = 'Alaa',
     String? filter = '',
-    String? attributesToHighlight = '[]',
   }) async {
     final ffApiRequestBody = '''
 {
-  "params": "query=${query}&filters=${filter}&attributesToHighlight=${attributesToHighlight}"
+  "params": "query=${query}&filters=${filter}&attributesToHighlight=<attributesToHighlight>"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Search Friends',

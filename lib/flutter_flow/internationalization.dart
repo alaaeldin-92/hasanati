@@ -1364,11 +1364,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Accept',
       'ar': '',
     },
-    'idq7lfve': {
+    'a8soznh9': {
       'en': 'No Notifications',
       'ar': '',
     },
-    '9pn9ziyn': {
+    '5i7vksu8': {
       'en':
           'You currently have no notifications. Come back again some other time.',
       'ar': '',
