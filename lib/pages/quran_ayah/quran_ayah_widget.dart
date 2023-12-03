@@ -520,8 +520,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       _model.soundPlayer!
                                                           .setUrl(
                                                               'https://verses.quran.com/${getJsonField(
-                                                            quranAyahQuranFontImlaeiResponse
-                                                                .jsonBody,
+                                                            (_model.audioJSON
+                                                                    ?.jsonBody ??
+                                                                ''),
                                                             r'''$.audio_files[:].url''',
                                                           ).toString()}')
                                                           .then((_) => _model
@@ -532,16 +533,15 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           await actions
                                                               .getAudioLength(
                                                         'https://verses.quran.com/${getJsonField(
-                                                          quranAyahQuranFontImlaeiResponse
-                                                              .jsonBody,
+                                                          (_model.audioJSON
+                                                                  ?.jsonBody ??
+                                                              ''),
                                                           r'''$.audio_files[:].url''',
                                                         ).toString()}',
                                                       );
                                                       setState(() {
                                                         _model.audioDuration =
                                                             _model.duration;
-                                                      });
-                                                      setState(() {
                                                         _model.audioPlaying =
                                                             true;
                                                       });
@@ -565,8 +565,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       setState(() {
                                                         _model.audioPlaying =
                                                             false;
-                                                      });
-                                                      setState(() {
                                                         _model.timeCounter =
                                                             0.0;
                                                       });
@@ -908,34 +906,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                         Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
-                                                  0.85,
-                                          height: 20.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0x65E6E6E6),
-                                          ),
-                                        ),
-                                        Container(
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  0.8,
-                                          height: 20.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0x65E6E6E6),
-                                          ),
-                                        ),
-                                      ].divide(SizedBox(height: 10.0)),
-                                    ),
-                                  if (_model.pageLoading)
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
                                                   1.0,
                                           height: 20.0,
                                           decoration: BoxDecoration(
@@ -945,16 +915,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                         Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
-                                                  0.85,
-                                          height: 20.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0x65E6E6E6),
-                                          ),
-                                        ),
-                                        Container(
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  0.8,
+                                                  1.0,
                                           height: 20.0,
                                           decoration: BoxDecoration(
                                             color: Color(0x65E6E6E6),

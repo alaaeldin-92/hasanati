@@ -63,6 +63,8 @@ class QuranPageModel extends FlutterFlowModel<QuranPageWidget> {
 
   bool pageLoading = true;
 
+  bool audioLoading = true;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -77,10 +79,14 @@ class QuranPageModel extends FlutterFlowModel<QuranPageWidget> {
   AudioPlayer? soundPlayer;
   // Stores action output result for [Custom Action - getAudioLength] action in Container widget.
   double? durationSingle;
+  // State field(s) for Loading widget.
+  late bool loadingStatus;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    loadingStatus = false;
+  }
 
   void dispose() {
     unfocusNode.dispose();

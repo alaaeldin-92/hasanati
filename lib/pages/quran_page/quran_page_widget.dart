@@ -434,6 +434,14 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                           highlightColor: Colors
                                                               .transparent,
                                                           onTap: () async {
+                                                            setState(() => _model
+                                                                    .loadingStatus =
+                                                                !_model
+                                                                    .loadingStatus);
+                                                            setState(() {
+                                                              _model.audioLoading =
+                                                                  true;
+                                                            });
                                                             _model.audioPageJSON =
                                                                 await VerseAudioPageCall
                                                                     .call(
@@ -465,7 +473,13 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                               );
                                                               _model.tempCounter =
                                                                   0;
+                                                              _model.audioLoading =
+                                                                  false;
                                                             });
+                                                            setState(() => _model
+                                                                    .loadingStatus =
+                                                                !_model
+                                                                    .loadingStatus);
                                                             while (_model
                                                                     .audioIndexForPage <
                                                                 _model
@@ -552,6 +566,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                                   0.0;
                                                               _model.audioIndexForPage =
                                                                   0;
+                                                              _model.audioSingleDuration =
+                                                                  0.0;
                                                             });
 
                                                             setState(() {});
@@ -636,6 +652,14 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                             size: 24.0,
                                                           ),
                                                         ),
+                                                      if (_model.audioLoading)
+                                                        Lottie.asset(
+                                                            'assets/lottie_animations/Animation_-_1701617942129.json',
+                                                            width: 40.0,
+                                                            height: 40.0,
+                                                            fit: BoxFit.cover,
+                                                            animate: _model
+                                                                .loadingStatus),
                                                     ],
                                                   ),
                                                 ),
@@ -844,7 +868,22 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                               ),
                                             ),
                                           ),
-                                        if (_model.pageLoading)
+                                        if ((functions.concatenatVersesTextWithNum(
+                                                        quranPageQuranFontImlaeiPageResponse
+                                                            .jsonBody) !=
+                                                    null &&
+                                                functions.concatenatVersesTextWithNum(
+                                                        quranPageQuranFontImlaeiPageResponse
+                                                            .jsonBody) !=
+                                                    '') &&
+                                            (functions.getConcatenatedText(
+                                                        stackQuranTranslationPageResponse
+                                                            .bodyText) !=
+                                                    null &&
+                                                functions.getConcatenatedText(
+                                                        stackQuranTranslationPageResponse
+                                                            .bodyText) !=
+                                                    ''))
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -866,36 +905,6 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                 width:
                                                     MediaQuery.sizeOf(context)
                                                             .width *
-                                                        0.85,
-                                                height: 20.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0x65E6E6E6),
-                                                ),
-                                              ),
-                                              Container(
-                                                width:
-                                                    MediaQuery.sizeOf(context)
-                                                            .width *
-                                                        0.8,
-                                                height: 20.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0x65E6E6E6),
-                                                ),
-                                              ),
-                                            ].divide(SizedBox(height: 10.0)),
-                                          ),
-                                        if (_model.pageLoading)
-                                          Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Container(
-                                                width:
-                                                    MediaQuery.sizeOf(context)
-                                                            .width *
                                                         1.0,
                                                 height: 20.0,
                                                 decoration: BoxDecoration(
@@ -906,17 +915,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                 width:
                                                     MediaQuery.sizeOf(context)
                                                             .width *
-                                                        0.85,
-                                                height: 20.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0x65E6E6E6),
-                                                ),
-                                              ),
-                                              Container(
-                                                width:
-                                                    MediaQuery.sizeOf(context)
-                                                            .width *
-                                                        0.8,
+                                                        1.0,
                                                 height: 20.0,
                                                 decoration: BoxDecoration(
                                                   color: Color(0x65E6E6E6),
