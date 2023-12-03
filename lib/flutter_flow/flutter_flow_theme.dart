@@ -181,51 +181,51 @@ class ThemeTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Outfit';
-  TextStyle get displayLarge => GoogleFonts.getFont(
-        'Outfit',
+  String get displayLargeFamily => 'CriqueGrotesk';
+  TextStyle get displayLarge => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 64.0,
       );
-  String get displayMediumFamily => 'Outfit';
-  TextStyle get displayMedium => GoogleFonts.getFont(
-        'Outfit',
+  String get displayMediumFamily => 'CriqueGrotesk';
+  TextStyle get displayMedium => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 44.0,
       );
-  String get displaySmallFamily => 'Outfit';
-  TextStyle get displaySmall => GoogleFonts.getFont(
-        'Outfit',
+  String get displaySmallFamily => 'CriqueGrotesk';
+  TextStyle get displaySmall => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
-  String get headlineLargeFamily => 'Outfit';
-  TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Outfit',
+  String get headlineLargeFamily => 'CriqueGrotesk';
+  TextStyle get headlineLarge => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Outfit';
-  TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Outfit',
+  String get headlineMediumFamily => 'CriqueGrotesk';
+  TextStyle get headlineMedium => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get headlineSmallFamily => 'Outfit';
-  TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Outfit',
+  String get headlineSmallFamily => 'CriqueGrotesk';
+  TextStyle get headlineSmall => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Outfit';
-  TextStyle get titleLarge => GoogleFonts.getFont(
-        'Outfit',
+  String get titleLargeFamily => 'CriqueGrotesk';
+  TextStyle get titleLarge => TextStyle(
+        fontFamily: 'CriqueGrotesk',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,

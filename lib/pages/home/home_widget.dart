@@ -907,12 +907,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'CriqueGrotesk',
                                                                   fontSize:
                                                                       18.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                           Icon(
@@ -1183,10 +1185,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Readex Pro',
+                                                            'CriqueGrotesk',
                                                         fontSize: 18.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Row(
@@ -1620,11 +1623,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'CriqueGrotesk',
                                                                 fontSize: 18.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                         if (!_model

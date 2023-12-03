@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
+import '/components/reciter_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -18,6 +19,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'quran_page_model.dart';
 export 'quran_page_model.dart';
 
@@ -331,8 +333,37 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                           ),
                                         ),
                                       ),
-                                      Opacity(
-                                        opacity: 0.2,
+                                      InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          await showModalBottomSheet(
+                                            isScrollControlled: true,
+                                            backgroundColor: Colors.transparent,
+                                            context: context,
+                                            builder: (context) {
+                                              return WebViewAware(
+                                                  child: GestureDetector(
+                                                onTap: () => _model.unfocusNode
+                                                        .canRequestFocus
+                                                    ? FocusScope.of(context)
+                                                        .requestFocus(
+                                                            _model.unfocusNode)
+                                                    : FocusScope.of(context)
+                                                        .unfocus(),
+                                                child: Padding(
+                                                  padding:
+                                                      MediaQuery.viewInsetsOf(
+                                                          context),
+                                                  child: ReciterWidget(),
+                                                ),
+                                              ));
+                                            },
+                                          ).then(
+                                              (value) => safeSetState(() {}));
+                                        },
                                         child: FaIcon(
                                           FontAwesomeIcons.ellipsisH,
                                           color: Colors.white,
@@ -423,12 +454,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                               _model.audioDuration =
                                                                   _model
                                                                       .totalDuration;
-                                                            });
-                                                            setState(() {
                                                               _model.audioPlaying =
                                                                   true;
-                                                            });
-                                                            setState(() {
                                                               _model.totalRecords =
                                                                   getJsonField(
                                                                 (_model.audioPageJSON
@@ -436,19 +463,13 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                                     ''),
                                                                 r'''$.pagination.total_records''',
                                                               );
-                                                            });
-                                                            setState(() {
                                                               _model.tempCounter =
                                                                   0;
                                                             });
                                                             while (_model
                                                                     .audioIndexForPage <
-                                                                getJsonField(
-                                                                  (_model.audioPageJSON
-                                                                          ?.jsonBody ??
-                                                                      ''),
-                                                                  r'''$.pagination.total_records''',
-                                                                )) {
+                                                                _model
+                                                                    .totalRecords) {
                                                               _model.soundPlayer ??=
                                                                   AudioPlayer();
                                                               if (_model
@@ -527,21 +548,39 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                             setState(() {
                                                               _model.audioPlaying =
                                                                   false;
-                                                            });
-                                                            setState(() {
                                                               _model.timeCounter =
                                                                   0.0;
+                                                              _model.audioIndexForPage =
+                                                                  0;
                                                             });
-                                                            _model.audioIndexForPage =
-                                                                0;
 
                                                             setState(() {});
                                                           },
-                                                          child: Icon(
-                                                            Icons.play_arrow,
-                                                            color: Color(
-                                                                0xFF2F2F2F),
-                                                            size: 24.0,
+                                                          child: Container(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: Color(
+                                                                  0xFF009BDF),
+                                                              shape: BoxShape
+                                                                  .circle,
+                                                            ),
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          5.0,
+                                                                          5.0,
+                                                                          5.0,
+                                                                          5.0),
+                                                              child: Icon(
+                                                                Icons
+                                                                    .play_arrow,
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
+                                                                size: 24.0,
+                                                              ),
+                                                            ),
                                                           ),
                                                         ),
                                                       if (_model.audioPlaying)
