@@ -74,11 +74,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             backgroundColor: Color(0xFF009BDD),
             body: Center(
               child: SizedBox(
-                width: 50.0,
-                height: 50.0,
+                width: 45.0,
+                height: 45.0,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
-                    FlutterFlowTheme.of(context).primary,
+                    Color(0xFF009BDF),
                   ),
                 ),
               ),
@@ -177,15 +177,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                           if (!snapshot.hasData) {
                                             return Center(
                                               child: SizedBox(
-                                                width: 50.0,
-                                                height: 50.0,
+                                                width: 45.0,
+                                                height: 45.0,
                                                 child:
                                                     CircularProgressIndicator(
                                                   valueColor:
                                                       AlwaysStoppedAnimation<
                                                           Color>(
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                                    Color(0xFF009BDF),
                                                   ),
                                                 ),
                                               ),
@@ -591,16 +590,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                       firstPageProgressIndicatorBuilder:
                                                           (_) => Center(
                                                         child: SizedBox(
-                                                          width: 50.0,
-                                                          height: 50.0,
+                                                          width: 45.0,
+                                                          height: 45.0,
                                                           child:
                                                               CircularProgressIndicator(
                                                             valueColor:
                                                                 AlwaysStoppedAnimation<
                                                                     Color>(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .primary,
+                                                              Color(0xFF009BDF),
                                                             ),
                                                           ),
                                                         ),
@@ -609,16 +606,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                       newPageProgressIndicatorBuilder:
                                                           (_) => Center(
                                                         child: SizedBox(
-                                                          width: 50.0,
-                                                          height: 50.0,
+                                                          width: 45.0,
+                                                          height: 45.0,
                                                           child:
                                                               CircularProgressIndicator(
                                                             valueColor:
                                                                 AlwaysStoppedAnimation<
                                                                     Color>(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .primary,
+                                                              Color(0xFF009BDF),
                                                             ),
                                                           ),
                                                         ),

@@ -55,7 +55,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
         });
       }
 
-      FFAppState().quranVerseTraverseUpdated = true;
+      FFAppState().quranPageTraverseUpdated = true;
       await _model.updateMemorized(context);
       setState(() {
         _model.pageLoading = false;
@@ -102,11 +102,11 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             body: Center(
               child: SizedBox(
-                width: 50.0,
-                height: 50.0,
+                width: 45.0,
+                height: 45.0,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
-                    FlutterFlowTheme.of(context).primary,
+                    Color(0xFF009BDF),
                   ),
                 ),
               ),
@@ -132,11 +132,11 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                   if (!snapshot.hasData) {
                     return Center(
                       child: SizedBox(
-                        width: 50.0,
-                        height: 50.0,
+                        width: 45.0,
+                        height: 45.0,
                         child: CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation<Color>(
-                            FlutterFlowTheme.of(context).primary,
+                            Color(0xFF009BDF),
                           ),
                         ),
                       ),
