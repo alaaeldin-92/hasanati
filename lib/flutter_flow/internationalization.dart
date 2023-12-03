@@ -216,6 +216,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'View Profile',
       'ar': 'قيم التطبيق',
     },
+    '1tfg3mbz': {
+      'en': 'Default Reciter',
+      'ar': 'قيم التطبيق',
+    },
     '3hrx4l26': {
       'en': 'Dark Mode',
       'ar': 'الوضع المظلم',
@@ -1374,47 +1378,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Reciter
   {
-    'q6w5hi5e': {
+    '5jl4mvut': {
       'en': 'Choose A Reciter',
       'ar': '',
     },
-    '726bupxv': {
+    '2llll49t': {
       'en': 'Al-Minshawi\n(Murattal)',
       'ar': '',
     },
-    's1hh7774': {
+    'dgwtluow': {
       'en': 'Mishary\nAl-Afasy',
       'ar': '',
     },
-    's4g8zg9a': {
+    'xtgt1zs7': {
       'en': 'Abu Bakr\nAl-Shatri',
       'ar': '',
     },
-    'f1fop04g': {
+    '3bu1d9re': {
       'en': 'Abdurahm-\nan Sudais',
       'ar': '',
     },
-    'aryb0j5j': {
+    'pylqu0if': {
       'en': 'Al-Husary\n(Muallim)',
       'ar': '',
     },
-    '05a7uuz0': {
+    'klicqr33': {
       'en': 'Al-Minshawi\n(Mujawwad)',
       'ar': '',
     },
-    'hjaaebof': {
+    'j0qfn6lb': {
       'en': 'Al-Husary\n(Muallim)',
       'ar': '',
     },
-    '9otaf5mp': {
+    '5aecbocb': {
       'en': 'Hani \nAr-Rifai',
       'ar': '',
     },
-    '85961tst': {
+    'i2z0rbt5': {
       'en': 'Saud Ash-\nShuraym',
       'ar': '',
     },
-    '6fakdjfb': {
+    'fedoy116': {
       'en': 'Mohamed \nAl-Tablawi',
       'ar': '',
     },

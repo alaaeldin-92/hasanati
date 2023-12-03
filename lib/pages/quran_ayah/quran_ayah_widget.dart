@@ -176,6 +176,10 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
+                                        if (_model.audioPlaying) {
+                                          _model.soundPlayer?.stop();
+                                        }
+
                                         context.pushNamed('Home');
 
                                         _model.syncQuranPerformance =
@@ -567,9 +571,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                               if (_model.audioLoading)
                                                 Lottie.asset(
                                                     'assets/lottie_animations/Animation_-_1701617942129.json',
-                                                    width: 40.0,
-                                                    height: 40.0,
-                                                    fit: BoxFit.cover,
+                                                    width: 45.0,
+                                                    height: 45.0,
+                                                    fit: BoxFit.contain,
                                                     animate:
                                                         _model.loadingStatus),
                                             ],
@@ -636,6 +640,12 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
+                                                          if (_model
+                                                              .audioPlaying) {
+                                                            _model.soundPlayer
+                                                                ?.stop();
+                                                          }
+
                                                           context.pushNamed(
                                                             'QuranPage',
                                                             queryParameters: {
@@ -1045,6 +1055,10 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                               .quranLastReadVerse =
                                                           '${_model.surahID?.toString()}:${_model.verseID?.toString()}';
                                                     });
+                                                    if (_model.audioPlaying) {
+                                                      _model.soundPlayer
+                                                          ?.stop();
+                                                    }
                                                   },
                                           ),
                                         ),
@@ -1170,6 +1184,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                         .quranLastReadVerse =
                                                     '${_model.surahID?.toString()}:${_model.verseID?.toString()}';
                                               });
+                                              if (_model.audioPlaying) {
+                                                _model.soundPlayer?.stop();
+                                              }
                                             },
                                           ),
                                         ),

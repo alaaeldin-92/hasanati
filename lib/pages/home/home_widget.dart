@@ -18,6 +18,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'home_model.dart';
@@ -226,6 +227,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   highlightColor:
                                                       Colors.transparent,
                                                   onTap: () async {
+                                                    if (_model
+                                                        .verseOfTheDayAudioPlaying) {
+                                                      _model.soundPlayer
+                                                          ?.stop();
+                                                    }
+
                                                     context.pushNamed(
                                                       'Notification',
                                                       extra: <String, dynamic>{
@@ -340,7 +347,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           children: [
                                             Expanded(
                                               child: Container(
-                                                height: 100.0,
+                                                height: 90.0,
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(
                                                           context)
@@ -366,7 +373,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Container(
-                                                          height: 100.0,
                                                           decoration:
                                                               BoxDecoration(
                                                             color: FlutterFlowTheme
@@ -388,42 +394,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                children: [
-                                                                  FaIcon(
-                                                                    FontAwesomeIcons
-                                                                        .book,
-                                                                    color: Color(
-                                                                        0xFF009BDD),
-                                                                    size: 18.0,
-                                                                  ),
-                                                                  Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      '7vnikd59' /* Quran Completion */,
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Readex Pro',
-                                                                          color:
-                                                                              Color(0xFF007BAF),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w600,
-                                                                        ),
-                                                                  ),
-                                                                ].divide(SizedBox(
-                                                                    width:
-                                                                        8.0)),
-                                                              ),
-                                                              Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
                                                                 mainAxisAlignment:
                                                                     MainAxisAlignment
                                                                         .spaceBetween,
@@ -433,26 +403,26 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                         MainAxisSize
                                                                             .max,
                                                                     children: [
-                                                                      Icon(
-                                                                        Icons
-                                                                            .check,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryText,
+                                                                      FaIcon(
+                                                                        FontAwesomeIcons
+                                                                            .book,
+                                                                        color: Color(
+                                                                            0xFF009BDD),
                                                                         size:
                                                                             18.0,
                                                                       ),
                                                                       Text(
-                                                                        '${valueOrDefault<String>(
-                                                                          functions
-                                                                              .formatNumber(FFAppState().quranVersesRead),
-                                                                          '0',
-                                                                        )} verses',
+                                                                        FFLocalizations.of(context)
+                                                                            .getText(
+                                                                          '7vnikd59' /* Quran Completion */,
+                                                                        ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
                                                                               fontFamily: 'Readex Pro',
-                                                                              color: FlutterFlowTheme.of(context).primaryText,
-                                                                              fontSize: 12.0,
+                                                                              color: Color(0xFF007BAF),
+                                                                              fontSize: 14.0,
+                                                                              fontWeight: FontWeight.w600,
                                                                             ),
                                                                       ),
                                                                     ].divide(SizedBox(
@@ -460,7 +430,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                             5.0)),
                                                                   ),
                                                                   Text(
-                                                                    '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}% completed',
+                                                                    '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}%',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -471,6 +441,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                           fontSize:
                                                                               12.0,
+                                                                          fontWeight:
+                                                                              FontWeight.w600,
                                                                         ),
                                                                   ),
                                                                 ],
@@ -510,47 +482,55 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                         ),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      width: 100.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x25009BDD),
-                                                        borderRadius:
-                                                            BorderRadius.only(
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  50.0),
-                                                          bottomRight:
-                                                              Radius.circular(
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  15.0,
                                                                   0.0),
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  50.0),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  0.0),
+                                                      child: Container(
+                                                        width: 100.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      0.0),
+                                                          shape: BoxShape
+                                                              .rectangle,
                                                         ),
-                                                        shape:
-                                                            BoxShape.rectangle,
-                                                      ),
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                        child: Image.asset(
-                                                          'assets/images/blue.png',
-                                                          width: 140.0,
-                                                          height:
-                                                              MediaQuery.sizeOf(
-                                                                          context)
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      5.0,
+                                                                      5.0,
+                                                                      5.0,
+                                                                      5.0),
+                                                          child: ClipRRect(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        8.0),
+                                                            child: Image.asset(
+                                                              'assets/images/blue.png',
+                                                              width: 130.0,
+                                                              height: MediaQuery
+                                                                          .sizeOf(
+                                                                              context)
                                                                       .height *
                                                                   1.0,
-                                                          fit: BoxFit.contain,
+                                                              fit: BoxFit
+                                                                  .contain,
+                                                            ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 25.0)),
+                                                      SizedBox(width: 15.0)),
                                                 ),
                                               ),
                                             ),
@@ -573,6 +553,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
+                                        if (_model.verseOfTheDayAudioPlaying) {
+                                          _model.soundPlayer?.stop();
+                                        }
+
                                         context.pushNamed(
                                           'QuranPage',
                                           queryParameters: {
@@ -683,6 +667,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
+                                        if (_model.verseOfTheDayAudioPlaying) {
+                                          _model.soundPlayer?.stop();
+                                        }
+
                                         context.pushNamed(
                                           'QuranAyah',
                                           queryParameters: {
@@ -1061,6 +1049,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 Colors
                                                                     .transparent,
                                                             onTap: () async {
+                                                              if (_model
+                                                                  .verseOfTheDayAudioPlaying) {
+                                                                _model
+                                                                    .soundPlayer
+                                                                    ?.stop();
+                                                              }
+
                                                               context.pushNamed(
                                                                 'Profile',
                                                                 queryParameters:
@@ -1374,6 +1369,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           .transparent,
                                                                   onTap:
                                                                       () async {
+                                                                    if (_model
+                                                                        .verseOfTheDayAudioPlaying) {
+                                                                      _model
+                                                                          .soundPlayer
+                                                                          ?.stop();
+                                                                    }
+
                                                                     context
                                                                         .pushNamed(
                                                                       'QuranAyah',
@@ -1872,7 +1874,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             crossAxisAlignment:
-                                                                                CrossAxisAlignment.center,
+                                                                                CrossAxisAlignment.start,
                                                                             children:
                                                                                 [
                                                                               Container(
@@ -1881,22 +1883,35 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                   borderRadius: BorderRadius.circular(100.0),
                                                                                 ),
                                                                                 child: Stack(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(0.0, -1.0),
                                                                                   children: [
-                                                                                    if (!_model.verseOfTheDayAudioPlaying)
-                                                                                      Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                                                                                    if (!_model.verseOfTheDayAudioPlaying && !_model.audioLoading)
+                                                                                      Align(
+                                                                                        alignment: AlignmentDirectional(0.00, -1.00),
                                                                                         child: InkWell(
                                                                                           splashColor: Colors.transparent,
                                                                                           focusColor: Colors.transparent,
                                                                                           hoverColor: Colors.transparent,
                                                                                           highlightColor: Colors.transparent,
                                                                                           onTap: () async {
+                                                                                            setState(() => _model.loadingStatus = !_model.loadingStatus);
                                                                                             _model.audioJSON = await VerseAudioCall.call(
                                                                                               surahID: _model.verseOfTheDayChapter,
                                                                                               ayahID: _model.verseOfTheDayVerse,
-                                                                                              reciterID: 4,
+                                                                                              reciterID: FFAppState().reciterID,
                                                                                             );
+                                                                                            _model.duration = await actions.getAudioLength(
+                                                                                              'https://verses.quran.com/${getJsonField(
+                                                                                                (_model.audioJSON?.jsonBody ?? ''),
+                                                                                                r'''$.audio_files[:].url''',
+                                                                                              ).toString()}',
+                                                                                            );
+                                                                                            setState(() {
+                                                                                              _model.verseOfTheDayAudioDuration = _model.duration!;
+                                                                                              _model.verseOfTheDayAudioPlaying = true;
+                                                                                              _model.audioLoading = false;
+                                                                                            });
+                                                                                            setState(() => _model.loadingStatus = !_model.loadingStatus);
                                                                                             _model.soundPlayer ??= AudioPlayer();
                                                                                             if (_model.soundPlayer!.playing) {
                                                                                               await _model.soundPlayer!.stop();
@@ -1909,18 +1924,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                                 ).toString()}')
                                                                                                 .then((_) => _model.soundPlayer!.play());
 
-                                                                                            _model.duration = await actions.getAudioLength(
-                                                                                              'https://verses.quran.com/${getJsonField(
-                                                                                                (_model.audioJSON?.jsonBody ?? ''),
-                                                                                                r'''$.audio_files[:].url''',
-                                                                                              ).toString()}',
-                                                                                            );
-                                                                                            setState(() {
-                                                                                              _model.verseOfTheDayAudioDuration = _model.duration!;
-                                                                                            });
-                                                                                            setState(() {
-                                                                                              _model.verseOfTheDayAudioPlaying = true;
-                                                                                            });
                                                                                             while (_model.verseOfTheDayTimeCounter < _model.duration!) {
                                                                                               await Future.delayed(const Duration(milliseconds: 1000));
                                                                                               setState(() {
@@ -1940,22 +1943,21 @@ class _HomeWidgetState extends State<HomeWidget> {
 
                                                                                             setState(() {});
                                                                                           },
-                                                                                          child: Icon(
-                                                                                            Icons.play_arrow,
-                                                                                            color: FlutterFlowTheme.of(context).primaryText,
-                                                                                            size: 24.0,
+                                                                                          child: Container(
+                                                                                            decoration: BoxDecoration(
+                                                                                              color: Color(0xFF009BDF),
+                                                                                              shape: BoxShape.circle,
+                                                                                            ),
+                                                                                            child: Padding(
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+                                                                                              child: Icon(
+                                                                                                Icons.play_arrow,
+                                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                                size: 24.0,
+                                                                                              ),
+                                                                                            ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    if (_model.verseOfTheDayAudioPlaying)
-                                                                                      CircularPercentIndicator(
-                                                                                        percent: functions.divideDouble(_model.verseOfTheDayTimeCounter, _model.verseOfTheDayAudioDuration),
-                                                                                        radius: 22.5,
-                                                                                        lineWidth: 5.0,
-                                                                                        animation: false,
-                                                                                        animateFromLastPercent: true,
-                                                                                        progressColor: Color(0xFF009BDD),
-                                                                                        startAngle: 0.0,
                                                                                       ),
                                                                                     if (_model.verseOfTheDayAudioPlaying)
                                                                                       InkWell(
@@ -1972,12 +1974,27 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                             _model.verseOfTheDayTimeCounter = 0.0;
                                                                                           });
                                                                                         },
-                                                                                        child: Icon(
-                                                                                          Icons.pause_sharp,
-                                                                                          color: Color(0xFF009BDD),
-                                                                                          size: 24.0,
+                                                                                        child: Stack(
+                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                          children: [
+                                                                                            CircularPercentIndicator(
+                                                                                              percent: functions.divideDouble(_model.verseOfTheDayTimeCounter, _model.verseOfTheDayAudioDuration),
+                                                                                              radius: 22.5,
+                                                                                              lineWidth: 5.0,
+                                                                                              animation: false,
+                                                                                              animateFromLastPercent: true,
+                                                                                              progressColor: Color(0xFF009BDD),
+                                                                                              startAngle: 0.0,
+                                                                                            ),
+                                                                                            Icon(
+                                                                                              Icons.pause_sharp,
+                                                                                              color: Color(0xFF009BDD),
+                                                                                              size: 24.0,
+                                                                                            ),
+                                                                                          ],
                                                                                         ),
                                                                                       ),
+                                                                                    if (_model.audioLoading) Lottie.asset('assets/lottie_animations/Animation_-_1701617942129.json', width: 45.0, height: 45.0, fit: BoxFit.contain, animate: _model.loadingStatus),
                                                                                   ],
                                                                                 ),
                                                                               ),
@@ -2199,11 +2216,22 @@ class _HomeWidgetState extends State<HomeWidget> {
                   ],
                 ),
               ),
-              wrapWithModel(
-                model: _model.navbarModel,
-                updateCallback: () => setState(() {}),
-                child: NavbarWidget(
-                  selectedIndex: 1,
+              InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  if (_model.verseOfTheDayAudioPlaying) {
+                    _model.soundPlayer?.stop();
+                  }
+                },
+                child: wrapWithModel(
+                  model: _model.navbarModel,
+                  updateCallback: () => setState(() {}),
+                  child: NavbarWidget(
+                    selectedIndex: 1,
+                  ),
                 ),
               ),
             ],
