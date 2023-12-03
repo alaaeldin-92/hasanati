@@ -401,7 +401,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Stack(
                                             alignment:
@@ -713,7 +715,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(SizedBox(height: 5.0)),
+                                            ].divide(SizedBox(height: 10.0)),
                                           ),
                                           Container(
                                             decoration: BoxDecoration(),
