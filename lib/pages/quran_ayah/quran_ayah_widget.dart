@@ -53,23 +53,18 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       setState(() {
         _model.surahID = widget.surahID;
-      });
-      setState(() {
         _model.verseID = widget.ayahNumber;
-      });
-      setState(() {
         _model.versesCount = widget.versesCount;
-      });
-      setState(() {
         _model.surahName = widget.surahName!;
       });
       await _model.updateLikesAndMem(context);
       setState(() {});
       FFAppState().quranVerseTraverseUpdated = true;
+      FFAppState().stopTimers = false;
       setState(() {
         _model.pageLoading = false;
       });
-      while (true) {
+      while (!FFAppState().stopTimers) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
           FFAppState().quranTimeReadSec = FFAppState().quranTimeReadSec + 1;

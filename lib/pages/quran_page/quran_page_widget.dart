@@ -56,11 +56,14 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
       }
 
       FFAppState().quranPageTraverseUpdated = true;
+      setState(() {
+        FFAppState().stopTimers = false;
+      });
       await _model.updateMemorized(context);
       setState(() {
         _model.pageLoading = false;
       });
-      while (true) {
+      while (!FFAppState().stopTimers) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
           FFAppState().quranTimeReadSec = FFAppState().quranTimeReadSec + 1;
