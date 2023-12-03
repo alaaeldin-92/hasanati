@@ -70,7 +70,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        '6cpky3xr' /* Choose A Reciter */,
+                        'fc5g0wgi' /* Choose A Reciter */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
@@ -131,6 +131,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 9;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -168,7 +169,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'yg48gxfu' /* Al-Minshawi
+                              'flteu4zp' /* Al-Minshawi
 (Murattal) */
                               ,
                             ),
@@ -185,6 +186,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 7;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -222,7 +224,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'oe3axtct' /* Mishary
+                              'hivi8p91' /* Mishary
 Al-Afasy */
                               ,
                             ),
@@ -239,6 +241,7 @@ Al-Afasy */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 4;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -276,7 +279,7 @@ Al-Afasy */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '3cfy4o6v' /* Abu Bakr
+                              'rz7srozl' /* Abu Bakr
 Al-Shatri */
                               ,
                             ),
@@ -293,6 +296,7 @@ Al-Shatri */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 3;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -330,7 +334,7 @@ Al-Shatri */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              't5l1kzw1' /* Abdurahm-
+                              'f8hmy6dw' /* Abdurahm-
 an Sudais */
                               ,
                             ),
@@ -347,6 +351,7 @@ an Sudais */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 12;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -384,7 +389,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '483rze4d' /* Al-Husary
+                              '73rr9g0c' /* Al-Husary
 (Muallim) */
                               ,
                             ),
@@ -401,6 +406,7 @@ an Sudais */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 8;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -438,7 +444,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'm4uu7pet' /* Al-Minshawi
+                              '1pu13jva' /* Al-Minshawi
 (Mujawwad) */
                               ,
                             ),
@@ -455,6 +461,7 @@ an Sudais */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 12;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -492,7 +499,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '8nvelkqb' /* Al-Husary
+                              'ox200fku' /* Al-Husary
 (Muallim) */
                               ,
                             ),
@@ -509,6 +516,7 @@ an Sudais */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 5;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -546,7 +554,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '7pto5dsi' /* Hani 
+                              'y73amskl' /* Hani 
 Ar-Rifai */
                               ,
                             ),
@@ -563,6 +571,7 @@ Ar-Rifai */
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         FFAppState().reciterID = 10;
+                        Navigator.pop(context);
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -600,8 +609,63 @@ Ar-Rifai */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'qxv89br6' /* Saud Ash-
+                              'j2znixzi' /* Saud Ash-
 Shuraym */
+                              ,
+                            ),
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
+                          ),
+                        ].divide(SizedBox(height: 5.0)),
+                      ),
+                    ),
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        FFAppState().reciterID = 11;
+                        Navigator.pop(context);
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          if (FFAppState().reciterID == 11)
+                            Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    FlutterFlowTheme.of(context).primary,
+                                    FlutterFlowTheme.of(context).secondary
+                                  ],
+                                  stops: [0.0, 1.0],
+                                  begin: AlignmentDirectional(0.0, -1.0),
+                                  end: AlignmentDirectional(0, 1.0),
+                                ),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    3.0, 3.0, 3.0, 3.0),
+                                child: Container(
+                                  width: 60.0,
+                                  height: 60.0,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/hqdefault.jpg',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'v9lldci9' /* Mohamed 
+Al-Tablawi */
                               ,
                             ),
                             textAlign: TextAlign.center,
