@@ -66,11 +66,25 @@ class _ReciterWidgetState extends State<ReciterWidget> {
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 90.0,
+                      height: 7.5,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFCFCECE),
+                        borderRadius: BorderRadius.circular(100.0),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'fc5g0wgi' /* Choose A Reciter */,
+                        'lrg2hf7i' /* Choose A Reciter */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
@@ -136,40 +150,43 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          if (FFAppState().reciterID == 9)
-                            Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    FlutterFlowTheme.of(context).primary,
-                                    FlutterFlowTheme.of(context).secondary
-                                  ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(0.0, -1.0),
-                                  end: AlignmentDirectional(0, 1.0),
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    3.0, 3.0, 3.0, 3.0),
-                                child: Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  clipBehavior: Clip.antiAlias,
+                          Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              if (FFAppState().reciterID == 9)
+                                Container(
+                                  width: 66.0,
+                                  height: 66.0,
                                   decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        FlutterFlowTheme.of(context).primary,
+                                        FlutterFlowTheme.of(context).secondary
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Image.asset(
-                                    'assets/images/mohamed-siddiq-el-minshawi-profile.jpeg',
-                                    fit: BoxFit.cover,
-                                  ),
+                                ),
+                              Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/mohamed-siddiq-el-minshawi-profile.jpeg',
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                            ),
+                            ],
+                          ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'flteu4zp' /* Al-Minshawi
+                              'c2i7xq1x' /* Al-Minshawi
 (Murattal) */
                               ,
                             ),
@@ -191,40 +208,43 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          if (FFAppState().reciterID == 7)
-                            Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    FlutterFlowTheme.of(context).primary,
-                                    FlutterFlowTheme.of(context).secondary
-                                  ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(0.0, -1.0),
-                                  end: AlignmentDirectional(0, 1.0),
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    3.0, 3.0, 3.0, 3.0),
-                                child: Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  clipBehavior: Clip.antiAlias,
+                          Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              if (FFAppState().reciterID == 7)
+                                Container(
+                                  width: 66.0,
+                                  height: 66.0,
                                   decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        FlutterFlowTheme.of(context).primary,
+                                        FlutterFlowTheme.of(context).secondary
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Image.asset(
-                                    'assets/images/Mishary.jpg',
-                                    fit: BoxFit.cover,
-                                  ),
+                                ),
+                              Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/Mishary.jpg',
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                            ),
+                            ],
+                          ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'hivi8p91' /* Mishary
+                              'd5qqx57g' /* Mishary
 Al-Afasy */
                               ,
                             ),
@@ -246,21 +266,27 @@ Al-Afasy */
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          if (FFAppState().reciterID == 4)
-                            Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    FlutterFlowTheme.of(context).primary,
-                                    FlutterFlowTheme.of(context).secondary
-                                  ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(0.0, -1.0),
-                                  end: AlignmentDirectional(0, 1.0),
+                          Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              if (FFAppState().reciterID == 4)
+                                Container(
+                                  width: 66.0,
+                                  height: 66.0,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        FlutterFlowTheme.of(context).primary,
+                                        FlutterFlowTheme.of(context).secondary
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
+                                    shape: BoxShape.circle,
+                                  ),
                                 ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Padding(
+                              Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     3.0, 3.0, 3.0, 3.0),
                                 child: Container(
@@ -276,10 +302,11 @@ Al-Afasy */
                                   ),
                                 ),
                               ),
-                            ),
+                            ],
+                          ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'rz7srozl' /* Abu Bakr
+                              'mzqv73ok' /* Abu Bakr
 Al-Shatri */
                               ,
                             ),
@@ -301,21 +328,27 @@ Al-Shatri */
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          if (FFAppState().reciterID == 3)
-                            Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    FlutterFlowTheme.of(context).primary,
-                                    FlutterFlowTheme.of(context).secondary
-                                  ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(0.0, -1.0),
-                                  end: AlignmentDirectional(0, 1.0),
+                          Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              if (FFAppState().reciterID == 3)
+                                Container(
+                                  width: 66.0,
+                                  height: 66.0,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        FlutterFlowTheme.of(context).primary,
+                                        FlutterFlowTheme.of(context).secondary
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
+                                    shape: BoxShape.circle,
+                                  ),
                                 ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Padding(
+                              Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     3.0, 3.0, 3.0, 3.0),
                                 child: Container(
@@ -331,10 +364,11 @@ Al-Shatri */
                                   ),
                                 ),
                               ),
-                            ),
+                            ],
+                          ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'f8hmy6dw' /* Abdurahm-
+                              'hwd7qutq' /* Abdurahm-
 an Sudais */
                               ,
                             ),
@@ -389,7 +423,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '73rr9g0c' /* Al-Husary
+                              'opt7fee0' /* Al-Husary
 (Muallim) */
                               ,
                             ),
@@ -444,7 +478,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '1pu13jva' /* Al-Minshawi
+                              'pdybuxv8' /* Al-Minshawi
 (Mujawwad) */
                               ,
                             ),
@@ -499,7 +533,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'ox200fku' /* Al-Husary
+                              '113agfwq' /* Al-Husary
 (Muallim) */
                               ,
                             ),
@@ -554,7 +588,7 @@ an Sudais */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'y73amskl' /* Hani 
+                              '6rockvy5' /* Hani 
 Ar-Rifai */
                               ,
                             ),
@@ -609,7 +643,7 @@ Ar-Rifai */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'j2znixzi' /* Saud Ash-
+                              's51aif0w' /* Saud Ash-
 Shuraym */
                               ,
                             ),
@@ -664,7 +698,7 @@ Shuraym */
                             ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'v9lldci9' /* Mohamed 
+                              'fht4ypvw' /* Mohamed 
 Al-Tablawi */
                               ,
                             ),
