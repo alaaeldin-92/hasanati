@@ -19,6 +19,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
@@ -45,6 +46,8 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
 
   bool pageLoading = true;
 
+  bool audioLoading = false;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -54,11 +57,13 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   List<QuranVersesFavoriteRecord>? favQueryVerseOfDay;
   // Stores action output result for [Firestore Query - Query a collection] action in Container widget.
   QuranPerformanceRecord? userQuranPer;
-  // Stores action output result for [Backend Call - API (Verse Audio)] action in Icon widget.
+  // Stores action output result for [Backend Call - API (Verse Audio)] action in Container widget.
   ApiCallResponse? audioJSON;
-  AudioPlayer? soundPlayer;
-  // Stores action output result for [Custom Action - getAudioLength] action in Icon widget.
+  // Stores action output result for [Custom Action - getAudioLength] action in Container widget.
   double? duration;
+  AudioPlayer? soundPlayer;
+  // State field(s) for Loading widget.
+  late bool loadingStatus;
   // Model for HomeSkeleton component.
   late HomeSkeletonModel homeSkeletonModel;
   // Model for Navbar component.
@@ -67,6 +72,7 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
+    loadingStatus = false;
     homeSkeletonModel = createModel(context, () => HomeSkeletonModel());
     navbarModel = createModel(context, () => NavbarModel());
   }

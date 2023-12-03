@@ -1,5 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/components/navbar_widget.dart';
+import '/components/reciter_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'settings_model.dart';
 export 'settings_model.dart';
 
@@ -428,6 +430,65 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                         Text(
                                           FFLocalizations.of(context).getText(
                                             'k7sn45jc' /* View Profile */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                fontSize: 16.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ].divide(SizedBox(width: 15.0)),
+                                    ),
+                                  ),
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        context: context,
+                                        builder: (context) {
+                                          return WebViewAware(
+                                              child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: Container(
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        0.45,
+                                                child: ReciterWidget(),
+                                              ),
+                                            ),
+                                          ));
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    },
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Icon(
+                                          Icons.mic_none_sharp,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 24.0,
+                                        ),
+                                        Text(
+                                          FFLocalizations.of(context).getText(
+                                            '1tfg3mbz' /* Default Reciter */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
