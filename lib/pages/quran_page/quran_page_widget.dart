@@ -423,7 +423,9 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                         AlignmentDirectional(
                                                             0.0, 0.0),
                                                     children: [
-                                                      if (!_model.audioPlaying)
+                                                      if (!_model
+                                                              .audioLoading &&
+                                                          !_model.audioPlaying)
                                                         InkWell(
                                                           splashColor: Colors
                                                               .transparent,
@@ -808,59 +810,75 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                     mainAxisAlignment:
                                                         MainAxisAlignment.end,
                                                     children: [
-                                                      Expanded(
-                                                        child: Container(
-                                                          width: 100.0,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Text(
-                                                            functions.concatenatVersesTextWithNum(
-                                                                quranPageQuranFontImlaeiPageResponse
-                                                                    .jsonBody),
-                                                            textAlign:
-                                                                TextAlign.end,
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Muhammadi ',
-                                                                  fontSize:
-                                                                      28.0,
-                                                                  useGoogleFonts:
-                                                                      false,
-                                                                ),
+                                                      if (functions.concatenatVersesTextWithNum(
+                                                                  quranPageQuranFontImlaeiPageResponse
+                                                                      .jsonBody) !=
+                                                              null &&
+                                                          functions.concatenatVersesTextWithNum(
+                                                                  quranPageQuranFontImlaeiPageResponse
+                                                                      .jsonBody) !=
+                                                              '')
+                                                        Expanded(
+                                                          child: Container(
+                                                            width: 100.0,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryBackground,
+                                                            ),
+                                                            child: Text(
+                                                              functions.concatenatVersesTextWithNum(
+                                                                  quranPageQuranFontImlaeiPageResponse
+                                                                      .jsonBody),
+                                                              textAlign:
+                                                                  TextAlign.end,
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Muhammadi ',
+                                                                    fontSize:
+                                                                        28.0,
+                                                                    useGoogleFonts:
+                                                                        false,
+                                                                  ),
+                                                            ),
                                                           ),
                                                         ),
-                                                      ),
                                                     ],
                                                   ),
                                                   Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     children: [
-                                                      Expanded(
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Text(
-                                                            functions.getConcatenatedText(
-                                                                stackQuranTranslationPageResponse
-                                                                    .bodyText),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium,
+                                                      if (functions.getConcatenatedText(
+                                                                  stackQuranTranslationPageResponse
+                                                                      .bodyText) !=
+                                                              null &&
+                                                          functions.getConcatenatedText(
+                                                                  stackQuranTranslationPageResponse
+                                                                      .bodyText) !=
+                                                              '')
+                                                        Expanded(
+                                                          child: Container(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryBackground,
+                                                            ),
+                                                            child: Text(
+                                                              functions.getConcatenatedText(
+                                                                  stackQuranTranslationPageResponse
+                                                                      .bodyText),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium,
+                                                            ),
                                                           ),
                                                         ),
-                                                      ),
                                                     ],
                                                   ),
                                                 ].divide(
