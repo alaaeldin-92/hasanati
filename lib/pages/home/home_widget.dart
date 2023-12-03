@@ -538,14 +538,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             BorderRadius
                                                                 .circular(8.0),
                                                         child: Image.asset(
-                                                          'assets/images/256x256bb.png',
+                                                          'assets/images/blue.png',
                                                           width: 140.0,
                                                           height:
                                                               MediaQuery.sizeOf(
                                                                           context)
                                                                       .height *
                                                                   1.0,
-                                                          fit: BoxFit.cover,
+                                                          fit: BoxFit.contain,
                                                         ),
                                                       ),
                                                     ),
