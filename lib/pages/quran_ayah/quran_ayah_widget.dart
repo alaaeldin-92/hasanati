@@ -573,7 +573,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                     'assets/lottie_animations/Animation_-_1701617942129.json',
                                                     width: 45.0,
                                                     height: 45.0,
-                                                    fit: BoxFit.contain,
+                                                    fit: BoxFit.cover,
                                                     animate:
                                                         _model.loadingStatus),
                                             ],
