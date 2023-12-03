@@ -429,6 +429,38 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                         width:
                                                                             5.0)),
                                                                   ),
+                                                                ],
+                                                              ),
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceBetween,
+                                                                children: [
+                                                                  Row(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Icon(
+                                                                        Icons
+                                                                            .check,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primaryText,
+                                                                        size:
+                                                                            18.0,
+                                                                      ),
+                                                                      Text(
+                                                                        '${FFAppState().quranVersesMemorized.length.toString()} verses',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium,
+                                                                      ),
+                                                                    ].divide(SizedBox(
+                                                                        width:
+                                                                            5.0)),
+                                                                  ),
                                                                   Text(
                                                                     '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}%',
                                                                     style: FlutterFlowTheme.of(
@@ -440,9 +472,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                           fontSize:
-                                                                              12.0,
+                                                                              14.0,
                                                                           fontWeight:
-                                                                              FontWeight.w600,
+                                                                              FontWeight.normal,
                                                                         ),
                                                                   ),
                                                                 ],
@@ -2216,22 +2248,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                   ],
                 ),
               ),
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  if (_model.verseOfTheDayAudioPlaying) {
-                    _model.soundPlayer?.stop();
-                  }
-                },
-                child: wrapWithModel(
-                  model: _model.navbarModel,
-                  updateCallback: () => setState(() {}),
-                  child: NavbarWidget(
-                    selectedIndex: 1,
-                  ),
+              wrapWithModel(
+                model: _model.navbarModel,
+                updateCallback: () => setState(() {}),
+                child: NavbarWidget(
+                  selectedIndex: 1,
                 ),
               ),
             ],

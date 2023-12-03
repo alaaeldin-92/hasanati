@@ -46,7 +46,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
       alignment: AlignmentDirectional(0.00, 1.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
-        height: MediaQuery.sizeOf(context).height * 1.0,
+        height: MediaQuery.sizeOf(context).height * 0.45,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.only(
@@ -83,7 +83,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        '5jl4mvut' /* Choose A Reciter */,
+                        't2152edf' /* Choose A Reciter */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
@@ -185,7 +185,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '2llll49t' /* Al-Minshawi
+                              'uo98oy48' /* Al-Minshawi
 (Murattal) */
                               ,
                             ),
@@ -243,7 +243,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'dgwtluow' /* Mishary
+                              '2aaarn9a' /* Mishary
 Al-Afasy */
                               ,
                             ),
@@ -305,7 +305,7 @@ Al-Afasy */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'xtgt1zs7' /* Abu Bakr
+                              'qdclmchp' /* Abu Bakr
 Al-Shatri */
                               ,
                             ),
@@ -367,7 +367,7 @@ Al-Shatri */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '3bu1d9re' /* Abdurahm-
+                              'ltkvsqgd' /* Abdurahm-
 an Sudais */
                               ,
                             ),
@@ -429,7 +429,7 @@ an Sudais */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'pylqu0if' /* Al-Husary
+                              'tox0tfx1' /* Al-Husary
 (Muallim) */
                               ,
                             ),
@@ -490,7 +490,7 @@ an Sudais */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'klicqr33' /* Al-Minshawi
+                              'kollveh6' /* Al-Minshawi
 (Mujawwad) */
                               ,
                             ),
@@ -551,7 +551,7 @@ an Sudais */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'j0qfn6lb' /* Al-Husary
+                              '5sqmbch1' /* Al-Husary
 (Muallim) */
                               ,
                             ),
@@ -612,7 +612,7 @@ an Sudais */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              '5aecbocb' /* Hani 
+                              'hslkkzvn' /* Hani 
 Ar-Rifai */
                               ,
                             ),
@@ -673,7 +673,7 @@ Ar-Rifai */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'i2z0rbt5' /* Saud Ash-
+                              'hl4gm0fh' /* Saud Ash-
 Shuraym */
                               ,
                             ),
@@ -734,7 +734,7 @@ Shuraym */
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'fedoy116' /* Mohamed 
+                              '8zzbptim' /* Mohamed 
 Al-Tablawi */
                               ,
                             ),

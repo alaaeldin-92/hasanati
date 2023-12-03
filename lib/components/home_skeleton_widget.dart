@@ -248,26 +248,19 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
+                                        height: 100.0,
                                         decoration: BoxDecoration(
-                                          color: Color(0x25009BDD),
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(50.0),
-                                            bottomRight: Radius.circular(0.0),
-                                            topLeft: Radius.circular(50.0),
-                                            topRight: Radius.circular(0.0),
-                                          ),
-                                          shape: BoxShape.rectangle,
+                                          shape: BoxShape.circle,
                                         ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                          child: Image.asset(
-                                            'assets/images/256x256bb.png',
-                                            width: 140.0,
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                1.0,
-                                            fit: BoxFit.cover,
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 15.0, 15.0, 15.0),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFFEEEEEE),
+                                              shape: BoxShape.circle,
+                                            ),
                                           ),
                                         ),
                                       ),

@@ -481,7 +481,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Icon(
-                                          Icons.mic_none_sharp,
+                                          Icons.mic_none_outlined,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
                                           size: 24.0,
