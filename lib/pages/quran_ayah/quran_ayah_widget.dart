@@ -403,51 +403,324 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFFEEEEEE),
-                                              borderRadius:
-                                                  BorderRadius.circular(50.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(5.0, 5.0, 5.0, 5.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  Container(
+                                          Stack(
+                                            alignment:
+                                                AlignmentDirectional(0.0, 0.0),
+                                            children: [
+                                              if (!_model.audioPlaying &&
+                                                  !_model.audioLoading)
+                                                InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    setState(() => _model
+                                                            .loadingStatus =
+                                                        !_model.loadingStatus);
+                                                    setState(() {
+                                                      _model.audioLoading =
+                                                          true;
+                                                    });
+                                                    _model.audioJSON =
+                                                        await VerseAudioCall
+                                                            .call(
+                                                      surahID: _model.surahID,
+                                                      ayahID: _model.verseID,
+                                                      reciterID: FFAppState()
+                                                          .reciterID,
+                                                    );
+                                                    _model.soundPlayer ??=
+                                                        AudioPlayer();
+                                                    if (_model
+                                                        .soundPlayer!.playing) {
+                                                      await _model.soundPlayer!
+                                                          .stop();
+                                                    }
+                                                    _model.soundPlayer!
+                                                        .setVolume(1.0);
+                                                    _model.soundPlayer!
+                                                        .setUrl(
+                                                            'https://verses.quran.com/${getJsonField(
+                                                          (_model.audioJSON
+                                                                  ?.jsonBody ??
+                                                              ''),
+                                                          r'''$.audio_files[:].url''',
+                                                        ).toString()}')
+                                                        .then((_) => _model
+                                                            .soundPlayer!
+                                                            .play());
+
+                                                    _model.duration =
+                                                        await actions
+                                                            .getAudioLength(
+                                                      'https://verses.quran.com/${getJsonField(
+                                                        (_model.audioJSON
+                                                                ?.jsonBody ??
+                                                            ''),
+                                                        r'''$.audio_files[:].url''',
+                                                      ).toString()}',
+                                                    );
+                                                    setState(() {
+                                                      _model.audioDuration =
+                                                          _model.duration;
+                                                      _model.audioPlaying =
+                                                          true;
+                                                      _model.audioLoading =
+                                                          false;
+                                                    });
+                                                    setState(() => _model
+                                                            .loadingStatus =
+                                                        !_model.loadingStatus);
+                                                    while (_model.timeCounter! <
+                                                        _model.duration!) {
+                                                      await Future.delayed(
+                                                          const Duration(
+                                                              milliseconds:
+                                                                  1000));
+                                                      setState(() {
+                                                        _model.timeCounter =
+                                                            _model.timeCounter! +
+                                                                1.0;
+                                                      });
+                                                    }
+                                                    await Future.delayed(
+                                                        const Duration(
+                                                            milliseconds:
+                                                                1000));
+                                                    setState(() {
+                                                      _model.audioPlaying =
+                                                          false;
+                                                      _model.timeCounter = 0.0;
+                                                    });
+
+                                                    setState(() {});
+                                                  },
+                                                  child: Container(
                                                     decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              50.0),
+                                                      color: Color(0xFF009BDF),
+                                                      shape: BoxShape.circle,
                                                     ),
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            0.00, 0.00),
                                                     child: Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
-                                                                  15.0,
                                                                   5.0,
-                                                                  15.0,
+                                                                  5.0,
+                                                                  5.0,
                                                                   5.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'ec79bx73' /* Verse */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
+                                                      child: Icon(
+                                                        Icons.play_arrow,
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                        size: 24.0,
                                                       ),
                                                     ),
                                                   ),
+                                                ),
+                                              if (_model.audioPlaying)
+                                                CircularPercentIndicator(
+                                                  percent:
+                                                      functions.divideDouble(
+                                                          _model.timeCounter!,
+                                                          _model
+                                                              .audioDuration!),
+                                                  radius: 22.5,
+                                                  lineWidth: 5.0,
+                                                  animation: false,
+                                                  animateFromLastPercent: true,
+                                                  progressColor:
+                                                      Color(0xFF009BDF),
+                                                  startAngle: 0.0,
+                                                ),
+                                              if (_model.audioPlaying)
+                                                InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    _model.soundPlayer?.stop();
+                                                    setState(() {
+                                                      _model.audioPlaying =
+                                                          false;
+                                                      _model.timeCounter = 0.0;
+                                                    });
+                                                  },
+                                                  child: Icon(
+                                                    Icons.pause_sharp,
+                                                    color: Color(0xFF009BDF),
+                                                    size: 24.0,
+                                                  ),
+                                                ),
+                                              if (_model.audioLoading)
+                                                Lottie.asset(
+                                                    'assets/lottie_animations/Animation_-_1701617942129.json',
+                                                    width: 40.0,
+                                                    height: 40.0,
+                                                    fit: BoxFit.cover,
+                                                    animate:
+                                                        _model.loadingStatus),
+                                            ],
+                                          ),
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xFFEEEEEE),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          50.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 5.0, 5.0, 5.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      50.0),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.00, 0.00),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      15.0,
+                                                                      5.0,
+                                                                      15.0,
+                                                                      5.0),
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'ec79bx73' /* Verse */,
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          context.pushNamed(
+                                                            'QuranPage',
+                                                            queryParameters: {
+                                                              'page':
+                                                                  serializeParam(
+                                                                FFAppState()
+                                                                    .quranLastReadPage,
+                                                                ParamType.int,
+                                                              ),
+                                                            }.withoutNulls,
+                                                          );
+                                                        },
+                                                        child: Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Color(
+                                                                0x00FFFFFF),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        50.0),
+                                                          ),
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.00, 0.00),
+                                                          child: Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        15.0,
+                                                                        5.0,
+                                                                        15.0,
+                                                                        5.0),
+                                                            child: Text(
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'gzuyc536' /* Page */,
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    _model.surahName,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color:
+                                                              Color(0xFF2F2F2F),
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    '${_model.verseID?.toString()}/${_model.versesCount?.toString()}',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ].divide(SizedBox(height: 5.0)),
+                                          ),
+                                          Container(
+                                            decoration: BoxDecoration(),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                if (!_model.hearted)
                                                   InkWell(
                                                     splashColor:
                                                         Colors.transparent,
@@ -458,401 +731,90 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                     highlightColor:
                                                         Colors.transparent,
                                                     onTap: () async {
-                                                      context.pushNamed(
-                                                        'QuranPage',
-                                                        queryParameters: {
-                                                          'page':
-                                                              serializeParam(
-                                                            FFAppState()
-                                                                .quranLastReadPage,
-                                                            ParamType.int,
-                                                          ),
-                                                        }.withoutNulls,
-                                                      );
+                                                      setState(() {
+                                                        _model.hearted = true;
+                                                      });
+                                                      setState(() {
+                                                        _model.verseLikesNum =
+                                                            _model.verseLikesNum! +
+                                                                1;
+                                                      });
+                                                      FFAppState()
+                                                          .addToQuranVersesFavorites(
+                                                              '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
+                                                      FFAppState()
+                                                          .addToQuranVersesFavoriteAddSession(
+                                                              '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
                                                     },
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x00FFFFFF),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(50.0),
-                                                      ),
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.00, 0.00),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    15.0,
-                                                                    5.0,
-                                                                    15.0,
-                                                                    5.0),
-                                                        child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'gzuyc536' /* Page */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium,
-                                                        ),
-                                                      ),
+                                                    child: Icon(
+                                                      Icons.favorite_border,
+                                                      color: Color(0xFF2F2F2F),
+                                                      size: 24.0,
                                                     ),
                                                   ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                  color: Color(0x4DFFFFFF),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          100.0),
-                                                ),
-                                                child: Stack(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  children: [
-                                                    if (!_model.audioPlaying &&
-                                                        !_model.audioLoading)
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          setState(() {
-                                                            _model.audioLoading =
-                                                                true;
-                                                          });
-                                                          _model.audioJSON =
-                                                              await VerseAudioCall
-                                                                  .call(
-                                                            surahID:
-                                                                _model.surahID,
-                                                            ayahID:
-                                                                _model.verseID,
-                                                            reciterID:
-                                                                FFAppState()
-                                                                    .reciterID,
-                                                          );
-                                                          _model.soundPlayer ??=
-                                                              AudioPlayer();
-                                                          if (_model
-                                                              .soundPlayer!
-                                                              .playing) {
-                                                            await _model
-                                                                .soundPlayer!
-                                                                .stop();
-                                                          }
-                                                          _model.soundPlayer!
-                                                              .setVolume(1.0);
-                                                          _model.soundPlayer!
-                                                              .setUrl(
-                                                                  'https://verses.quran.com/${getJsonField(
-                                                                (_model.audioJSON
-                                                                        ?.jsonBody ??
-                                                                    ''),
-                                                                r'''$.audio_files[:].url''',
-                                                              ).toString()}')
-                                                              .then((_) => _model
-                                                                  .soundPlayer!
-                                                                  .play());
+                                                if (_model.hearted)
+                                                  InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
+                                                    onTap: () async {
+                                                      setState(() {
+                                                        _model.hearted = false;
+                                                      });
+                                                      setState(() {
+                                                        _model.verseLikesNum =
+                                                            _model.verseLikesNum! +
+                                                                -1;
+                                                      });
+                                                      if (!FFAppState()
+                                                          .quranVersesFavoriteRemoveSession
+                                                          .contains(
+                                                              '${_model.surahID?.toString()}:${_model.verseID?.toString()}')) {
+                                                        FFAppState()
+                                                            .addToQuranVersesFavoriteRemoveSession(
+                                                                '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
+                                                      } else {
+                                                        FFAppState()
+                                                            .removeFromQuranVersesFavoriteRemoveSession(
+                                                                '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
+                                                      }
 
-                                                          _model.duration =
-                                                              await actions
-                                                                  .getAudioLength(
-                                                            'https://verses.quran.com/${getJsonField(
-                                                              (_model.audioJSON
-                                                                      ?.jsonBody ??
-                                                                  ''),
-                                                              r'''$.audio_files[:].url''',
-                                                            ).toString()}',
-                                                          );
-                                                          setState(() {
-                                                            _model.audioDuration =
-                                                                _model.duration;
-                                                            _model.audioPlaying =
-                                                                true;
-                                                            _model.audioLoading =
-                                                                false;
-                                                          });
-                                                          while (_model
-                                                                  .timeCounter! <
-                                                              _model
-                                                                  .duration!) {
-                                                            await Future.delayed(
-                                                                const Duration(
-                                                                    milliseconds:
-                                                                        1000));
-                                                            setState(() {
-                                                              _model.timeCounter =
-                                                                  _model.timeCounter! +
-                                                                      1.0;
-                                                            });
-                                                          }
-                                                          await Future.delayed(
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000));
-                                                          setState(() {
-                                                            _model.audioPlaying =
-                                                                false;
-                                                            _model.timeCounter =
-                                                                0.0;
-                                                          });
-
-                                                          setState(() {});
-                                                        },
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: Color(
-                                                                0xFF009BDF),
-                                                            shape:
-                                                                BoxShape.circle,
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        5.0,
-                                                                        5.0,
-                                                                        5.0,
-                                                                        5.0),
-                                                            child: Icon(
-                                                              Icons.play_arrow,
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .secondaryBackground,
-                                                              size: 24.0,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (_model.audioPlaying)
-                                                      CircularPercentIndicator(
-                                                        percent: functions
-                                                            .divideDouble(
-                                                                _model
-                                                                    .timeCounter!,
-                                                                _model
-                                                                    .audioDuration!),
-                                                        radius: 22.5,
-                                                        lineWidth: 5.0,
-                                                        animation: false,
-                                                        animateFromLastPercent:
-                                                            true,
-                                                        progressColor:
-                                                            Color(0xFF009BDF),
-                                                        startAngle: 0.0,
-                                                      ),
-                                                    if (_model.audioPlaying)
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          _model.soundPlayer
-                                                              ?.stop();
-                                                          setState(() {
-                                                            _model.audioPlaying =
-                                                                false;
-                                                          });
-                                                          setState(() {
-                                                            _model.timeCounter =
-                                                                0.0;
-                                                          });
-                                                        },
-                                                        child: Icon(
-                                                          Icons.pause_sharp,
-                                                          color:
-                                                              Color(0xFF009BDF),
-                                                          size: 24.0,
-                                                        ),
-                                                      ),
-                                                    if (_model.audioLoading)
-                                                      Lottie.asset(
-                                                        'assets/lottie_animations/Animation_-_1701617942129.json',
-                                                        width: 40.0,
-                                                        height: 40.0,
-                                                        fit: BoxFit.cover,
-                                                        animate: false,
-                                                      ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ].divide(SizedBox(width: 8.0)),
-                                          ),
-                                          Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                _model.surahName,
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF2F2F2F),
-                                                    ),
-                                              ),
-                                              Text(
-                                                '${_model.verseID?.toString()}/${_model.versesCount?.toString()}',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    if (!_model.hearted)
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          setState(() {
-                                                            _model.hearted =
-                                                                true;
-                                                          });
-                                                          setState(() {
-                                                            _model.verseLikesNum =
-                                                                _model.verseLikesNum! +
-                                                                    1;
-                                                          });
-                                                          FFAppState()
-                                                              .addToQuranVersesFavorites(
-                                                                  '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
-                                                          FFAppState()
-                                                              .addToQuranVersesFavoriteAddSession(
-                                                                  '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
-                                                        },
-                                                        child: Icon(
-                                                          Icons.favorite_border,
-                                                          color:
-                                                              Color(0xFF2F2F2F),
-                                                          size: 24.0,
-                                                        ),
-                                                      ),
-                                                    if (_model.hearted)
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          setState(() {
-                                                            _model.hearted =
-                                                                false;
-                                                          });
-                                                          setState(() {
-                                                            _model.verseLikesNum =
-                                                                _model.verseLikesNum! +
-                                                                    -1;
-                                                          });
-                                                          if (!FFAppState()
-                                                              .quranVersesFavoriteRemoveSession
-                                                              .contains(
-                                                                  '${_model.surahID?.toString()}:${_model.verseID?.toString()}')) {
-                                                            FFAppState()
-                                                                .addToQuranVersesFavoriteRemoveSession(
-                                                                    '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
-                                                          } else {
-                                                            FFAppState()
-                                                                .removeFromQuranVersesFavoriteRemoveSession(
-                                                                    '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
-                                                          }
-
-                                                          FFAppState()
-                                                              .removeFromQuranVersesFavorites(
-                                                                  '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
-                                                        },
-                                                        child: Icon(
-                                                          Icons
-                                                              .favorite_rounded,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .error,
-                                                          size: 24.0,
-                                                        ),
-                                                      ),
-                                                    Text(
-                                                      valueOrDefault<String>(
-                                                        _model.verseLikesNum
-                                                            ?.toString(),
-                                                        '0',
-                                                      ),
-                                                      style:
+                                                      FFAppState()
+                                                          .removeFromQuranVersesFavorites(
+                                                              '${_model.surahID?.toString()}:${_model.verseID?.toString()}');
+                                                    },
+                                                    child: Icon(
+                                                      Icons.favorite_rounded,
+                                                      color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Readex Pro',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                              .error,
+                                                      size: 24.0,
                                                     ),
-                                                  ].divide(
-                                                      SizedBox(width: 2.0)),
+                                                  ),
+                                                Text(
+                                                  valueOrDefault<String>(
+                                                    _model.verseLikesNum
+                                                        ?.toString(),
+                                                    '0',
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
                                                 ),
-                                              ),
-                                            ].divide(SizedBox(width: 8.0)),
+                                              ].divide(SizedBox(width: 2.0)),
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -942,9 +904,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                             ),
                                           ),
                                         ),
-                                      if (quranAyahQuranFontImlaeiResponse
-                                              .succeeded &&
-                                          stackVerseKeyResponse.succeeded)
+                                      if (!quranAyahQuranFontImlaeiResponse
+                                              .succeeded ||
+                                          !stackVerseKeyResponse.succeeded)
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
