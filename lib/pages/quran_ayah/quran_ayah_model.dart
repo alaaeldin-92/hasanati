@@ -55,7 +55,7 @@ class QuranAyahModel extends FlutterFlowModel<QuranAyahWidget> {
 
   double audioSingleDuration = 0.0;
 
-  bool pageLoading = true;
+  bool audioLoading = false;
 
   ///  State fields for stateful widgets in this page.
 

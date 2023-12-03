@@ -62,9 +62,6 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
         FFAppState().stopTimers = false;
       });
       await _model.updateMemorized(context);
-      setState(() {
-        _model.pageLoading = false;
-      });
       while (!FFAppState().stopTimers) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
@@ -795,7 +792,10 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                             ),
                                           ],
                                         ),
-                                        if (!_model.pageLoading)
+                                        if (stackQuranTranslationPageResponse
+                                                .succeeded &&
+                                            quranPageQuranFontImlaeiPageResponse
+                                                .succeeded)
                                           Flexible(
                                             child: SingleChildScrollView(
                                               primary: false,
@@ -810,14 +810,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                     mainAxisAlignment:
                                                         MainAxisAlignment.end,
                                                     children: [
-                                                      if (functions.concatenatVersesTextWithNum(
-                                                                  quranPageQuranFontImlaeiPageResponse
-                                                                      .jsonBody) !=
-                                                              null &&
-                                                          functions.concatenatVersesTextWithNum(
-                                                                  quranPageQuranFontImlaeiPageResponse
-                                                                      .jsonBody) !=
-                                                              '')
+                                                      if (quranPageQuranFontImlaeiPageResponse
+                                                          .succeeded)
                                                         Expanded(
                                                           child: Container(
                                                             width: 100.0,
@@ -853,14 +847,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     children: [
-                                                      if (functions.getConcatenatedText(
-                                                                  stackQuranTranslationPageResponse
-                                                                      .bodyText) !=
-                                                              null &&
-                                                          functions.getConcatenatedText(
-                                                                  stackQuranTranslationPageResponse
-                                                                      .bodyText) !=
-                                                              '')
+                                                      if (stackQuranTranslationPageResponse
+                                                          .succeeded)
                                                         Expanded(
                                                           child: Container(
                                                             decoration:
@@ -886,22 +874,10 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                               ),
                                             ),
                                           ),
-                                        if ((functions.concatenatVersesTextWithNum(
-                                                        quranPageQuranFontImlaeiPageResponse
-                                                            .jsonBody) !=
-                                                    null &&
-                                                functions.concatenatVersesTextWithNum(
-                                                        quranPageQuranFontImlaeiPageResponse
-                                                            .jsonBody) !=
-                                                    '') &&
-                                            (functions.getConcatenatedText(
-                                                        stackQuranTranslationPageResponse
-                                                            .bodyText) !=
-                                                    null &&
-                                                functions.getConcatenatedText(
-                                                        stackQuranTranslationPageResponse
-                                                            .bodyText) !=
-                                                    ''))
+                                        if (quranPageQuranFontImlaeiPageResponse
+                                                .succeeded &&
+                                            stackQuranTranslationPageResponse
+                                                .succeeded)
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:

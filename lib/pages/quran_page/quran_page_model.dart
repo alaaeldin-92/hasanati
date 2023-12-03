@@ -61,9 +61,7 @@ class QuranPageModel extends FlutterFlowModel<QuranPageWidget> {
 
   int totalRecords = 0;
 
-  bool pageLoading = true;
-
-  bool audioLoading = true;
+  bool audioLoading = false;
 
   ///  State fields for stateful widgets in this page.
 
