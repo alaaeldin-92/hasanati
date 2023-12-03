@@ -347,7 +347,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           children: [
                                             Expanded(
                                               child: Container(
-                                                height: 90.0,
+                                                height: 100.0,
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(
                                                           context)
@@ -409,7 +409,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                         color: Color(
                                                                             0xFF009BDD),
                                                                         size:
-                                                                            18.0,
+                                                                            20.0,
                                                                       ),
                                                                       Text(
                                                                         FFLocalizations.of(context)
@@ -421,13 +421,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                             .override(
                                                                               fontFamily: 'Readex Pro',
                                                                               color: Color(0xFF007BAF),
-                                                                              fontSize: 14.0,
+                                                                              fontSize: 16.0,
                                                                               fontWeight: FontWeight.w600,
                                                                             ),
                                                                       ),
                                                                     ].divide(SizedBox(
                                                                         width:
-                                                                            5.0)),
+                                                                            8.0)),
                                                                   ),
                                                                 ],
                                                               ),
@@ -450,12 +450,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryText,
                                                                         size:
-                                                                            18.0,
+                                                                            16.0,
                                                                       ),
                                                                       Text(
                                                                         '${FFAppState().quranVersesMemorized.length.toString()} verses',
                                                                         style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium,
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              fontSize: 12.0,
+                                                                            ),
                                                                       ),
                                                                     ].divide(SizedBox(
                                                                         width:
@@ -472,7 +476,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                           fontSize:
-                                                                              14.0,
+                                                                              12.0,
                                                                           fontWeight:
                                                                               FontWeight.normal,
                                                                         ),
@@ -1927,6 +1931,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                           highlightColor: Colors.transparent,
                                                                                           onTap: () async {
                                                                                             setState(() => _model.loadingStatus = !_model.loadingStatus);
+                                                                                            setState(() {
+                                                                                              _model.pageLoading = true;
+                                                                                            });
                                                                                             _model.audioJSON = await VerseAudioCall.call(
                                                                                               surahID: _model.verseOfTheDayChapter,
                                                                                               ayahID: _model.verseOfTheDayVerse,
@@ -2026,7 +2033,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                           ],
                                                                                         ),
                                                                                       ),
-                                                                                    if (_model.audioLoading) Lottie.asset('assets/lottie_animations/Animation_-_1701617942129.json', width: 45.0, height: 45.0, fit: BoxFit.contain, animate: _model.loadingStatus),
+                                                                                    if (_model.audioLoading) Lottie.asset('assets/lottie_animations/Animation_-_1701617942129.json', width: 45.0, height: 45.0, fit: BoxFit.cover, animate: _model.loadingStatus),
                                                                                   ],
                                                                                 ),
                                                                               ),
