@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
+import '/components/reciter_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -18,6 +19,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'quran_ayah_model.dart';
 export 'quran_ayah_model.dart';
 
@@ -59,12 +61,14 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
       });
       await _model.updateLikesAndMem(context);
       setState(() {});
-      FFAppState().quranVerseTraverseUpdated = true;
-      FFAppState().stopTimers = false;
+      setState(() {
+        FFAppState().quranVerseTraverseUpdated = true;
+        FFAppState().stopTimers = false;
+      });
       setState(() {
         _model.pageLoading = false;
       });
-      while (!FFAppState().stopTimers) {
+      while (true) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
           FFAppState().quranTimeReadSec = FFAppState().quranTimeReadSec + 1;
@@ -300,8 +304,35 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                     ),
                                   ),
                                 ),
-                                Opacity(
-                                  opacity: 0.2,
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
+                                      context: context,
+                                      builder: (context) {
+                                        return WebViewAware(
+                                            child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: Padding(
+                                            padding: MediaQuery.viewInsetsOf(
+                                                context),
+                                            child: ReciterWidget(),
+                                          ),
+                                        ));
+                                      },
+                                    ).then((value) => safeSetState(() {}));
+                                  },
                                   child: FaIcon(
                                     FontAwesomeIcons.ellipsisH,
                                     color: Colors.white,
@@ -473,7 +504,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                               .call(
                                                         surahID: _model.surahID,
                                                         ayahID: _model.verseID,
-                                                        reciterID: 4,
+                                                        reciterID: FFAppState()
+                                                            .reciterID,
                                                       );
                                                       _model.soundPlayer ??=
                                                           AudioPlayer();
@@ -488,9 +520,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       _model.soundPlayer!
                                                           .setUrl(
                                                               'https://verses.quran.com/${getJsonField(
-                                                            (_model.audioJSON
-                                                                    ?.jsonBody ??
-                                                                ''),
+                                                            quranAyahQuranFontImlaeiResponse
+                                                                .jsonBody,
                                                             r'''$.audio_files[:].url''',
                                                           ).toString()}')
                                                           .then((_) => _model
@@ -501,9 +532,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           await actions
                                                               .getAudioLength(
                                                         'https://verses.quran.com/${getJsonField(
-                                                          (_model.audioJSON
-                                                                  ?.jsonBody ??
-                                                              ''),
+                                                          quranAyahQuranFontImlaeiResponse
+                                                              .jsonBody,
                                                           r'''$.audio_files[:].url''',
                                                         ).toString()}',
                                                       );
@@ -543,10 +573,28 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
 
                                                       setState(() {});
                                                     },
-                                                    child: Icon(
-                                                      Icons.play_arrow,
-                                                      color: Color(0xFF2F2F2F),
-                                                      size: 24.0,
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            Color(0xFF009BDF),
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    5.0,
+                                                                    5.0,
+                                                                    5.0,
+                                                                    5.0),
+                                                        child: Icon(
+                                                          Icons.play_arrow,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          size: 24.0,
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
                                                 if (_model.audioPlaying)

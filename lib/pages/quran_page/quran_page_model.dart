@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
+import '/components/reciter_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -19,6 +20,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 
 class QuranPageModel extends FlutterFlowModel<QuranPageWidget> {
   ///  Local state fields for this page.
@@ -68,12 +70,12 @@ class QuranPageModel extends FlutterFlowModel<QuranPageWidget> {
   QuranPerformanceRecord? syncQuranPerformance;
   // Stores action output result for [Firestore Query - Query a collection] action in Icon widget.
   QuranLastReadPageRecord? syncLastRead;
-  // Stores action output result for [Backend Call - API (Verse Audio Page)] action in Icon widget.
+  // Stores action output result for [Backend Call - API (Verse Audio Page)] action in Container widget.
   ApiCallResponse? audioPageJSON;
-  // Stores action output result for [Custom Action - getTotalAudioLength] action in Icon widget.
+  // Stores action output result for [Custom Action - getTotalAudioLength] action in Container widget.
   double? totalDuration;
   AudioPlayer? soundPlayer;
-  // Stores action output result for [Custom Action - getAudioLength] action in Icon widget.
+  // Stores action output result for [Custom Action - getAudioLength] action in Container widget.
   double? durationSingle;
 
   /// Initialization and disposal methods.

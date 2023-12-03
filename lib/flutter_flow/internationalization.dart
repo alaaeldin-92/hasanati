@@ -1372,6 +1372,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
+  // Reciter
+  {
+    'fc5g0wgi': {
+      'en': 'Choose A Reciter',
+      'ar': '',
+    },
+    'flteu4zp': {
+      'en': 'Al-Minshawi\n(Murattal)',
+      'ar': '',
+    },
+    'hivi8p91': {
+      'en': 'Mishary\nAl-Afasy',
+      'ar': '',
+    },
+    'rz7srozl': {
+      'en': 'Abu Bakr\nAl-Shatri',
+      'ar': '',
+    },
+    'f8hmy6dw': {
+      'en': 'Abdurahm-\nan Sudais',
+      'ar': '',
+    },
+    '73rr9g0c': {
+      'en': 'Al-Husary\n(Muallim)',
+      'ar': '',
+    },
+    '1pu13jva': {
+      'en': 'Al-Minshawi\n(Mujawwad)',
+      'ar': '',
+    },
+    'ox200fku': {
+      'en': 'Al-Husary\n(Muallim)',
+      'ar': '',
+    },
+    'y73amskl': {
+      'en': 'Hani \nAr-Rifai',
+      'ar': '',
+    },
+    'j2znixzi': {
+      'en': 'Saud Ash-\nShuraym',
+      'ar': '',
+    },
+    'v9lldci9': {
+      'en': 'Mohamed \nAl-Tablawi',
+      'ar': '',
+    },
+  },
   // Miscellaneous
   {
     'crf9sbfs': {

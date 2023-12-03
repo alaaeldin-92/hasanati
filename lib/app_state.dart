@@ -104,6 +104,9 @@ class FFAppState extends ChangeNotifier {
           await secureStorage.getBool('ff_quranPageTraverseUpdated') ??
               _quranPageTraverseUpdated;
     });
+    await _safeInitAsync(() async {
+      _reciterID = await secureStorage.getInt('ff_reciterID') ?? _reciterID;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -529,6 +532,17 @@ class FFAppState extends ChangeNotifier {
 
   void deleteQuranPageTraverseUpdated() {
     secureStorage.delete(key: 'ff_quranPageTraverseUpdated');
+  }
+
+  int _reciterID = 4;
+  int get reciterID => _reciterID;
+  set reciterID(int _value) {
+    _reciterID = _value;
+    secureStorage.setInt('ff_reciterID', _value);
+  }
+
+  void deleteReciterID() {
+    secureStorage.delete(key: 'ff_reciterID');
   }
 }
 
