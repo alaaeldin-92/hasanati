@@ -630,18 +630,12 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                             setState(() {
                                                               _model.audioPlaying =
                                                                   false;
-                                                            });
-                                                            setState(() {
                                                               _model.timeCounter =
                                                                   0.0;
-                                                            });
-                                                            setState(() {
                                                               _model.audioIndexForPage =
                                                                   0;
-                                                            });
-                                                            setState(() {
-                                                              _model.tempCounter =
-                                                                  0;
+                                                              _model.audioSingleDuration =
+                                                                  0.0;
                                                             });
                                                           },
                                                           child: Icon(
@@ -874,9 +868,9 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                               ),
                                             ),
                                           ),
-                                        if (quranPageQuranFontImlaeiPageResponse
-                                                .succeeded &&
-                                            stackQuranTranslationPageResponse
+                                        if (!quranPageQuranFontImlaeiPageResponse
+                                                .succeeded ||
+                                            !stackQuranTranslationPageResponse
                                                 .succeeded)
                                           Column(
                                             mainAxisSize: MainAxisSize.max,

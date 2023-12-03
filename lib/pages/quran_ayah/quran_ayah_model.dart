@@ -69,10 +69,14 @@ class QuranAyahModel extends FlutterFlowModel<QuranAyahWidget> {
   AudioPlayer? soundPlayer;
   // Stores action output result for [Custom Action - getAudioLength] action in Container widget.
   double? duration;
+  // State field(s) for Loading widget.
+  late bool loadingStatus;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    loadingStatus = false;
+  }
 
   void dispose() {
     unfocusNode.dispose();
