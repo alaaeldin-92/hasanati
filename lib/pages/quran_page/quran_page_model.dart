@@ -59,6 +59,8 @@ class QuranPageModel extends FlutterFlowModel<QuranPageWidget> {
 
   int totalRecords = 0;
 
+  bool pageLoading = true;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

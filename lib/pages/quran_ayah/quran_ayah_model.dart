@@ -53,6 +53,8 @@ class QuranAyahModel extends FlutterFlowModel<QuranAyahWidget> {
 
   double audioSingleDuration = 0.0;
 
+  bool pageLoading = true;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
