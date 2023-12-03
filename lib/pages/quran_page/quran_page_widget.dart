@@ -55,8 +55,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
         });
       }
 
-      FFAppState().quranPageTraverseUpdated = true;
       setState(() {
+        FFAppState().quranPageTraverseUpdated = true;
         FFAppState().stopTimers = false;
       });
       await _model.updateMemorized(context);

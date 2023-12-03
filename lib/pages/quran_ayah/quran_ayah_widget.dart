@@ -59,12 +59,14 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
       });
       await _model.updateLikesAndMem(context);
       setState(() {});
-      FFAppState().quranVerseTraverseUpdated = true;
-      FFAppState().stopTimers = false;
+      setState(() {
+        FFAppState().quranVerseTraverseUpdated = true;
+        FFAppState().stopTimers = false;
+      });
       setState(() {
         _model.pageLoading = false;
       });
-      while (!FFAppState().stopTimers) {
+      while (true) {
         await Future.delayed(const Duration(milliseconds: 1000));
         setState(() {
           FFAppState().quranTimeReadSec = FFAppState().quranTimeReadSec + 1;
