@@ -142,58 +142,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // QuranAyah
   {
-    'cm4qverv': {
-      'en': 'Qur\'an Tracking',
-      'ar': '',
-    },
-    '4oli4w2r': {
-      'en': 'Total: 2 min',
-      'ar': '',
-    },
-    '47nzikxz': {
-      'en': '0',
-      'ar': '',
-    },
-    'l29nv527': {
-      'en': '0',
-      'ar': '',
-    },
-    'i36dnldn': {
-      'en': ':',
-      'ar': '',
-    },
-    'ae2g9nvn': {
-      'en': '0',
-      'ar': '',
-    },
-    'rek8nqea': {
-      'en': '0',
-      'ar': '',
-    },
-    'vljjospq': {
-      'en': '',
-      'ar': '',
-    },
-    'rhmz8b19': {
-      'en': '5/10',
-      'ar': '',
-    },
-    'fvju53i5': {
-      'en': '5 verses left',
-      'ar': '',
-    },
-    'rx4fnk44': {
-      'en': 'Online Friends',
-      'ar': '',
-    },
-    'hyq1p8k7': {
-      'en': '20/30 Online',
-      'ar': '',
-    },
-    'e3nfzrgj': {
-      'en': 'See All',
-      'ar': '',
-    },
     'ec79bx73': {
       'en': 'Verse',
       'ar': '',

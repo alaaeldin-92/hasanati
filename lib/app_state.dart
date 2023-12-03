@@ -99,6 +99,11 @@ class FFAppState extends ChangeNotifier {
     await _safeInitAsync(() async {
       _stopTimers = await secureStorage.getBool('ff_stopTimers') ?? _stopTimers;
     });
+    await _safeInitAsync(() async {
+      _quranPageTraverseUpdated =
+          await secureStorage.getBool('ff_quranPageTraverseUpdated') ??
+              _quranPageTraverseUpdated;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -513,6 +518,17 @@ class FFAppState extends ChangeNotifier {
 
   void deleteStopTimers() {
     secureStorage.delete(key: 'ff_stopTimers');
+  }
+
+  bool _quranPageTraverseUpdated = false;
+  bool get quranPageTraverseUpdated => _quranPageTraverseUpdated;
+  set quranPageTraverseUpdated(bool _value) {
+    _quranPageTraverseUpdated = _value;
+    secureStorage.setBool('ff_quranPageTraverseUpdated', _value);
+  }
+
+  void deleteQuranPageTraverseUpdated() {
+    secureStorage.delete(key: 'ff_quranPageTraverseUpdated');
   }
 }
 
