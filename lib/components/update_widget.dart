@@ -79,51 +79,72 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                     ),
                   ],
                 ),
-                FutureBuilder<List<UpdateRecord>>(
-                  future: queryUpdateRecordOnce(
-                    singleRecord: true,
-                  ),
-                  builder: (context, snapshot) {
-                    // Customize what your widget looks like when it's loading.
-                    if (!snapshot.hasData) {
-                      return Center(
-                        child: SizedBox(
-                          width: 45.0,
-                          height: 45.0,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              Color(0xFF009BDF),
+                Stack(
+                  alignment: AlignmentDirectional(1.0, -1.0),
+                  children: [
+                    FutureBuilder<List<UpdateRecord>>(
+                      future: queryUpdateRecordOnce(
+                        singleRecord: true,
+                      ),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 45.0,
+                              height: 45.0,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  Color(0xFF009BDF),
+                                ),
+                              ),
                             ),
+                          );
+                        }
+                        List<UpdateRecord> imageUpdateRecordList =
+                            snapshot.data!;
+                        // Return an empty Container when the item does not exist.
+                        if (snapshot.data!.isEmpty) {
+                          return Container();
+                        }
+                        final imageUpdateRecord =
+                            imageUpdateRecordList.isNotEmpty
+                                ? imageUpdateRecordList.first
+                                : null;
+                        return ClipRRect(
+                          borderRadius: BorderRadius.circular(0.0),
+                          child: Image.network(
+                            'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/F2lnrjNXcAAxr3N.jpg?alt=media',
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                      );
-                    }
-                    List<UpdateRecord> imageUpdateRecordList = snapshot.data!;
-                    // Return an empty Container when the item does not exist.
-                    if (snapshot.data!.isEmpty) {
-                      return Container();
-                    }
-                    final imageUpdateRecord = imageUpdateRecordList.isNotEmpty
-                        ? imageUpdateRecordList.first
-                        : null;
-                    return InkWell(
+                        );
+                      },
+                    ),
+                    InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        await launchURL(
-                            'https://apps.apple.com/us/app/quranly/id1559233786');
+                        Navigator.pop(context);
                       },
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.network(
-                          'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/F2lnrjNXcAAxr3N.jpg?alt=media',
-                          fit: BoxFit.cover,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEEEEEE),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              5.0, 5.0, 5.0, 5.0),
+                          child: Icon(
+                            Icons.close,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 22.0,
+                          ),
                         ),
                       ),
-                    );
-                  },
+                    ),
+                  ],
                 ),
                 FFButtonWidget(
                   onPressed: () async {
@@ -131,7 +152,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                         'https://apps.apple.com/us/app/quranly/id1559233786');
                   },
                   text: FFLocalizations.of(context).getText(
-                    'upotp74y' /* Update */,
+                    '9mpz8shg' /* Update */,
                   ),
                   options: FFButtonOptions(
                     width: MediaQuery.sizeOf(context).width * 1.0,
