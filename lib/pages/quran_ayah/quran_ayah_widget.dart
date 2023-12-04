@@ -568,14 +568,20 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                     size: 24.0,
                                                   ),
                                                 ),
-                                              if (_model.audioLoading)
-                                                Lottie.asset(
-                                                    'assets/lottie_animations/Animation_-_1701617942129.json',
-                                                    width: 45.0,
-                                                    height: 45.0,
-                                                    fit: BoxFit.cover,
-                                                    animate:
-                                                        _model.loadingStatus),
+                                              Transform.scale(
+                                                scaleX: 4.0,
+                                                scaleY: 4.0,
+                                                child: Visibility(
+                                                  visible: _model.audioLoading,
+                                                  child: Lottie.asset(
+                                                      'assets/lottie_animations/Animation_-_1701617942129.json',
+                                                      width: 45.0,
+                                                      height: 45.0,
+                                                      fit: BoxFit.contain,
+                                                      animate:
+                                                          _model.loadingStatus),
+                                                ),
+                                              ),
                                             ],
                                           ),
                                           Column(
@@ -700,7 +706,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Text(
-                                                    _model.surahName,
+                                                    '${_model.surahID?.toString()}. ${_model.surahName}',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -883,6 +889,24 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
+                                                    Container(
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                      ),
+                                                      child: Text(
+                                                        '${valueOrDefault<String>(
+                                                          _model.verseID
+                                                              ?.toString(),
+                                                          '1',
+                                                        )}.',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium,
+                                                      ),
+                                                    ),
                                                     Flexible(
                                                       child: Container(
                                                         width:
@@ -910,7 +934,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                         ),
                                                       ),
                                                     ),
-                                                  ],
+                                                  ].divide(
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                               ].divide(SizedBox(height: 15.0)),
                                             ),

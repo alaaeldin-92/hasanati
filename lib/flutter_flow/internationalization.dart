@@ -1378,48 +1378,55 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Reciter
   {
-    'bti2kqy4': {
+    'j5rxgldg': {
       'en': 'Choose A Reciter',
       'ar': '',
     },
-    '2gr0kedt': {
+    'kkjwyb7d': {
       'en': 'Al-Minshawi\n(Murattal)',
       'ar': '',
     },
-    'uuse225m': {
+    'utm15ct7': {
       'en': 'Mishary\nAl-Afasy',
       'ar': '',
     },
-    'rtieva0p': {
+    'u11rtdt9': {
       'en': 'Abu Bakr\nAl-Shatri',
       'ar': '',
     },
-    '67z7p6g3': {
+    '9a9tjqft': {
       'en': 'Abdurahm-\nan Sudais',
       'ar': '',
     },
-    '5nz3042m': {
+    'z3fxir7m': {
       'en': 'Al-Husary\n(Muallim)',
       'ar': '',
     },
-    'rfj2bpci': {
+    'n9yktxlk': {
       'en': 'Al-Minshawi\n(Mujawwad)',
       'ar': '',
     },
-    'r4wp7x5w': {
+    '4f6ca0hx': {
       'en': 'Al-Husary\n(Muallim)',
       'ar': '',
     },
-    '3bcd2riu': {
+    'os8hh7kf': {
       'en': 'Hani \nAr-Rifai',
       'ar': '',
     },
-    'wswq9yvd': {
+    'tto2eh7f': {
       'en': 'Saud Ash-\nShuraym',
       'ar': '',
     },
-    '5e1iek5v': {
+    'r7bhlb44': {
       'en': 'Mohamed \nAl-Tablawi',
+      'ar': '',
+    },
+  },
+  // Update
+  {
+    'nwlan0fz': {
+      'en': 'Update',
       'ar': '',
     },
   },

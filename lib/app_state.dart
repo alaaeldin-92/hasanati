@@ -107,6 +107,10 @@ class FFAppState extends ChangeNotifier {
     await _safeInitAsync(() async {
       _reciterID = await secureStorage.getInt('ff_reciterID') ?? _reciterID;
     });
+    await _safeInitAsync(() async {
+      _seenUpdateScreen = await secureStorage.getBool('ff_seenUpdateScreen') ??
+          _seenUpdateScreen;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -543,6 +547,17 @@ class FFAppState extends ChangeNotifier {
 
   void deleteReciterID() {
     secureStorage.delete(key: 'ff_reciterID');
+  }
+
+  bool _seenUpdateScreen = false;
+  bool get seenUpdateScreen => _seenUpdateScreen;
+  set seenUpdateScreen(bool _value) {
+    _seenUpdateScreen = _value;
+    secureStorage.setBool('ff_seenUpdateScreen', _value);
+  }
+
+  void deleteSeenUpdateScreen() {
+    secureStorage.delete(key: 'ff_seenUpdateScreen');
   }
 }
 

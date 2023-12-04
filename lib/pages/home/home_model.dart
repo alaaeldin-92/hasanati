@@ -1,8 +1,10 @@
+import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/home_skeleton_widget.dart';
 import '/components/navbar_widget.dart';
+import '/components/update_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -22,6 +24,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 
 class HomeModel extends FlutterFlowModel<HomeWidget> {
   ///  Local state fields for this page.
@@ -55,6 +58,8 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   QuranVerseOfTheDayRecord? verseOfTheDayQuery;
   // Stores action output result for [Firestore Query - Query a collection] action in Home widget.
   List<QuranVersesFavoriteRecord>? favQueryVerseOfDay;
+  // Stores action output result for [Firestore Query - Query a collection] action in Home widget.
+  UpdateRecord? updateScreen;
   // Stores action output result for [Firestore Query - Query a collection] action in Container widget.
   QuranPerformanceRecord? userQuranPer;
   // Stores action output result for [Backend Call - API (Verse Audio)] action in Container widget.
@@ -88,69 +93,68 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   Future initialCheck(BuildContext context) async {
     QuranPerformanceRecord? quranPerfQuery;
 
-    if (false) {
-      context.goNamed('AuthCompleteProfile1');
-    }
-    quranPerfQuery = await queryQuranPerformanceRecordOnce(
-      queryBuilder: (quranPerformanceRecord) => quranPerformanceRecord.where(
-        'user',
-        isEqualTo: currentUserUid,
-      ),
-      singleRecord: true,
-    ).then((s) => s.firstOrNull);
-    if (!(quranPerfQuery != null)) {
-      await QuranPerformanceRecord.collection
-          .doc()
-          .set(createQuranPerformanceRecordData(
-            hasanat: 0,
-            timeReadSec: 0,
-            versesRead: 0,
-            user: currentUserUid,
-            lastmodified: getCurrentTimestamp.secondsSinceEpoch,
-          ));
-      verseOfTheDayChapter = random_data.randomInteger(1, 114);
-      verseOfTheDayVerse = random_data.randomInteger(
-          1,
-          functions.getVersesCountFromId(
-              functions.quranSurahEN()!, verseOfTheDayChapter));
+    if (loggedIn) {
+      quranPerfQuery = await queryQuranPerformanceRecordOnce(
+        queryBuilder: (quranPerformanceRecord) => quranPerformanceRecord.where(
+          'user',
+          isEqualTo: currentUserUid,
+        ),
+        singleRecord: true,
+      ).then((s) => s.firstOrNull);
+      if (!(quranPerfQuery != null)) {
+        await QuranPerformanceRecord.collection
+            .doc()
+            .set(createQuranPerformanceRecordData(
+              hasanat: 0,
+              timeReadSec: 0,
+              versesRead: 0,
+              user: currentUserUid,
+              lastmodified: getCurrentTimestamp.secondsSinceEpoch,
+            ));
+        verseOfTheDayChapter = random_data.randomInteger(1, 114);
+        verseOfTheDayVerse = random_data.randomInteger(
+            1,
+            functions.getVersesCountFromId(
+                functions.quranSurahEN()!, verseOfTheDayChapter));
 
-      await QuranVerseOfTheDayRecord.collection
-          .doc()
-          .set(createQuranVerseOfTheDayRecordData(
-            chapter: verseOfTheDayChapter,
-            verse: random_data.randomInteger(
-                1,
-                functions.getVersesCountFromId(
-                    functions.quranSurahEN()!, verseOfTheDayChapter)),
-            claimed: false,
-            nextUpdate:
-                functions.add(getCurrentTimestamp.secondsSinceEpoch, 86400),
-            user: currentUserUid,
-          ));
+        await QuranVerseOfTheDayRecord.collection
+            .doc()
+            .set(createQuranVerseOfTheDayRecordData(
+              chapter: verseOfTheDayChapter,
+              verse: random_data.randomInteger(
+                  1,
+                  functions.getVersesCountFromId(
+                      functions.quranSurahEN()!, verseOfTheDayChapter)),
+              claimed: false,
+              nextUpdate:
+                  functions.add(getCurrentTimestamp.secondsSinceEpoch, 86400),
+              user: currentUserUid,
+            ));
 
-      await QuranLastReadVerseRecord.collection
-          .doc()
-          .set(createQuranLastReadVerseRecordData(
-            user: currentUserUid,
-          ));
+        await QuranLastReadVerseRecord.collection
+            .doc()
+            .set(createQuranLastReadVerseRecordData(
+              user: currentUserUid,
+            ));
 
-      await QuranVersesFavoriteRecord.collection
-          .doc()
-          .set(createQuranVersesFavoriteRecordData(
-            user: currentUserUid,
-          ));
+        await QuranVersesFavoriteRecord.collection
+            .doc()
+            .set(createQuranVersesFavoriteRecordData(
+              user: currentUserUid,
+            ));
 
-      await QuranVersesMemorizeRecord.collection
-          .doc()
-          .set(createQuranVersesMemorizeRecordData(
-            user: currentUserUid,
-          ));
+        await QuranVersesMemorizeRecord.collection
+            .doc()
+            .set(createQuranVersesMemorizeRecordData(
+              user: currentUserUid,
+            ));
 
-      await QuranLastReadPageRecord.collection
-          .doc()
-          .set(createQuranLastReadPageRecordData(
-            user: currentUserUid,
-          ));
+        await QuranLastReadPageRecord.collection
+            .doc()
+            .set(createQuranLastReadPageRecordData(
+              user: currentUserUid,
+            ));
+      }
     }
   }
 

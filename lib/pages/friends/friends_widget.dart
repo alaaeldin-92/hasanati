@@ -281,7 +281,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                            MainAxisAlignment.start,
                                         children: [
                                           if (_model.searchResultJSON.length >
                                               0)
