@@ -471,7 +471,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                                 height:
                                                     MediaQuery.sizeOf(context)
                                                             .height *
-                                                        0.45,
+                                                        0.5,
                                                 child: ReciterWidget(),
                                               ),
                                             ),
@@ -482,11 +482,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
-                                        Icon(
-                                          Icons.mic_none_outlined,
+                                        FaIcon(
+                                          FontAwesomeIcons.edit,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
-                                          size: 24.0,
+                                          size: 22.0,
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
