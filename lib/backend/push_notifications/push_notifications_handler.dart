@@ -162,6 +162,7 @@ final parametersBuilderMap =
         },
       ),
   'Notification': ParameterData.none(),
+  'Network': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {
