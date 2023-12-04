@@ -82,7 +82,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      'mf7ddc2r' /* Choose A Reciter */,
+                      'bti2kqy4' /* Choose A Reciter */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -192,7 +192,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'qwt1w4c1' /* Al-Minshawi
+                                  '2gr0kedt' /* Al-Minshawi
 (Murattal) */
                                   ,
                                 ),
@@ -253,7 +253,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'kmd23hyk' /* Mishary
+                                  'uuse225m' /* Mishary
 Al-Afasy */
                                   ,
                                 ),
@@ -318,7 +318,7 @@ Al-Afasy */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '7nw820td' /* Abu Bakr
+                                  'rtieva0p' /* Abu Bakr
 Al-Shatri */
                                   ,
                                 ),
@@ -383,7 +383,7 @@ Al-Shatri */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'kwoorsug' /* Abdurahm-
+                                  '67z7p6g3' /* Abdurahm-
 an Sudais */
                                   ,
                                 ),
@@ -448,7 +448,7 @@ an Sudais */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'i4y1he9x' /* Al-Husary
+                                  '5nz3042m' /* Al-Husary
 (Muallim) */
                                   ,
                                 ),
@@ -512,7 +512,7 @@ an Sudais */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '5oiidvrk' /* Al-Minshawi
+                                  'rfj2bpci' /* Al-Minshawi
 (Mujawwad) */
                                   ,
                                 ),
@@ -576,7 +576,7 @@ an Sudais */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'fqpvra1r' /* Al-Husary
+                                  'r4wp7x5w' /* Al-Husary
 (Muallim) */
                                   ,
                                 ),
@@ -640,7 +640,7 @@ an Sudais */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'pqsu6y0v' /* Hani 
+                                  '3bcd2riu' /* Hani 
 Ar-Rifai */
                                   ,
                                 ),
@@ -704,7 +704,7 @@ Ar-Rifai */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'lm0vg8gp' /* Saud Ash-
+                                  'wswq9yvd' /* Saud Ash-
 Shuraym */
                                   ,
                                 ),
@@ -768,7 +768,7 @@ Shuraym */
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'cn4xwb6u' /* Mohamed 
+                                  '5e1iek5v' /* Mohamed 
 Al-Tablawi */
                                   ,
                                 ),
