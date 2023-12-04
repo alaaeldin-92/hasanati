@@ -126,6 +126,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                 ].divide(SizedBox(width: 15.0)),
               ),
               SingleChildScrollView(
+                primary: false,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
