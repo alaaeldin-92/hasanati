@@ -3,6 +3,7 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/home_skeleton_widget.dart';
 import '/components/navbar_widget.dart';
+import '/components/update_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -21,6 +22,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'home_model.dart';
 export 'home_model.dart';
 
@@ -102,6 +104,33 @@ class _HomeWidgetState extends State<HomeWidget> {
       setState(() {
         _model.pageLoading = false;
       });
+      _model.updateScreen = await queryUpdateRecordOnce(
+        singleRecord: true,
+      ).then((s) => s.firstOrNull);
+      if ((_model.updateScreen?.status == true) &&
+          (FFAppState().seenUpdateScreen == false)) {
+        await showModalBottomSheet(
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          builder: (context) {
+            return WebViewAware(
+                child: GestureDetector(
+              onTap: () => _model.unfocusNode.canRequestFocus
+                  ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+                  : FocusScope.of(context).unfocus(),
+              child: Padding(
+                padding: MediaQuery.viewInsetsOf(context),
+                child: UpdateWidget(),
+              ),
+            ));
+          },
+        ).then((value) => safeSetState(() {}));
+
+        setState(() {
+          FFAppState().seenUpdateScreen = true;
+        });
+      }
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -466,7 +495,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                             5.0)),
                                                                   ),
                                                                   Text(
-                                                                    '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}%',
+                                                                    '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}% completed',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -931,14 +960,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'CriqueGrotesk',
+                                                                      'Readex Pro',
                                                                   fontSize:
                                                                       18.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
-                                                                  useGoogleFonts:
-                                                                      false,
                                                                 ),
                                                           ),
                                                           Icon(
@@ -1216,11 +1243,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'CriqueGrotesk',
+                                                            'Readex Pro',
                                                         fontSize: 18.0,
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Row(
@@ -1661,13 +1687,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'CriqueGrotesk',
+                                                                    'Readex Pro',
                                                                 fontSize: 18.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                         ),
                                                         if (!_model
@@ -1932,7 +1956,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                           onTap: () async {
                                                                                             setState(() => _model.loadingStatus = !_model.loadingStatus);
                                                                                             setState(() {
-                                                                                              _model.pageLoading = true;
+                                                                                              _model.audioLoading = true;
                                                                                             });
                                                                                             _model.audioJSON = await VerseAudioCall.call(
                                                                                               surahID: _model.verseOfTheDayChapter,
@@ -1972,11 +1996,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                             await Future.delayed(const Duration(milliseconds: 1000));
                                                                                             setState(() {
                                                                                               _model.verseOfTheDayAudioPlaying = false;
-                                                                                            });
-                                                                                            setState(() {
-                                                                                              _model.verseOfTheDayAudioDuration = 0.0;
-                                                                                            });
-                                                                                            setState(() {
                                                                                               _model.verseOfTheDayTimeCounter = 0.0;
                                                                                             });
 
@@ -2033,7 +2052,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                           ],
                                                                                         ),
                                                                                       ),
-                                                                                    if (_model.audioLoading) Lottie.asset('assets/lottie_animations/Animation_-_1701617942129.json', width: 45.0, height: 45.0, fit: BoxFit.cover, animate: _model.loadingStatus),
+                                                                                    Transform.scale(
+                                                                                      scaleX: 4.0,
+                                                                                      scaleY: 4.0,
+                                                                                      child: Visibility(
+                                                                                        visible: _model.audioLoading,
+                                                                                        child: Lottie.asset('assets/lottie_animations/Animation_-_1701617942129.json', width: 45.0, height: 45.0, fit: BoxFit.contain, animate: _model.loadingStatus),
+                                                                                      ),
+                                                                                    ),
                                                                                   ],
                                                                                 ),
                                                                               ),

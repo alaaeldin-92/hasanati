@@ -32,7 +32,7 @@ service cloud.firestore {
     match /prayerPerformance/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if true;
+      allow write: if false;
       allow delete: if false;
     }
 
@@ -58,6 +58,13 @@ service cloud.firestore {
     }
 
     match /friendRequestNotification/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if request.auth.uid == resource.data.sender;
+    }
+
+    match /update/{document} {
       allow create: if true;
       allow read: if true;
       allow write: if false;
