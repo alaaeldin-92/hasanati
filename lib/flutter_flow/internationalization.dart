@@ -1425,7 +1425,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Update
   {
-    '9mpz8shg': {
+    'ornoe31u': {
       'en': 'Update',
       'ar': '',
     },

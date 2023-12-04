@@ -152,7 +152,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                         'https://apps.apple.com/us/app/quranly/id1559233786');
                   },
                   text: FFLocalizations.of(context).getText(
-                    '9mpz8shg' /* Update */,
+                    'ornoe31u' /* Update */,
                   ),
                   options: FFButtonOptions(
                     width: MediaQuery.sizeOf(context).width * 1.0,

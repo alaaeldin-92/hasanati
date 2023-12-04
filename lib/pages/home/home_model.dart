@@ -92,6 +92,14 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
 
   Future initialCheck(BuildContext context) async {
     QuranPerformanceRecord? quranPerfQuery;
+    QuranVersesMemorizeRecord? quranVersesMem;
+    QuranVersesFavoriteRecord? quranVersesFav;
+    QuranLastReadPageRecord? quranLastReadPage;
+    QuranLastReadVerseRecord? quranLastReadVerse;
+    QuranVersesMemorizeRecord? quranVersesMemCopy;
+    QuranVersesFavoriteRecord? quranVersesFavCopy;
+    QuranLastReadPageRecord? quranLastReadPageCopy;
+    QuranLastReadVerseRecord? quranLastReadVerseCopy;
 
     if (loggedIn) {
       quranPerfQuery = await queryQuranPerformanceRecordOnce(
@@ -154,6 +162,116 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
             .set(createQuranLastReadPageRecordData(
               user: currentUserUid,
             ));
+      } else {
+        if (FFAppState().quranHasanat < quranPerfQuery!.hasanat) {
+          quranVersesMem = await queryQuranVersesMemorizeRecordOnce(
+            queryBuilder: (quranVersesMemorizeRecord) =>
+                quranVersesMemorizeRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          quranVersesFav = await queryQuranVersesFavoriteRecordOnce(
+            queryBuilder: (quranVersesFavoriteRecord) =>
+                quranVersesFavoriteRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          quranLastReadPage = await queryQuranLastReadPageRecordOnce(
+            queryBuilder: (quranLastReadPageRecord) =>
+                quranLastReadPageRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          quranLastReadVerse = await queryQuranLastReadVerseRecordOnce(
+            queryBuilder: (quranLastReadVerseRecord) =>
+                quranLastReadVerseRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          FFAppState().quranHasanat = quranPerfQuery!.hasanat;
+          FFAppState().quranTimeReadSec = quranPerfQuery!.timeReadSec;
+          FFAppState().quranVersesRead = quranPerfQuery!.versesRead;
+          FFAppState().quranLastReadVerse = quranLastReadVerse!.verse;
+          FFAppState().quranLastReadPage = quranLastReadPage!.page;
+          FFAppState().quranVersesFavorites =
+              quranVersesFav!.verse.toList().cast<String>();
+          FFAppState().quranVersesMemorized =
+              quranVersesMem!.verse.toList().cast<String>();
+        } else if (FFAppState().quranHasanat > quranPerfQuery!.hasanat) {
+          quranVersesMemCopy = await queryQuranVersesMemorizeRecordOnce(
+            queryBuilder: (quranVersesMemorizeRecord) =>
+                quranVersesMemorizeRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          quranVersesFavCopy = await queryQuranVersesFavoriteRecordOnce(
+            queryBuilder: (quranVersesFavoriteRecord) =>
+                quranVersesFavoriteRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          quranLastReadPageCopy = await queryQuranLastReadPageRecordOnce(
+            queryBuilder: (quranLastReadPageRecord) =>
+                quranLastReadPageRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+          quranLastReadVerseCopy = await queryQuranLastReadVerseRecordOnce(
+            queryBuilder: (quranLastReadVerseRecord) =>
+                quranLastReadVerseRecord.where(
+              'user',
+              isEqualTo: currentUserUid,
+            ),
+            singleRecord: true,
+          ).then((s) => s.firstOrNull);
+
+          await quranPerfQuery!.reference
+              .update(createQuranPerformanceRecordData(
+            hasanat: FFAppState().quranHasanat,
+            timeReadSec: FFAppState().quranTimeReadSec,
+            versesRead: FFAppState().quranVersesRead,
+          ));
+
+          await quranVersesMemCopy!.reference.update({
+            ...mapToFirestore(
+              {
+                'verse': FFAppState().quranVersesMemorized,
+              },
+            ),
+          });
+
+          await quranVersesFavCopy!.reference.update({
+            ...mapToFirestore(
+              {
+                'verse': FFAppState().quranVersesFavorites,
+              },
+            ),
+          });
+
+          await quranLastReadVerseCopy!.reference
+              .update(createQuranLastReadVerseRecordData(
+            verse: FFAppState().quranLastReadVerse,
+          ));
+
+          await quranLastReadPageCopy!.reference
+              .update(createQuranLastReadPageRecordData(
+            page: FFAppState().quranLastReadPage,
+          ));
+        }
       }
     }
   }
