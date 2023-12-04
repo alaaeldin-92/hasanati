@@ -30,3 +30,4 @@ export '/pages/auth_forgot_password/auth_forgot_password_widget.dart'
     show AuthForgotPasswordWidget;
 export '/pages/quran_page/quran_page_widget.dart' show QuranPageWidget;
 export '/pages/notification/notification_widget.dart' show NotificationWidget;
+export '/pages/network/network_widget.dart' show NetworkWidget;

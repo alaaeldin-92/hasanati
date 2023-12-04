@@ -1334,6 +1334,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
+  // Network
+  {
+    'd02mz6c5': {
+      'en': 'Network error',
+      'ar': 'لم يتم العثور على نتائج',
+    },
+    'f2kha8z5': {
+      'en':
+          'Ensure a stable connection and retry. If the issue persists, contact support.',
+      'ar': 'حاول البحث عن شيء آخر',
+    },
+    '8di6ati5': {
+      'en': 'Try Again',
+      'ar': 'العودة إلى المنزل',
+    },
+    '786r5mjm': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
   // Navbar
   {
     'udp76wvq': {
@@ -1425,7 +1445,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Update
   {
-    'ornoe31u': {
+    'ufetiswp': {
       'en': 'Update',
       'ar': '',
     },
