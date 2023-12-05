@@ -22,8 +22,6 @@ export '/pages/onboarding_two/onboarding_two_widget.dart'
     show OnboardingTwoWidget;
 export '/pages/introduction/introduction_widget.dart' show IntroductionWidget;
 export '/pages/auth_main/auth_main_widget.dart' show AuthMainWidget;
-export '/pages/auth_complete_profile2_copy/auth_complete_profile2_copy_widget.dart'
-    show AuthCompleteProfile2CopyWidget;
 export '/pages/auth_complete_profile1/auth_complete_profile1_widget.dart'
     show AuthCompleteProfile1Widget;
 export '/pages/auth_forgot_password/auth_forgot_password_widget.dart'
