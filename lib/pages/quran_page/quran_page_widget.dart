@@ -352,7 +352,13 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                 padding:
                                                     MediaQuery.viewInsetsOf(
                                                         context),
-                                                child: ReciterWidget(),
+                                                child: Container(
+                                                  height:
+                                                      MediaQuery.sizeOf(context)
+                                                              .height *
+                                                          1.0,
+                                                  child: ReciterWidget(),
+                                                ),
                                               ),
                                             ));
                                           },
