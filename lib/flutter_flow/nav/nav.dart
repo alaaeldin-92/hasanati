@@ -25,7 +25,7 @@ export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';
 
-class AppStateNotifier extends ChangeNotifier {
+class AppStateNotifier extends ChangeNotifier  {
   AppStateNotifier._();
 
   static AppStateNotifier? _instance;
@@ -45,9 +45,6 @@ class AppStateNotifier extends ChangeNotifier {
 
   bool get loading => user == null || showSplashImage;
   bool get loggedIn => user?.loggedIn ?? false;
-  var connectivityResult =  (Connectivity().checkConnectivity());
-  bool get internetConnected => connectivityResult == ConnectivityResult.mobile ||
-      connectivityResult == ConnectivityResult.wifi;
   bool get profileCompleted => currentUserDisplayName.isNotEmpty;
   bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
   bool get shouldRedirect => loggedIn && _redirectLocation != null;
@@ -87,13 +84,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          !appStateNotifier.loggedIn ? OnboardingWidget() : appStateNotifier.profileCompleted ? HomeWidget() :AuthCompleteProfile1Widget(),
+          !appStateNotifier.loggedIn ? OnboardingWidget() : (appStateNotifier.profileCompleted ? HomeWidget() : AuthCompleteProfile1Widget()),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-            !appStateNotifier.loggedIn ? OnboardingWidget() : appStateNotifier.profileCompleted ? HomeWidget() :AuthCompleteProfile1Widget(),
+            !appStateNotifier.loggedIn ? OnboardingWidget() : (appStateNotifier.profileCompleted ? HomeWidget() : AuthCompleteProfile1Widget()),
         ),
         FFRoute(
           name: 'Home',
@@ -396,21 +393,27 @@ class FFRoute {
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
         name: name,
         path: path,
-        redirect: (context, state) {
+        redirect: (context, state) async {
+           
+          
           if (appStateNotifier.shouldRedirect) {
             final redirectLocation = appStateNotifier.getRedirectLocation();
             appStateNotifier.clearRedirectLocation();
             return redirectLocation;
           }
 
+          var connectivityResult =  await (Connectivity().checkConnectivity());
+          bool internetConnected = connectivityResult == ConnectivityResult.mobile ||
+            connectivityResult == ConnectivityResult.wifi;
+
+          if(!internetConnected){
+            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            return '/network';
+          }
+
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
             return '/onboarding';
-          }
-
-          if(!appStateNotifier.internetConnected){
-            appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/network';
           }
 
           return null;
