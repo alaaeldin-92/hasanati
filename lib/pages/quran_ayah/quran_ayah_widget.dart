@@ -364,6 +364,14 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                             ));
                                           },
                                         ).then((value) => safeSetState(() {}));
+
+                                        if (_model.audioPlaying) {
+                                          _model.soundPlayer?.stop();
+                                          setState(() {
+                                            _model.audioPlaying = false;
+                                            _model.timeCounter = 0.0;
+                                          });
+                                        }
                                       },
                                       child: FaIcon(
                                         FontAwesomeIcons.ellipsisH,

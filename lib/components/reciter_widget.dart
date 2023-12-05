@@ -46,7 +46,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
       alignment: AlignmentDirectional(0.00, 1.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
-        height: MediaQuery.sizeOf(context).height * 0.45,
+        height: MediaQuery.sizeOf(context).height * 1.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.only(
@@ -125,664 +125,625 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                   ),
                 ].divide(SizedBox(width: 15.0)),
               ),
-              SingleChildScrollView(
-                primary: false,
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    GridView(
-                      padding: EdgeInsets.zero,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4,
-                        crossAxisSpacing: 0.0,
-                        mainAxisSpacing: 10.0,
-                        childAspectRatio: 0.7,
-                      ),
-                      primary: false,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 9;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  if (FFAppState().reciterID == 9)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Container(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.asset(
-                                      'assets/images/mohamed-siddiq-el-minshawi-profile.jpeg',
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'kkjwyb7d' /* Al-Minshawi
-(Murattal) */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 7;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  if (FFAppState().reciterID == 7)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Container(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.asset(
-                                      'assets/images/Mishary.jpg',
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'utm15ct7' /* Mishary
-Al-Afasy */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 4;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  if (FFAppState().reciterID == 4)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/abu-bakr-al-shatri-pofile.jpeg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'u11rtdt9' /* Abu Bakr
-Al-Shatri */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 3;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  if (FFAppState().reciterID == 3)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/42418d05c28b13b237f9879aacf4a617.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  '9a9tjqft' /* Abdurahm-
-an Sudais */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 12;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  if (FFAppState().reciterID == 12)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/alhusarey.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'z3fxir7m' /* Al-Husary
-(Muallim) */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 8;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                children: [
-                                  if (FFAppState().reciterID == 8)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/mohamed-siddiq-el-minshawi-profile.jpeg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'n9yktxlk' /* Al-Minshawi
-(Mujawwad) */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 12;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                children: [
-                                  if (FFAppState().reciterID == 12)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/alhusarey.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  '4f6ca0hx' /* Al-Husary
-(Muallim) */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 5;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                children: [
-                                  if (FFAppState().reciterID == 5)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/7b591f94dac935328b4c342091c9e23b.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'os8hh7kf' /* Hani 
-Ar-Rifai */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 10;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                children: [
-                                  if (FFAppState().reciterID == 10)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/artworks-000343991031-xhrc1l-t500x500.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'tto2eh7f' /* Saud Ash-
-Shuraym */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            FFAppState().reciterID = 11;
-                            Navigator.pop(context);
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Stack(
-                                children: [
-                                  if (FFAppState().reciterID == 11)
-                                    Container(
-                                      width: 66.0,
-                                      height: 66.0,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                            FlutterFlowTheme.of(context)
-                                                .secondary
-                                          ],
-                                          stops: [0.0, 1.0],
-                                          begin:
-                                              AlignmentDirectional(0.0, -1.0),
-                                          end: AlignmentDirectional(0, 1.0),
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        3.0, 3.0, 3.0, 3.0),
-                                    child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/hqdefault.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'r7bhlb44' /* Mohamed 
-Al-Tablawi */
-                                  ,
-                                ),
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                            ].divide(SizedBox(height: 5.0)),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+              GridView(
+                padding: EdgeInsets.zero,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 0.0,
+                  mainAxisSpacing: 10.0,
+                  childAspectRatio: 0.7,
                 ),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: [
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 9;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          children: [
+                            if (FFAppState().reciterID == 9)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Container(
+                              width: 60.0,
+                              height: 60.0,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.asset(
+                                'assets/images/mohamed-siddiq-el-minshawi-profile.jpeg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'vgqfjzbw' /* Al-Minshawi
+(Murattal) */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 7;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          children: [
+                            if (FFAppState().reciterID == 7)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Container(
+                              width: 60.0,
+                              height: 60.0,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.asset(
+                                'assets/images/Mishary.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'gswy3jxa' /* Mishary
+Al-Afasy */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 4;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          children: [
+                            if (FFAppState().reciterID == 4)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/abu-bakr-al-shatri-pofile.jpeg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'akhs1ytd' /* Abu Bakr
+Al-Shatri */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 3;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          children: [
+                            if (FFAppState().reciterID == 3)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/42418d05c28b13b237f9879aacf4a617.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'qs3mb0xe' /* Abdurahm-
+an Sudais */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 12;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          children: [
+                            if (FFAppState().reciterID == 12)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/alhusarey.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'vrcdhvm4' /* Al-Husary
+(Muallim) */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 8;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          children: [
+                            if (FFAppState().reciterID == 8)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/mohamed-siddiq-el-minshawi-profile.jpeg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'wmtj880r' /* Al-Minshawi
+(Mujawwad) */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 12;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          children: [
+                            if (FFAppState().reciterID == 12)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/alhusarey.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'csmudvcv' /* Al-Husary
+(Muallim) */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 5;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          children: [
+                            if (FFAppState().reciterID == 5)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/7b591f94dac935328b4c342091c9e23b.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            '39qgxfek' /* Hani 
+Ar-Rifai */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 10;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          children: [
+                            if (FFAppState().reciterID == 10)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/artworks-000343991031-xhrc1l-t500x500.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'zxknpbq2' /* Saud Ash-
+Shuraym */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      FFAppState().reciterID = 11;
+                      Navigator.pop(context);
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Stack(
+                          children: [
+                            if (FFAppState().reciterID == 11)
+                              Container(
+                                width: 66.0,
+                                height: 66.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(0.0, -1.0),
+                                    end: AlignmentDirectional(0, 1.0),
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              child: Container(
+                                width: 60.0,
+                                height: 60.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/hqdefault.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'ka14nm5h' /* Mohamed 
+Al-Tablawi */
+                            ,
+                          ),
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
+                        ),
+                      ].divide(SizedBox(height: 5.0)),
+                    ),
+                  ),
+                ],
               ),
             ].divide(SizedBox(height: 20.0)),
           ),
