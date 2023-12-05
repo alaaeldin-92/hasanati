@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -26,6 +26,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   algolia: 1.1.1
+  connectivity: ^3.0.0
   audio_session: 0.1.16
   audioplayers: ^5.2.1
   audioplayers_android: ^4.0.3
@@ -80,7 +81,7 @@ dependencies:
   google_sign_in_ios: 5.6.4
   google_sign_in_platform_interface: 2.4.2
   google_sign_in_web: 0.12.1
-  infinite_scroll_pagination: 
+  infinite_scroll_pagination:
     git:
       url: https://github.com/FlutterFlow/infinite_scroll_pagination.git
       ref: develop
@@ -125,7 +126,6 @@ dependencies:
   webview_flutter_wkwebview: 3.1.1
   webviewx_plus: 0.3.3
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
@@ -139,22 +139,19 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
 flutter_launcher_icons:
   android: true
   ios: true
   remove_alpha_ios: true
   web:
     generate: true
-  image_path: 'assets/images/app_launcher_icon.png'
-
+  image_path: "assets/images/app_launcher_icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -170,127 +167,127 @@ flutter:
     - assets/rive_animations/
     - assets/pdfs/
   fonts:
-    - family: 'P001'
+    - family: "P001"
       fonts:
         - asset: assets/fonts/QCF_P001.TTF
-    - family: 'P002'
+    - family: "P002"
       fonts:
         - asset: assets/fonts/QCF_P002.ttf
-    - family: 'P003'
+    - family: "P003"
       fonts:
         - asset: assets/fonts/QCF_P003.TTF
-    - family: 'P004'
+    - family: "P004"
       fonts:
         - asset: assets/fonts/QCF_P004.TTF
-    - family: 'P005'
+    - family: "P005"
       fonts:
         - asset: assets/fonts/QCF_P005.TTF
-    - family: 'P006'
+    - family: "P006"
       fonts:
         - asset: assets/fonts/QCF_P006.TTF
-    - family: 'P007'
+    - family: "P007"
       fonts:
         - asset: assets/fonts/QCF_P007.TTF
-    - family: 'P008'
+    - family: "P008"
       fonts:
         - asset: assets/fonts/QCF_P008.TTF
-    - family: 'P009'
+    - family: "P009"
       fonts:
         - asset: assets/fonts/QCF_P009.TTF
-    - family: 'P010'
+    - family: "P010"
       fonts:
         - asset: assets/fonts/QCF_P010.TTF
-    - family: 'P011'
+    - family: "P011"
       fonts:
         - asset: assets/fonts/QCF_P011.TTF
-    - family: 'P012'
+    - family: "P012"
       fonts:
         - asset: assets/fonts/QCF_P012.TTF
-    - family: 'P013'
+    - family: "P013"
       fonts:
         - asset: assets/fonts/QCF_P013.TTF
-    - family: 'P014'
+    - family: "P014"
       fonts:
         - asset: assets/fonts/QCF_P014.TTF
-    - family: 'P015'
+    - family: "P015"
       fonts:
         - asset: assets/fonts/QCF_P015.TTF
-    - family: 'P016'
+    - family: "P016"
       fonts:
         - asset: assets/fonts/QCF_P016.TTF
-    - family: 'P017'
+    - family: "P017"
       fonts:
         - asset: assets/fonts/QCF_P017.TTF
-    - family: 'P018'
+    - family: "P018"
       fonts:
         - asset: assets/fonts/QCF_P018.TTF
-    - family: 'P019'
+    - family: "P019"
       fonts:
         - asset: assets/fonts/QCF_P019.TTF
-    - family: 'P020'
+    - family: "P020"
       fonts:
         - asset: assets/fonts/QCF_P020.TTF
-    - family: 'P021'
+    - family: "P021"
       fonts:
         - asset: assets/fonts/QCF_P021.TTF
-    - family: 'P022'
+    - family: "P022"
       fonts:
         - asset: assets/fonts/QCF_P022.TTF
-    - family: 'P023'
+    - family: "P023"
       fonts:
         - asset: assets/fonts/QCF_P023.TTF
-    - family: 'P024'
+    - family: "P024"
       fonts:
         - asset: assets/fonts/QCF_P024.TTF
-    - family: 'P025'
+    - family: "P025"
       fonts:
         - asset: assets/fonts/QCF_P025.TTF
-    - family: 'P026'
+    - family: "P026"
       fonts:
         - asset: assets/fonts/QCF_P026.TTF
-    - family: 'P027'
+    - family: "P027"
       fonts:
         - asset: assets/fonts/QCF_P027.TTF
-    - family: 'P028'
+    - family: "P028"
       fonts:
         - asset: assets/fonts/QCF_P028.TTF
-    - family: 'P029'
+    - family: "P029"
       fonts:
         - asset: assets/fonts/QCF_P029.TTF
-    - family: 'P030'
+    - family: "P030"
       fonts:
         - asset: assets/fonts/QCF_P030.TTF
-    - family: 'P031'
+    - family: "P031"
       fonts:
         - asset: assets/fonts/QCF_P031.TTF
-    - family: 'P032'
+    - family: "P032"
       fonts:
         - asset: assets/fonts/QCF_P032.TTF
-    - family: 'P033'
+    - family: "P033"
       fonts:
         - asset: assets/fonts/QCF_P033.TTF
-    - family: 'P034'
+    - family: "P034"
       fonts:
         - asset: assets/fonts/QCF_P034.TTF
-    - family: 'quranFont'
+    - family: "quranFont"
       fonts:
         - asset: assets/fonts/Al_Majeed_Quranic_Font_shiped_(1).ttf
-    - family: 'quran2'
+    - family: "quran2"
       fonts:
         - asset: assets/fonts/Al_Mushaf_Quran_(2).ttf
-    - family: 'qurankarim114'
+    - family: "qurankarim114"
       fonts:
         - asset: assets/fonts/Quran_karim_114.ttf
-    - family: 'QCF_BSML'
+    - family: "QCF_BSML"
       fonts:
         - asset: assets/fonts/QCF_BSML.TTF
-    - family: 'Muhammadi '
+    - family: "Muhammadi "
       fonts:
         - asset: assets/fonts/MUHAMMADI_QURANIC_FONT.ttf
-    - family: 'Fredoka'
+    - family: "Fredoka"
       fonts:
         - asset: assets/fonts/FredokaOne-Regular.ttf
-    - family: 'CriqueGrotesk'
+    - family: "CriqueGrotesk"
       fonts:
         - asset: assets/fonts/CriqueGrotesk-Light.ttf
           weight: 300

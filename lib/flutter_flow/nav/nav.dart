@@ -2,9 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hasanati/auth/firebase_auth/auth_util.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
+import 'package:connectivity/connectivity.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -43,6 +45,10 @@ class AppStateNotifier extends ChangeNotifier {
 
   bool get loading => user == null || showSplashImage;
   bool get loggedIn => user?.loggedIn ?? false;
+  var connectivityResult =  (Connectivity().checkConnectivity());
+  bool get internetConnected => connectivityResult == ConnectivityResult.mobile ||
+      connectivityResult == ConnectivityResult.wifi;
+  bool get profileCompleted => currentUserDisplayName.isNotEmpty;
   bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
   bool get shouldRedirect => loggedIn && _redirectLocation != null;
 
@@ -81,13 +87,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomeWidget() : OnboardingWidget(),
+          !appStateNotifier.loggedIn ? OnboardingWidget() : appStateNotifier.profileCompleted ? HomeWidget() :AuthCompleteProfile1Widget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomeWidget() : OnboardingWidget(),
+            !appStateNotifier.loggedIn ? OnboardingWidget() : appStateNotifier.profileCompleted ? HomeWidget() :AuthCompleteProfile1Widget(),
         ),
         FFRoute(
           name: 'Home',
@@ -401,6 +407,12 @@ class FFRoute {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
             return '/onboarding';
           }
+
+          if(!appStateNotifier.internetConnected){
+            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            return '/network';
+          }
+
           return null;
         },
         pageBuilder: (context, state) {
