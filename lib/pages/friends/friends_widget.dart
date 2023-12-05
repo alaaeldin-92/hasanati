@@ -773,7 +773,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                             BorderRadius.circular(8.0),
                                         child: Image.asset(
                                           'assets/images/marginalia-planning-a-trip.png',
-                                          width: 200.0,
+                                          width: 300.0,
                                           height: 200.0,
                                           fit: BoxFit.contain,
                                         ),
@@ -789,7 +789,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  fontSize: 20.0,
+                                                  fontSize: 22.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
@@ -811,7 +811,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                     .override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Color(0xFF545454),
-                                                      fontSize: 12.0,
+                                                      fontSize: 14.0,
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
@@ -820,7 +820,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                           ),
                                         ],
                                       ),
-                                    ],
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ],
