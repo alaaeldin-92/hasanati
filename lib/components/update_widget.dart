@@ -160,7 +160,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
-            ],
+            ].divide(SizedBox(height: 20.0)),
           ),
         ),
       ),
