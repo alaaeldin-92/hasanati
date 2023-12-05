@@ -710,7 +710,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'العودة إلى المنزل',
     },
     'uul1cb38': {
-      'en': 'Search for a friend',
+      'en': 'Find friends',
       'ar': 'لم يتم العثور على نتائج',
     },
     'inkyq97g': {
@@ -1262,8 +1262,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '0a5529be': {
       'en':
-          'You currently have no notifications. Come back again some other time.',
+          'You currently have no notifications. You will receive one when you get a friend request.',
       'ar': '',
+    },
+    't85weeb8': {
+      'en': 'Go Back',
+      'ar': 'العودة إلى المنزل',
     },
     '97vd0np7': {
       'en': 'Home',
@@ -1277,8 +1281,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'لم يتم العثور على نتائج',
     },
     'f2kha8z5': {
-      'en':
-          'Ensure a stable connection and retry. If the issue persists, contact support.',
+      'en': 'You have lost your netork connection. Please try again.',
       'ar': 'حاول البحث عن شيء آخر',
     },
     '8di6ati5': {

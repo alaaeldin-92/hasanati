@@ -338,17 +338,17 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                                             iconPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: Color(0xFF017AFD),
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .titleSmall
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Color(0xFF009BDF),
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
                                             borderSide: BorderSide(
                                               color: Color(0xFF009BDD),
                                               width: 2.0,

@@ -1,5 +1,5 @@
 import '/backend/backend.dart';
-import '/components/skeleton_lines_widget.dart';
+import '/components/update_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';

@@ -763,28 +763,6 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                             child: Stack(
                               alignment: AlignmentDirectional(0.0, -1.0),
                               children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.asset(
-                                    'assets/images/wave.png',
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 1.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 55.0, 0.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.asset(
-                                      'assets/images/wave.png',
-                                      width: MediaQuery.sizeOf(context).width *
-                                          1.0,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
                                 Align(
                                   alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Column(
@@ -794,10 +772,10 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         child: Image.asset(
-                                          'assets/images/marginalia-meditating-man.png',
-                                          width: 300.0,
+                                          'assets/images/marginalia-planning-a-trip.png',
+                                          width: 200.0,
                                           height: 200.0,
-                                          fit: BoxFit.fitHeight,
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                       Column(
@@ -805,18 +783,18 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'uul1cb38' /* Search for a friend */,
+                                              'uul1cb38' /* Find friends */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  fontSize: 22.0,
+                                                  fontSize: 20.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                           Container(
-                                            width: 200.0,
+                                            width: 220.0,
                                             decoration: BoxDecoration(),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
@@ -842,7 +820,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                           ),
                                         ],
                                       ),
-                                    ].divide(SizedBox(height: 20.0)),
+                                    ],
                                   ),
                                 ),
                               ],
