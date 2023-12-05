@@ -116,7 +116,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                             '8di6ati5' /* Try Again */,
                           ),
                           options: FFButtonOptions(
-                            height: 50.0,
+                            height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
