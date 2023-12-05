@@ -9,7 +9,8 @@ import '../cloud_functions/cloud_functions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:stream_transform/stream_transform.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-
+import 'package:http/http.dart' as http;  // new
+import 'dart:convert';  // new
 export 'push_notifications_handler.dart';
 export 'serialization_util.dart';
 
@@ -82,4 +83,46 @@ void triggerPushNotification({
       .collection(kUserPushNotificationsCollectionName)
       .doc()
       .set(pushNotificationData);
+}
+
+
+Future<void> triggerForegroundPushNotification({
+  required String? notificationTitle,
+  required String? notificationText,
+  String? notificationImageUrl,
+  DateTime? scheduledTime,
+  String? notificationSound,
+  required List<String> userTokens, // Use FCM tokens instead of DocumentReferences
+  required String initialPageName,
+  required Map<String, dynamic> parameterData,
+}) async {
+  if ((notificationTitle ?? '').isEmpty || (notificationText ?? '').isEmpty) {
+    return;
+  }
+
+  final serializedParameterData = serializeParameterData(parameterData);
+
+  final pushNotificationData = {
+    'notification': {
+      'title': notificationTitle,
+      'body': notificationText,
+      if (notificationImageUrl != null) 'image_url': notificationImageUrl,
+    },
+    'data': {
+      'scheduled_time': scheduledTime?.toUtc().toIso8601String(),
+      'sound': notificationSound,
+      'initial_page_name': initialPageName,
+      'parameter_data': serializedParameterData,
+    },
+    'registration_ids': userTokens,
+  };
+
+  // Send the notification using a server (Cloud Function, backend server, etc.)
+  // Example: Use http package to send the notification to FCM
+  // Replace 'YOUR_FCM_SERVER_URL' with your server endpoint
+  await http.post(
+    Uri.parse('AAAAIzWC8Xw:APA91bG-UuaEMpWB5CKC722nLUDG3NF-KHlDoYF8GR7bCDohBhb1C0HLvSx67XDbWVLldrEihrbYXN-vB6G1OSLChb7Z6VYQc6pthqBITlIZPiWNCdPMuI0cNyhY2S5Qc1f7l7gZanYm'),  // FCM SERVER URL
+    headers: {'Content-Type': 'application/json'},
+    body: jsonEncode(pushNotificationData),
+  );
 }

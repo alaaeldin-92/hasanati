@@ -69,10 +69,39 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
     }
   }
 
+
+
+void _handleForegroundPushNotification(RemoteMessage message) async{
+  try {
+    final initialPageName = message.data['initial_page_name'] as String;
+    final initialParameterData = getInitialParameterData(message.data);
+    final parametersBuilder = parametersBuilderMap[initialPageName];
+
+    if (parametersBuilder != null) {
+      final parameterData = await parametersBuilder(initialParameterData);
+
+      // Navigate to the specified page with the provided parameters
+      Navigator.pushNamed(
+        context,
+        initialPageName,
+        arguments: parameterData,
+      );
+    }
+  } catch (e) {
+    print('Error: $e');
+  }
+}
+
+
   @override
   void initState() {
     super.initState();
     handleOpenedPushNotification();
+
+    /////////////// calling the function for FOREGROUND notifications
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      _handleForegroundPushNotification(message);
+    });
   }
 
   @override
@@ -178,3 +207,4 @@ Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {
     return {};
   }
 }
+

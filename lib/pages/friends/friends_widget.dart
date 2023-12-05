@@ -14,6 +14,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
+import 'package:firebase_messaging/firebase_messaging.dart'; // new
+import 'package:firebase_core/firebase_core.dart'; // new
+
 import 'friends_model.dart';
 export 'friends_model.dart';
 
@@ -28,6 +32,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
   late FriendsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance; // new
 
   @override
   void initState() {
@@ -562,6 +568,29 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                   initialPageName: 'Notification',
                                                                                   parameterData: {},
                                                                                 );
+
+                                                                                final firestore = FirebaseFirestore.instance;
+                                                                                QuerySnapshot targetUserRef = await firestore
+                                                                                .collection('users')
+                                                                                .where('user', isEqualTo: getJsonField(
+                                                                                      searchHitItem,
+                                                                                      r'''$.uid''',
+                                                                                    ).toString())
+                                                                                .get();
+
+                                                                                triggerForegroundPushNotification(
+                                                                                  notificationTitle: 'Hasanati',
+                                                                                  notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
+                                                                                  notificationImageUrl: 'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                                                  notificationSound: 'default',
+                                                                                  userTokens: [
+                                                                                     targetUserRef.docs[0]['fcm_token']
+                                                                                  ],
+                                                                                  initialPageName: 'Notification',
+                                                                                  parameterData: {},
+                                                                                );
+ 
+                                                                  
 
                                                                                 setState(() {});
                                                                               },
