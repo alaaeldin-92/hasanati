@@ -1349,7 +1349,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Try Again',
       'ar': 'العودة إلى المنزل',
     },
-    '786r5mjm': {
+    '0bjyz102': {
       'en': 'Home',
       'ar': '',
     },
@@ -1445,7 +1445,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Update
   {
-    'ufetiswp': {
+    'bntud9c0': {
       'en': 'Update',
       'ar': '',
     },
