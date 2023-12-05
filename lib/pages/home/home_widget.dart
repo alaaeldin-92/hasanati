@@ -109,6 +109,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       ).then((s) => s.firstOrNull);
       if ((_model.updateScreen?.status == true) &&
           (FFAppState().seenUpdateScreen == false)) {
+        FFAppState().seenUpdateScreen = true;
         await showModalBottomSheet(
           isScrollControlled: true,
           backgroundColor: Colors.transparent,
@@ -121,15 +122,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                   : FocusScope.of(context).unfocus(),
               child: Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: UpdateWidget(),
+                child: Container(
+                  height: MediaQuery.sizeOf(context).height * 1.0,
+                  child: UpdateWidget(),
+                ),
               ),
             ));
           },
         ).then((value) => safeSetState(() {}));
-
-        setState(() {
-          FFAppState().seenUpdateScreen = true;
-        });
       }
     });
 
