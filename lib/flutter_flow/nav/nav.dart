@@ -203,11 +203,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => AuthMainWidget(),
         ),
         FFRoute(
-          name: 'AuthCompleteProfile2Copy',
-          path: '/authCompleteProfile2Copy',
-          builder: (context, params) => AuthCompleteProfile2CopyWidget(),
-        ),
-        FFRoute(
           name: 'AuthCompleteProfile1',
           path: '/authCompleteProfile1',
           builder: (context, params) => AuthCompleteProfile1Widget(),

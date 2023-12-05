@@ -18,24 +18,10 @@ class AuthForgotPasswordModel
   FocusNode? emailFocusNode;
   TextEditingController? emailController;
   String? Function(BuildContext, String?)? emailControllerValidator;
-  String? _emailControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'ibbq45a5' /* Field is required */,
-      );
-    }
-
-    if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
-      return 'Has to be a valid email address.';
-    }
-    return null;
-  }
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {
-    emailControllerValidator = _emailControllerValidator;
-  }
+  void initState(BuildContext context) {}
 
   void dispose() {
     unfocusNode.dispose();

@@ -49,6 +49,10 @@ class _UpdateWidgetState extends State<UpdateWidget> {
       alignment: AlignmentDirectional(0.00, 1.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
+        height: MediaQuery.sizeOf(context).height * 0.45,
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.sizeOf(context).height * 1.0,
+        ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.only(
