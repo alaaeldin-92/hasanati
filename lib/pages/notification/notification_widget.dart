@@ -283,7 +283,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                     MainAxisAlignment.start,
                                                 children: [
                                                   Container(
-                                                    width: 60.0,
+                                                    width: 55.0,
                                                     height: 60.0,
                                                     child: Stack(
                                                       children: [
@@ -698,53 +698,104 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           color: Color(0xFFEEEEEE),
                         ),
                         alignment: AlignmentDirectional(0.00, 0.00),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Image.asset(
-                                'assets/images/jelly-no-messages.png',
-                                height: 150.0,
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 40.0, 20.0, 40.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'vom3e54p' /* No Notifications */,
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(
+                                    'assets/images/network-triangle-with-an-exclamation-point.png',
+                                    height: 150.0,
+                                    fit: BoxFit.contain,
                                   ),
-                                  textAlign: TextAlign.center,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        fontSize: 18.0,
+                                ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'vom3e54p' /* No Notifications */,
                                       ),
-                                ),
-                                Container(
-                                  width: 250.0,
-                                  decoration: BoxDecoration(),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '0a5529be' /* You currently have no notifica... */,
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 18.0,
+                                            fontWeight: FontWeight.w600,
+                                          ),
                                     ),
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          fontSize: 12.0,
+                                    Container(
+                                      width: 225.0,
+                                      decoration: BoxDecoration(),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          '0a5529be' /* You currently have no notifica... */,
                                         ),
-                                  ),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              fontSize: 12.0,
+                                            ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 0.0),
+                                      child: FFButtonWidget(
+                                        onPressed: () async {
+                                          context.safePop();
+                                        },
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          't85weeb8' /* Go Back */,
+                                        ),
+                                        options: FFButtonOptions(
+                                          height: 50.0,
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  38.0, 0.0, 38.0, 0.0),
+                                          iconPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: Colors.black,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: Colors.white,
+                                                    fontSize: 16.0,
+                                                  ),
+                                          elevation: 3.0,
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(100.0),
+                                        ),
+                                      ),
+                                    ),
+                                  ].divide(SizedBox(height: 5.0)),
                                 ),
-                              ].divide(SizedBox(height: 5.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ),
                         ),
                       ),
                     ),
