@@ -6,7 +6,7 @@ import 'package:hasanati/auth/firebase_auth/auth_util.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity/connectivity.dart'; // for connection check
 
 import '/auth/base_auth_user_provider.dart';
 
