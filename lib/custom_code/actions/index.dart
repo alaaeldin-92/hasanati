@@ -15,4 +15,3 @@ export 'calculate_performance_for_day.dart' show calculatePerformanceForDay;
 export 'get_all_prayer_performance.dart' show getAllPrayerPerformance;
 export 'get_total_audio_length.dart' show getTotalAudioLength;
 export 'play_audio.dart' show playAudio;
-export 'connected_to_internet.dart' show connectedToInternet;

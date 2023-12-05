@@ -84,7 +84,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
-                              fontSize: 22.0,
+                              fontSize: 24.0,
                               fontWeight: FontWeight.w500,
                             ),
                       ),
@@ -115,7 +115,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            context.pop();
+                            context.safePop();
                           },
                           text: FFLocalizations.of(context).getText(
                             '8di6ati5' /* Try Again */,
@@ -143,7 +143,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                           ),
                         ),
                       ),
-                    ],
+                    ].divide(SizedBox(height: 5.0)),
                   ),
                 ].divide(SizedBox(height: 20.0)),
               ),
