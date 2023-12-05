@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -100,9 +99,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
-                  child: SvgPicture.asset(
-                    'assets/images/Group_9-blue-light(1).svg',
+                  child: Image.asset(
+                    'assets/images/image_11.png',
                     width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: MediaQuery.sizeOf(context).height * 1.0,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -208,7 +208,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             decoration: BoxDecoration(
                                               color: Color(0xFF009BDD),
                                               borderRadius:
-                                                  BorderRadius.circular(15.0),
+                                                  BorderRadius.circular(10.0),
                                             ),
                                             alignment: AlignmentDirectional(
                                                 0.00, 0.00),
@@ -247,7 +247,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                   'Readex Pro',
                                                               color: Color(
                                                                   0xFF005B7F),
-                                                              fontSize: 12.0,
+                                                              fontSize: 14.0,
                                                             ),
                                                       ),
                                                       Text(
@@ -315,7 +315,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                   'Readex Pro',
                                                               color: Color(
                                                                   0xFF005B7F),
-                                                              fontSize: 12.0,
+                                                              fontSize: 14.0,
                                                             ),
                                                       ),
                                                       Text(
@@ -369,7 +369,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                   'Readex Pro',
                                                               color: Color(
                                                                   0xFF005B7F),
-                                                              fontSize: 12.0,
+                                                              fontSize: 14.0,
                                                             ),
                                                       ),
                                                       Text(
@@ -494,6 +494,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                       shape: BoxShape.circle,
                                                     ),
                                                   ),
+                                                FaIcon(
+                                                  FontAwesomeIcons.lock,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  size: 14.0,
+                                                ),
                                               ].divide(SizedBox(height: 10.0)),
                                             ),
                                             Column(
@@ -529,6 +536,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                       shape: BoxShape.circle,
                                                     ),
                                                   ),
+                                                FaIcon(
+                                                  FontAwesomeIcons.lock,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  size: 14.0,
+                                                ),
                                               ].divide(SizedBox(height: 10.0)),
                                             ),
                                           ],

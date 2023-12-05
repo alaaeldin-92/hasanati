@@ -331,23 +331,24 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 1.0,
-                                            height: 50.0,
+                                            height: 45.0,
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: Colors.white,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF009BDD),
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
+                                            color: Color(0xFF017AFD),
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .titleSmall
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryBackground,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
                                             borderSide: BorderSide(
                                               color: Color(0xFF009BDD),
                                               width: 2.0,
