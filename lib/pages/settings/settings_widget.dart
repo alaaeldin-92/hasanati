@@ -471,7 +471,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                                 height:
                                                     MediaQuery.sizeOf(context)
                                                             .height *
-                                                        0.5,
+                                                        1.0,
                                                 child: ReciterWidget(),
                                               ),
                                             ),

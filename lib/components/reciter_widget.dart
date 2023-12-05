@@ -46,7 +46,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
       alignment: AlignmentDirectional(0.00, 1.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
-        height: MediaQuery.sizeOf(context).height * 1.0,
+        height: MediaQuery.sizeOf(context).height * 0.45,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.only(
@@ -58,9 +58,9 @@ class _ReciterWidgetState extends State<ReciterWidget> {
         ),
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            scrollDirection: Axis.vertical,
             children: [
               Row(
                 mainAxisSize: MainAxisSize.max,
@@ -133,6 +133,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                   mainAxisSpacing: 10.0,
                   childAspectRatio: 0.7,
                 ),
+                primary: false,
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 children: [
