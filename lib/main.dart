@@ -227,6 +227,8 @@ WidgetsBinding.instance.addObserver(this);
   Future < void > didChangeAppLifecycleState(AppLifecycleState state) async {
     if (currentUser?.loggedIn == true) {
 
+// latest
+
       final firestore = FirebaseFirestore.instance;
       switch (state) {
         case AppLifecycleState.resumed:
