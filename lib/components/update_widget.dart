@@ -1,5 +1,4 @@
 import '/backend/backend.dart';
-import '/components/skeleton_lines_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -49,7 +48,6 @@ class _UpdateWidgetState extends State<UpdateWidget> {
       alignment: AlignmentDirectional(0.00, 1.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
-        height: MediaQuery.sizeOf(context).height * 0.45,
         constraints: BoxConstraints(
           maxHeight: MediaQuery.sizeOf(context).height * 1.0,
         ),
@@ -83,60 +81,60 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                   ),
                 ],
               ),
-              Stack(
-                alignment: AlignmentDirectional(1.0, -1.0),
-                children: [
-                  FutureBuilder<List<UpdateRecord>>(
-                    future: queryUpdateRecordOnce(
-                      singleRecord: true,
-                    ),
-                    builder: (context, snapshot) {
-                      // Customize what your widget looks like when it's loading.
-                      if (!snapshot.hasData) {
-                        return SkeletonLinesWidget();
-                      }
-                      List<UpdateRecord> imageUpdateRecordList = snapshot.data!;
-                      // Return an empty Container when the item does not exist.
-                      if (snapshot.data!.isEmpty) {
-                        return Container();
-                      }
-                      final imageUpdateRecord = imageUpdateRecordList.isNotEmpty
-                          ? imageUpdateRecordList.first
-                          : null;
-                      return ClipRRect(
+              FutureBuilder<List<UpdateRecord>>(
+                future: queryUpdateRecordOnce(
+                  singleRecord: true,
+                ),
+                builder: (context, snapshot) {
+                  // Customize what your widget looks like when it's loading.
+                  if (!snapshot.hasData) {
+                    return UpdateWidget();
+                  }
+                  List<UpdateRecord> stackUpdateRecordList = snapshot.data!;
+                  // Return an empty Container when the item does not exist.
+                  if (snapshot.data!.isEmpty) {
+                    return Container();
+                  }
+                  final stackUpdateRecord = stackUpdateRecordList.isNotEmpty
+                      ? stackUpdateRecordList.first
+                      : null;
+                  return Stack(
+                    alignment: AlignmentDirectional(1.0, -1.0),
+                    children: [
+                      ClipRRect(
                         borderRadius: BorderRadius.circular(0.0),
                         child: Image.network(
                           'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/F2lnrjNXcAAxr3N.jpg?alt=media',
                           fit: BoxFit.cover,
                         ),
-                      );
-                    },
-                  ),
-                  InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFFEEEEEE),
-                        shape: BoxShape.circle,
                       ),
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
-                        child: Icon(
-                          Icons.close,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 22.0,
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFFEEEEEE),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                5.0, 5.0, 5.0, 5.0),
+                            child: Icon(
+                              Icons.close,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 22.0,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                ],
+                    ],
+                  );
+                },
               ),
               FFButtonWidget(
                 onPressed: () async {

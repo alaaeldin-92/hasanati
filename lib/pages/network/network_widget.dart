@@ -89,30 +89,25 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                             ),
                       ),
                       Container(
-                        width: 220.0,
+                        width: 260.0,
                         decoration: BoxDecoration(),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 5.0, 0.0, 0.0),
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'f2kha8z5' /* Ensure a stable connection and... */,
-                            ),
-                            textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Color(0xFF545454),
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'f2kha8z5' /* You have lost your netork conn... */,
                           ),
+                          textAlign: TextAlign.center,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF545454),
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                         ),
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.safePop();
@@ -121,9 +116,9 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                             '8di6ati5' /* Try Again */,
                           ),
                           options: FFButtonOptions(
-                            height: 40.0,
+                            height: 50.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                24.0, 0.0, 24.0, 0.0),
+                                28.0, 0.0, 28.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: Colors.black,
@@ -139,13 +134,13 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                               color: Colors.transparent,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(100.0),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 5.0)),
+                    ].divide(SizedBox(height: 7.5)),
                   ),
-                ].divide(SizedBox(height: 20.0)),
+                ].divide(SizedBox(height: 25.0)),
               ),
             ),
           ),

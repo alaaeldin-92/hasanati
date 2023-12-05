@@ -89,7 +89,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                         ),
                                   ),
                                   Container(
-                                    width: 100.0,
+                                    width: 140.0,
                                     height: 15.0,
                                     decoration: BoxDecoration(
                                       color: Color(0x65E6E6E6),
@@ -212,12 +212,15 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                                       MainAxisAlignment
                                                           .spaceBetween,
                                                   children: [
-                                                    Container(
-                                                      width: 100.0,
-                                                      height: 10.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x65E6E6E6),
+                                                    Expanded(
+                                                      child: Container(
+                                                        width: 100.0,
+                                                        height: 10.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0x65E6E6E6),
+                                                        ),
                                                       ),
                                                     ),
                                                   ],
