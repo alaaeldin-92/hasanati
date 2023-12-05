@@ -231,20 +231,10 @@ WidgetsBinding.instance.addObserver(this);
       switch (state) {
         case AppLifecycleState.resumed:
         //Execute code here when user come back to the app.
-
-        // if(currentUser?.displayName == null && currentUser?.loggedIn == true){
-        //   Navigator.push(
-        //     this as BuildContext,
-        //     MaterialPageRoute(builder: (context) => AuthCompleteProfile1Widget()),
-        //   );
-        // }else {
          FFAppState().stopTimers=false;
           await firestore.collection('users').doc(currentUser?.uid).update({
             'online': true,
           });
-          checkAndUpdateDB();
-          // }
-
           break;
 
         case AppLifecycleState.paused:
