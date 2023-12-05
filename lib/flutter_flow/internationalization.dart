@@ -1349,7 +1349,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Try Again',
       'ar': 'العودة إلى المنزل',
     },
-    '0bjyz102': {
+    'fnicx4q2': {
       'en': 'Home',
       'ar': '',
     },
@@ -1402,50 +1402,50 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Choose A Reciter',
       'ar': '',
     },
-    'kkjwyb7d': {
+    'vgqfjzbw': {
       'en': 'Al-Minshawi\n(Murattal)',
       'ar': '',
     },
-    'utm15ct7': {
+    'gswy3jxa': {
       'en': 'Mishary\nAl-Afasy',
       'ar': '',
     },
-    'u11rtdt9': {
+    'akhs1ytd': {
       'en': 'Abu Bakr\nAl-Shatri',
       'ar': '',
     },
-    '9a9tjqft': {
+    'qs3mb0xe': {
       'en': 'Abdurahm-\nan Sudais',
       'ar': '',
     },
-    'z3fxir7m': {
+    'vrcdhvm4': {
       'en': 'Al-Husary\n(Muallim)',
       'ar': '',
     },
-    'n9yktxlk': {
+    'wmtj880r': {
       'en': 'Al-Minshawi\n(Mujawwad)',
       'ar': '',
     },
-    '4f6ca0hx': {
+    'csmudvcv': {
       'en': 'Al-Husary\n(Muallim)',
       'ar': '',
     },
-    'os8hh7kf': {
+    '39qgxfek': {
       'en': 'Hani \nAr-Rifai',
       'ar': '',
     },
-    'tto2eh7f': {
+    'zxknpbq2': {
       'en': 'Saud Ash-\nShuraym',
       'ar': '',
     },
-    'r7bhlb44': {
+    'ka14nm5h': {
       'en': 'Mohamed \nAl-Tablawi',
       'ar': '',
     },
   },
   // Update
   {
-    'bntud9c0': {
+    '0gsrd1nb': {
       'en': 'Update',
       'ar': '',
     },
