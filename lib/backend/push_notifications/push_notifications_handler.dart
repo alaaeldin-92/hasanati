@@ -153,7 +153,6 @@ final parametersBuilderMap =
   'OnboardingTwo': ParameterData.none(),
   'Introduction': ParameterData.none(),
   'AuthMain': ParameterData.none(),
-  'AuthCompleteProfile2Copy': ParameterData.none(),
   'AuthCompleteProfile1': ParameterData.none(),
   'AuthForgotPassword': ParameterData.none(),
   'QuranPage': (data) async => ParameterData(

@@ -1131,70 +1131,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
-  // AuthCompleteProfile2Copy
-  {
-    'mxxdrd42': {
-      'en': 'Complete your profile (2/2)',
-      'ar': '',
-    },
-    '3vhfkma2': {
-      'en': 'Full Name',
-      'ar': '',
-    },
-    'o37ap9ri': {
-      'en': 'Age',
-      'ar': '',
-    },
-    'bbt9c9tw': {
-      'en': 'Nationality',
-      'ar': '',
-    },
-    'twditd1q': {
-      'en': 'Male',
-      'ar': '',
-    },
-    'e434qy7c': {
-      'en': 'Female',
-      'ar': '',
-    },
-    'axdf6zqu': {
-      'en': 'Submit',
-      'ar': '',
-    },
-    'arg0q69j': {
-      'en':
-          'By submitting, you agree to our Privacy Policy and Terms of Conditions.',
-      'ar': '',
-    },
-    'dgurvy2j': {
-      'en': 'Field is required',
-      'ar': '',
-    },
-    'gqlvxk5y': {
-      'en': 'Please choose an option from the dropdown',
-      'ar': '',
-    },
-    'x13yj2xo': {
-      'en': 'Field is required',
-      'ar': '',
-    },
-    '0iqsoqta': {
-      'en': 'Please choose an option from the dropdown',
-      'ar': '',
-    },
-    '6xjzpyq0': {
-      'en': 'Field is required',
-      'ar': '',
-    },
-    '4c6q6865': {
-      'en': 'Please choose an option from the dropdown',
-      'ar': '',
-    },
-    'sf7hc0fm': {
-      'en': 'Home',
-      'ar': '',
-    },
-  },
   // AuthCompleteProfile1
   {
     'uqdkyq10': {
@@ -1241,7 +1177,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Password Reset',
       'ar': '',
     },
-    'caww5jk7': {
+    '7k3wau5q': {
       'en': 'Email',
       'ar': '',
     },
