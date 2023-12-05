@@ -10,6 +10,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
+import '/flutter_flow/permissions_util.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'home_widget.dart' show HomeWidget;
 import 'package:cached_network_image/cached_network_image.dart';
@@ -60,6 +61,8 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   List<QuranVersesFavoriteRecord>? favQueryVerseOfDay;
   // Stores action output result for [Firestore Query - Query a collection] action in Home widget.
   UpdateRecord? updateScreen;
+  // Stores action output result for [Custom Action - getFCMToken] action in Home widget.
+  String? fcmToken;
   // Stores action output result for [Firestore Query - Query a collection] action in Container widget.
   QuranPerformanceRecord? userQuranPer;
   // Stores action output result for [Backend Call - API (Verse Audio)] action in Container widget.

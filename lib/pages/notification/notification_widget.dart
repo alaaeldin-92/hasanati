@@ -706,18 +706,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           ),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 40.0, 20.0, 40.0),
+                                20.0, 60.0, 20.0, 40.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/network-triangle-with-an-exclamation-point.png',
-                                    height: 150.0,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -739,7 +731,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                       decoration: BoxDecoration(),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '0a5529be' /* You currently have no notifica... */,
+                                          '0a5529be' /* You will receive one when you ... */,
                                         ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
@@ -765,7 +757,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                           't85weeb8' /* Go Back */,
                                         ),
                                         options: FFButtonOptions(
-                                          height: 50.0,
+                                          height: 40.0,
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   38.0, 0.0, 38.0, 0.0),
@@ -787,7 +779,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             width: 1.0,
                                           ),
                                           borderRadius:
-                                              BorderRadius.circular(100.0),
+                                              BorderRadius.circular(0.0),
                                         ),
                                       ),
                                     ),

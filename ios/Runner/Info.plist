@@ -60,7 +60,8 @@
 
 	<key>NSLocationWhenInUseUsageDescription</key>
     <string>In order to search nearby, this app requires access to your current location.</string>
-
+	<key>PermissionGroupNotification</key>
+    <string>Allow Hasanati to send you notifications?</string>
     <key>UIBackgroundModes</key>
     <array>
         <string>fetch</string>

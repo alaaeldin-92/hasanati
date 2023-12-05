@@ -1261,8 +1261,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     '0a5529be': {
-      'en':
-          'You currently have no notifications. You will receive one when you get a friend request.',
+      'en': 'You will receive one when you get a friend request.',
       'ar': '',
     },
     't85weeb8': {
@@ -1393,6 +1392,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'crf9sbfs': {
       'en': '',
+      'ar': '',
+    },
+    'javo9hbs': {
+      'en': 'Allow Hasanati to send you notifications?',
       'ar': '',
     },
     'uyuhjzoo': {
