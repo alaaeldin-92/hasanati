@@ -254,9 +254,9 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),
@@ -284,9 +284,9 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),
@@ -317,9 +317,9 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),

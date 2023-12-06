@@ -261,9 +261,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),
@@ -291,9 +291,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),
@@ -324,9 +324,9 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),
@@ -725,10 +725,10 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: '72',
                                                           color:
                                                               Color(0xFF2F2F2F),
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -737,10 +737,10 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: '72',
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ],
@@ -839,10 +839,10 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 2.0)),

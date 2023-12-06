@@ -302,6 +302,22 @@ flutter:
           weight: 700
         - asset: assets/fonts/CriqueGrotesk-Black.ttf
           weight: 900
+    - family: '72'
+      fonts:
+        - asset: assets/fonts/72-Light.ttf
+          weight: 300
+        - asset: assets/fonts/72-Regular.ttf
+        - asset: assets/fonts/72-Italic.ttf
+          style: italic
+        - asset: assets/fonts/72-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/72-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/72-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/72-Black.ttf
+          weight: 900
 
     - family: MyFlutterApp
       fonts:

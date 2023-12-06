@@ -447,8 +447,9 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                       r'''$.username''',
                                                                                     ).toString(),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Readex Pro',
+                                                                                          fontFamily: '72',
                                                                                           fontWeight: FontWeight.w500,
+                                                                                          useGoogleFonts: false,
                                                                                         ),
                                                                                   ),
                                                                                   Text(
@@ -457,9 +458,10 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                       r'''$.display_name''',
                                                                                     ).toString(),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Readex Pro',
+                                                                                          fontFamily: '72',
                                                                                           color: FlutterFlowTheme.of(context).secondaryText,
                                                                                           fontSize: 12.0,
+                                                                                          useGoogleFonts: false,
                                                                                         ),
                                                                                   ),
                                                                                 ].divide(SizedBox(height: 2.5)),
@@ -496,10 +498,11 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                 iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      fontFamily: 'Readex Pro',
+                                                                                      fontFamily: '72',
                                                                                       color: Color(0xFF009BDD),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.normal,
+                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                                 borderSide: BorderSide(
                                                                                   color: Color(0xFF009BDD),
@@ -574,10 +577,11 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                 iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: Color(0xFF009BDD),
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      fontFamily: 'Readex Pro',
+                                                                                      fontFamily: '72',
                                                                                       color: Colors.white,
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.normal,
+                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                                 borderSide: BorderSide(
                                                                                   color: Colors.transparent,
@@ -609,10 +613,11 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                 iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).alternate,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      fontFamily: 'Readex Pro',
+                                                                                      fontFamily: '72',
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.normal,
+                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                                 borderSide: BorderSide(
                                                                                   color: Color(0xFFEEEEEE),
@@ -689,9 +694,10 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: '72',
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -709,10 +715,11 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: '72',
                                               color: Color(0xFF545454),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -788,9 +795,10 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: '72',
                                                   fontSize: 22.0,
                                                   fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Container(
@@ -805,16 +813,18 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                   'inkyq97g' /* Build your own community and c... */,
                                                 ),
                                                 textAlign: TextAlign.center,
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF545454),
-                                                      fontSize: 14.0,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: '72',
+                                                          color:
+                                                              Color(0xFF545454),
+                                                          fontSize: 14.0,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ),
                                           ),

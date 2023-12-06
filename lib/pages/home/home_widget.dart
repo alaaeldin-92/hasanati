@@ -219,16 +219,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                     .getText(
                                                   'q2b5pj07' /* Assalamualaikum, */,
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: '72',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
                                                               .alternate,
-                                                    ),
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                               AuthUserStreamWidget(
                                                 builder: (context) => Text(
@@ -241,12 +241,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         fontSize: 18.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -448,13 +448,15 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Readex Pro',
+                                                                                '72',
                                                                             color:
                                                                                 Color(0xFF007BAF),
                                                                             fontSize:
                                                                                 16.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -492,9 +494,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Readex Pro',
+                                                                                '72',
                                                                             fontSize:
                                                                                 12.0,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -697,10 +701,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -844,10 +849,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -1026,11 +1032,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      '72',
                                                                   color: Color(
                                                                       0xFF009BDD),
                                                                   fontSize:
                                                                       12.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           );
                                                         },
@@ -1190,10 +1198,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          '72',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                               ),
                                                             ].divide(SizedBox(
@@ -1488,9 +1498,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: 'Readex Pro',
+                                                                                fontFamily: '72',
                                                                                 color: Color(0xFF009BDD),
                                                                                 fontSize: 12.0,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                         ),
                                                                       ),
@@ -1797,11 +1808,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Readex Pro',
+                                                                              '72',
                                                                           color:
                                                                               Color(0xFF009BDD),
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              false,
                                                                         ),
                                                                   ),
                                                                   Icon(
@@ -1841,10 +1854,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        '72',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryText,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ].divide(SizedBox(
@@ -2061,16 +2076,18 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                             Text(
                                                                               '${functions.getValueFromQuranSurahEN(functions.quranSurahEN()!, _model.verseOfTheDayChapter, 'name_simple')}',
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: 'Readex Pro',
+                                                                                    fontFamily: '72',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                             Text(
                                                                               '${_model.verseOfTheDayVerse.toString()}/${functions.toString(functions.getVersesCountFromId(functions.quranSurahEN()!, _model.verseOfTheDayChapter))}',
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: 'Readex Pro',
+                                                                                    fontFamily: '72',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
                                                                                     fontWeight: FontWeight.normal,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ],
@@ -2139,9 +2156,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                   Text(
                                                                                     '${_model.verseOfTheDayLikesNum.toString()}',
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Readex Pro',
+                                                                                          fontFamily: '72',
                                                                                           color: FlutterFlowTheme.of(context).primaryText,
                                                                                           fontWeight: FontWeight.normal,
+                                                                                          useGoogleFonts: false,
                                                                                         ),
                                                                                   ),
                                                                                 ].divide(SizedBox(width: 3.0)),
@@ -2228,8 +2246,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                   r'''$.verse.words''',
                                                                                 )),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: 'Readex Pro',
+                                                                                      fontFamily: '72',
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
+                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               );
                                                                             },

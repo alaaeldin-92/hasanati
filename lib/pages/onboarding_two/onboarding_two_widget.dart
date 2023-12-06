@@ -101,10 +101,11 @@ class _OnboardingTwoWidgetState extends State<OnboardingTwoWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: '72',
                                           color: Color(0xFF009BDD),
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(width: 5.0)),
@@ -168,9 +169,10 @@ ranking */
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: '72',
                                         fontSize: 32.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ],
@@ -187,11 +189,12 @@ ranking */
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: '72',
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ],
@@ -232,10 +235,11 @@ ranking */
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: '72',
                                               color: Color(0xFF009BDD),
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -269,10 +273,11 @@ ranking */
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: '72',
                                               color: Colors.white,
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),

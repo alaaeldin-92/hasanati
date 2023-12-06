@@ -29,3 +29,5 @@ export '/pages/auth_forgot_password/auth_forgot_password_widget.dart'
 export '/pages/quran_page/quran_page_widget.dart' show QuranPageWidget;
 export '/pages/notification/notification_widget.dart' show NotificationWidget;
 export '/pages/network/network_widget.dart' show NetworkWidget;
+export '/pages/auth_complete_profile3/auth_complete_profile3_widget.dart'
+    show AuthCompleteProfile3Widget;
