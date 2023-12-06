@@ -10,8 +10,13 @@ import 'package:flutter/material.dart';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-Future<String> getFCMToken() async {
+Future<String> getDeviceFcmToken() async {
+  // Initialize firebase_messaging
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
   String? fcmToken = await messaging.getToken();
+  if (fcmToken == null) {
+    throw Exception('FCM token is null');
+  }
   return fcmToken;
 }
 
