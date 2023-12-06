@@ -152,9 +152,10 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: Color(0xFF009BDF),
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: '72',
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         fontSize: 18.0,
+                        useGoogleFonts: false,
                       ),
                   borderSide: BorderSide(
                     color: Colors.transparent,

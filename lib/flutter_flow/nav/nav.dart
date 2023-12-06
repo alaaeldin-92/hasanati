@@ -230,6 +230,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Network',
           path: '/network',
           builder: (context, params) => NetworkWidget(),
+        ),
+        FFRoute(
+          name: 'AuthCompleteProfile3',
+          path: '/authCompleteProfile3',
+          builder: (context, params) => AuthCompleteProfile3Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

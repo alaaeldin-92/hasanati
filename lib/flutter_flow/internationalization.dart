@@ -410,7 +410,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // AuthCompleteProfile2
   {
     'xgxgdj1g': {
-      'en': 'Complete your profile (2/2)',
+      'en': 'Complete your profile (2/3)',
       'ar': '',
     },
     '9d09g087': {
@@ -1134,7 +1134,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // AuthCompleteProfile1
   {
     'uqdkyq10': {
-      'en': 'Complete your profile (1/2)',
+      'en': 'Complete your profile (1/3)',
       'ar': '',
     },
     'eyyx7pp8': {
@@ -1288,6 +1288,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'العودة إلى المنزل',
     },
     'fnicx4q2': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
+  // AuthCompleteProfile3
+  {
+    '5jukdqdn': {
+      'en': 'Complete',
+      'ar': '',
+    },
+    'kgx0wzal': {
+      'en':
+          'By submitting, you agree to our Privacy Policy and Terms of Conditions.',
+      'ar': '',
+    },
+    'ugswle6r': {
       'en': 'Home',
       'ar': '',
     },

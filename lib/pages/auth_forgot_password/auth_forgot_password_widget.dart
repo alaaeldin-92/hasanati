@@ -97,10 +97,11 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: '72',
                                   color: Color(0xFF009BDD),
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.normal,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ].divide(SizedBox(width: 5.0)),
@@ -173,9 +174,10 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: '72',
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.w500,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ],
@@ -344,10 +346,11 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: '72',
                                                       color: Color(0xFF009BDF),
                                                       fontWeight:
                                                           FontWeight.w600,
+                                                      useGoogleFonts: false,
                                                     ),
                                             borderSide: BorderSide(
                                               color: Color(0xFF009BDD),
@@ -373,10 +376,11 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: '72',
                                         color: Color(0xFF888888),
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: false,
                                         lineHeight: 1.5,
                                       ),
                                 ),

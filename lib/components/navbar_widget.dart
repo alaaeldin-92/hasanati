@@ -101,11 +101,12 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                       'udp76wvq' /* Home */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: '72',
                           color: widget.selectedIndex == 1
                               ? FFAppState().LightPrimary
                               : FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 10.0,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ].divide(SizedBox(height: 5.0)),
@@ -135,11 +136,12 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                       'i588fetq' /* Friends */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: '72',
                           color: widget.selectedIndex == 2
                               ? FFAppState().LightPrimary
                               : FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 10.0,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ].divide(SizedBox(height: 5.0)),
@@ -169,11 +171,12 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                       'hksep5su' /* Ranking */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: '72',
                           color: widget.selectedIndex == 3
                               ? FFAppState().LightPrimary
                               : FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 10.0,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ].divide(SizedBox(height: 5.0)),
@@ -212,11 +215,12 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                       'pa68ha39' /* Settings */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: '72',
                           color: widget.selectedIndex == 4
                               ? FFAppState().LightPrimary
                               : FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 10.0,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ].divide(SizedBox(height: 5.0)),

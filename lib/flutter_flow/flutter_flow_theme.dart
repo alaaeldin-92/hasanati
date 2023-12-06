@@ -230,58 +230,58 @@ class ThemeTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
       );
-  String get titleMediumFamily => 'Readex Pro';
-  TextStyle get titleMedium => GoogleFonts.getFont(
-        'Readex Pro',
+  String get titleMediumFamily => '72';
+  TextStyle get titleMedium => TextStyle(
+        fontFamily: '72',
         color: theme.info,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
       );
-  String get titleSmallFamily => 'Readex Pro';
-  TextStyle get titleSmall => GoogleFonts.getFont(
-        'Readex Pro',
+  String get titleSmallFamily => '72';
+  TextStyle get titleSmall => TextStyle(
+        fontFamily: '72',
         color: theme.info,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Readex Pro';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'Readex Pro',
+  String get labelLargeFamily => '72';
+  TextStyle get labelLarge => TextStyle(
+        fontFamily: '72',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelMediumFamily => 'Readex Pro';
-  TextStyle get labelMedium => GoogleFonts.getFont(
-        'Readex Pro',
+  String get labelMediumFamily => '72';
+  TextStyle get labelMedium => TextStyle(
+        fontFamily: '72',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get labelSmallFamily => 'Readex Pro';
-  TextStyle get labelSmall => GoogleFonts.getFont(
-        'Readex Pro',
+  String get labelSmallFamily => '72';
+  TextStyle get labelSmall => TextStyle(
+        fontFamily: '72',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'Readex Pro';
-  TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Readex Pro',
+  String get bodyLargeFamily => '72';
+  TextStyle get bodyLarge => TextStyle(
+        fontFamily: '72',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Readex Pro';
-  TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Readex Pro',
+  String get bodyMediumFamily => '72';
+  TextStyle get bodyMedium => TextStyle(
+        fontFamily: '72',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'Readex Pro';
-  TextStyle get bodySmall => GoogleFonts.getFont(
-        'Readex Pro',
+  String get bodySmallFamily => '72';
+  TextStyle get bodySmall => TextStyle(
+        fontFamily: '72',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,

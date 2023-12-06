@@ -123,8 +123,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: '72',
                                             color: Color(0xFF979797),
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -693,8 +694,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: '72',
                                                   color: Color(0xFF979797),
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ],
@@ -858,9 +860,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: '72',
                                       color: Colors.white,
                                       fontWeight: FontWeight.normal,
+                                      useGoogleFonts: false,
                                     ),
                                 borderSide: BorderSide(
                                   color: Colors.transparent,

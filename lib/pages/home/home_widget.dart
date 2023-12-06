@@ -241,16 +241,16 @@ final firestore = FirebaseFirestore.instance;
                                                     .getText(
                                                   'q2b5pj07' /* Assalamualaikum, */,
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: '72',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
                                                               .alternate,
-                                                    ),
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                               AuthUserStreamWidget(
                                                 builder: (context) => Text(
@@ -263,12 +263,12 @@ final firestore = FirebaseFirestore.instance;
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         fontSize: 18.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -470,13 +470,15 @@ final firestore = FirebaseFirestore.instance;
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Readex Pro',
+                                                                                '72',
                                                                             color:
                                                                                 Color(0xFF007BAF),
                                                                             fontSize:
                                                                                 16.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -514,9 +516,11 @@ final firestore = FirebaseFirestore.instance;
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Readex Pro',
+                                                                                '72',
                                                                             fontSize:
                                                                                 12.0,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -719,10 +723,11 @@ final firestore = FirebaseFirestore.instance;
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -866,10 +871,11 @@ final firestore = FirebaseFirestore.instance;
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -1048,11 +1054,13 @@ final firestore = FirebaseFirestore.instance;
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      '72',
                                                                   color: Color(
                                                                       0xFF009BDD),
                                                                   fontSize:
                                                                       12.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           );
                                                         },
@@ -1212,10 +1220,12 @@ final firestore = FirebaseFirestore.instance;
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          '72',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                               ),
                                                             ].divide(SizedBox(
@@ -1510,9 +1520,10 @@ final firestore = FirebaseFirestore.instance;
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: 'Readex Pro',
+                                                                                fontFamily: '72',
                                                                                 color: Color(0xFF009BDD),
                                                                                 fontSize: 12.0,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                         ),
                                                                       ),
@@ -1819,11 +1830,13 @@ final firestore = FirebaseFirestore.instance;
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Readex Pro',
+                                                                              '72',
                                                                           color:
                                                                               Color(0xFF009BDD),
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              false,
                                                                         ),
                                                                   ),
                                                                   Icon(
@@ -1863,10 +1876,12 @@ final firestore = FirebaseFirestore.instance;
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        '72',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryText,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ].divide(SizedBox(
@@ -2083,16 +2098,18 @@ final firestore = FirebaseFirestore.instance;
                                                                             Text(
                                                                               '${functions.getValueFromQuranSurahEN(functions.quranSurahEN()!, _model.verseOfTheDayChapter, 'name_simple')}',
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: 'Readex Pro',
+                                                                                    fontFamily: '72',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                             Text(
                                                                               '${_model.verseOfTheDayVerse.toString()}/${functions.toString(functions.getVersesCountFromId(functions.quranSurahEN()!, _model.verseOfTheDayChapter))}',
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: 'Readex Pro',
+                                                                                    fontFamily: '72',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
                                                                                     fontWeight: FontWeight.normal,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ],
@@ -2161,9 +2178,10 @@ final firestore = FirebaseFirestore.instance;
                                                                                   Text(
                                                                                     '${_model.verseOfTheDayLikesNum.toString()}',
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Readex Pro',
+                                                                                          fontFamily: '72',
                                                                                           color: FlutterFlowTheme.of(context).primaryText,
                                                                                           fontWeight: FontWeight.normal,
+                                                                                          useGoogleFonts: false,
                                                                                         ),
                                                                                   ),
                                                                                 ].divide(SizedBox(width: 3.0)),
@@ -2250,8 +2268,9 @@ final firestore = FirebaseFirestore.instance;
                                                                                   r'''$.verse.words''',
                                                                                 )),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: 'Readex Pro',
+                                                                                      fontFamily: '72',
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
+                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               );
                                                                             },
