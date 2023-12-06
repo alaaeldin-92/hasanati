@@ -61,7 +61,7 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   List<QuranVersesFavoriteRecord>? favQueryVerseOfDay;
   // Stores action output result for [Firestore Query - Query a collection] action in Home widget.
   UpdateRecord? updateScreen;
-  // Stores action output result for [Custom Action - getFCMToken] action in Home widget.
+  // Stores action output result for [Custom Action - getUserFCM] action in Home widget.
   String? fcmToken;
   // Stores action output result for [Firestore Query - Query a collection] action in Container widget.
   QuranPerformanceRecord? userQuranPer;

@@ -135,7 +135,9 @@ class _HomeWidgetState extends State<HomeWidget> {
       if (valueOrDefault(currentUserDocument?.fcmToken, '') == null ||
           valueOrDefault(currentUserDocument?.fcmToken, '') == '') {
         await requestPermission(notificationsPermission);
-        _model.fcmToken = await actions.getFCMToken();
+        _model.fcmToken = await actions.getUserFCM(
+          currentUserUid,
+        );
 
         await currentUserReference!.update(createUsersRecordData(
           fcmToken: _model.fcmToken,
