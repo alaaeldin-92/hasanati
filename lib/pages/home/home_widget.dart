@@ -3,7 +3,6 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/home_skeleton_widget.dart';
 import '/components/navbar_widget.dart';
-import '/components/update_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -23,7 +22,6 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 import 'home_model.dart';
 export 'home_model.dart';
 
@@ -108,39 +106,17 @@ class _HomeWidgetState extends State<HomeWidget> {
       _model.updateScreen = await queryUpdateRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
+      await requestPermission(notificationsPermission);
       if ((_model.updateScreen?.status == true) &&
           (FFAppState().seenUpdateScreen == false)) {
         FFAppState().seenUpdateScreen = true;
-        await showModalBottomSheet(
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          context: context,
-          builder: (context) {
-            return WebViewAware(
-                child: GestureDetector(
-              onTap: () => _model.unfocusNode.canRequestFocus
-                  ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-                  : FocusScope.of(context).unfocus(),
-              child: Padding(
-                padding: MediaQuery.viewInsetsOf(context),
-                child: Container(
-                  height: MediaQuery.sizeOf(context).height * 1.0,
-                  child: UpdateWidget(),
-                ),
-              ),
-            ));
-          },
-        ).then((value) => safeSetState(() {}));
       }
       if (valueOrDefault(currentUserDocument?.fcmToken, '') == null ||
           valueOrDefault(currentUserDocument?.fcmToken, '') == '') {
-        await requestPermission(notificationsPermission);
-        _model.fcmToken = await actions.getUserFCM(
-          currentUserUid,
-        );
+        _model.deviceFcm = await actions.getDeviceFcmToken();
 
         await currentUserReference!.update(createUsersRecordData(
-          fcmToken: _model.fcmToken,
+          fcmToken: _model.deviceFcm,
         ));
       }
     });
@@ -219,16 +195,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                     .getText(
                                                   'q2b5pj07' /* Assalamualaikum, */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .alternate,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                               AuthUserStreamWidget(
                                                 builder: (context) => Text(
@@ -241,12 +217,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         fontSize: 18.0,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -448,15 +424,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                '72',
+                                                                                'Readex Pro',
                                                                             color:
                                                                                 Color(0xFF007BAF),
                                                                             fontSize:
                                                                                 16.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
-                                                                            useGoogleFonts:
-                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -494,11 +468,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                '72',
+                                                                                'Readex Pro',
                                                                             fontSize:
                                                                                 12.0,
-                                                                            useGoogleFonts:
-                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -701,11 +673,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily: '72',
+                                                              fontFamily:
+                                                                  'Readex Pro',
                                                               color:
                                                                   Colors.white,
-                                                              useGoogleFonts:
-                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -849,11 +820,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily: '72',
+                                                              fontFamily:
+                                                                  'Readex Pro',
                                                               color:
                                                                   Colors.white,
-                                                              useGoogleFonts:
-                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -1032,13 +1002,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      '72',
+                                                                      'Readex Pro',
                                                                   color: Color(
                                                                       0xFF009BDD),
                                                                   fontSize:
                                                                       12.0,
-                                                                  useGoogleFonts:
-                                                                      false,
                                                                 ),
                                                           );
                                                         },
@@ -1198,12 +1166,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          '72',
+                                                                          'Readex Pro',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
-                                                                      useGoogleFonts:
-                                                                          false,
                                                                     ),
                                                               ),
                                                             ].divide(SizedBox(
@@ -1498,10 +1464,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: '72',
+                                                                                fontFamily: 'Readex Pro',
                                                                                 color: Color(0xFF009BDD),
                                                                                 fontSize: 12.0,
-                                                                                useGoogleFonts: false,
                                                                               ),
                                                                         ),
                                                                       ),
@@ -1808,13 +1773,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              '72',
+                                                                              'Readex Pro',
                                                                           color:
                                                                               Color(0xFF009BDD),
                                                                           fontSize:
                                                                               12.0,
-                                                                          useGoogleFonts:
-                                                                              false,
                                                                         ),
                                                                   ),
                                                                   Icon(
@@ -1854,12 +1817,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        '72',
+                                                                        'Readex Pro',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryText,
-                                                                    useGoogleFonts:
-                                                                        false,
                                                                   ),
                                                             ),
                                                           ].divide(SizedBox(
@@ -2076,18 +2037,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                             Text(
                                                                               '${functions.getValueFromQuranSurahEN(functions.quranSurahEN()!, _model.verseOfTheDayChapter, 'name_simple')}',
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: '72',
+                                                                                    fontFamily: 'Readex Pro',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
-                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                             Text(
                                                                               '${_model.verseOfTheDayVerse.toString()}/${functions.toString(functions.getVersesCountFromId(functions.quranSurahEN()!, _model.verseOfTheDayChapter))}',
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: '72',
+                                                                                    fontFamily: 'Readex Pro',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
                                                                                     fontWeight: FontWeight.normal,
-                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ],
@@ -2156,10 +2115,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                   Text(
                                                                                     '${_model.verseOfTheDayLikesNum.toString()}',
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: '72',
+                                                                                          fontFamily: 'Readex Pro',
                                                                                           color: FlutterFlowTheme.of(context).primaryText,
                                                                                           fontWeight: FontWeight.normal,
-                                                                                          useGoogleFonts: false,
                                                                                         ),
                                                                                   ),
                                                                                 ].divide(SizedBox(width: 3.0)),
@@ -2246,9 +2204,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                   r'''$.verse.words''',
                                                                                 )),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               );
                                                                             },

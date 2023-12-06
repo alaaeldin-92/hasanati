@@ -337,9 +337,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -493,9 +493,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -558,9 +558,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -684,9 +684,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -734,9 +734,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -978,11 +978,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                '72',
+                                                                                'Readex Pro',
                                                                             color:
                                                                                 Colors.white,
-                                                                            useGoogleFonts:
-                                                                                false,
                                                                           ),
                                                                     ),
                                                                     Container(
@@ -1016,9 +1014,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                   '0',
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                             if ((_model.leaderboardChoice == 'Quran') &&
@@ -1029,9 +1026,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                   r'''$.versesRead''',
                                                                                 ).toString(),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                             if ((_model.leaderboardChoice == 'Quran') &&
@@ -1045,9 +1041,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                   '0',
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                           ],
@@ -1191,11 +1186,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              '72',
+                                                                              'Readex Pro',
                                                                           color:
                                                                               Colors.white,
-                                                                          useGoogleFonts:
-                                                                              false,
                                                                         ),
                                                                   ),
                                                                   Container(
@@ -1230,9 +1223,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                 '0',
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: '72',
+                                                                                    fontFamily: 'Readex Pro',
                                                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           if ((_model.leaderboardChoice == 'Quran') &&
@@ -1243,9 +1235,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                 r'''$.versesRead''',
                                                                               ).toString(),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: '72',
+                                                                                    fontFamily: 'Readex Pro',
                                                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           if ((_model.leaderboardChoice == 'Quran') &&
@@ -1259,9 +1250,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                 '0',
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: '72',
+                                                                                    fontFamily: 'Readex Pro',
                                                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                         ],
@@ -1409,11 +1399,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                '72',
+                                                                                'Readex Pro',
                                                                             color:
                                                                                 Colors.white,
-                                                                            useGoogleFonts:
-                                                                                false,
                                                                           ),
                                                                     ),
                                                                     Container(
@@ -1447,9 +1435,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                   '0',
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                             if ((_model.leaderboardChoice == 'Quran') &&
@@ -1460,9 +1447,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                   r'''$.versesRead''',
                                                                                 ).toString(),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                             if ((_model.leaderboardChoice == 'Quran') &&
@@ -1476,9 +1462,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                   '0',
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                           ],
@@ -1546,12 +1531,11 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily: '72',
+                                                              fontFamily:
+                                                                  'Readex Pro',
                                                               color:
                                                                   Colors.white,
                                                               fontSize: 22.0,
-                                                              useGoogleFonts:
-                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -1575,15 +1559,14 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily: '72',
+                                                              fontFamily:
+                                                                  'Readex Pro',
                                                               color:
                                                                   Colors.white,
                                                               fontSize: 16.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
-                                                              useGoogleFonts:
-                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -1861,10 +1844,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                               Text(
                                                                                 containerUsersRecord!.displayName,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: '72',
+                                                                                      fontFamily: 'Readex Pro',
                                                                                       color: Color(0xFF0E0C23),
                                                                                       fontWeight: FontWeight.bold,
-                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                               Row(
@@ -1877,9 +1859,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                         r'''$.hasanat''',
                                                                                       ).toString()} hasanat',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: '72',
+                                                                                            fontFamily: 'Readex Pro',
                                                                                             color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                            useGoogleFonts: false,
                                                                                           ),
                                                                                     ),
                                                                                   if ((_model.leaderboardChoice == 'Quran') && (_model.leaderboardQuranField == 'Verses'))
@@ -1889,9 +1870,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                         r'''$.versesRead''',
                                                                                       ).toString()} completed',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: '72',
+                                                                                            fontFamily: 'Readex Pro',
                                                                                             color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                            useGoogleFonts: false,
                                                                                           ),
                                                                                     ),
                                                                                   if ((_model.leaderboardChoice == 'Quran') && (_model.leaderboardQuranField == 'Time'))
@@ -1901,9 +1881,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                         r'''$.timeReadSec''',
                                                                                       ))} reading',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: '72',
+                                                                                            fontFamily: 'Readex Pro',
                                                                                             color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                            useGoogleFonts: false,
                                                                                           ),
                                                                                     ),
                                                                                 ],
@@ -2003,11 +1982,9 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                '72',
+                                                                                'Readex Pro',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryText,
-                                                                            useGoogleFonts:
-                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),

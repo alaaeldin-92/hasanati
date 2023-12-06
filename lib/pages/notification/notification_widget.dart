@@ -136,10 +136,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.w500,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                             ].divide(SizedBox(width: 10.0)),
@@ -170,11 +169,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: '72',
+                                        fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
                                         fontSize: 12.0,
-                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -384,11 +382,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.bold,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -410,11 +406,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.normal,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -436,11 +430,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.normal,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -462,11 +454,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.normal,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -488,11 +478,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.normal,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -514,11 +502,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.normal,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -540,11 +526,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         fontWeight:
                                                                             FontWeight.normal,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -558,13 +542,11 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
                                                                 fontSize: 12.0,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                         ),
                                                       ].divide(SizedBox(
@@ -676,15 +658,13 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                               .titleSmall
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 color: Colors
                                                                     .white,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                       borderSide: BorderSide(
                                                         color:
@@ -741,10 +721,9 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: '72',
+                                            fontFamily: 'Readex Pro',
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w600,
-                                            useGoogleFonts: false,
                                           ),
                                     ),
                                     Container(
@@ -758,12 +737,11 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
                                               fontSize: 12.0,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
