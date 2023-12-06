@@ -4,7 +4,6 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/home_skeleton_widget.dart';
 import '/components/navbar_widget.dart';
-import '/components/update_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -25,7 +24,6 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class HomeModel extends FlutterFlowModel<HomeWidget> {
   ///  Local state fields for this page.
@@ -61,8 +59,8 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   List<QuranVersesFavoriteRecord>? favQueryVerseOfDay;
   // Stores action output result for [Firestore Query - Query a collection] action in Home widget.
   UpdateRecord? updateScreen;
-  // Stores action output result for [Custom Action - getUserFCM] action in Home widget.
-  String? fcmToken;
+  // Stores action output result for [Custom Action - getDeviceFcmToken] action in Home widget.
+  String? deviceFcm;
   // Stores action output result for [Firestore Query - Query a collection] action in Container widget.
   QuranPerformanceRecord? userQuranPer;
   // Stores action output result for [Backend Call - API (Verse Audio)] action in Container widget.

@@ -134,10 +134,9 @@ class _AuthCompleteProfile1WidgetState
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: '72',
+                                            fontFamily: 'Readex Pro',
                                             fontSize: 20.0,
                                             fontWeight: FontWeight.w500,
-                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ],
@@ -251,13 +250,12 @@ class _AuthCompleteProfile1WidgetState
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .error,
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.normal,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                   ].divide(SizedBox(height: 10.0)),
@@ -330,10 +328,9 @@ class _AuthCompleteProfile1WidgetState
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
                                                   .override(
-                                                    fontFamily: '72',
+                                                    fontFamily: 'Readex Pro',
                                                     color: Color(0xFF009BDD),
                                                     fontWeight: FontWeight.w600,
-                                                    useGoogleFonts: false,
                                                   ),
                                           borderSide: BorderSide(
                                             color: Color(0xFF009BDD),
@@ -359,11 +356,10 @@ class _AuthCompleteProfile1WidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       color: Color(0xFF888888),
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.normal,
-                                      useGoogleFonts: false,
                                       lineHeight: 1.5,
                                     ),
                               ),
