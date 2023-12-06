@@ -18,3 +18,4 @@ export 'play_audio.dart' show playAudio;
 export 'get_user_f_c_m.dart' show getUserFCM;
 export 'get_device_fcm_token.dart' show getDeviceFcmToken;
 export 'send_foreground_push_message.dart' show sendForegroundPushMessage;
+export 'one_signal.dart' show oneSignal;
