@@ -608,8 +608,14 @@ class _AuthCompleteProfile2WidgetState
                                                 photoUrl:
                                                     'https://t4.ftcdn.net/jpg/00/64/67/27/360_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg',
                                                 online: true,
+                                                email: '',
                                                 notificationsRead: true,
+                                                fcmToken: '',
                                               ));
+                                              setState(() {
+                                                FFAppState().profileCreated =
+                                                    true;
+                                              });
 
                                               context.pushNamed('Home');
                                             },

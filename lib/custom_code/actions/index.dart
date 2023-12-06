@@ -15,4 +15,5 @@ export 'calculate_performance_for_day.dart' show calculatePerformanceForDay;
 export 'get_all_prayer_performance.dart' show getAllPrayerPerformance;
 export 'get_total_audio_length.dart' show getTotalAudioLength;
 export 'play_audio.dart' show playAudio;
-export 'get_f_c_m_token.dart' show getFCMToken;
+export 'get_user_f_c_m.dart' show getUserFCM;
+export 'get_device_fcm_token.dart' show getDeviceFcmToken;
