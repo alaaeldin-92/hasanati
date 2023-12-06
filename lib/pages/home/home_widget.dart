@@ -1221,14 +1221,6 @@ final firestore = FirebaseFirestore.instance;
                                                 hoverColor: Colors.transparent,
                                                 highlightColor:
                                                     Colors.transparent,
-                                                onTap: () async {
-                                                  await actions
-                                                      .sendForegroundPushMessage(
-                                                    'ct7nZqiuRH2u0lpleXxgS6:APA91bGvCrRIb7ZlV5KgUsukdyDfgiqWML5p0SBvaneepax_dCNViyXmex4Quj_Uln93mAdmfBnGuVF9kQO2gm-d-ugLSVnlDkPc2_gKFbXL1F5ABBV1YorniMvuCwfEuz-xzkpA1t0Q',
-                                                    'wpojwojfpwj',
-                                                    'Friend Request',
-                                                  );
-                                                },
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(

@@ -572,11 +572,11 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                   
 
                                                                                 if (_model.targetUserRef?.online == true) {
-                                                                                  await actions.sendForegroundPushMessage(
-                                                                                    _model.targetUserRef!.fcmToken,
-                                                                                    'This is the body',
-                                                                                    'Friend Request',
-                                                                                  );
+                                                                                  // await actions.sendForegroundPushMessage(
+                                                                                  //   _model.targetUserRef!.fcmToken,
+                                                                                  //   'This is the body',
+                                                                                  //   'Friend Request',
+                                                                                  // );
                                                                                 } else {
                                                                                   triggerPushNotification(
                                                                                     notificationTitle: 'Hasanati',

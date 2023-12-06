@@ -9,8 +9,7 @@ import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
 
 import 'package:flutter/services.dart';
-import 'package:hasanati/backend/backend.dart';
-import 'backend/push_notifications/firebase_foreground.dart';
+import 'package:hasanati/backend/backend.dart'; 
 import 'backend/push_notifications/push_notifications_util.dart';
 import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
@@ -22,8 +21,7 @@ import 'index.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
-  await initFirebase();
-  // await FirebaseForeground().initNotifications();
+  await initFirebase(); 
 
   await FlutterFlowTheme.initialize();
 
