@@ -1,11 +1,13 @@
 import 'dart:async';
-import 'dart:convert';
+ 
 
 import 'serialization_util.dart';
 import '../backend.dart';
 import '../../flutter_flow/flutter_flow_theme.dart';
 import '../../flutter_flow/flutter_flow_util.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import '../../components/customNotificationDialog.dart';
 import 'package:flutter/material.dart';
 
 import '../../index.dart';
@@ -27,22 +29,136 @@ class PushNotificationsHandler extends StatefulWidget {
 class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
   bool _loading = false;
 
+ 
+ 
+Future requestNotificationPermissions() async {
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
+  flutterLocalNotificationsPlugin
+      .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>()
+      ?.requestPermission();
+}
+
+Future localNotification(
+  String? title,
+  String? content,
+) async {
+  // Send Local Notification only Android
+  // Initialize the FlutterLocalNotificationsPlugin
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
+
+  // Configure the Android initialization settings
+  var initializationSettingsAndroid =
+      AndroidInitializationSettings('@mipmap/ic_launcher');
+
+  // Configure the initialization settings for the FlutterLocalNotificationsPlugin
+  var initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+    iOS: null,
+    macOS: null,
+  );
+
+  // Initialize the FlutterLocalNotificationsPlugin with the initialization settings
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
+  // Configure the notification details
+  var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+    'channel_id',
+    'channel_name',
+    importance: Importance.max,
+    priority: Priority.high,
+    ticker: 'ticker',
+  );
+
+  // Configure the notification
+  var notificationDetails = NotificationDetails(
+    android: androidPlatformChannelSpecifics,
+    iOS: null,
+    macOS: null,
+  );
+
+  // Show the notification
+  await flutterLocalNotificationsPlugin.show(
+    0,
+    title ?? '', // Use title parameter here
+    content ?? '', // Use content parameter here
+    notificationDetails,
+    payload: 'item x',
+  );
+}
+
+
+  /////////////// defining the custom function for handling FOREGROUND notifications
+
+  void messageListener(BuildContext context) {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+// Handle multiple notifications for the same message
+      if (_handledMessageIds.contains('${message.messageId}0000foreground')) {
+        return;
+      }
+      _handledMessageIds.add('${message.messageId}0000foreground');
+
+      print('Got a new message whilst in the foreground!');
+
+// ... Extract notification data ...
+
+      String? title = message.notification?.title;
+      print('Notification Title: $title');
+
+      String? body = message.notification?.body;
+      print('Notification Body: $body');
+
+      String? image = isWeb
+          ? message.notification?.web?.image
+          : message.notification?.android?.imageUrl ??
+              message.notification?.apple?.imageUrl;
+      print('Notification Image: $image');
+
+      print('Message also contained data: ${message.data}');
+
+// Show a custom dialog and handle after closure
+
+      localNotification(title, body)
+          .then((_) => _handleForegroundNotification(message));
+    });
+  }
+///////////////
+
   Future handleOpenedPushNotification() async {
     if (isWeb) {
       return;
     }
 
     final notification = await FirebaseMessaging.instance.getInitialMessage();
+
     if (notification != null) {
       await _handlePushNotification(notification);
     }
     FirebaseMessaging.onMessageOpenedApp.listen(_handlePushNotification);
   }
 
+  Future _handleForegroundNotification(RemoteMessage message) async {
+
+     final initialPageName = message.data['initialPageName'] as String;
+      final initialParameterData = getInitialParameterData(message.data);
+      final parametersBuilder = parametersBuilderMap[initialPageName];
+      if (parametersBuilder != null) {
+        final parameterData = await parametersBuilder(initialParameterData);
+        context.pushNamed(
+          initialPageName,
+          pathParameters: parameterData.pathParameters,
+          extra: parameterData.extra,
+        );
+      }
+  }
+
+
   Future _handlePushNotification(RemoteMessage message) async {
-    if (_handledMessageIds.contains(message.messageId)) {
-      return;
-    }
+    // if (_handledMessageIds.contains(message.messageId)) {
+    //   return;
+    // }
     _handledMessageIds.add(message.messageId);
 
     if (mounted) {
@@ -73,6 +189,9 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
   void initState() {
     super.initState();
     handleOpenedPushNotification();
+       /////////////// calling the function for FOREGROUND notifications
+    messageListener(context);
+    ///////////////
   }
 
   @override

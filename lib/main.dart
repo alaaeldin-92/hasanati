@@ -25,7 +25,7 @@ void main() async {
   await initFirebase(); 
 
   // Start initial custom actions code
-  await actions.oneSignal();
+  // await actions.oneSignal();
   // End initial custom actions code
 
   await FlutterFlowTheme.initialize();
