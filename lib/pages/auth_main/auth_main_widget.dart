@@ -232,16 +232,14 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                   .getText(
                                                 'bi116evq' /* Sign in */,
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: '72',
-                                                        fontSize: 20.0,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        useGoogleFonts: false,
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    fontSize: 20.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                             ),
                                           ],
                                         ),
@@ -546,12 +544,10 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      '72',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .primaryText,
-                                                                  useGoogleFonts:
-                                                                      false,
                                                                 ),
                                                       ),
                                                     ),
@@ -615,15 +611,13 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                     .getText(
                                                   'vxshsp1p' /* Remember Me */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color:
-                                                              Color(0xFF888888),
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Color(0xFF888888),
+                                                    ),
                                               ),
                                             ],
                                           ),
@@ -645,15 +639,13 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                 'uju7vc0n' /* Forgot Password? */,
                                               ),
                                               textAlign: TextAlign.end,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: '72',
-                                                        color:
-                                                            Color(0xFF888888),
-                                                        useGoogleFonts: false,
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: Color(0xFF888888),
+                                                  ),
                                             ),
                                           ),
                                         ),
@@ -774,12 +766,12 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                           .of(context)
                                                       .titleSmall
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             Color(0xFF009BDF),
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: false,
                                                       ),
                                                   borderSide: BorderSide(
                                                     color: Color(0xFF009BDF),
@@ -819,11 +811,10 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: Color(0xFF888888),
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.w500,
-                                          useGoogleFonts: false,
                                           lineHeight: 1.3,
                                         ),
                                   ),
@@ -861,16 +852,14 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                   .getText(
                                                 't0b1hr5j' /* Sign Up */,
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: '72',
-                                                        fontSize: 20.0,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        useGoogleFonts: false,
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    fontSize: 20.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                             ),
                                           ],
                                         ),
@@ -1315,12 +1304,10 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      '72',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .primaryText,
-                                                                  useGoogleFonts:
-                                                                      false,
                                                                 ),
                                                       ),
                                                     ),
@@ -1388,10 +1375,10 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             Color(0xFF888888),
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -1514,12 +1501,12 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                           .of(context)
                                                       .titleSmall
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             Color(0xFF009BDD),
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: false,
                                                       ),
                                                   borderSide: BorderSide(
                                                     color: Color(0xFF009BDD),
@@ -1559,11 +1546,10 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: Color(0xFF888888),
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.w500,
-                                          useGoogleFonts: false,
                                           lineHeight: 1.3,
                                         ),
                                   ),

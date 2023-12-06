@@ -124,10 +124,9 @@ Daily Habit */
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: '72',
+                                    fontFamily: 'Readex Pro',
                                     fontSize: 32.0,
                                     fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
                                   ),
                             ),
                           ],
@@ -147,12 +146,11 @@ Daily Habit */
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.normal,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -197,11 +195,10 @@ Daily Habit */
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: Color(0xFF009BDD),
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -235,11 +232,10 @@ Daily Habit */
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: Colors.white,
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),

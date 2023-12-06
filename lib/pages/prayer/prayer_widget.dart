@@ -205,10 +205,9 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: '72',
+                                            fontFamily: 'Readex Pro',
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ].divide(SizedBox(width: 5.0)),
@@ -306,11 +305,9 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        '72',
+                                                                        'Readex Pro',
                                                                     color: Colors
                                                                         .white,
-                                                                    useGoogleFonts:
-                                                                        false,
                                                                   ),
                                                             ),
                                                             Text(
@@ -320,11 +317,9 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        '72',
+                                                                        'Readex Pro',
                                                                     color: Colors
                                                                         .white,
-                                                                    useGoogleFonts:
-                                                                        false,
                                                                   ),
                                                             ),
                                                           ],
@@ -472,10 +467,9 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             color: Colors.white,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                   ].divide(
@@ -490,12 +484,12 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -661,10 +655,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                             .of(context)
                                                         .titleSmall
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           color: Colors.white,
                                                           fontSize: 14.0,
-                                                          useGoogleFonts: false,
                                                         ),
                                                     elevation: 3.0,
                                                     borderSide: BorderSide(
@@ -937,11 +931,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -987,10 +980,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1033,10 +1026,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1080,10 +1073,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1334,11 +1327,11 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.w600,
-                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -2624,11 +2617,11 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.w600,
-                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -3908,11 +3901,11 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.w600,
-                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -5140,11 +5133,11 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.w600,
-                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -6376,11 +6369,11 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.w600,
-                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -7674,17 +7667,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Sunday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -7814,17 +7807,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Monday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -7943,17 +7936,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Tuesday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -8072,17 +8065,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Wednesday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -8201,17 +8194,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Thursday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -8330,17 +8323,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Friday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -8459,17 +8452,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Saturday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -8584,11 +8577,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -8712,11 +8704,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -8828,11 +8819,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -8944,11 +8934,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9060,11 +9049,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9176,11 +9164,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9292,11 +9279,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9408,11 +9394,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9536,11 +9521,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9652,11 +9636,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9768,11 +9751,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -9884,11 +9866,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10000,11 +9981,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10116,11 +10096,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10232,11 +10211,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10360,11 +10338,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10476,11 +10453,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10592,11 +10568,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10708,11 +10683,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10824,11 +10798,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -10940,11 +10913,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -11056,11 +11028,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -11188,17 +11159,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Monday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -11317,17 +11288,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Tuesday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -11446,17 +11417,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Wednesday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -11575,17 +11546,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Thursday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -11704,17 +11675,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Friday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -11833,17 +11804,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Saturday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -11962,17 +11933,17 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                                 'Sunday',
                                                                 getCurrentTimestamp)
                                                             .toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily: '72',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
                                                       ),
                                                       StreamBuilder<
                                                           List<
@@ -12103,11 +12074,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -12200,11 +12170,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12244,11 +12213,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12288,11 +12256,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12332,11 +12299,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12376,11 +12342,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12432,11 +12397,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12476,11 +12440,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12520,11 +12483,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(
@@ -12564,11 +12526,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -12661,11 +12622,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     StreamBuilder<
@@ -12758,11 +12718,10 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily: '72',
+                                                            fontFamily:
+                                                                'Readex Pro',
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
                                                           ),
                                                     ),
                                                     CircularPercentIndicator(

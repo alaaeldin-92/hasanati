@@ -153,10 +153,9 @@ class _AuthCompleteProfile2WidgetState
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: '72',
+                                                fontFamily: 'Readex Pro',
                                                 fontSize: 20.0,
                                                 fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -409,10 +408,8 @@ class _AuthCompleteProfile2WidgetState
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 fontSize: 16.0,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                         ),
                                                         Text(
@@ -638,10 +635,9 @@ class _AuthCompleteProfile2WidgetState
                                                       context)
                                                   .titleSmall
                                                   .override(
-                                                    fontFamily: '72',
+                                                    fontFamily: 'Readex Pro',
                                                     color: Color(0xFF009BDD),
                                                     fontWeight: FontWeight.w600,
-                                                    useGoogleFonts: false,
                                                   ),
                                               borderSide: BorderSide(
                                                 color: Color(0xFF009BDD),
@@ -667,11 +663,10 @@ class _AuthCompleteProfile2WidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: Color(0xFF888888),
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.normal,
-                                          useGoogleFonts: false,
                                           lineHeight: 1.5,
                                         ),
                                   ),
@@ -1003,10 +998,8 @@ class _AuthCompleteProfile2WidgetState
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 fontSize: 16.0,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                         ),
                                                         Expanded(

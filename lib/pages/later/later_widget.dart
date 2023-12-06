@@ -84,10 +84,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: '72',
+                                  fontFamily: 'Readex Pro',
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
                                 ),
                           ),
                           Row(
@@ -100,10 +99,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       color: Color(0xFFA588FC),
                                       fontSize: 14.0,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                               Icon(
@@ -174,9 +172,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(
@@ -191,12 +188,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: '72',
+                                                  fontFamily: 'Readex Pro',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Row(
@@ -214,16 +210,16 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   'snonzu30' /* 600 */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                             ].divide(SizedBox(width: 2.5)),
                                           ),
@@ -299,9 +295,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(
@@ -314,12 +309,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: '72',
+                                                  fontFamily: 'Readex Pro',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Row(
@@ -337,16 +331,16 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   'wu7qaffu' /* 1.2k */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                             ].divide(SizedBox(width: 2.5)),
                                           ),
@@ -434,9 +428,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(
@@ -449,12 +442,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: '72',
+                                                  fontFamily: 'Readex Pro',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Row(
@@ -472,16 +464,16 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   'iv4aswpw' /* 1.2k */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                             ].divide(SizedBox(width: 2.5)),
                                           ),
@@ -511,10 +503,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: '72',
+                                  fontFamily: 'Readex Pro',
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
                                 ),
                           ),
                           Row(
@@ -527,10 +518,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       color: Color(0xFFA588FC),
                                       fontSize: 14.0,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                               Icon(
@@ -616,9 +606,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(
@@ -633,12 +622,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: '72',
+                                                  fontFamily: 'Readex Pro',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Row(
@@ -656,16 +644,16 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   '09fjm15u' /* 600 */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                             ].divide(SizedBox(width: 2.5)),
                                           ),
@@ -755,9 +743,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(
@@ -770,12 +757,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: '72',
+                                                  fontFamily: 'Readex Pro',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Row(
@@ -793,16 +779,16 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   'x0y9qvi3' /* 1.2k */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                             ].divide(SizedBox(width: 2.5)),
                                           ),
@@ -890,9 +876,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(
@@ -905,12 +890,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: '72',
+                                                  fontFamily: 'Readex Pro',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Row(
@@ -928,16 +912,16 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   'zk1uq9kn' /* 1.2k */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                    ),
                                               ),
                                             ].divide(SizedBox(width: 2.5)),
                                           ),
@@ -1021,13 +1005,13 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .alternate,
                                                         fontSize: 14.0,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1120,12 +1104,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        '72',
+                                                                        'Readex Pro',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    useGoogleFonts:
-                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -1177,11 +1159,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 5.0)),
@@ -1205,11 +1187,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
-                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -1276,10 +1258,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: '72',
+                                        fontFamily: 'Readex Pro',
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 Icon(
@@ -1305,10 +1286,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       color: Color(0xFF009BDD),
                                       fontSize: 12.0,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -1360,10 +1340,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1407,10 +1386,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1437,10 +1415,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1467,10 +1444,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1497,10 +1473,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1527,10 +1502,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1557,10 +1531,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ].divide(SizedBox(height: 5.0)),
@@ -1648,11 +1621,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ].divide(SizedBox(height: 5.0)),
@@ -1679,10 +1651,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: '72',
+                                  fontFamily: 'Readex Pro',
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
                                 ),
                           ),
                           Row(
@@ -1695,10 +1666,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       color: Color(0xFF009BDD),
                                       fontSize: 14.0,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                               Icon(
@@ -1786,13 +1756,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .alternate,
                                                                 fontSize: 14.0,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                     ),
                                                   ),
@@ -1891,11 +1859,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            '72',
+                                                                            'Readex Pro',
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .secondaryBackground,
-                                                                        useGoogleFonts:
-                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1953,12 +1919,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                     ),
                                                   ].divide(
@@ -1986,12 +1950,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                     ),
                                                   ],
@@ -2076,11 +2038,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           color: Color(0xFF009BDD),
                                           fontSize: 28.0,
                                           fontWeight: FontWeight.bold,
-                                          useGoogleFonts: false,
                                         ),
                                   );
                                 },
@@ -2092,10 +2053,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: '72',
+                                      fontFamily: 'Readex Pro',
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.w500,
-                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -2153,10 +2113,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: '72',
+                                          fontFamily: 'Readex Pro',
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
-                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   Container(
@@ -2173,11 +2132,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               color: Color(0xFF545454),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.normal,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -2243,9 +2201,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: '72',
+                                              fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ].divide(SizedBox(width: 10.0)),
@@ -2325,9 +2282,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: '72',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
-                                                        useGoogleFonts: false,
                                                       ),
                                             ),
                                           ].divide(SizedBox(width: 10.0)),
@@ -2339,11 +2296,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: '72',
+                                                fontFamily: 'Readex Pro',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
-                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -2471,10 +2427,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: '72',
+                                                      fontFamily: 'Readex Pro',
                                                       color: Colors.white,
                                                       fontSize: 14.0,
-                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: BorderSide(
@@ -2563,10 +2518,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: '72',
+                                                          fontFamily:
+                                                              'Readex Pro',
                                                           color: Colors.white,
                                                           fontSize: 12.0,
-                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -2641,16 +2596,14 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     .getText(
                                                   'xj664owp' /* : */,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: '72',
-                                                          color:
-                                                              Color(0xFF0E4051),
-                                                          fontSize: 22.0,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Color(0xFF0E4051),
+                                                      fontSize: 22.0,
+                                                    ),
                                               ),
                                               Container(
                                                 decoration: BoxDecoration(
@@ -2909,11 +2862,9 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        '72',
+                                                                        'Readex Pro',
                                                                     color: Colors
                                                                         .white,
-                                                                    useGoogleFonts:
-                                                                        false,
                                                                   ),
                                                             ),
                                                           ].divide(SizedBox(
@@ -2926,12 +2877,10 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    '72',
+                                                                    'Readex Pro',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
-                                                                useGoogleFonts:
-                                                                    false,
                                                               ),
                                                         ),
                                                       ],
@@ -3040,13 +2989,11 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                                     .titleSmall
                                                                     .override(
                                                                       fontFamily:
-                                                                          '72',
+                                                                          'Readex Pro',
                                                                       color: Colors
                                                                           .white,
                                                                       fontSize:
                                                                           14.0,
-                                                                      useGoogleFonts:
-                                                                          false,
                                                                     ),
                                                             elevation: 3.0,
                                                             borderSide:
