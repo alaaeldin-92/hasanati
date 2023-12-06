@@ -1410,10 +1410,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'ar': '',
     },
-    'fiyesgw0': {
-      'en': 'Allow Hasanati to send you notifications?',
-      'ar': '',
-    },
     'uyuhjzoo': {
       'en': '',
       'ar': '',

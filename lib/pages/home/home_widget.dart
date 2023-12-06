@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
-import '/flutter_flow/permissions_util.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -106,7 +105,6 @@ class _HomeWidgetState extends State<HomeWidget> {
       _model.updateScreen = await queryUpdateRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
-      await requestPermission(notificationsPermission);
       if ((_model.updateScreen?.status == true) &&
           (FFAppState().seenUpdateScreen == false)) {
         FFAppState().seenUpdateScreen = true;
@@ -1193,36 +1191,21 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              InkWell(
-                                                splashColor: Colors.transparent,
-                                                focusColor: Colors.transparent,
-                                                hoverColor: Colors.transparent,
-                                                highlightColor:
-                                                    Colors.transparent,
-                                                onTap: () async {
-                                                  await actions
-                                                      .sendForegroundPushMessage(
-                                                    'ct7nZqiuRH2u0lpleXxgS6:APA91bGvCrRIb7ZlV5KgUsukdyDfgiqWML5p0SBvaneepax_dCNViyXmex4Quj_Uln93mAdmfBnGuVF9kQO2gm-d-ugLSVnlDkPc2_gKFbXL1F5ABBV1YorniMvuCwfEuz-xzkpA1t0Q',
-                                                    'wpojwojfpwj',
-                                                    'Friend Request',
-                                                  );
-                                                },
-                                                child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'l6dlh2o8' /* Quran Chapters */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        fontSize: 18.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'l6dlh2o8' /* Quran Chapters */,
                                                 ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 18.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
