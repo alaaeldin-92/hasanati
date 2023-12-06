@@ -44,8 +44,7 @@ class AppStateNotifier extends ChangeNotifier  {
   bool notifyOnAuthChange = true;
 
   bool get loading => user == null || showSplashImage;
-  bool get loggedIn => user?.loggedIn ?? false;
-  bool get profileCompleted => FFAppState().profileCreated; // new
+  bool get loggedIn => user?.loggedIn ?? false; 
   bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
   bool get shouldRedirect => loggedIn && _redirectLocation != null;
 
@@ -84,13 +83,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          !appStateNotifier.loggedIn ? OnboardingWidget() : (appStateNotifier.profileCompleted ? HomeWidget() : AuthCompleteProfile1Widget()),
+          !appStateNotifier.loggedIn ? OnboardingWidget() : HomeWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-            !appStateNotifier.loggedIn ? OnboardingWidget() : (appStateNotifier.profileCompleted ? HomeWidget() : AuthCompleteProfile1Widget()),
+            !appStateNotifier.loggedIn ? OnboardingWidget() : HomeWidget(),
         ),
         FFRoute(
           name: 'Home',

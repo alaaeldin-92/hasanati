@@ -39,8 +39,30 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  void checkForIncompleteProfile() async{
+final firestore = FirebaseFirestore.instance;
+    QuerySnapshot querySnapshotUsers = await firestore
+          .collection('users')
+          .where('uid', isEqualTo: currentUser?.uid)
+          .get();
+    if(querySnapshotUsers.docs[0]['username'].isEmpty){
+      context.safePop();
+       context.pushNamed(
+          'AuthCompleteProfile1',
+        );
+    }else if(querySnapshotUsers.docs[0]['display_name'].isEmpty){
+        context.safePop();
+       context.pushNamed(
+          'AuthCompleteProfile2',
+        );
+    }
+  }
+
   @override
   void initState() {
+    
+    checkForIncompleteProfile();
+
     super.initState();
     _model = createModel(context, () => HomeModel());
 
