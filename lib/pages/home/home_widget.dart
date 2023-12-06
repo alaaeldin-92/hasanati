@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
-import '/flutter_flow/permissions_util.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -128,7 +127,6 @@ final firestore = FirebaseFirestore.instance;
       _model.updateScreen = await queryUpdateRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
-      await requestPermission(notificationsPermission);
       if ((_model.updateScreen?.status == true) &&
           (FFAppState().seenUpdateScreen == false)) {
         FFAppState().seenUpdateScreen = true;
@@ -1215,28 +1213,21 @@ final firestore = FirebaseFirestore.instance;
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              InkWell(
-                                                splashColor: Colors.transparent,
-                                                focusColor: Colors.transparent,
-                                                hoverColor: Colors.transparent,
-                                                highlightColor:
-                                                    Colors.transparent,
-                                                child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'l6dlh2o8' /* Quran Chapters */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        fontSize: 18.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'l6dlh2o8' /* Quran Chapters */,
                                                 ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 18.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
