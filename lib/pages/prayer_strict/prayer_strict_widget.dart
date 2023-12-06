@@ -189,9 +189,10 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: '72',
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ].divide(SizedBox(width: 5.0)),
@@ -287,9 +288,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        '72',
                                                                     color: Colors
                                                                         .white,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                             Text(
@@ -303,9 +306,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        '72',
                                                                     color: Colors
                                                                         .white,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ],
@@ -444,9 +449,9 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: '72',
                                                           color: Colors.white,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ].divide(SizedBox(width: 10.0)),
@@ -456,16 +461,16 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                     .getText(
                                                   'edqvjma2' /* 20/30 Online */,
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: '72',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
                                                               .secondaryText,
-                                                    ),
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ],
                                           ),
@@ -618,16 +623,15 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: Color(0xFF009BDF),
-                                                  textStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 14.0,
-                                                          ),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily: '72',
+                                                        color: Colors.white,
+                                                        fontSize: 14.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                   elevation: 3.0,
                                                   borderSide: BorderSide(
                                                     color: Colors.transparent,
@@ -858,10 +862,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
+                                                            fontFamily: '72',
                                                             fontWeight:
                                                                 FontWeight.w600,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -907,10 +912,10 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -953,10 +958,10 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1000,10 +1005,10 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1242,11 +1247,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(
@@ -2509,11 +2514,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(
@@ -3771,11 +3776,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(
@@ -4981,11 +4986,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(
@@ -6187,11 +6192,11 @@ class _PrayerStrictWidgetState extends State<PrayerStrictWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(

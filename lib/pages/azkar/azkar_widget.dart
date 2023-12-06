@@ -118,9 +118,10 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                       'xp6y13d7' /* Next */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: '72',
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ],
@@ -221,11 +222,13 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    '72',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .alternate,
                                                                 fontSize: 14.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ),
@@ -328,10 +331,12 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    '72',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ].divide(
@@ -359,10 +364,12 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    '72',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ],

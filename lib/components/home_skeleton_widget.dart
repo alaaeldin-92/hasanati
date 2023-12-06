@@ -83,9 +83,10 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: '72',
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   Container(
@@ -193,13 +194,14 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
+                                                            fontFamily: '72',
                                                             color: Color(
                                                                 0xFF007BAF),
                                                             fontSize: 14.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ].divide(
@@ -408,9 +410,10 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: '72',
                                                   fontSize: 18.0,
                                                   fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Icon(
@@ -556,9 +559,10 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: '72',
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   Row(
@@ -875,9 +879,10 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: '72',
                                               fontSize: 18.0,
                                               fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Row(

@@ -652,11 +652,11 @@ class _SearchQuranWidgetState extends State<SearchQuranWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: '72',
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Padding(
@@ -672,13 +672,13 @@ class _SearchQuranWidgetState extends State<SearchQuranWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color:
                                                             Color(0xFF545454),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),

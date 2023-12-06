@@ -140,10 +140,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: '72',
                                                   color: Color(0xFF0C092A),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Text(
@@ -151,12 +152,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: '72',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ].divide(SizedBox(height: 5.0)),
@@ -243,11 +245,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color: Color(
                                                                   0xFF005B7F),
                                                               fontSize: 14.0,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                       Text(
@@ -261,13 +264,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -311,11 +315,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color: Color(
                                                                   0xFF005B7F),
                                                               fontSize: 14.0,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                       Text(
@@ -324,13 +329,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -365,11 +371,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color: Color(
                                                                   0xFF005B7F),
                                                               fontSize: 14.0,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                       Text(
@@ -383,13 +390,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .of(context)
                                                             .bodyMedium
                                                             .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
+                                                              fontFamily: '72',
                                                               color:
                                                                   Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ].divide(
@@ -434,8 +442,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: '72',
                                                           color: _model.view ==
                                                                   'Friends'
                                                               ? Color(
@@ -445,6 +452,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                   .secondaryText,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   if (_model.view == 'Friends')
@@ -473,8 +481,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: _model.view ==
                                                                 'Stats'
                                                             ? Color(0xFF009BDD)
@@ -483,6 +490,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .secondaryText,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 if (_model.view == 'Stats')
@@ -515,8 +523,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: _model.view ==
                                                                 'Details'
                                                             ? Color(0xFF009BDD)
@@ -525,6 +532,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .secondaryText,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 if (_model.view == 'Details')
@@ -770,9 +778,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: 'Readex Pro',
+                                                                                fontFamily: '72',
                                                                                 color: Color(0xFF0E0C23),
                                                                                 fontWeight: FontWeight.bold,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                         ),
                                                                       ].divide(SizedBox(

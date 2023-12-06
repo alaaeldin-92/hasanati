@@ -96,10 +96,11 @@ class _AuthVerifyEmailWidgetState extends State<AuthVerifyEmailWidget> {
                           textAlign: TextAlign.center,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: '72',
                                     color: Color(0xFF009BDD),
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ].divide(SizedBox(width: 5.0)),
@@ -138,9 +139,10 @@ class _AuthVerifyEmailWidgetState extends State<AuthVerifyEmailWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: '72',
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ],
@@ -181,11 +183,12 @@ class _AuthVerifyEmailWidgetState extends State<AuthVerifyEmailWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: '72',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryText,
                                                   fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -241,8 +244,9 @@ class _AuthVerifyEmailWidgetState extends State<AuthVerifyEmailWidget> {
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: '72',
                                         color: Color(0xFF009BDF),
+                                        useGoogleFonts: false,
                                       ),
                                   borderSide: BorderSide(
                                     color: Color(0xFF009BDF),
@@ -298,10 +302,11 @@ class _AuthVerifyEmailWidgetState extends State<AuthVerifyEmailWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: '72',
                                           color: Color(0xFF888888),
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: false,
                                           lineHeight: 1.3,
                                         ),
                                   ),

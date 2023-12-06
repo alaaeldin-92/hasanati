@@ -83,9 +83,10 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                           'd02mz6c5' /* Network error */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily: '72',
                               fontSize: 24.0,
                               fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Container(
@@ -98,10 +99,11 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                           textAlign: TextAlign.center,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: '72',
                                     color: Color(0xFF545454),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),

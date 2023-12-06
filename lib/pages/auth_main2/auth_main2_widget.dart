@@ -108,9 +108,10 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: '72',
                                     color: Color(0xFF8F6396),
                                     fontSize: 14.0,
+                                    useGoogleFonts: false,
                                   ),
                               borderSide: BorderSide(
                                 color: Colors.transparent,
@@ -156,14 +157,16 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                   .getText(
                                                 'tr6cjd6k' /* Sign in */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 20.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: '72',
+                                                        fontSize: 20.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ],
                                         ),
@@ -506,10 +509,10 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color:
                                                             Color(0xFF888888),
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -525,13 +528,15 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                 'twlxfy1f' /* Forgot Password? */,
                                               ),
                                               textAlign: TextAlign.end,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF888888),
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: '72',
+                                                        color:
+                                                            Color(0xFF888888),
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -626,11 +631,11 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                           .of(context)
                                                       .titleSmall
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.white,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                                   borderSide: BorderSide(
                                                     color: Colors.transparent,
@@ -668,8 +673,9 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: '72',
                                           color: Color(0xFF888888),
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   Expanded(
@@ -720,11 +726,11 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
+                                                          fontFamily: '72',
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ].divide(SizedBox(width: 12.0)),
@@ -789,11 +795,11 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ].divide(SizedBox(width: 12.0)),
@@ -857,12 +863,12 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                           .of(context)
                                                       .titleSmall
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: '72',
                                                         color: Colors.black,
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                                   borderSide: BorderSide(
                                                     color: Colors.transparent,
@@ -906,10 +912,11 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: '72',
                                         color: Color(0xFF888888),
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: false,
                                         lineHeight: 1.3,
                                       ),
                                 ),
