@@ -6,6 +6,7 @@ import '/components/friends_skeleton_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:collection/collection.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -553,6 +554,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                 await _model.targetUserRef!.reference.update(createUsersRecordData(
                                                                                   notificationsRead: false,
                                                                                 ));
+
                                                                                 
 
                                                                                 final firestore = FirebaseFirestore.instance;
@@ -565,25 +567,29 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                 .get();
 
 
-                                                                                if(targetUserRef.docs[0]['online'] == true){
-                                                                                    sendForegroundPushMessage(targetUserRef.docs[0]['fcm_token'], "${valueOrDefault(currentUserDocument?.username, '')} has requested to add you", "Friend Request");
-                                                                                }else{
-                                                                                   triggerPushNotification(
-                                                                                  notificationTitle: 'Hasanati',
-                                                                                  notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
-                                                                                  notificationImageUrl: 'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
-                                                                                  notificationSound: 'default',
-                                                                                  userRefs: [
-                                                                                    _model.userToAdd!.reference
-                                                                                  ],
-                                                                                  initialPageName: 'Notification',
-                                                                                  parameterData: {},
-                                                                                );
-                                                                                }
 
-                                                                               
- 
+                                                                        
                                                                   
+
+                                                                                if (_model.targetUserRef?.online == true) {
+                                                                                  await actions.sendForegroundPushMessage(
+                                                                                    _model.targetUserRef!.fcmToken,
+                                                                                    'This is the body',
+                                                                                    'Friend Request',
+                                                                                  );
+                                                                                } else {
+                                                                                  triggerPushNotification(
+                                                                                    notificationTitle: 'Hasanati',
+                                                                                    notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
+                                                                                    notificationImageUrl: 'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                                                    notificationSound: 'default',
+                                                                                    userRefs: [
+                                                                                      _model.userToAdd!.reference
+                                                                                    ],
+                                                                                    initialPageName: 'Notification',
+                                                                                    parameterData: {},
+                                                                                  );
+                                                                                }
 
                                                                                 setState(() {});
                                                                               },
