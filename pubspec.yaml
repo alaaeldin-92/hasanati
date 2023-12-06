@@ -26,6 +26,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   algolia: 1.1.1
+  http: ^0.13.4
   connectivity: ^3.0.0
   audio_session: 0.1.16
   audioplayers: ^5.2.1
@@ -299,7 +300,7 @@ flutter:
           weight: 700
         - asset: assets/fonts/CriqueGrotesk-Black.ttf
           weight: 900
-    - family: '72'
+    - family: "72"
       fonts:
         - asset: assets/fonts/72-Light.ttf
           weight: 300

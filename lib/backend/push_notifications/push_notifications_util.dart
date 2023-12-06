@@ -5,6 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'serialization_util.dart';
 import '../../auth/firebase_auth/auth_util.dart';
 import '../cloud_functions/cloud_functions.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
 
 import 'package:flutter/foundation.dart';
 import 'package:stream_transform/stream_transform.dart';
@@ -82,4 +85,35 @@ void triggerPushNotification({
       .collection(kUserPushNotificationsCollectionName)
       .doc()
       .set(pushNotificationData);
+}
+
+void sendForegroundPushMessage(String fcmToken, String body, String title) async{
+  try{
+      await http.post(
+        Uri.parse('https://fcm.googleapis.com/fcm/send'),
+        headers: <String, String>{
+          'Content-Type': 'application/json',
+          'Authorization': 'key=AAAAIzWC8Xw:APA91bG-UuaEMpWB5CKC722nLUDG3NF-KHlDoYF8GR7bCDohBhb1C0HLvSx67XDbWVLldrEihrbYXN-vB6G1OSLChb7Z6VYQc6pthqBITlIZPiWNCdPMuI0cNyhY2S5Qc1f7l7gZanYm',
+        },
+        body: jsonEncode(
+          <String, dynamic>{
+            'priority': 'high',
+            'data': <String, dynamic>{
+              'click_action': 'FLUTTER_NOTIFICATION_CLICK',
+              'status': 'done',
+              'body': body,
+              'title': title,
+            },
+            "notification": <String, dynamic>{
+              "title": title,
+              "body": body,
+              "android_channel_id": "dbfood"
+            },
+            "to": fcmToken,
+          }
+        ),
+      );
+  }catch(e){
+    print(e.toString());
+  }
 }
