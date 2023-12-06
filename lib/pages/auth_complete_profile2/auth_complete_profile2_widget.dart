@@ -612,10 +612,6 @@ class _AuthCompleteProfile2WidgetState
                                                 notificationsRead: true,
                                                 fcmToken: '',
                                               ));
-                                              setState(() {
-                                                FFAppState().profileCreated =
-                                                    true;
-                                              });
 
                                               context.pushNamed('Home');
                                             },
@@ -794,7 +790,7 @@ class _AuthCompleteProfile2WidgetState
                                                               _model
                                                                   .simpleSearchResults
                                                                   .toList(),
-                                                              'country')!
+                                                              'name')!
                                                           .toList()
                                                           .cast<dynamic>();
                                                     });
@@ -876,7 +872,7 @@ class _AuthCompleteProfile2WidgetState
                                                                       _model
                                                                           .simpleSearchResults
                                                                           .toList(),
-                                                                      'country')!
+                                                                      'name')!
                                                                   .toList()
                                                                   .cast<
                                                                       dynamic>();

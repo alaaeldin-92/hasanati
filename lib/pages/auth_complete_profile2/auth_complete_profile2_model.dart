@@ -21,7 +21,7 @@ class AuthCompleteProfile2Model
 
   String gender = 'M';
 
-  String country = 'sa';
+  String country = '🇸🇦';
 
   List<dynamic> countryList = [];
   void addToCountryList(dynamic item) => countryList.add(item);
