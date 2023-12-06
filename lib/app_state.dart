@@ -111,10 +111,6 @@ class FFAppState extends ChangeNotifier {
       _seenUpdateScreen = await secureStorage.getBool('ff_seenUpdateScreen') ??
           _seenUpdateScreen;
     });
-    await _safeInitAsync(() async {
-      _profileCreated =
-          await secureStorage.getBool('ff_profileCreated') ?? _profileCreated;
-    });
   }
 
   void update(VoidCallback callback) {
@@ -562,17 +558,6 @@ class FFAppState extends ChangeNotifier {
 
   void deleteSeenUpdateScreen() {
     secureStorage.delete(key: 'ff_seenUpdateScreen');
-  }
-
-  bool _profileCreated = false;
-  bool get profileCreated => _profileCreated;
-  set profileCreated(bool _value) {
-    _profileCreated = _value;
-    secureStorage.setBool('ff_profileCreated', _value);
-  }
-
-  void deleteProfileCreated() {
-    secureStorage.delete(key: 'ff_profileCreated');
   }
 }
 
