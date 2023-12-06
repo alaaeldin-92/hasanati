@@ -45,7 +45,7 @@ class AppStateNotifier extends ChangeNotifier  {
 
   bool get loading => user == null || showSplashImage;
   bool get loggedIn => user?.loggedIn ?? false;
-  bool get profileCompleted => currentUserDisplayName.isNotEmpty;
+  bool get profileCompleted => FFAppState().profileCreated; // new
   bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
   bool get shouldRedirect => loggedIn && _redirectLocation != null;
 
