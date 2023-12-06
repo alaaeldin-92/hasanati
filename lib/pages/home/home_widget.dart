@@ -3,7 +3,6 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/home_skeleton_widget.dart';
 import '/components/navbar_widget.dart';
-import '/components/update_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -23,7 +22,6 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 import 'home_model.dart';
 export 'home_model.dart';
 
@@ -108,39 +106,17 @@ class _HomeWidgetState extends State<HomeWidget> {
       _model.updateScreen = await queryUpdateRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
+      await requestPermission(notificationsPermission);
       if ((_model.updateScreen?.status == true) &&
           (FFAppState().seenUpdateScreen == false)) {
         FFAppState().seenUpdateScreen = true;
-        await showModalBottomSheet(
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          context: context,
-          builder: (context) {
-            return WebViewAware(
-                child: GestureDetector(
-              onTap: () => _model.unfocusNode.canRequestFocus
-                  ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-                  : FocusScope.of(context).unfocus(),
-              child: Padding(
-                padding: MediaQuery.viewInsetsOf(context),
-                child: Container(
-                  height: MediaQuery.sizeOf(context).height * 1.0,
-                  child: UpdateWidget(),
-                ),
-              ),
-            ));
-          },
-        ).then((value) => safeSetState(() {}));
       }
       if (valueOrDefault(currentUserDocument?.fcmToken, '') == null ||
           valueOrDefault(currentUserDocument?.fcmToken, '') == '') {
-        await requestPermission(notificationsPermission);
-        _model.fcmToken = await actions.getUserFCM(
-          currentUserUid,
-        );
+        _model.deviceFcm = await actions.getDeviceFcmToken();
 
         await currentUserReference!.update(createUsersRecordData(
-          fcmToken: _model.fcmToken,
+          fcmToken: _model.deviceFcm,
         ));
       }
     });
