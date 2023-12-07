@@ -1,9 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_data.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -125,44 +127,104 @@ class _AuthCompleteProfile2WidgetState
                               fit: BoxFit.fitHeight,
                             ),
                           ),
-                        Stack(
-                          alignment: AlignmentDirectional(1.0, -1.0),
-                          children: [
-                            Container(
-                              width: 190.0,
-                              height: 190.0,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Image.network(
-                                'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg?alt=media',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 20.0, 0.0, 0.0),
-                              child: FlutterFlowIconButton(
-                                borderColor:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                borderRadius: 80.0,
-                                borderWidth: 1.0,
-                                buttonSize: 50.0,
-                                fillColor: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                icon: FaIcon(
-                                  FontAwesomeIcons.pen,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 18.0,
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            final selectedMedia =
+                                await selectMediaWithSourceBottomSheet(
+                              context: context,
+                              allowPhoto: true,
+                            );
+                            if (selectedMedia != null &&
+                                selectedMedia.every((m) => validateFileFormat(
+                                    m.storagePath, context))) {
+                              setState(() => _model.isDataUploading = true);
+                              var selectedUploadedFiles = <FFUploadedFile>[];
+
+                              var downloadUrls = <String>[];
+                              try {
+                                selectedUploadedFiles = selectedMedia
+                                    .map((m) => FFUploadedFile(
+                                          name: m.storagePath.split('/').last,
+                                          bytes: m.bytes,
+                                          height: m.dimensions?.height,
+                                          width: m.dimensions?.width,
+                                          blurHash: m.blurHash,
+                                        ))
+                                    .toList();
+
+                                downloadUrls = (await Future.wait(
+                                  selectedMedia.map(
+                                    (m) async => await uploadData(
+                                        m.storagePath, m.bytes),
+                                  ),
+                                ))
+                                    .where((u) => u != null)
+                                    .map((u) => u!)
+                                    .toList();
+                              } finally {
+                                _model.isDataUploading = false;
+                              }
+                              if (selectedUploadedFiles.length ==
+                                      selectedMedia.length &&
+                                  downloadUrls.length == selectedMedia.length) {
+                                setState(() {
+                                  _model.uploadedLocalFile =
+                                      selectedUploadedFiles.first;
+                                  _model.uploadedFileUrl = downloadUrls.first;
+                                });
+                              } else {
+                                setState(() {});
+                                return;
+                              }
+                            }
+
+                            setState(() {
+                              _model.imageURL = _model.uploadedFileUrl;
+                            });
+                          },
+                          child: Stack(
+                            alignment: AlignmentDirectional(1.0, -1.0),
+                            children: [
+                              Container(
+                                width: 190.0,
+                                height: 190.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
                                 ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
-                                },
+                                child: Image.network(
+                                  _model.imageURL,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    5.0, 20.0, 0.0, 0.0),
+                                child: FlutterFlowIconButton(
+                                  borderColor: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  borderRadius: 80.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 50.0,
+                                  fillColor: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.pen,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 18.0,
+                                  ),
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -644,16 +706,12 @@ class _AuthCompleteProfile2WidgetState
                                                   .update(createUsersRecordData(
                                                 displayName: _model
                                                     .fullNameController.text,
-                                                nationality:
-                                                    functions.lowerCaseLetters(
-                                                        _model.country),
+                                                nationality: _model.countryCode,
                                                 age: int.tryParse(
                                                     _model.ageController.text),
                                                 gender: _model.gender,
-                                                photoUrl:
-                                                    'https://t4.ftcdn.net/jpg/00/64/67/27/360_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg',
+                                                photoUrl: _model.imageURL,
                                                 online: true,
-                                                email: '',
                                                 notificationsRead: true,
                                               ));
 
@@ -988,15 +1046,18 @@ class _AuthCompleteProfile2WidgetState
                                                       countryItemItem,
                                                       r'''$.emoji''',
                                                     ).toString();
-                                                  });
-                                                  setState(() {
                                                     _model.countryName =
                                                         getJsonField(
                                                       countryItemItem,
                                                       r'''$.name''',
                                                     ).toString();
-                                                  });
-                                                  setState(() {
+                                                    _model.countryCode =
+                                                        functions
+                                                            .lowerCaseLetters(
+                                                                getJsonField(
+                                                      countryItemItem,
+                                                      r'''$.code''',
+                                                    ).toString());
                                                     _model.popupOpen = false;
                                                   });
                                                 },

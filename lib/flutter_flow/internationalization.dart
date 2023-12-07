@@ -681,6 +681,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Friends
   {
+    '30myi2ho': {
+      'en': 'Add Friends',
+      'ar': '',
+    },
     '54wyphyw': {
       'en': 'Search for username',
       'ar': 'سورة، آية، ترجمة، تفسير',
@@ -1415,7 +1419,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Avatar
   {
     'jzq9nklj': {
-      'en': 'Choose A Reciter',
+      'en': 'Hand Drawn Collection (15)',
+      'ar': '',
+    },
+    '5yscyqp1': {
+      'en': 'Hand Drawn Collection (15)',
+      'ar': '',
+    },
+    'cynag83u': {
+      'en': 'Hand Drawn Collection (8)',
+      'ar': '',
+    },
+  },
+  // UploadProfile
+  {
+    'eaokj8cd': {
+      'en': 'Take Photo',
+      'ar': '',
+    },
+    'mzr7utpe': {
+      'en': 'Choose from library',
+      'ar': '',
+    },
+    'xsfh6ifc': {
+      'en': 'Remove current picture',
       'ar': '',
     },
   },
