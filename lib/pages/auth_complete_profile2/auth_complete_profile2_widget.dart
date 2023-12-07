@@ -1,5 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -114,14 +115,54 @@ class _AuthCompleteProfile2WidgetState
                             ),
                           ),
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/marginalia-meditating-man.png',
-                            width: 300.0,
-                            height: 200.0,
-                            fit: BoxFit.fitHeight,
+                        if (false)
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.asset(
+                              'assets/images/marginalia-meditating-man.png',
+                              width: 300.0,
+                              height: 200.0,
+                              fit: BoxFit.fitHeight,
+                            ),
                           ),
+                        Stack(
+                          alignment: AlignmentDirectional(1.0, -1.0),
+                          children: [
+                            Container(
+                              width: 190.0,
+                              height: 190.0,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg?alt=media',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  5.0, 20.0, 0.0, 0.0),
+                              child: FlutterFlowIconButton(
+                                borderColor:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                borderRadius: 80.0,
+                                borderWidth: 1.0,
+                                buttonSize: 50.0,
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                icon: FaIcon(
+                                  FontAwesomeIcons.pen,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -148,7 +189,7 @@ class _AuthCompleteProfile2WidgetState
                                       children: [
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            'xgxgdj1g' /* Complete your profile (2/3) */,
+                                            'xgxgdj1g' /* Complete your profile (2/2) */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -210,7 +251,7 @@ class _AuthCompleteProfile2WidgetState
                                                       ),
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              0.0),
+                                                              7.5),
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
@@ -221,7 +262,7 @@ class _AuthCompleteProfile2WidgetState
                                                       ),
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              0.0),
+                                                              7.5),
                                                     ),
                                                     errorBorder:
                                                         OutlineInputBorder(
@@ -234,7 +275,7 @@ class _AuthCompleteProfile2WidgetState
                                                       ),
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              0.0),
+                                                              7.5),
                                                     ),
                                                     focusedErrorBorder:
                                                         OutlineInputBorder(
@@ -247,7 +288,7 @@ class _AuthCompleteProfile2WidgetState
                                                       ),
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              0.0),
+                                                              7.5),
                                                     ),
                                                     filled: true,
                                                     fillColor:
@@ -309,7 +350,7 @@ class _AuthCompleteProfile2WidgetState
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            0.0),
+                                                            7.5),
                                                   ),
                                                   focusedBorder:
                                                       OutlineInputBorder(
@@ -319,7 +360,7 @@ class _AuthCompleteProfile2WidgetState
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            0.0),
+                                                            7.5),
                                                   ),
                                                   errorBorder:
                                                       OutlineInputBorder(
@@ -332,7 +373,7 @@ class _AuthCompleteProfile2WidgetState
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            0.0),
+                                                            7.5),
                                                   ),
                                                   focusedErrorBorder:
                                                       OutlineInputBorder(
@@ -345,7 +386,7 @@ class _AuthCompleteProfile2WidgetState
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            0.0),
+                                                            7.5),
                                                   ),
                                                   filled: true,
                                                   fillColor: Color(0xFFEEEEEE),
@@ -375,6 +416,9 @@ class _AuthCompleteProfile2WidgetState
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xFFEEEEEE),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.0),
                                                 ),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
@@ -444,7 +488,7 @@ class _AuthCompleteProfile2WidgetState
                                                   color: Color(0xFFEEEEEE),
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          0.0),
+                                                          7.5),
                                                 ),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
@@ -484,7 +528,7 @@ class _AuthCompleteProfile2WidgetState
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                          0.0),
+                                                                          7.5),
                                                             ),
                                                             alignment:
                                                                 AlignmentDirectional(
@@ -541,7 +585,7 @@ class _AuthCompleteProfile2WidgetState
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                          0.0),
+                                                                          7.5),
                                                             ),
                                                             alignment:
                                                                 AlignmentDirectional(
@@ -611,7 +655,6 @@ class _AuthCompleteProfile2WidgetState
                                                 online: true,
                                                 email: '',
                                                 notificationsRead: true,
-                                                fcmToken: '',
                                               ));
 
                                               context.pushNamed('Home');

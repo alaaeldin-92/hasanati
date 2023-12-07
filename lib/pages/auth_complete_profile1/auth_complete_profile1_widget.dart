@@ -129,7 +129,7 @@ class _AuthCompleteProfile1WidgetState
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'uqdkyq10' /* Complete your profile (1/3) */,
+                                        'uqdkyq10' /* Complete your profile (1/2) */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
