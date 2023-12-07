@@ -12,6 +12,7 @@ import 'package:collection/collection.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'friends_model.dart';
@@ -79,6 +80,48 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                 children: [
                   Padding(
                     padding:
+                        EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 0.0),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.safePop();
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          FaIcon(
+                            FontAwesomeIcons.arrowLeft,
+                            color: Colors.black,
+                            size: 20.0,
+                          ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              '30myi2ho' /* Add Friends */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                            ),
+                          ),
+                        ].divide(SizedBox(width: 10.0)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 25.0, 16.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
@@ -89,18 +132,17 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                             height: 50.0,
                             decoration: BoxDecoration(
                               color: Color(0xFFEEEEEE),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(5.0),
                             ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  15.0, 0.0, 15.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  InkWell(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      15.0, 0.0, 0.0, 0.0),
+                                  child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
                                     hoverColor: Colors.transparent,
@@ -109,137 +151,126 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                       context.safePop();
                                     },
                                     child: Icon(
-                                      Icons.arrow_back_outlined,
-                                      color: Colors.black,
+                                      Icons.search,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
                                       size: 20.0,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        8.0, 0.0, 0.0, 0.0),
-                                    child: Container(
-                                      width: 250.0,
-                                      child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
-                                        onChanged: (_) => EasyDebounce.debounce(
-                                          '_model.textController',
-                                          Duration(milliseconds: 0),
-                                          () async {
-                                            await Future.delayed(const Duration(
-                                                milliseconds: 1000));
-                                            _model.searchRes =
-                                                await SearchFriendsCall.call(
-                                              query: _model.textController.text,
-                                              filter:
-                                                  'NOT username:  ${valueOrDefault(currentUserDocument?.username, '')}',
-                                            );
-                                            if ((_model.searchRes?.succeeded ??
-                                                true)) {
-                                              setState(() {
-                                                _model.searchResultJSON =
-                                                    getJsonField(
-                                                  (_model.searchRes?.jsonBody ??
-                                                      ''),
-                                                  r'''$.hits''',
-                                                  true,
-                                                )!
-                                                        .toList()
-                                                        .cast<dynamic>();
-                                              });
-                                            }
+                                ),
+                                Expanded(
+                                  child: TextFormField(
+                                    controller: _model.textController,
+                                    focusNode: _model.textFieldFocusNode,
+                                    onChanged: (_) => EasyDebounce.debounce(
+                                      '_model.textController',
+                                      Duration(milliseconds: 0),
+                                      () async {
+                                        await Future.delayed(
+                                            const Duration(milliseconds: 1000));
+                                        _model.searchRes =
+                                            await SearchFriendsCall.call(
+                                          query: _model.textController.text,
+                                          filter:
+                                              'NOT username:  ${valueOrDefault(currentUserDocument?.username, '')}',
+                                        );
+                                        if ((_model.searchRes?.succeeded ??
+                                            true)) {
+                                          setState(() {
+                                            _model.searchResultJSON =
+                                                getJsonField(
+                                              (_model.searchRes?.jsonBody ??
+                                                  ''),
+                                              r'''$.hits''',
+                                              true,
+                                            )!
+                                                    .toList()
+                                                    .cast<dynamic>();
+                                          });
+                                        }
 
-                                            setState(() {});
-                                          },
-                                        ),
-                                        autofocus: true,
-                                        textInputAction: TextInputAction.search,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 16.0,
-                                                    fontWeight:
-                                                        FontWeight.normal,
-                                                  ),
-                                          hintText: FFLocalizations.of(context)
-                                              .getText(
-                                            '54wyphyw' /* Search for username */,
-                                          ),
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 16.0,
-                                                  ),
-                                          enabledBorder: InputBorder.none,
-                                          focusedBorder: InputBorder.none,
-                                          errorBorder: InputBorder.none,
-                                          focusedErrorBorder: InputBorder.none,
-                                          suffixIcon: _model.textController!
-                                                  .text.isNotEmpty
-                                              ? InkWell(
-                                                  onTap: () async {
-                                                    _model.textController
-                                                        ?.clear();
-                                                    await Future.delayed(
-                                                        const Duration(
-                                                            milliseconds:
-                                                                1000));
-                                                    _model.searchRes =
-                                                        await SearchFriendsCall
-                                                            .call(
-                                                      query: _model
-                                                          .textController.text,
-                                                      filter:
-                                                          'NOT username:  ${valueOrDefault(currentUserDocument?.username, '')}',
-                                                    );
-                                                    if ((_model.searchRes
-                                                            ?.succeeded ??
-                                                        true)) {
-                                                      setState(() {
-                                                        _model.searchResultJSON =
-                                                            getJsonField(
-                                                          (_model.searchRes
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                          r'''$.hits''',
-                                                          true,
-                                                        )!
-                                                                .toList()
-                                                                .cast<
-                                                                    dynamic>();
-                                                      });
-                                                    }
-
-                                                    setState(() {});
-                                                    setState(() {});
-                                                  },
-                                                  child: Icon(
-                                                    Icons.clear,
-                                                    size: 22,
-                                                  ),
-                                                )
-                                              : null,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 16.0,
-                                            ),
-                                        validator: _model
-                                            .textControllerValidator
-                                            .asValidator(context),
-                                      ),
+                                        setState(() {});
+                                      },
                                     ),
+                                    autofocus: true,
+                                    textInputAction: TextInputAction.search,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      labelStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        '54wyphyw' /* Search for username */,
+                                      ),
+                                      hintStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 16.0,
+                                          ),
+                                      enabledBorder: InputBorder.none,
+                                      focusedBorder: InputBorder.none,
+                                      errorBorder: InputBorder.none,
+                                      focusedErrorBorder: InputBorder.none,
+                                      suffixIcon: _model
+                                              .textController!.text.isNotEmpty
+                                          ? InkWell(
+                                              onTap: () async {
+                                                _model.textController?.clear();
+                                                await Future.delayed(
+                                                    const Duration(
+                                                        milliseconds: 1000));
+                                                _model.searchRes =
+                                                    await SearchFriendsCall
+                                                        .call(
+                                                  query: _model
+                                                      .textController.text,
+                                                  filter:
+                                                      'NOT username:  ${valueOrDefault(currentUserDocument?.username, '')}',
+                                                );
+                                                if ((_model
+                                                        .searchRes?.succeeded ??
+                                                    true)) {
+                                                  setState(() {
+                                                    _model.searchResultJSON =
+                                                        getJsonField(
+                                                      (_model.searchRes
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                      r'''$.hits''',
+                                                      true,
+                                                    )!
+                                                            .toList()
+                                                            .cast<dynamic>();
+                                                  });
+                                                }
+
+                                                setState(() {});
+                                                setState(() {});
+                                              },
+                                              child: Icon(
+                                                Icons.clear,
+                                                size: 22,
+                                              ),
+                                            )
+                                          : null,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 16.0,
+                                        ),
+                                    validator: _model.textControllerValidator
+                                        .asValidator(context),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ].divide(SizedBox(width: 10.0)),
                             ),
                           ),
                         ),

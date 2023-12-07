@@ -1366,7 +1366,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 boxShadow: [
                                                                   BoxShadow(
                                                                     blurRadius:
-                                                                        2.0,
+                                                                        1.0,
                                                                     color: Color(
                                                                         0x33000000),
                                                                     offset:
@@ -1378,7 +1378,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
-                                                                            5.0),
+                                                                            7.5),
                                                                 shape: BoxShape
                                                                     .rectangle,
                                                               ),
@@ -1565,34 +1565,33 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                            if (false)
-                                                              Container(
-                                                                width: 50.0,
-                                                                height: 50.0,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  color: Color(
-                                                                      0x25009BDD),
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .only(
-                                                                    bottomLeft:
-                                                                        Radius.circular(
-                                                                            100.0),
-                                                                    bottomRight:
-                                                                        Radius.circular(
-                                                                            0.0),
-                                                                    topLeft: Radius
-                                                                        .circular(
-                                                                            0.0),
-                                                                    topRight: Radius
-                                                                        .circular(
-                                                                            0.0),
-                                                                  ),
-                                                                  shape: BoxShape
-                                                                      .rectangle,
+                                                            Container(
+                                                              width: 50.0,
+                                                              height: 50.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x25009BDD),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .only(
+                                                                  bottomLeft: Radius
+                                                                      .circular(
+                                                                          100.0),
+                                                                  bottomRight: Radius
+                                                                      .circular(
+                                                                          0.0),
+                                                                  topLeft: Radius
+                                                                      .circular(
+                                                                          0.0),
+                                                                  topRight: Radius
+                                                                      .circular(
+                                                                          0.0),
                                                                 ),
+                                                                shape: BoxShape
+                                                                    .rectangle,
                                                               ),
+                                                            ),
                                                           ],
                                                         ),
                                                       );

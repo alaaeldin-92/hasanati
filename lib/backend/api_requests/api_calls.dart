@@ -308,6 +308,37 @@ class QuranTranslationPageCall {
   }
 }
 
+class InAppNotificationCall {
+  static Future<ApiCallResponse> call({
+    String? fcmToken = '',
+    String? username = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "to": "${fcmToken}",
+  "notification": {
+    "body": "${username} just sent you a friend request",
+    "title": "Friend Request",
+    "imageUrl": "https://static-cse.canva.com/blob/1207447/1600w-HdnNPtnguw4.bd60dcfd.jpg"
+  },
+  "initial_page_name": "Notification"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'In App Notification',
+      apiUrl: 'https://fcm.googleapis.com/fcm/send',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;

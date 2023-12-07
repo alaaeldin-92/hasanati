@@ -109,42 +109,43 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed('Home');
-                          },
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Icon(
-                                Icons.arrow_back_ios_new,
-                                color: Colors.black,
-                                size: 20.0,
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'rn6qiaox' /* Notifications */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 22.0,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                              ),
-                            ].divide(SizedBox(width: 10.0)),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.safePop();
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.arrow_back_ios_new,
+                            color: Colors.black,
+                            size: 20.0,
                           ),
-                        ),
-                      ],
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'rn6qiaox' /* Notifications */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                            ),
+                          ),
+                        ].divide(SizedBox(width: 10.0)),
+                      ),
                     ),
                   ),
                   if (notificationCount > 0)
@@ -179,15 +180,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                               stream: queryFriendRequestNotificationRecord(
                                 queryBuilder:
                                     (friendRequestNotificationRecord) =>
-                                        friendRequestNotificationRecord
-                                            .where(
-                                              'receiver',
-                                              isEqualTo: currentUserUid,
-                                            )
-                                            .where(
-                                              'accepted',
-                                              isEqualTo: false,
-                                            ),
+                                        friendRequestNotificationRecord.where(
+                                  'receiver',
+                                  isEqualTo: currentUserUid,
+                                ),
                               ),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
@@ -685,118 +681,125 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                                       5.0),
                                                         ),
                                                       ),
-                                                      StreamBuilder<
-                                                          List<
-                                                              FriendRequestNotificationRecord>>(
-                                                        stream:
-                                                            queryFriendRequestNotificationRecord(
-                                                          queryBuilder:
-                                                              (friendRequestNotificationRecord) =>
-                                                                  friendRequestNotificationRecord
-                                                                      .where(
-                                                                        'receiver',
-                                                                        isEqualTo:
-                                                                            currentUserUid,
-                                                                      )
-                                                                      .where(
-                                                                        'accepted',
-                                                                        isEqualTo:
-                                                                            true,
-                                                                      ),
-                                                          singleRecord: true,
-                                                        ),
-                                                        builder: (context,
-                                                            snapshot) {
-                                                          // Customize what your widget looks like when it's loading.
-                                                          if (!snapshot
-                                                              .hasData) {
-                                                            return Center(
-                                                              child: SizedBox(
-                                                                width: 45.0,
-                                                                height: 45.0,
-                                                                child:
-                                                                    CircularProgressIndicator(
-                                                                  valueColor:
-                                                                      AlwaysStoppedAnimation<
-                                                                          Color>(
-                                                                    Color(
-                                                                        0xFF009BDF),
+                                                      if (listViewFriendRequestNotificationRecord
+                                                                  .reference
+                                                                  .id !=
+                                                              null &&
+                                                          listViewFriendRequestNotificationRecord
+                                                                  .reference
+                                                                  .id !=
+                                                              '')
+                                                        StreamBuilder<
+                                                            List<
+                                                                FriendRequestNotificationRecord>>(
+                                                          stream:
+                                                              queryFriendRequestNotificationRecord(
+                                                            queryBuilder:
+                                                                (friendRequestNotificationRecord) =>
+                                                                    friendRequestNotificationRecord
+                                                                        .where(
+                                                                          'receiver',
+                                                                          isEqualTo:
+                                                                              currentUserUid,
+                                                                        )
+                                                                        .where(
+                                                                          'accepted',
+                                                                          isEqualTo:
+                                                                              true,
+                                                                        ),
+                                                            singleRecord: true,
+                                                          ),
+                                                          builder: (context,
+                                                              snapshot) {
+                                                            // Customize what your widget looks like when it's loading.
+                                                            if (!snapshot
+                                                                .hasData) {
+                                                              return Center(
+                                                                child: SizedBox(
+                                                                  width: 45.0,
+                                                                  height: 45.0,
+                                                                  child:
+                                                                      CircularProgressIndicator(
+                                                                    valueColor:
+                                                                        AlwaysStoppedAnimation<
+                                                                            Color>(
+                                                                      Color(
+                                                                          0xFF009BDF),
+                                                                    ),
                                                                   ),
                                                                 ),
+                                                              );
+                                                            }
+                                                            List<FriendRequestNotificationRecord>
+                                                                buttonFriendRequestNotificationRecordList =
+                                                                snapshot.data!;
+                                                            // Return an empty Container when the item does not exist.
+                                                            if (snapshot.data!
+                                                                .isEmpty) {
+                                                              return Container();
+                                                            }
+                                                            final buttonFriendRequestNotificationRecord =
+                                                                buttonFriendRequestNotificationRecordList
+                                                                        .isNotEmpty
+                                                                    ? buttonFriendRequestNotificationRecordList
+                                                                        .first
+                                                                    : null;
+                                                            return FFButtonWidget(
+                                                              onPressed: () {
+                                                                print(
+                                                                    'Button pressed ...');
+                                                              },
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'ykfyt3kh' /* Following */,
+                                                              ),
+                                                              options:
+                                                                  FFButtonOptions(
+                                                                height: 30.0,
+                                                                padding: EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        12.0,
+                                                                        0.0,
+                                                                        12.0,
+                                                                        0.0),
+                                                                iconPadding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
+                                                                textStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Readex Pro',
+                                                                      color: Color(
+                                                                          0xFF009BDF),
+                                                                      fontSize:
+                                                                          12.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                    ),
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: Color(
+                                                                      0xFF009BDF),
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            5.0),
                                                               ),
                                                             );
-                                                          }
-                                                          List<FriendRequestNotificationRecord>
-                                                              buttonFriendRequestNotificationRecordList =
-                                                              snapshot.data!;
-                                                          // Return an empty Container when the item does not exist.
-                                                          if (snapshot
-                                                              .data!.isEmpty) {
-                                                            return Container();
-                                                          }
-                                                          final buttonFriendRequestNotificationRecord =
-                                                              buttonFriendRequestNotificationRecordList
-                                                                      .isNotEmpty
-                                                                  ? buttonFriendRequestNotificationRecordList
-                                                                      .first
-                                                                  : null;
-                                                          return FFButtonWidget(
-                                                            onPressed: () {
-                                                              print(
-                                                                  'Button pressed ...');
-                                                            },
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'ykfyt3kh' /* Following */,
-                                                            ),
-                                                            options:
-                                                                FFButtonOptions(
-                                                              height: 30.0,
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          12.0,
-                                                                          0.0,
-                                                                          12.0,
-                                                                          0.0),
-                                                              iconPadding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .secondaryBackground,
-                                                              textStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Readex Pro',
-                                                                        color: Color(
-                                                                            0xFF009BDF),
-                                                                        fontSize:
-                                                                            12.0,
-                                                                        fontWeight:
-                                                                            FontWeight.normal,
-                                                                      ),
-                                                              borderSide:
-                                                                  BorderSide(
-                                                                color: Color(
-                                                                    0xFF009BDF),
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          5.0),
-                                                            ),
-                                                          );
-                                                        },
-                                                      ),
+                                                          },
+                                                        ),
                                                     ],
                                                   ),
                                                 ].divide(SizedBox(width: 10.0)),
