@@ -125,7 +125,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Icon(
-                                Icons.arrow_back_outlined,
+                                Icons.arrow_back_ios_new,
                                 color: Colors.black,
                                 size: 20.0,
                               ),
@@ -138,7 +138,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       fontSize: 22.0,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                     ),
                               ),
                             ].divide(SizedBox(width: 10.0)),
@@ -148,12 +148,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     ),
                   ),
                   if (notificationCount > 0)
-                    Expanded(
-                      child: Container(
-                        width: MediaQuery.sizeOf(context).width * 1.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFEEEEEE),
-                        ),
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      decoration: BoxDecoration(),
+                      child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -553,127 +551,253 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                           height: 5.0)),
                                                     ),
                                                   ),
-                                                  FFButtonWidget(
-                                                    onPressed: () async {
-                                                      await currentUserReference!
-                                                          .update({
-                                                        ...mapToFirestore(
-                                                          {
-                                                            'friends': FieldValue
-                                                                .arrayUnion([
-                                                              containerUsersRecord
-                                                                  ?.uid
-                                                            ]),
-                                                          },
-                                                        ),
-                                                      });
+                                                  Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      FFButtonWidget(
+                                                        onPressed: () async {
+                                                          await currentUserReference!
+                                                              .update({
+                                                            ...mapToFirestore(
+                                                              {
+                                                                'friends':
+                                                                    FieldValue
+                                                                        .arrayUnion([
+                                                                  containerUsersRecord
+                                                                      ?.uid
+                                                                ]),
+                                                              },
+                                                            ),
+                                                          });
 
-                                                      await containerUsersRecord!
-                                                          .reference
-                                                          .update({
-                                                        ...createUsersRecordData(
-                                                          notificationsRead:
-                                                              false,
-                                                        ),
-                                                        ...mapToFirestore(
-                                                          {
-                                                            'friends': FieldValue
-                                                                .arrayUnion([
-                                                              currentUserUid
-                                                            ]),
-                                                          },
-                                                        ),
-                                                      });
-                                                      triggerPushNotification(
-                                                        notificationTitle:
-                                                            'Hasanati',
-                                                        notificationText:
-                                                            '${currentUserDisplayName} has accepted your friend request',
-                                                        notificationImageUrl:
-                                                            'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
-                                                        notificationSound:
-                                                            'default',
-                                                        userRefs: [
-                                                          containerUsersRecord!
+                                                          await containerUsersRecord!
                                                               .reference
-                                                        ],
-                                                        initialPageName:
-                                                            'Friends',
-                                                        parameterData: {},
-                                                      );
-                                                      _model.toUpdateRef =
-                                                          await queryFriendRequestNotificationRecordOnce(
-                                                        queryBuilder:
-                                                            (friendRequestNotificationRecord) =>
-                                                                friendRequestNotificationRecord
-                                                                    .where(
-                                                                      'sender',
-                                                                      isEqualTo:
-                                                                          containerUsersRecord
-                                                                              ?.uid,
-                                                                    )
-                                                                    .where(
-                                                                      'receiver',
-                                                                      isEqualTo:
-                                                                          currentUserUid,
-                                                                    ),
-                                                        singleRecord: true,
-                                                      ).then((s) =>
-                                                              s.firstOrNull);
+                                                              .update({
+                                                            ...createUsersRecordData(
+                                                              notificationsRead:
+                                                                  false,
+                                                            ),
+                                                            ...mapToFirestore(
+                                                              {
+                                                                'friends':
+                                                                    FieldValue
+                                                                        .arrayUnion([
+                                                                  currentUserUid
+                                                                ]),
+                                                              },
+                                                            ),
+                                                          });
+                                                          triggerPushNotification(
+                                                            notificationTitle:
+                                                                'Hasanati',
+                                                            notificationText:
+                                                                '${currentUserDisplayName} has accepted your friend request',
+                                                            notificationImageUrl:
+                                                                'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                            notificationSound:
+                                                                'default',
+                                                            userRefs: [
+                                                              containerUsersRecord!
+                                                                  .reference
+                                                            ],
+                                                            initialPageName:
+                                                                'Friends',
+                                                            parameterData: {},
+                                                          );
+                                                          _model.toUpdateRef =
+                                                              await queryFriendRequestNotificationRecordOnce(
+                                                            queryBuilder:
+                                                                (friendRequestNotificationRecord) =>
+                                                                    friendRequestNotificationRecord
+                                                                        .where(
+                                                                          'sender',
+                                                                          isEqualTo:
+                                                                              containerUsersRecord?.uid,
+                                                                        )
+                                                                        .where(
+                                                                          'receiver',
+                                                                          isEqualTo:
+                                                                              currentUserUid,
+                                                                        ),
+                                                            singleRecord: true,
+                                                          ).then((s) => s
+                                                                  .firstOrNull);
 
-                                                      await _model.toUpdateRef!
-                                                          .reference
-                                                          .update(
-                                                              createFriendRequestNotificationRecordData(
-                                                        accepted: true,
-                                                      ));
+                                                          await _model
+                                                              .toUpdateRef!
+                                                              .reference
+                                                              .update(
+                                                                  createFriendRequestNotificationRecordData(
+                                                            accepted: true,
+                                                          ));
 
-                                                      setState(() {});
-                                                    },
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '37mikjdi' /* Accept */,
-                                                    ),
-                                                    options: FFButtonOptions(
-                                                      height: 30.0,
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  12.0,
-                                                                  0.0,
-                                                                  12.0,
-                                                                  0.0),
-                                                      iconPadding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      color: Color(0xFF009BDD),
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Readex Pro',
-                                                                color: Colors
-                                                                    .white,
-                                                                fontSize: 12.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
-                                                      borderSide: BorderSide(
-                                                        color:
-                                                            Colors.transparent,
+                                                          setState(() {});
+                                                        },
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          '37mikjdi' /* Accept */,
+                                                        ),
+                                                        options:
+                                                            FFButtonOptions(
+                                                          height: 30.0,
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      12.0,
+                                                                      0.0,
+                                                                      12.0,
+                                                                      0.0),
+                                                          iconPadding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          color:
+                                                              Color(0xFF009BDD),
+                                                          textStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleSmall
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Readex Pro',
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        12.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal,
+                                                                  ),
+                                                          borderSide:
+                                                              BorderSide(
+                                                            color: Colors
+                                                                .transparent,
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      5.0),
+                                                        ),
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                    ),
+                                                      StreamBuilder<
+                                                          List<
+                                                              FriendRequestNotificationRecord>>(
+                                                        stream:
+                                                            queryFriendRequestNotificationRecord(
+                                                          queryBuilder:
+                                                              (friendRequestNotificationRecord) =>
+                                                                  friendRequestNotificationRecord
+                                                                      .where(
+                                                                        'receiver',
+                                                                        isEqualTo:
+                                                                            currentUserUid,
+                                                                      )
+                                                                      .where(
+                                                                        'accepted',
+                                                                        isEqualTo:
+                                                                            true,
+                                                                      ),
+                                                          singleRecord: true,
+                                                        ),
+                                                        builder: (context,
+                                                            snapshot) {
+                                                          // Customize what your widget looks like when it's loading.
+                                                          if (!snapshot
+                                                              .hasData) {
+                                                            return Center(
+                                                              child: SizedBox(
+                                                                width: 45.0,
+                                                                height: 45.0,
+                                                                child:
+                                                                    CircularProgressIndicator(
+                                                                  valueColor:
+                                                                      AlwaysStoppedAnimation<
+                                                                          Color>(
+                                                                    Color(
+                                                                        0xFF009BDF),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            );
+                                                          }
+                                                          List<FriendRequestNotificationRecord>
+                                                              buttonFriendRequestNotificationRecordList =
+                                                              snapshot.data!;
+                                                          // Return an empty Container when the item does not exist.
+                                                          if (snapshot
+                                                              .data!.isEmpty) {
+                                                            return Container();
+                                                          }
+                                                          final buttonFriendRequestNotificationRecord =
+                                                              buttonFriendRequestNotificationRecordList
+                                                                      .isNotEmpty
+                                                                  ? buttonFriendRequestNotificationRecordList
+                                                                      .first
+                                                                  : null;
+                                                          return FFButtonWidget(
+                                                            onPressed: () {
+                                                              print(
+                                                                  'Button pressed ...');
+                                                            },
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              'ykfyt3kh' /* Following */,
+                                                            ),
+                                                            options:
+                                                                FFButtonOptions(
+                                                              height: 30.0,
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          12.0,
+                                                                          0.0,
+                                                                          12.0,
+                                                                          0.0),
+                                                              iconPadding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryBackground,
+                                                              textStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleSmall
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Readex Pro',
+                                                                        color: Color(
+                                                                            0xFF009BDF),
+                                                                        fontSize:
+                                                                            12.0,
+                                                                        fontWeight:
+                                                                            FontWeight.normal,
+                                                                      ),
+                                                              borderSide:
+                                                                  BorderSide(
+                                                                color: Color(
+                                                                    0xFF009BDF),
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          5.0),
+                                                            ),
+                                                          );
+                                                        },
+                                                      ),
+                                                    ],
                                                   ),
                                                 ].divide(SizedBox(width: 10.0)),
                                               ),
@@ -694,14 +818,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     Expanded(
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFEEEEEE),
-                        ),
+                        decoration: BoxDecoration(),
                         alignment: AlignmentDirectional(0.00, 0.00),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Padding(
@@ -713,75 +833,51 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'vom3e54p' /* No Notifications */,
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/network-open-letter-with-text.png',
+                                        width: 300.0,
+                                        height: 200.0,
+                                        fit: BoxFit.contain,
                                       ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w600,
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Text(
+                                          FFLocalizations.of(context).getText(
+                                            'vom3e54p' /* No Notifications */,
                                           ),
-                                    ),
-                                    Container(
-                                      width: 225.0,
-                                      decoration: BoxDecoration(),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '0a5529be' /* You will receive one when you ... */,
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 24.0,
+                                                fontWeight: FontWeight.w600,
+                                              ),
                                         ),
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              fontSize: 12.0,
-                                            ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          context.safePop();
-                                        },
-                                        text:
+                                        Container(
+                                          width: 225.0,
+                                          decoration: BoxDecoration(),
+                                          child: Text(
                                             FFLocalizations.of(context).getText(
-                                          't85weeb8' /* Go Back */,
-                                        ),
-                                        options: FFButtonOptions(
-                                          height: 40.0,
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  38.0, 0.0, 38.0, 0.0),
-                                          iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: Colors.black,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    fontSize: 16.0,
-                                                  ),
-                                          elevation: 3.0,
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
+                                              '0a5529be' /* You will receive one when you ... */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  fontSize: 12.0,
+                                                ),
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(0.0),
                                         ),
-                                      ),
+                                      ].divide(SizedBox(height: 5.0)),
                                     ),
                                   ].divide(SizedBox(height: 5.0)),
                                 ),
