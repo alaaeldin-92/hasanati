@@ -1,9 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_data.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'auth_complete_profile2_widget.dart' show AuthCompleteProfile2Widget;
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -37,10 +39,22 @@ class AuthCompleteProfile2Model
 
   String countryName = 'Saudi Arabia';
 
+  String countryCode = 'sa';
+
+  String imageURL =
+      'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg?alt=media';
+
+  FFUploadedFile? uploadedFile;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   final formKey = GlobalKey<FormState>();
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
+
   // State field(s) for fullName widget.
   FocusNode? fullNameFocusNode;
   TextEditingController? fullNameController;
