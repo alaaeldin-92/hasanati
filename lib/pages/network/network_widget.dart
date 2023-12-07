@@ -85,11 +85,11 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
                               fontSize: 24.0,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                       ),
                       Container(
-                        width: 260.0,
+                        width: 230.0,
                         decoration: BoxDecoration(),
                         child: Text(
                           FFLocalizations.of(context).getText(
@@ -100,7 +100,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
                                     color: Color(0xFF545454),
-                                    fontSize: 14.0,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.normal,
                                   ),
                         ),
@@ -134,7 +134,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
                               color: Colors.transparent,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(100.0),
                           ),
                         ),
                       ),

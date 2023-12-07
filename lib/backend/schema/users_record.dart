@@ -84,11 +84,6 @@ class UsersRecord extends FirestoreRecord {
   bool get notificationsRead => _notificationsRead ?? false;
   bool hasNotificationsRead() => _notificationsRead != null;
 
-  // "fcm_token" field.
-  String? _fcmToken;
-  String get fcmToken => _fcmToken ?? '';
-  bool hasFcmToken() => _fcmToken != null;
-
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -103,7 +98,6 @@ class UsersRecord extends FirestoreRecord {
     _gender = snapshotData['gender'] as String?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _notificationsRead = snapshotData['notificationsRead'] as bool?;
-    _fcmToken = snapshotData['fcm_token'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -152,7 +146,6 @@ class UsersRecord extends FirestoreRecord {
           'gender': snapshot.data['gender'],
           'phone_number': snapshot.data['phone_number'],
           'notificationsRead': snapshot.data['notificationsRead'],
-          'fcm_token': snapshot.data['fcm_token'],
         },
         UsersRecord.collection.doc(snapshot.objectID),
       );
@@ -201,7 +194,6 @@ Map<String, dynamic> createUsersRecordData({
   String? gender,
   String? phoneNumber,
   bool? notificationsRead,
-  String? fcmToken,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -217,7 +209,6 @@ Map<String, dynamic> createUsersRecordData({
       'gender': gender,
       'phone_number': phoneNumber,
       'notificationsRead': notificationsRead,
-      'fcm_token': fcmToken,
     }.withoutNulls,
   );
 
@@ -242,8 +233,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.age == e2?.age &&
         e1?.gender == e2?.gender &&
         e1?.phoneNumber == e2?.phoneNumber &&
-        e1?.notificationsRead == e2?.notificationsRead &&
-        e1?.fcmToken == e2?.fcmToken;
+        e1?.notificationsRead == e2?.notificationsRead;
   }
 
   @override
@@ -260,8 +250,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.age,
         e?.gender,
         e?.phoneNumber,
-        e?.notificationsRead,
-        e?.fcmToken
+        e?.notificationsRead
       ]);
 
   @override

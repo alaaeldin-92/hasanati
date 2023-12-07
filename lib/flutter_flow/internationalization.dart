@@ -410,7 +410,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // AuthCompleteProfile2
   {
     'xgxgdj1g': {
-      'en': 'Complete your profile (2/3)',
+      'en': 'Complete your profile (2/2)',
       'ar': '',
     },
     '9d09g087': {
@@ -951,6 +951,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Stats',
       'ar': '',
     },
+    'rzzlus6w': {
+      'en': 'Pending',
+      'ar': '',
+    },
+    'waj8kzcb': {
+      'en': 'Friends',
+      'ar': '',
+    },
     's72ieuhi': {
       'en': 'Home',
       'ar': '',
@@ -1134,7 +1142,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // AuthCompleteProfile1
   {
     'uqdkyq10': {
-      'en': 'Complete your profile (1/3)',
+      'en': 'Complete your profile (1/2)',
       'ar': '',
     },
     'eyyx7pp8': {
@@ -1256,6 +1264,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Accept',
       'ar': '',
     },
+    'ykfyt3kh': {
+      'en': 'Following',
+      'ar': '',
+    },
     'vom3e54p': {
       'en': 'No Notifications',
       'ar': '',
@@ -1263,10 +1275,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0a5529be': {
       'en': 'You will receive one when you get a friend request.',
       'ar': '',
-    },
-    't85weeb8': {
-      'en': 'Go Back',
-      'ar': 'العودة إلى المنزل',
     },
     '97vd0np7': {
       'en': 'Home',
@@ -1401,6 +1409,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '0gsrd1nb': {
       'en': 'Update',
+      'ar': '',
+    },
+  },
+  // Avatar
+  {
+    'jzq9nklj': {
+      'en': 'Choose A Reciter',
       'ar': '',
     },
   },

@@ -74,6 +74,7 @@ class _AuthCompleteProfile3WidgetState
                       child: Image.asset(
                         'assets/images/wave.png',
                         width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: 300.0,
                         fit: BoxFit.cover,
                       ),
                     ),
