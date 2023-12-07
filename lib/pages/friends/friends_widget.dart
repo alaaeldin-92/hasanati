@@ -580,17 +580,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
 
 
 
-                                                                        
-                                                                  
-
-                                                                                if (_model.targetUserRef?.online == true) {
-                                                                                  // await actions.sendForegroundPushMessage(
-                                                                                  //   _model.targetUserRef!.fcmToken,
-                                                                                  //   'This is the body',
-                                                                                  //   'Friend Request',
-                                                                                  // );
-                                                                                } else {
-                                                                                  triggerPushNotification(
+                                                                        triggerPushNotification(
                                                                                     notificationTitle: 'Hasanati',
                                                                                     notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
                                                                                     notificationImageUrl: 'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
@@ -601,6 +591,26 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                     initialPageName: 'Notification',
                                                                                     parameterData: {},
                                                                                   );
+                                                                  
+
+                                                                                if (_model.targetUserRef?.online == true) {
+                                                                                  // await actions.sendForegroundPushMessage(
+                                                                                  //   _model.targetUserRef!.fcmToken,
+                                                                                  //   'This is the body',
+                                                                                  //   'Friend Request',
+                                                                                  // );
+                                                                                } else {
+                                                                                  // triggerPushNotification(
+                                                                                  //   notificationTitle: 'Hasanati',
+                                                                                  //   notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
+                                                                                  //   notificationImageUrl: 'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                                                  //   notificationSound: 'default',
+                                                                                  //   userRefs: [
+                                                                                  //     _model.userToAdd!.reference
+                                                                                  //   ],
+                                                                                  //   initialPageName: 'Notification',
+                                                                                  //   parameterData: {},
+                                                                                  // );
                                                                                 }
 
                                                                                     setState(() {});
