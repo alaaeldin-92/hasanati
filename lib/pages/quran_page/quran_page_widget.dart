@@ -175,6 +175,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                         onTap: () async {
                                           if (_model.audioPlaying) {
                                             _model.soundPlayer?.stop();
+                                            _model.soundPlayer?.dispose();
                                           }
 
                                           context.pushNamed('Home');
@@ -342,6 +343,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                         onTap: () async {
                                           if (_model.audioPlaying) {
                                             _model.soundPlayer?.stop();
+                                            _model.soundPlayer?.dispose();
                                             setState(() {
                                               _model.audioPlaying = false;
                                               _model.timeCounter = 0.0;
@@ -1078,6 +1080,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                 });
                                                 if (_model.audioPlaying) {
                                                   _model.soundPlayer?.stop();
+                                                  _model.soundPlayer?.dispose();
                                                 }
                                               },
                                             ),
