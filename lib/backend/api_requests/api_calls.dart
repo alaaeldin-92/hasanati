@@ -115,10 +115,8 @@ class QuranLeaderboardHasanatCall {
     int? page = 0,
     int? hitsPerPage = 10,
     String? attributesToHighlight = '[]',
-    List<String>? attributesToRetrieveList,
+    String? attributesToRetrieve = '[\"hasanat\", \"user\"]',
   }) async {
-    final attributesToRetrieve = _serializeList(attributesToRetrieveList);
-
     return ApiManager.instance.makeApiCall(
       callName: 'Quran Leaderboard Hasanat',
       apiUrl:
@@ -332,6 +330,66 @@ class InAppNotificationCall {
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
+class QuranLeaderboardVersesCall {
+  static Future<ApiCallResponse> call({
+    int? page = 0,
+    int? hitsPerPage = 10,
+    String? attributesToHighlight = '[]',
+    String? attributesToRetrieve = '[\"versesRead\", \"user\"]',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'Quran Leaderboard Verses',
+      apiUrl:
+          'https://E62ISEPBAO-dsn.algolia.net/1/indexes/quranPerformance_versesRead_desc',
+      callType: ApiCallType.GET,
+      headers: {
+        'X-Algolia-API-Key': 'e37a5ca361a51f19ee8d7e3b8669c6ab',
+        'X-Algolia-Application-Id': 'E62ISEPBAO',
+      },
+      params: {
+        'page': page,
+        'hitsPerPage': hitsPerPage,
+        'attributesToHighlight': attributesToHighlight,
+        'attributesToRetrieve': attributesToRetrieve,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
+class QuranLeaderboardTimeCall {
+  static Future<ApiCallResponse> call({
+    int? page = 0,
+    int? hitsPerPage = 10,
+    String? attributesToHighlight = '[]',
+    String? attributesToRetrieve = '[\"timeReadSec\", \"user\"]',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'Quran Leaderboard Time',
+      apiUrl:
+          'https://E62ISEPBAO-dsn.algolia.net/1/indexes/quranPerformance_timeReadSec_desc',
+      callType: ApiCallType.GET,
+      headers: {
+        'X-Algolia-API-Key': 'e37a5ca361a51f19ee8d7e3b8669c6ab',
+        'X-Algolia-Application-Id': 'E62ISEPBAO',
+      },
+      params: {
+        'page': page,
+        'hitsPerPage': hitsPerPage,
+        'attributesToHighlight': attributesToHighlight,
+        'attributesToRetrieve': attributesToRetrieve,
+      },
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
