@@ -280,32 +280,24 @@ class FirebaseAuthManager extends AuthManager
   /// Tries to sign in or create an account using Firebase Auth.
   /// Returns the User object if sign in was successful.
   Future<BaseAuthUser?> _signInOrCreateAccount(
-      BuildContext context,
-      Future<UserCredential?> Function() signInFunc,
-      String authProvider,
-      ) async {
-    // try {
-    //   final userCredential = await signInFunc();
-    //   if (userCredential?.user != null) {
-    //     await maybeCreateUser(userCredential!.user!);
-    //   }
-    //   return userCredential == null
-    //       ? null
-    //       : HasanatiFirebaseUser.fromUserCredential(userCredential);
-    // } on FirebaseAuthException catch (e) {
-    //   ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //     SnackBar(content: Text('Error: ${e.code!}')),
-    //   );
-    //   return null;
-    // }
-    final userCredential = await signInFunc();
-    if (userCredential?.user != null) {
-      await maybeCreateUser(userCredential!.user!);
+    BuildContext context,
+    Future<UserCredential?> Function() signInFunc,
+    String authProvider,
+  ) async {
+    try {
+      final userCredential = await signInFunc();
+      if (userCredential?.user != null) {
+        await maybeCreateUser(userCredential!.user!);
+      }
+      return userCredential == null
+          ? null
+          : HasanatiFirebaseUser.fromUserCredential(userCredential);
+    } on FirebaseAuthException catch (e) {
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error: ${e.message!}')),
+      );
+      return null;
     }
-    return userCredential == null
-        ? null
-        : HasanatiFirebaseUser.fromUserCredential(userCredential);
   }
-
 }

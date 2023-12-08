@@ -2,11 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hasanati/auth/firebase_auth/auth_util.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
-import 'package:connectivity/connectivity.dart'; // for connection check
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -25,7 +23,7 @@ export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';
 
-class AppStateNotifier extends ChangeNotifier  {
+class AppStateNotifier extends ChangeNotifier {
   AppStateNotifier._();
 
   static AppStateNotifier? _instance;
@@ -45,7 +43,6 @@ class AppStateNotifier extends ChangeNotifier  {
 
   bool get loading => user == null || showSplashImage;
   bool get loggedIn => user?.loggedIn ?? false;
-  bool get profileCompleted => currentUserDisplayName.isNotEmpty;
   bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
   bool get shouldRedirect => loggedIn && _redirectLocation != null;
 
@@ -84,13 +81,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          !appStateNotifier.loggedIn ? OnboardingWidget() : (appStateNotifier.profileCompleted ? HomeWidget() : AuthCompleteProfile1Widget()),
+          appStateNotifier.loggedIn ? HomeWidget() : OnboardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-            !appStateNotifier.loggedIn ? OnboardingWidget() : (appStateNotifier.profileCompleted ? HomeWidget() : AuthCompleteProfile1Widget()),
+              appStateNotifier.loggedIn ? HomeWidget() : OnboardingWidget(),
         ),
         FFRoute(
           name: 'Home',
@@ -393,29 +390,17 @@ class FFRoute {
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
         name: name,
         path: path,
-        redirect: (context, state) async {
-           
-          
+        redirect: (context, state) {
           if (appStateNotifier.shouldRedirect) {
             final redirectLocation = appStateNotifier.getRedirectLocation();
             appStateNotifier.clearRedirectLocation();
             return redirectLocation;
           }
 
-          var connectivityResult =  await (Connectivity().checkConnectivity());
-          bool internetConnected = connectivityResult == ConnectivityResult.mobile ||
-            connectivityResult == ConnectivityResult.wifi;
-
-          if(!internetConnected){
-            appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/network';
-          }
-
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
             return '/onboarding';
           }
-
           return null;
         },
         pageBuilder: (context, state) {
