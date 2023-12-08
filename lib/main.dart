@@ -39,9 +39,6 @@ void main() async {
     create: (context) => appState,
     child: MyApp(),
   ));
-  
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
-
 }
 
 class MyApp extends StatefulWidget {
@@ -53,7 +50,7 @@ class MyApp extends StatefulWidget {
       context.findAncestorStateOfType<_MyAppState>()!;
 }
 
-class _MyAppState extends State<MyApp> with WidgetsBindingObserver{
+class _MyAppState extends State<MyApp> {
   Locale? _locale = FFLocalizations.getStoredLocale();
   ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
@@ -68,7 +65,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver{
   @override
   void initState() {
     super.initState();
-WidgetsBinding.instance.addObserver(this);
+
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
     userStream = hasanatiFirebaseUserStream()
@@ -84,7 +81,6 @@ WidgetsBinding.instance.addObserver(this);
   void dispose() {
     authUserSub.cancel();
     fcmTokenSub.cancel();
-    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 

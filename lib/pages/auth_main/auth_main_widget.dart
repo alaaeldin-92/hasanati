@@ -9,7 +9,6 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'auth_main_model.dart';
-import'package:firebase_auth/firebase_auth.dart';
 export 'auth_main_model.dart';
 
 class AuthMainWidget extends StatefulWidget {
@@ -675,39 +674,19 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                   GoRouter.of(context)
                                                       .prepareAuthEvent();
 
-                                                 try{
-                                                final user = await authManager
-                                                    .signInWithEmail(
-                                                  context,
-                                                  _model
-                                                      .emailAddressSignInController
-                                                      .text,
-                                                  _model.passwordSignInController
-                                                      .text,
-                                                );
-                                                if (user == null) {
-                                                  return;
-                                                }
-                                              } on FirebaseAuthException catch (e) {
-                                                // Handle the error, you can update a state variable
-                                                if(e.code == "INVALID_LOGIN_CREDENTIALS"){
-                                                    setState(() {
-                                                          _model.authErrorSignIn = "Invalid login credentials, please try again.";
-                                                    });
-
-                                                                                               }
-
-                                                // _model.authErrorSignIn = e.code;
-
-                                                return;
-                                              }
-
-                                              
- setState(() {
-                                                _model.authErrorSignIn = '';
-                                              });
-
-
+                                                  final user = await authManager
+                                                      .signInWithEmail(
+                                                    context,
+                                                    _model
+                                                        .emailAddressSignInController
+                                                        .text,
+                                                    _model
+                                                        .passwordSignInController
+                                                        .text,
+                                                  );
+                                                  if (user == null) {
+                                                    return;
+                                                  }
 
                                                   if (_model
                                                       .checkboxSignInValue!) {
@@ -1439,51 +1418,40 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                       _model
                                                           .confirmPasswordSignUpController
                                                           .text) {
-                                                   setState(() {
-   _model.authErrorSignUp = "Passwords don't match.";
-});
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      SnackBar(
+                                                        content: Text(
+                                                          'Passwords don\'t match!',
+                                                        ),
+                                                      ),
+                                                    );
                                                     return;
                                                   }
 
-                                                 try{
-                                                final user = await authManager
-                                                    .createAccountWithEmail(
-                                                  context,
-                                                  _model
-                                                      .emailAddressSignUpController
-                                                      .text,
-                                                  _model.passwordSignUpController
-                                                      .text,
-                                                );
-                                                if (user == null) {
-                                                  return;
-                                                }
+                                                  final user = await authManager
+                                                      .createAccountWithEmail(
+                                                    context,
+                                                    _model
+                                                        .emailAddressSignUpController
+                                                        .text,
+                                                    _model
+                                                        .passwordSignUpController
+                                                        .text,
+                                                  );
+                                                  if (user == null) {
+                                                    return;
+                                                  }
 
-                                                await UsersRecord.collection
-                                                    .doc(user.uid)
-                                                    .update(createUsersRecordData(
-                                                  email: _model
-                                                      .emailAddressSignUpController
-                                                      .text,
-                                                ));
-                                              } on FirebaseAuthException catch (e) {
-                                                // Handle the error, you can update a state variable
-
-                                                if(e.code == "email-already-in-use"){
-                                                     setState(() {
-                                                  _model.authErrorSignUp = "Email already exists.";
-                                                       });
-                                                }
-
-                                                // _model.authErrorSignUp = e.code;
-                                                return;
-                                              }
-
-                                             
-setState(() {
-                                                _model.authErrorSignUp = '';
-                                              });
-
+                                                  await UsersRecord.collection
+                                                      .doc(user.uid)
+                                                      .update(
+                                                          createUsersRecordData(
+                                                        email: _model
+                                                            .emailAddressSignUpController
+                                                            .text,
+                                                      ));
 
                                                   await authManager
                                                       .sendEmailVerification();

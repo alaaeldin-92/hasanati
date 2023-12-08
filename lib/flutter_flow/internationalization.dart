@@ -111,11 +111,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Assalamualaikum,',
       'ar': '',
     },
-    '7vnikd59': {
-      'en': 'Quran Completion',
+    '47ikx6ol': {
+      'en': 'Quran Memorization',
       'ar': '',
     },
-    '9r3kcesq': {
+    'yy7vds6e': {
       'en': '',
       'ar': '',
     },

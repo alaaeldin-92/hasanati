@@ -1,11 +1,14 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
 import '/components/navbar_widget.dart';
 import '/components/reciter_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -80,21 +83,118 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            AuthUserStreamWidget(
-                              builder: (context) => Container(
-                                width: 60.0,
-                                height: 60.0,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.network(
-                                  currentUserPhoto != null &&
-                                          currentUserPhoto != ''
-                                      ? currentUserPhoto
-                                      : 'https://firebasestorage.googleapis.com/v0/b/ubereats-234aa.appspot.com/o/b6a18f0ffd345b22cd219ef0e73ea5fe-removebg-preview.png?alt=media&token=b86b0e86-098a-46fa-b379-521772d3f11c&_gl=1*1jz5afi*_ga*MTE0NzczNDMuMTY5NTg4MzM0OQ..*_ga_CW55HF8NVT*MTY5NzU2MDIxOS45Mi4xLjE2OTc1NjQ4NzguNTIuMC4w',
-                                  fit: BoxFit.cover,
-                                ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                final selectedMedia =
+                                    await selectMediaWithSourceBottomSheet(
+                                  context: context,
+                                  allowPhoto: true,
+                                );
+                                if (selectedMedia != null &&
+                                    selectedMedia.every((m) =>
+                                        validateFileFormat(
+                                            m.storagePath, context))) {
+                                  setState(() => _model.isDataUploading = true);
+                                  var selectedUploadedFiles =
+                                      <FFUploadedFile>[];
+
+                                  var downloadUrls = <String>[];
+                                  try {
+                                    selectedUploadedFiles = selectedMedia
+                                        .map((m) => FFUploadedFile(
+                                              name:
+                                                  m.storagePath.split('/').last,
+                                              bytes: m.bytes,
+                                              height: m.dimensions?.height,
+                                              width: m.dimensions?.width,
+                                              blurHash: m.blurHash,
+                                            ))
+                                        .toList();
+
+                                    downloadUrls = (await Future.wait(
+                                      selectedMedia.map(
+                                        (m) async => await uploadData(
+                                            m.storagePath, m.bytes),
+                                      ),
+                                    ))
+                                        .where((u) => u != null)
+                                        .map((u) => u!)
+                                        .toList();
+                                  } finally {
+                                    _model.isDataUploading = false;
+                                  }
+                                  if (selectedUploadedFiles.length ==
+                                          selectedMedia.length &&
+                                      downloadUrls.length ==
+                                          selectedMedia.length) {
+                                    setState(() {
+                                      _model.uploadedLocalFile =
+                                          selectedUploadedFiles.first;
+                                      _model.uploadedFileUrl =
+                                          downloadUrls.first;
+                                    });
+                                  } else {
+                                    setState(() {});
+                                    return;
+                                  }
+                                }
+
+                                if (currentUserPhoto !=
+                                    'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/default.jpg?alt=media&token=fa8e6097-b224-4084-a3f2-5daaaf2bd732') {
+                                  await FirebaseStorage.instance
+                                      .refFromURL(currentUserPhoto)
+                                      .delete();
+                                }
+
+                                await currentUserReference!
+                                    .update(createUsersRecordData(
+                                  photoUrl: _model.uploadedFileUrl,
+                                ));
+                              },
+                              child: Stack(
+                                alignment: AlignmentDirectional(1.0, -1.0),
+                                children: [
+                                  AuthUserStreamWidget(
+                                    builder: (context) => Container(
+                                      width: 60.0,
+                                      height: 60.0,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.network(
+                                        currentUserPhoto != null &&
+                                                currentUserPhoto != ''
+                                            ? currentUserPhoto
+                                            : 'https://firebasestorage.googleapis.com/v0/b/ubereats-234aa.appspot.com/o/b6a18f0ffd345b22cd219ef0e73ea5fe-removebg-preview.png?alt=media&token=b86b0e86-098a-46fa-b379-521772d3f11c&_gl=1*1jz5afi*_ga*MTE0NzczNDMuMTY5NTg4MzM0OQ..*_ga_CW55HF8NVT*MTY5NzU2MDIxOS45Mi4xLjE2OTc1NjQ4NzguNTIuMC4w',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color: Color(0xFF009BDD),
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5.0, 5.0, 5.0, 5.0),
+                                      child: Icon(
+                                        Icons.edit_rounded,
+                                        color: Color(0xFF009BDD),
+                                        size: 14.0,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             Expanded(

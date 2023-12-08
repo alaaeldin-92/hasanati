@@ -590,6 +590,11 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                             false;
                                                         _model.timeCounter =
                                                             0.0;
+                                                        _model.audioDuration =
+                                                            0.0;
+                                                        _model.audioSingleDuration =
+                                                            0.0;
+                                                        _model.tempCounter = 0;
                                                       });
                                                     },
                                                     child: Icon(
