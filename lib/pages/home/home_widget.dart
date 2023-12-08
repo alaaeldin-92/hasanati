@@ -347,6 +347,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           children: [
                                             Expanded(
                                               child: Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
                                                 height: 100.0,
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(
@@ -354,219 +358,209 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       .secondaryBackground,
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          8.0),
+                                                          5.0),
                                                 ),
-                                                child: Row(
+                                                child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                      MainAxisAlignment.center,
                                                   children: [
                                                     Expanded(
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    15.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .min,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: [
-                                                                  Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      FaIcon(
-                                                                        FontAwesomeIcons
-                                                                            .book,
-                                                                        color: Color(
-                                                                            0xFF009BDD),
-                                                                        size:
-                                                                            20.0,
-                                                                      ),
-                                                                      Text(
-                                                                        FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          '7vnikd59' /* Quran Completion */,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              color: Color(0xFF007BAF),
-                                                                              fontSize: 16.0,
-                                                                              fontWeight: FontWeight.w600,
-                                                                            ),
-                                                                      ),
-                                                                    ].divide(SizedBox(
-                                                                        width:
-                                                                            8.0)),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: [
-                                                                  Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Icon(
-                                                                        Icons
-                                                                            .check,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryText,
-                                                                        size:
-                                                                            16.0,
-                                                                      ),
-                                                                      Text(
-                                                                        '${FFAppState().quranVersesMemorized.length.toString()} verses',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              fontSize: 12.0,
-                                                                            ),
-                                                                      ),
-                                                                    ].divide(SizedBox(
-                                                                        width:
-                                                                            5.0)),
-                                                                  ),
-                                                                  Text(
-                                                                    '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}% completed',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Readex Pro',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primaryText,
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.normal,
-                                                                        ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              Container(
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Expanded(
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          15.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              child: Container(
                                                                 decoration:
-                                                                    BoxDecoration(),
-                                                                child:
-                                                                    LinearPercentIndicator(
-                                                                  percent: functions.divide(
-                                                                      FFAppState()
-                                                                          .quranVersesRead,
-                                                                      6236)!,
-                                                                  lineHeight:
-                                                                      6.0,
-                                                                  animation:
-                                                                      true,
-                                                                  animateFromLastPercent:
-                                                                      true,
-                                                                  progressColor:
-                                                                      Color(
-                                                                          0xFF009BDD),
-                                                                  backgroundColor:
-                                                                      Color(
-                                                                          0xFFEEEEEE),
-                                                                  barRadius: Radius
-                                                                      .circular(
-                                                                          100.0),
-                                                                  padding:
-                                                                      EdgeInsets
-                                                                          .zero,
+                                                                    BoxDecoration(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryBackground,
+                                                                ),
+                                                                child: Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .min,
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .center,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Row(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.max,
+                                                                          children:
+                                                                              [
+                                                                            FaIcon(
+                                                                              FontAwesomeIcons.book,
+                                                                              color: Color(0xFF009BDD),
+                                                                              size: 20.0,
+                                                                            ),
+                                                                            Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '47ikx6ol' /* Quran Memorization */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'Readex Pro',
+                                                                                    color: Color(0xFF007BAF),
+                                                                                    fontSize: 16.0,
+                                                                                    fontWeight: FontWeight.w600,
+                                                                                  ),
+                                                                            ),
+                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                    Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Row(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.max,
+                                                                          children:
+                                                                              [
+                                                                            Icon(
+                                                                              Icons.check,
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                              size: 16.0,
+                                                                            ),
+                                                                            Text(
+                                                                              '${FFAppState().quranVersesMemorized.length.toString()} verses',
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'Readex Pro',
+                                                                                    fontSize: 12.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ].divide(SizedBox(width: 5.0)),
+                                                                        ),
+                                                                        Text(
+                                                                          '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}% completed',
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'Readex Pro',
+                                                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                                                fontSize: 12.0,
+                                                                                fontWeight: FontWeight.normal,
+                                                                              ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                    Container(
+                                                                      decoration:
+                                                                          BoxDecoration(),
+                                                                      child:
+                                                                          LinearPercentIndicator(
+                                                                        percent: functions.divide(
+                                                                            FFAppState().quranVersesRead,
+                                                                            6236)!,
+                                                                        lineHeight:
+                                                                            6.0,
+                                                                        animation:
+                                                                            true,
+                                                                        animateFromLastPercent:
+                                                                            true,
+                                                                        progressColor:
+                                                                            Color(0xFF009BDD),
+                                                                        backgroundColor:
+                                                                            Color(0xFFEEEEEE),
+                                                                        barRadius:
+                                                                            Radius.circular(100.0),
+                                                                        padding:
+                                                                            EdgeInsets.zero,
+                                                                      ),
+                                                                    ),
+                                                                  ].divide(SizedBox(
+                                                                      height:
+                                                                          10.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
-                                                                height: 10.0)),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  15.0,
-                                                                  0.0),
-                                                      child: Container(
-                                                        width: 100.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      0.0),
-                                                          shape: BoxShape
-                                                              .rectangle,
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      5.0,
-                                                                      5.0,
-                                                                      5.0,
-                                                                      5.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                            child: Image.asset(
-                                                              'assets/images/blue.png',
-                                                              width: 130.0,
-                                                              height: MediaQuery
-                                                                          .sizeOf(
-                                                                              context)
-                                                                      .height *
-                                                                  1.0,
-                                                              fit: BoxFit
-                                                                  .contain,
                                                             ),
                                                           ),
-                                                        ),
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        15.0,
+                                                                        0.0),
+                                                            child: Container(
+                                                              width: 100.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            0.0),
+                                                                shape: BoxShape
+                                                                    .rectangle,
+                                                              ),
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5.0,
+                                                                            5.0,
+                                                                            5.0,
+                                                                            5.0),
+                                                                child:
+                                                                    ClipRRect(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                  child: Image
+                                                                      .asset(
+                                                                    'assets/images/blue.png',
+                                                                    width:
+                                                                        130.0,
+                                                                    height:
+                                                                        MediaQuery.sizeOf(context).height *
+                                                                            1.0,
+                                                                    fit: BoxFit
+                                                                        .contain,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ].divide(SizedBox(
+                                                            width: 15.0)),
                                                       ),
                                                     ),
-                                                  ].divide(
-                                                      SizedBox(width: 15.0)),
+                                                  ],
                                                 ),
                                               ),
                                             ),

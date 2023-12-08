@@ -1599,11 +1599,13 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 380.0, 0.0, 0.0),
                                       child: Stack(
+                                        alignment:
+                                            AlignmentDirectional(0.0, -1.0),
                                         children: [
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 0.0, 12.0, 0.0),
+                                                    12.0, 15.0, 12.0, 0.0),
                                             child: Container(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
@@ -2032,6 +2034,14 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                       SizedBox(height: 10.0)),
                                                 ),
                                               ),
+                                            ),
+                                          ),
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                            child: Image.asset(
+                                              'assets/images/Group_70.png',
+                                              fit: BoxFit.cover,
                                             ),
                                           ),
                                         ],
