@@ -51,8 +51,6 @@ class QuranAyahModel extends FlutterFlowModel<QuranAyahWidget> {
 
   int? tempCounter = 0;
 
-  int audioIndexForPage = 0;
-
   double audioSingleDuration = 0.0;
 
   bool audioLoading = false;
