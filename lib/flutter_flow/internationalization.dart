@@ -295,6 +295,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Completed',
       'ar': '',
     },
+    'onehp7hc': {
+      'en': 'Hello World',
+      'ar': '',
+    },
     'grirlk0g': {
       'en': 'Home',
       'ar': '',
@@ -1000,10 +1004,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // OnboardingTwo
   {
-    '65u087k3': {
-      'en': 'Back',
-      'ar': '',
-    },
     '6gcili1n': {
       'en': 'Compete in global\nranking',
       'ar': '',
