@@ -1914,6 +1914,14 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                         },
                                                       ),
                                                     ),
+                                                    Text(
+                                                      _model.currentPage
+                                                          .toString(),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
@@ -2037,17 +2045,6 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           );
                                                         },
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'onehp7hc' /* Hello World */,
-                                                      ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium,
                                                     ),
                                                   ].divide(
                                                       SizedBox(height: 10.0)),
