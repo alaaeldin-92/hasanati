@@ -506,9 +506,11 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                               .loadingStatus =
                                                           !_model
                                                               .loadingStatus);
-                                                      while (_model
-                                                              .timeCounter! <
-                                                          _model.duration!) {
+                                                      while ((_model
+                                                                  .timeCounter! <
+                                                              _model
+                                                                  .duration!) &&
+                                                          _model.audioPlaying) {
                                                         await Future.delayed(
                                                             const Duration(
                                                                 milliseconds:
@@ -589,10 +591,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                         _model.audioPlaying =
                                                             false;
                                                         _model.timeCounter =
-                                                            0.0;
-                                                        _model.audioDuration =
-                                                            0.0;
-                                                        _model.audioSingleDuration =
                                                             0.0;
                                                         _model.tempCounter = 0;
                                                       });

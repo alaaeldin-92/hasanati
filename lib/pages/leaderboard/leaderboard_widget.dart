@@ -1854,14 +1854,6 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
                                                                                 ),
-                                                                                Text(
-                                                                                  displayedJSONItemIndex.toString(),
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Readex Pro',
-                                                                                        color: Color(0xFF0E0C23),
-                                                                                        fontWeight: FontWeight.bold,
-                                                                                      ),
-                                                                                ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -1913,14 +1905,6 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                           );
                                                         },
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      _model.currentPage
-                                                          .toString(),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium,
                                                     ),
                                                     Padding(
                                                       padding:

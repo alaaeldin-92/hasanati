@@ -503,10 +503,12 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                                     .loadingStatus =
                                                                 !_model
                                                                     .loadingStatus);
-                                                            while (_model
-                                                                    .audioIndexForPage <
+                                                            while ((_model
+                                                                        .audioIndexForPage <
+                                                                    _model
+                                                                        .totalRecords) &&
                                                                 _model
-                                                                    .totalRecords) {
+                                                                    .audioPlaying) {
                                                               _model.soundPlayer ??=
                                                                   AudioPlayer();
                                                               if (_model
