@@ -112,7 +112,7 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
 
     if (leaderboardChoice == 'Quran') {
       if (leaderboardQuranField == 'Hasanat') {
-        jsonRes1 = await QuranLeaderboardCall.call(
+        jsonRes1 = await QuranLeaderboardHasanatCall.call(
           page: functions.add(currentPage, -1),
           hitsPerPage: hitsPerPage,
           attributesToRetrieveList:
@@ -149,7 +149,7 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
           );
         }
       } else if (leaderboardQuranField == 'Verses') {
-        jsonRes2 = await QuranLeaderboardCall.call(
+        jsonRes2 = await QuranLeaderboardHasanatCall.call(
           page: functions.add(currentPage, -1),
           hitsPerPage: hitsPerPage,
           attributesToRetrieveList: functions.quranVersesAttributesToRetrieve(),
@@ -168,7 +168,7 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
           );
         }
       } else {
-        jsonRes3 = await QuranLeaderboardCall.call(
+        jsonRes3 = await QuranLeaderboardHasanatCall.call(
           page: functions.add(currentPage, -1),
           hitsPerPage: hitsPerPage,
           attributesToRetrieveList: functions.quranTimeAttributesToRetrieve(),
@@ -197,7 +197,7 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
 
     if (leaderboardChoice == 'Quran') {
       if (leaderboardQuranField == 'Hasanat') {
-        jsonTop3Res1 = await QuranLeaderboardCall.call(
+        jsonTop3Res1 = await QuranLeaderboardHasanatCall.call(
           page: 0,
           hitsPerPage: 3,
           attributesToRetrieveList:
@@ -213,7 +213,7 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
               .cast<dynamic>();
         }
       } else if (leaderboardQuranField == 'Verses') {
-        jsonTop3Res2 = await QuranLeaderboardCall.call(
+        jsonTop3Res2 = await QuranLeaderboardHasanatCall.call(
           page: 0,
           hitsPerPage: 3,
           attributesToRetrieveList: functions.quranVersesAttributesToRetrieve(),
@@ -228,7 +228,7 @@ class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
               .cast<dynamic>();
         }
       } else {
-        jsonTop3Res3 = await QuranLeaderboardCall.call(
+        jsonTop3Res3 = await QuranLeaderboardHasanatCall.call(
           page: 0,
           hitsPerPage: 3,
           attributesToRetrieveList: functions.quranTimeAttributesToRetrieve(),

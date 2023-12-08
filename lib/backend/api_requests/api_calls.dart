@@ -110,7 +110,7 @@ class QuranTranslationCall {
   }
 }
 
-class QuranLeaderboardCall {
+class QuranLeaderboardHasanatCall {
   static Future<ApiCallResponse> call({
     int? page = 0,
     int? hitsPerPage = 10,
@@ -120,8 +120,9 @@ class QuranLeaderboardCall {
     final attributesToRetrieve = _serializeList(attributesToRetrieveList);
 
     return ApiManager.instance.makeApiCall(
-      callName: 'Quran Leaderboard',
-      apiUrl: 'https://E62ISEPBAO-dsn.algolia.net/1/indexes/quranPerformance',
+      callName: 'Quran Leaderboard Hasanat',
+      apiUrl:
+          'https://E62ISEPBAO-dsn.algolia.net/1/indexes/quranPerformance_hasanat_desc',
       callType: ApiCallType.GET,
       headers: {
         'X-Algolia-API-Key': 'e37a5ca361a51f19ee8d7e3b8669c6ab',
