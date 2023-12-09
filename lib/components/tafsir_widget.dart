@@ -93,7 +93,7 @@ class _TafsirWidgetState extends State<TafsirWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'ynukv42b' /* Tafsir Ibn-Kathir */,
+                          '2zp0q53p' /* Tafsir Ibn-Kathir */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -127,7 +127,7 @@ class _TafsirWidgetState extends State<TafsirWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        't7qpp63x' /* Hello World */,
+                        'd5uxq5vi' /* Hello World */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',

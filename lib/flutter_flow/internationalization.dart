@@ -1439,11 +1439,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Tafsir
   {
-    'ynukv42b': {
+    '2zp0q53p': {
       'en': 'Tafsir Ibn-Kathir',
       'ar': '',
     },
-    't7qpp63x': {
+    'd5uxq5vi': {
       'en': 'Hello World',
       'ar': '',
     },

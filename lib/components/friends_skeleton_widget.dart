@@ -47,7 +47,8 @@ class _FriendsSkeletonWidgetState extends State<FriendsSkeletonWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
