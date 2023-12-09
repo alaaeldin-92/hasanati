@@ -65,15 +65,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
     return FutureBuilder<int>(
       future: queryFriendRequestNotificationRecordCount(
         queryBuilder: (friendRequestNotificationRecord) =>
-            friendRequestNotificationRecord
-                .where(
-                  'receiver',
-                  isEqualTo: currentUserUid,
-                )
-                .where(
-                  'accepted',
-                  isEqualTo: false,
-                ),
+            friendRequestNotificationRecord.where(
+          'receiver',
+          isEqualTo: currentUserUid,
+        ),
       ),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
@@ -551,144 +546,142 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     children: [
-                                                      FFButtonWidget(
-                                                        onPressed: () async {
-                                                          await currentUserReference!
-                                                              .update({
-                                                            ...mapToFirestore(
-                                                              {
-                                                                'friends':
-                                                                    FieldValue
-                                                                        .arrayUnion([
-                                                                  containerUsersRecord
-                                                                      ?.uid
-                                                                ]),
-                                                              },
-                                                            ),
-                                                          });
-
-                                                          await containerUsersRecord!
-                                                              .reference
-                                                              .update({
-                                                            ...createUsersRecordData(
-                                                              notificationsRead:
-                                                                  false,
-                                                            ),
-                                                            ...mapToFirestore(
-                                                              {
-                                                                'friends':
-                                                                    FieldValue
-                                                                        .arrayUnion([
-                                                                  currentUserUid
-                                                                ]),
-                                                              },
-                                                            ),
-                                                          });
-                                                          triggerPushNotification(
-                                                            notificationTitle:
-                                                                'Hasanati',
-                                                            notificationText:
-                                                                '${currentUserDisplayName} has accepted your friend request',
-                                                            notificationImageUrl:
-                                                                'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
-                                                            notificationSound:
-                                                                'default',
-                                                            userRefs: [
-                                                              containerUsersRecord!
-                                                                  .reference
-                                                            ],
-                                                            initialPageName:
-                                                                'Friends',
-                                                            parameterData: {},
-                                                          );
-                                                          _model.toUpdateRef =
-                                                              await queryFriendRequestNotificationRecordOnce(
-                                                            queryBuilder:
-                                                                (friendRequestNotificationRecord) =>
-                                                                    friendRequestNotificationRecord
-                                                                        .where(
-                                                                          'sender',
-                                                                          isEqualTo:
-                                                                              containerUsersRecord?.uid,
-                                                                        )
-                                                                        .where(
-                                                                          'receiver',
-                                                                          isEqualTo:
-                                                                              currentUserUid,
-                                                                        ),
-                                                            singleRecord: true,
-                                                          ).then((s) => s
-                                                                  .firstOrNull);
-
-                                                          await _model
-                                                              .toUpdateRef!
-                                                              .reference
-                                                              .update(
-                                                                  createFriendRequestNotificationRecordData(
-                                                            accepted: true,
-                                                          ));
-
-                                                          setState(() {});
-                                                        },
-                                                        text:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '37mikjdi' /* Accept */,
-                                                        ),
-                                                        options:
-                                                            FFButtonOptions(
-                                                          height: 30.0,
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          iconPadding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          color:
-                                                              Color(0xFF009BDD),
-                                                          textStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmall
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Readex Pro',
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        12.0,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .normal,
-                                                                  ),
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: Colors
-                                                                .transparent,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      5.0),
-                                                        ),
-                                                      ),
                                                       if (listViewFriendRequestNotificationRecord
-                                                                  .reference
-                                                                  .id !=
-                                                              null &&
-                                                          listViewFriendRequestNotificationRecord
-                                                                  .reference
-                                                                  .id !=
-                                                              '')
+                                                              .accepted ==
+                                                          false)
+                                                        FFButtonWidget(
+                                                          onPressed: () async {
+                                                            await currentUserReference!
+                                                                .update({
+                                                              ...mapToFirestore(
+                                                                {
+                                                                  'friends':
+                                                                      FieldValue
+                                                                          .arrayUnion([
+                                                                    containerUsersRecord
+                                                                        ?.uid
+                                                                  ]),
+                                                                },
+                                                              ),
+                                                            });
+
+                                                            await containerUsersRecord!
+                                                                .reference
+                                                                .update({
+                                                              ...createUsersRecordData(
+                                                                notificationsRead:
+                                                                    false,
+                                                              ),
+                                                              ...mapToFirestore(
+                                                                {
+                                                                  'friends':
+                                                                      FieldValue
+                                                                          .arrayUnion([
+                                                                    currentUserUid
+                                                                  ]),
+                                                                },
+                                                              ),
+                                                            });
+                                                            triggerPushNotification(
+                                                              notificationTitle:
+                                                                  'Hasanati',
+                                                              notificationText:
+                                                                  '👋 ${currentUserDisplayName} has accepted your friend request',
+                                                              notificationImageUrl:
+                                                                  'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/app_launcher_icon.png?alt=media',
+                                                              notificationSound:
+                                                                  'default',
+                                                              userRefs: [
+                                                                containerUsersRecord!
+                                                                    .reference
+                                                              ],
+                                                              initialPageName:
+                                                                  'Friends',
+                                                              parameterData: {},
+                                                            );
+                                                            _model.toUpdateRef =
+                                                                await queryFriendRequestNotificationRecordOnce(
+                                                              queryBuilder:
+                                                                  (friendRequestNotificationRecord) =>
+                                                                      friendRequestNotificationRecord
+                                                                          .where(
+                                                                            'sender',
+                                                                            isEqualTo:
+                                                                                containerUsersRecord?.uid,
+                                                                          )
+                                                                          .where(
+                                                                            'receiver',
+                                                                            isEqualTo:
+                                                                                currentUserUid,
+                                                                          ),
+                                                              singleRecord:
+                                                                  true,
+                                                            ).then((s) => s
+                                                                    .firstOrNull);
+
+                                                            await _model
+                                                                .toUpdateRef!
+                                                                .reference
+                                                                .update(
+                                                                    createFriendRequestNotificationRecordData(
+                                                              accepted: true,
+                                                            ));
+
+                                                            setState(() {});
+                                                          },
+                                                          text: FFLocalizations
+                                                                  .of(context)
+                                                              .getText(
+                                                            '37mikjdi' /* Accept */,
+                                                          ),
+                                                          options:
+                                                              FFButtonOptions(
+                                                            height: 30.0,
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        12.0,
+                                                                        0.0,
+                                                                        12.0,
+                                                                        0.0),
+                                                            iconPadding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0),
+                                                            color: Color(
+                                                                0xFF009BDD),
+                                                            textStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Readex Pro',
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          12.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                    ),
+                                                            borderSide:
+                                                                BorderSide(
+                                                              color: Colors
+                                                                  .transparent,
+                                                            ),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        5.0),
+                                                          ),
+                                                        ),
+                                                      if (listViewFriendRequestNotificationRecord
+                                                              .accepted ==
+                                                          true)
                                                         StreamBuilder<
                                                             List<
                                                                 FriendRequestNotificationRecord>>(

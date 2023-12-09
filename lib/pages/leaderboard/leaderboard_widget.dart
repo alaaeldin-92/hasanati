@@ -388,24 +388,33 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                setState(() {
-                                                  _model.leaderboardQuranField =
-                                                      'Hasanat';
-                                                });
-                                                unawaited(
-                                                  () async {
-                                                    await _model.updateTop3JSON(
-                                                        context);
-                                                    setState(() {});
-                                                  }(),
-                                                );
-                                                unawaited(
-                                                  () async {
-                                                    await _model
-                                                        .updateJSON(context);
-                                                    setState(() {});
-                                                  }(),
-                                                );
+                                                if (_model
+                                                        .leaderboardQuranField !=
+                                                    'Hasanat') {
+                                                  setState(() {
+                                                    _model.leaderboardQuranField =
+                                                        'Hasanat';
+                                                    _model.pageLoading = true;
+                                                  });
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .updateTop3JSON(
+                                                              context);
+                                                      setState(() {});
+                                                    }(),
+                                                  );
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .updateJSON(context);
+                                                      setState(() {});
+                                                    }(),
+                                                  );
+                                                  setState(() {
+                                                    _model.pageLoading = false;
+                                                  });
+                                                }
                                               },
                                               child: Container(
                                                 decoration: BoxDecoration(
@@ -454,24 +463,33 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                setState(() {
-                                                  _model.leaderboardQuranField =
-                                                      'Verses';
-                                                });
-                                                unawaited(
-                                                  () async {
-                                                    await _model.updateTop3JSON(
-                                                        context);
-                                                    setState(() {});
-                                                  }(),
-                                                );
-                                                unawaited(
-                                                  () async {
-                                                    await _model
-                                                        .updateJSON(context);
-                                                    setState(() {});
-                                                  }(),
-                                                );
+                                                if (_model
+                                                        .leaderboardQuranField !=
+                                                    'Verses') {
+                                                  setState(() {
+                                                    _model.leaderboardQuranField =
+                                                        'Verses';
+                                                    _model.pageLoading = true;
+                                                  });
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .updateTop3JSON(
+                                                              context);
+                                                      setState(() {});
+                                                    }(),
+                                                  );
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .updateJSON(context);
+                                                      setState(() {});
+                                                    }(),
+                                                  );
+                                                  setState(() {
+                                                    _model.pageLoading = false;
+                                                  });
+                                                }
                                               },
                                               child: Container(
                                                 decoration: BoxDecoration(
@@ -520,24 +538,33 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                setState(() {
-                                                  _model.leaderboardQuranField =
-                                                      'Time';
-                                                });
-                                                unawaited(
-                                                  () async {
-                                                    await _model.updateTop3JSON(
-                                                        context);
-                                                    setState(() {});
-                                                  }(),
-                                                );
-                                                unawaited(
-                                                  () async {
-                                                    await _model
-                                                        .updateJSON(context);
-                                                    setState(() {});
-                                                  }(),
-                                                );
+                                                if (_model
+                                                        .leaderboardQuranField !=
+                                                    'Time') {
+                                                  setState(() {
+                                                    _model.leaderboardQuranField =
+                                                        'Time';
+                                                    _model.pageLoading = true;
+                                                  });
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .updateTop3JSON(
+                                                              context);
+                                                      setState(() {});
+                                                    }(),
+                                                  );
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .updateJSON(context);
+                                                      setState(() {});
+                                                    }(),
+                                                  );
+                                                  setState(() {
+                                                    _model.pageLoading = false;
+                                                  });
+                                                }
                                               },
                                               child: Container(
                                                 decoration: BoxDecoration(
