@@ -55,10 +55,19 @@ Future localNotification(
   var initializationSettingsAndroid =
       AndroidInitializationSettings('@mipmap/ic_launcher');
 
+
+  // Configure the IOS initialization settings
+  final DarwinInitializationSettings initializationSettingsDarwin =
+      DarwinInitializationSettings(
+    requestAlertPermission: false,
+    requestBadgePermission: false,
+    requestSoundPermission: false
+  );
+
   // Configure the initialization settings for the FlutterLocalNotificationsPlugin
   var initializationSettings = InitializationSettings(
     android: initializationSettingsAndroid,
-    iOS: null,
+    iOS: initializationSettingsDarwin,
     macOS: null,
   );
 
@@ -75,10 +84,12 @@ Future localNotification(
     ticker: 'ticker',
   );
 
+  const iosNotificatonSpecifics = DarwinNotificationDetails();
+
   // Configure the notification
   var notificationDetails = NotificationDetails(
     android: androidPlatformChannelSpecifics,
-    iOS: null,
+    iOS: iosNotificatonSpecifics,
     macOS: null,
   );
 
