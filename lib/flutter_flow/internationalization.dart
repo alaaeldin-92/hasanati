@@ -1405,6 +1405,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
+  // Tafsir
+  {
+    's4osh68d': {
+      'en': 'Tafsir Ibn-Kathir',
+      'ar': '',
+    },
+    'sujhw858': {
+      'en': 'Hello World',
+      'ar': '',
+    },
+  },
   // Update
   {
     '0gsrd1nb': {

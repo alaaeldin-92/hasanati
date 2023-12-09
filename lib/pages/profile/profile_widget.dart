@@ -216,7 +216,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               return Container(
                                                 height: 100.0,
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xFFFF9C44),
+                                                  color: Color(0xFF009BDD),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10.0),
@@ -282,8 +282,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
-                                                                        0xFFB36C2E),
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryBackground,
                                                                     fontSize:
                                                                         18.0,
                                                                     fontWeight:
@@ -351,8 +352,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
-                                                                      0xFFB36C2E),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryBackground,
                                                                   fontSize:
                                                                       18.0,
                                                                   fontWeight:
@@ -415,8 +417,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
-                                                                      0xFFB36C2E),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryBackground,
                                                                   fontSize:
                                                                       18.0,
                                                                   fontWeight:
@@ -881,39 +884,75 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         size: 26.0,
                                       ),
                                     ),
-                                    Container(
-                                      width: 80.0,
-                                      height: 80.0,
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            width: 70.0,
-                                            height: 70.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              profileUsersRecord!.photoUrl,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Align(
-                                            alignment: AlignmentDirectional(
-                                                1.00, 1.00),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(100.0),
-                                              child: Image.network(
-                                                'https://flagcdn.com/w40/${profileUsersRecord?.nationality}.png',
-                                                width: 40.0,
-                                                height: 40.0,
-                                                fit: BoxFit.contain,
+                                    Stack(
+                                      children: [
+                                        Container(
+                                          width: 80.0,
+                                          height: 80.0,
+                                          child: Stack(
+                                            children: [
+                                              Stack(
+                                                alignment: AlignmentDirectional(
+                                                    1.0, -1.0),
+                                                children: [
+                                                  Container(
+                                                    width: 70.0,
+                                                    height: 70.0,
+                                                    clipBehavior:
+                                                        Clip.antiAlias,
+                                                    decoration: BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: Image.network(
+                                                      profileUsersRecord!
+                                                          .photoUrl,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                  if (profileUsersRecord
+                                                          ?.online ??
+                                                      true)
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  3.0,
+                                                                  3.0,
+                                                                  0.0),
+                                                      child: Container(
+                                                        width: 10.0,
+                                                        height: 10.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0xFF04DD00),
+                                                          shape:
+                                                              BoxShape.circle,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                ],
                                               ),
-                                            ),
+                                              Align(
+                                                alignment: AlignmentDirectional(
+                                                    1.00, 1.00),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          100.0),
+                                                  child: Image.network(
+                                                    'https://flagcdn.com/w40/${profileUsersRecord?.nationality}.png',
+                                                    width: 40.0,
+                                                    height: 40.0,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                     StreamBuilder<
                                         List<FriendRequestNotificationRecord>>(
