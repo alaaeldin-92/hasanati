@@ -40,9 +40,11 @@ Future requestNotificationPermissions() async {
       ?.requestPermission();
 }
 
+
 Future localNotification(
   String? title,
   String? content,
+  String? image
 ) async {
   // Send Local Notification only Android
   // Initialize the FlutterLocalNotificationsPlugin
@@ -67,6 +69,7 @@ Future localNotification(
   var androidPlatformChannelSpecifics = AndroidNotificationDetails(
     'channel_id',
     'channel_name',
+    largeIcon: FilePathAndroidBitmap(image ?? "https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/default.jpg?alt=media&token=fa8e6097-b224-4084-a3f2-5daaaf2bd732"),
     importance: Importance.max,
     priority: Priority.high,
     ticker: 'ticker',
@@ -120,8 +123,11 @@ Future localNotification(
 
 // Show a custom dialog and handle after closure
 
-      localNotification(title, body)
-          .then((_) => _handleForegroundNotification(message));
+        // showCustomNotificationDialog(context, image, title, body)
+        //   .then((_) => _handlePushNotification(message));
+
+      localNotification(title, body, image)
+          .then((_) => _handlePushNotification(message));
     });
   }
 ///////////////
@@ -139,22 +145,7 @@ Future localNotification(
     FirebaseMessaging.onMessageOpenedApp.listen(_handlePushNotification);
   }
 
-  Future _handleForegroundNotification(RemoteMessage message) async {
-
-     final initialPageName = message.data['initialPageName'] as String;
-      final initialParameterData = getInitialParameterData(message.data);
-      final parametersBuilder = parametersBuilderMap[initialPageName];
-      if (parametersBuilder != null) {
-        final parameterData = await parametersBuilder(initialParameterData);
-        context.pushNamed(
-          initialPageName,
-          pathParameters: parameterData.pathParameters,
-          extra: parameterData.extra,
-        );
-      }
-  }
-
-
+   
   Future _handlePushNotification(RemoteMessage message) async {
     // if (_handledMessageIds.contains(message.messageId)) {
     //   return;
