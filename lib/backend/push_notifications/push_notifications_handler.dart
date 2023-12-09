@@ -69,7 +69,7 @@ Future localNotification(
   var androidPlatformChannelSpecifics = AndroidNotificationDetails(
     'channel_id',
     'channel_name',
-    largeIcon: FilePathAndroidBitmap(image ?? "https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/default.jpg?alt=media&token=fa8e6097-b224-4084-a3f2-5daaaf2bd732"),
+    largeIcon: DrawableResourceAndroidBitmap('@mipmap/ic_launcher'),
     importance: Importance.max,
     priority: Priority.high,
     ticker: 'ticker',
@@ -127,7 +127,7 @@ Future localNotification(
         //   .then((_) => _handlePushNotification(message));
 
       localNotification(title, body, image)
-          .then((_) => _handlePushNotification(message));
+          .then((_) => handleOpenedPushNotification());
     });
   }
 ///////////////
