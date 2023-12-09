@@ -8,7 +8,16 @@ import 'tafsir_model.dart';
 export 'tafsir_model.dart';
 
 class TafsirWidget extends StatefulWidget {
-  const TafsirWidget({Key? key}) : super(key: key);
+  const TafsirWidget({
+    Key? key,
+    required this.surahName,
+    required this.verseNumber,
+    required this.versesCount,
+  }) : super(key: key);
+
+  final String? surahName;
+  final int? verseNumber;
+  final int? versesCount;
 
   @override
   _TafsirWidgetState createState() => _TafsirWidgetState();
@@ -60,7 +69,76 @@ class _TafsirWidgetState extends State<TafsirWidget> {
           padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: <Widget>[].divide(SizedBox(height: 20.0)),
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 90.0,
+                    height: 7.5,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFCFCECE),
+                      borderRadius: BorderRadius.circular(100.0),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'ynukv42b' /* Tafsir Ibn-Kathir */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '${widget.surahName} ${widget.verseNumber?.toString()}/${widget.versesCount?.toString()}',
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
+                    ],
+                  ),
+                ].divide(SizedBox(height: 10.0)),
+              ),
+              Expanded(
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    Text(
+                      FFLocalizations.of(context).getText(
+                        't7qpp63x' /* Hello World */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Readex Pro',
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+            ].divide(SizedBox(height: 20.0)),
           ),
         ),
       ),

@@ -1150,7 +1150,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           decoration:
                                                                               BoxDecoration(
                                                                             color:
-                                                                                Color(0xFF009BDD),
+                                                                                Color(0xFF04DD00),
                                                                             shape:
                                                                                 BoxShape.circle,
                                                                           ),

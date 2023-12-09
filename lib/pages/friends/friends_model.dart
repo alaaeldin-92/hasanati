@@ -3,6 +3,7 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/push_notifications/push_notifications_util.dart';
 import '/components/friends_skeleton_widget.dart';
+import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -44,15 +45,23 @@ class FriendsModel extends FlutterFlowModel<FriendsWidget> {
   UsersRecord? userToAdd;
   // Stores action output result for [Firestore Query - Query a collection] action in Button widget.
   UsersRecord? targetUserRef;
+  // Stores action output result for [Firestore Query - Query a collection] action in Button widget.
+  FriendRequestNotificationRecord? toUpdateRef;
+  // Model for Navbar component.
+  late NavbarModel navbarModel;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    navbarModel = createModel(context, () => NavbarModel());
+  }
 
   void dispose() {
     unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
+
+    navbarModel.dispose();
   }
 
   /// Action blocks are added here.
