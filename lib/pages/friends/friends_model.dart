@@ -45,8 +45,6 @@ class FriendsModel extends FlutterFlowModel<FriendsWidget> {
   UsersRecord? userToAdd;
   // Stores action output result for [Firestore Query - Query a collection] action in Button widget.
   UsersRecord? targetUserRef;
-  // Stores action output result for [Firestore Query - Query a collection] action in Button widget.
-  FriendRequestNotificationRecord? toUpdateRef;
   // Model for Navbar component.
   late NavbarModel navbarModel;
 

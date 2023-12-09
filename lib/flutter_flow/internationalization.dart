@@ -721,38 +721,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Build your own community and compete for good deeds',
       'ar': 'حاول البحث عن شيء آخر',
     },
-    'lxuu9bzn': {
-      'en': ' has',
-      'ar': '',
-    },
-    'l47fjdok': {
-      'en': ' sent',
-      'ar': '',
-    },
-    '2lrh3hde': {
-      'en': ' you',
-      'ar': '',
-    },
-    '9c0fu4uk': {
-      'en': ' a',
-      'ar': '',
-    },
-    'xmutffep': {
-      'en': ' friend',
-      'ar': '',
-    },
-    'ycwp7i6a': {
-      'en': ' request',
-      'ar': '',
-    },
-    'hwit95yt': {
-      'en': 'Accept',
-      'ar': '',
-    },
-    '3rzp20ti': {
-      'en': 'Following',
-      'ar': '',
-    },
     'ta1tu2zj': {
       'en': 'Home',
       'ar': '',
@@ -1439,11 +1407,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Tafsir
   {
-    '2zp0q53p': {
+    's4osh68d': {
       'en': 'Tafsir Ibn-Kathir',
       'ar': '',
     },
-    'd5uxq5vi': {
+    'sujhw858': {
       'en': 'Hello World',
       'ar': '',
     },
