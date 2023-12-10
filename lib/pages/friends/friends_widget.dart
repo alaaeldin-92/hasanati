@@ -317,7 +317,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                             Container(
                               height: MediaQuery.sizeOf(context).height * 0.85,
                               decoration: BoxDecoration(),
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.00, -1.00),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
@@ -332,7 +332,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 15.0, 0.0, 0.0),
+                                                  0.0, 20.0, 0.0, 0.0),
                                           child: StreamBuilder<
                                               List<
                                                   FriendRequestNotificationRecord>>(
@@ -847,7 +847,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                           ),
                                         ),
                                       ),
-                                    if (false)
+                                    if (_model.textController.text == null ||
+                                        _model.textController.text == '')
                                       Align(
                                         alignment:
                                             AlignmentDirectional(0.00, 0.00),

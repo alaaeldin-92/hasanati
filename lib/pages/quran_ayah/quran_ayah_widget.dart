@@ -2,7 +2,6 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/reciter_widget.dart';
-import '/components/tafsir_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -431,62 +430,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                await showModalBottomSheet(
-                                                  isScrollControlled: true,
-                                                  backgroundColor:
-                                                      Colors.transparent,
-                                                  context: context,
-                                                  builder: (context) {
-                                                    return WebViewAware(
-                                                        child: GestureDetector(
-                                                      onTap: () => _model
-                                                              .unfocusNode
-                                                              .canRequestFocus
-                                                          ? FocusScope.of(
-                                                                  context)
-                                                              .requestFocus(_model
-                                                                  .unfocusNode)
-                                                          : FocusScope.of(
-                                                                  context)
-                                                              .unfocus(),
-                                                      child: Padding(
-                                                        padding: MediaQuery
-                                                            .viewInsetsOf(
-                                                                context),
-                                                        child: Container(
-                                                          height:
-                                                              MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .height *
-                                                                  0.6,
-                                                          child: TafsirWidget(
-                                                            surahName: _model
-                                                                .surahName,
-                                                            verseNumber:
-                                                                _model.verseID!,
-                                                            versesCount: _model
-                                                                .versesCount!,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ));
-                                                  },
-                                                ).then((value) =>
-                                                    safeSetState(() {}));
-                                              },
-                                              child: Icon(
-                                                Icons.search_sharp,
-                                                color: Colors.black,
-                                                size: 24.0,
-                                              ),
-                                            ),
                                             Stack(
                                               alignment: AlignmentDirectional(
                                                   0.0, 0.0),
@@ -936,28 +879,30 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                 ].divide(SizedBox(width: 2.0)),
                                               ),
                                             ),
-                                            InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                await Clipboard.setData(
-                                                    ClipboardData(
-                                                        text: getJsonField(
-                                                  quranAyahQuranFontImlaeiResponse
-                                                      .jsonBody,
-                                                  r'''$.verses[:].text_imlaei''',
-                                                ).toString()));
-                                                HapticFeedback.selectionClick();
-                                              },
-                                              child: Icon(
-                                                Icons.content_copy_outlined,
-                                                color: Colors.black,
-                                                size: 24.0,
+                                            if (false)
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Clipboard.setData(
+                                                      ClipboardData(
+                                                          text: getJsonField(
+                                                    quranAyahQuranFontImlaeiResponse
+                                                        .jsonBody,
+                                                    r'''$.verses[:].text_imlaei''',
+                                                  ).toString()));
+                                                  HapticFeedback
+                                                      .selectionClick();
+                                                },
+                                                child: Icon(
+                                                  Icons.content_copy_outlined,
+                                                  color: Colors.black,
+                                                  size: 24.0,
+                                                ),
                                               ),
-                                            ),
                                           ],
                                         ),
                                         if (quranAyahQuranFontImlaeiResponse

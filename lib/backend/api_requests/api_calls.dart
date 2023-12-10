@@ -398,6 +398,47 @@ class QuranLeaderboardTimeCall {
   }
 }
 
+class QuranVerseTafsirCall {
+  static Future<ApiCallResponse> call({
+    int? tafsirID = 14,
+    int? chapter = 1,
+    int? verse = 1,
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'Quran Verse Tafsir',
+      apiUrl:
+          'https://api.quran.com/api/v4/quran/tafsirs/${tafsirID}?verse_key=${chapter}:${verse}',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
+class QuranPageTafsirCall {
+  static Future<ApiCallResponse> call({
+    int? verseID = 169,
+    int? page = 1,
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'Quran Page Tafsir',
+      apiUrl:
+          'https://api.quran.com/api/v4/quran/tafsirs/${verseID}?page_number=${page}',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;

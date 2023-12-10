@@ -1407,11 +1407,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Tafsir
   {
-    's4osh68d': {
+    'hvsrx5ud': {
       'en': 'Tafsir Ibn-Kathir',
       'ar': '',
     },
-    'sujhw858': {
+    '2fsi87u8': {
       'en': 'Hello World',
       'ar': '',
     },
