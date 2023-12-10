@@ -438,19 +438,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'By submitting, you agree to our Privacy Policy and Terms of Conditions.',
       'ar': '',
     },
-    'nvl13qz8': {
+    'axi2r87b': {
       'en': 'Field is required',
       'ar': '',
     },
-    '4duanvy1': {
+    'anvbh1bq': {
       'en': 'Please choose an option from the dropdown',
       'ar': '',
     },
-    '5nij0fka': {
+    '69qhrqq3': {
       'en': 'Field is required',
       'ar': '',
     },
-    '53496ott': {
+    'ljhj7dnz': {
       'en': 'Please choose an option from the dropdown',
       'ar': '',
     },

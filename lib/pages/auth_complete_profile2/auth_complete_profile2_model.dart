@@ -60,7 +60,7 @@ class AuthCompleteProfile2Model
   String? _fullNameControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'nvl13qz8' /* Field is required */,
+        'axi2r87b' /* Field is required */,
       );
     }
 
