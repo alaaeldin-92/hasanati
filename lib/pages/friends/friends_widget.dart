@@ -622,7 +622,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                                     ));
                                                                                                 
 
-                                                                                                await _model.targetUserRef!.reference.update(createUsersRecordData(
+                                                                                                await _model.userToAdd!.reference.update(createUsersRecordData(
                                                                                                   notificationsRead: false,
                                                                                                 )); 
                                                                                                 triggerPushNotification(

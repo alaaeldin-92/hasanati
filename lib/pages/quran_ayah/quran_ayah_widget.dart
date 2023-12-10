@@ -644,6 +644,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                     onTap: () async {
                                                       _model.soundPlayer
                                                           ?.stop();
+                                                      _model.soundPlayer
+                                                          ?.dispose();
                                                       setState(() {
                                                         _model.audioPlaying =
                                                             false;
@@ -742,6 +744,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                                 .audioPlaying) {
                                                               _model.soundPlayer
                                                                   ?.stop();
+                                                              _model.soundPlayer
+                                                                  ?.dispose();
                                                             }
 
                                                             context.pushNamed(
@@ -1218,6 +1222,8 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       if (_model.audioPlaying) {
                                                         _model.soundPlayer
                                                             ?.stop();
+                                                        _model.soundPlayer
+                                                          ?.dispose();
                                                       }
                                                     },
                                             ),
