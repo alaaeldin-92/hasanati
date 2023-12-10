@@ -315,7 +315,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                             Container(
                               height: MediaQuery.sizeOf(context).height * 0.85,
                               decoration: BoxDecoration(),
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.00, -1.00),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
@@ -330,7 +330,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 15.0, 0.0, 0.0),
+                                                  0.0, 20.0, 0.0, 0.0),
                                           child: StreamBuilder<
                                               List<
                                                   FriendRequestNotificationRecord>>(
@@ -618,21 +618,10 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                                       accepted: false,
                                                                                                       createdAt: getCurrentTimestamp.secondsSinceEpoch,
                                                                                                     ));
-                                                                                                _model.targetUserRef = await queryUsersRecordOnce(
-                                                                                                  queryBuilder: (usersRecord) => usersRecord.where(
-                                                                                                    'uid',
-                                                                                                    isEqualTo: getJsonField(
-                                                                                                      searchHitItem,
-                                                                                                      r'''$.uid''',
-                                                                                                    ).toString(),
-                                                                                                  ),
-                                                                                                  singleRecord: true,
-                                                                                                ).then((s) => s.firstOrNull);
 
-                                                                                                await _model.targetUserRef!.reference.update(createUsersRecordData(
+                                                                                                await _model.userToAdd!.reference.update(createUsersRecordData(
                                                                                                   notificationsRead: false,
                                                                                                 ));
-                                                                                                if (_model.targetUserRef?.online == true) {}
                                                                                                 triggerPushNotification(
                                                                                                   notificationTitle: 'Hasanati',
                                                                                                   notificationText: '${valueOrDefault(currentUserDocument?.username, '')} just sent you a friend request.',
@@ -855,7 +844,8 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                           ),
                                         ),
                                       ),
-                                    if (false)
+                                    if (_model.textController.text == null ||
+                                        _model.textController.text == '')
                                       Align(
                                         alignment:
                                             AlignmentDirectional(0.00, 0.00),
