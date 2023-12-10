@@ -222,7 +222,7 @@ class _AuthCompleteProfile2WidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 20.0, 0.0, 0.0),
+                                    0.0, 20.0, 5.0, 0.0),
                                 child: Container(
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
@@ -234,7 +234,7 @@ class _AuthCompleteProfile2WidgetState
                                   ),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 15.0, 15.0, 15.0),
+                                        10.0, 10.0, 10.0, 10.0),
                                     child: FaIcon(
                                       FontAwesomeIcons.edit,
                                       color: Color(0xFF009BDD),
