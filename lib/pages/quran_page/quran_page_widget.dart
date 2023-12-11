@@ -1012,6 +1012,16 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                       if (_model.audioPlaying) {
                                                         _model.soundPlayer
                                                             ?.stop();
+                                                        setState(() {
+                                                              _model.audioPlaying =
+                                                                  false;
+                                                              _model.timeCounter =
+                                                                  0.0;
+                                                              _model.audioIndexForPage =
+                                                                  0;
+                                                              _model.audioSingleDuration =
+                                                                  0.0;
+                                                            });
                                                       }
                                                     },
                                             ),
@@ -1070,6 +1080,16 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                 });
                                                 if (_model.audioPlaying) {
                                                   _model.soundPlayer?.stop();
+                                                  setState(() {
+                                                              _model.audioPlaying =
+                                                                  false;
+                                                              _model.timeCounter =
+                                                                  0.0;
+                                                              _model.audioIndexForPage =
+                                                                  0;
+                                                              _model.audioSingleDuration =
+                                                                  0.0;
+                                                            });
                                                 }
                                               },
                                             ),

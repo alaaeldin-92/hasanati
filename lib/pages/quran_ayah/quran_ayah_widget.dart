@@ -349,8 +349,11 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                             _model.soundPlayer?.stop();
 
                                             setState(() {
-                                              _model.audioPlaying = false;
-                                              _model.timeCounter = 0.0;
+                                             _model.audioPlaying =
+                                                            false;
+                                              _model.timeCounter =
+                                                  0.0;
+                                              _model.tempCounter = 0;
                                             });
                                           }
                                           await showModalBottomSheet(
@@ -1153,6 +1156,13 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       if (_model.audioPlaying) {
                                                         _model.soundPlayer
                                                             ?.stop();
+                                                        setState(() {
+                                                          _model.audioPlaying =
+                                                            false;
+                                                        _model.timeCounter =
+                                                            0.0;
+                                                        _model.tempCounter = 0;
+                                                        });
                                                       }
                                                     },
                                             ),
@@ -1290,6 +1300,13 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                 });
                                                 if (_model.audioPlaying) {
                                                   _model.soundPlayer?.stop();
+                                                  setState(() {
+                                                    _model.audioPlaying =
+                                                            false;
+                                                        _model.timeCounter =
+                                                            0.0;
+                                                        _model.tempCounter = 0;
+                                                  });
                                                 }
                                               },
                                             ),
