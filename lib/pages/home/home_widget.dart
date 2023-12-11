@@ -2021,7 +2021,7 @@ final firestore = FirebaseFirestore.instance;
                                                                                           alignment: AlignmentDirectional(0.0, 0.0),
                                                                                           children: [
                                                                                             CircularPercentIndicator(
-                                                                                              percent: functions.divideDouble(_model.verseOfTheDayTimeCounter, _model.verseOfTheDayAudioDuration),
+                                                                                              percent: _model.verseOfTheDayTimeCounter < _model.verseOfTheDayAudioDuration ? functions.divideDouble(_model.verseOfTheDayTimeCounter, _model.verseOfTheDayAudioDuration) : 1.0,
                                                                                               radius: 22.5,
                                                                                               lineWidth: 5.0,
                                                                                               animation: false,

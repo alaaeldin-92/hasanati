@@ -847,8 +847,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                           ),
                                         ),
                                       ),
-                                    if (_model.textController.text == null ||
-                                        _model.textController.text == '')
+                                    if (false)
                                       Align(
                                         alignment:
                                             AlignmentDirectional(0.00, 0.00),
