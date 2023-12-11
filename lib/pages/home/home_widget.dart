@@ -252,7 +252,7 @@ final firestore = FirebaseFirestore.instance;
                                                     if (_model
                                                         .verseOfTheDayAudioPlaying) {
                                                       _model.soundPlayer
-                                                          ?.stop();
+                                                          ?.dispose();
                                                     }
 
                                                     context.pushNamed(
@@ -606,7 +606,7 @@ final firestore = FirebaseFirestore.instance;
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         if (_model.verseOfTheDayAudioPlaying) {
-                                          _model.soundPlayer?.stop();
+                                          _model.soundPlayer?.dispose();
                                         }
 
                                         context.pushNamed(
@@ -720,7 +720,7 @@ final firestore = FirebaseFirestore.instance;
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         if (_model.verseOfTheDayAudioPlaying) {
-                                          _model.soundPlayer?.stop();
+                                          _model.soundPlayer?.dispose();
                                         }
 
                                         context.pushNamed(
@@ -1959,6 +1959,7 @@ final firestore = FirebaseFirestore.instance;
                                                                                               _model.verseOfTheDayAudioDuration = _model.duration!;
                                                                                               _model.verseOfTheDayAudioPlaying = true;
                                                                                               _model.audioLoading = false;
+                                                                                              _model.verseOfTheDayTimeCounter = 0;
                                                                                             });
                                                                                             setState(() => _model.loadingStatus = !_model.loadingStatus);
                                                                                             _model.soundPlayer ??= AudioPlayer();
@@ -1972,7 +1973,7 @@ final firestore = FirebaseFirestore.instance;
                                                                                                   r'''$.audio_files[:].url''',
                                                                                                 ).toString()}')
                                                                                                 .then((_) => _model.soundPlayer!.play());
-
+                            
                                                                                             while (_model.verseOfTheDayTimeCounter < _model.duration!) {
                                                                                               await Future.delayed(const Duration(milliseconds: 1000));
                                                                                               setState(() {
@@ -2013,10 +2014,8 @@ final firestore = FirebaseFirestore.instance;
                                                                                           _model.soundPlayer?.stop();
                                                                                           setState(() {
                                                                                             _model.verseOfTheDayAudioPlaying = false;
-                                                                                          });
-                                                                                          setState(() {
-                                                                                            _model.verseOfTheDayTimeCounter = 0.0;
-                                                                                          });
+                                                                                            _model.verseOfTheDayTimeCounter = 0;
+                                                                                          }); 
                                                                                         },
                                                                                         child: Stack(
                                                                                           alignment: AlignmentDirectional(0.0, 0.0),

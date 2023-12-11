@@ -179,7 +179,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
                                           if (_model.audioPlaying) {
-                                            _model.soundPlayer?.stop();
                                             _model.soundPlayer?.dispose();
                                           }
 
@@ -348,7 +347,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                         onTap: () async {
                                           if (_model.audioPlaying) {
                                             _model.soundPlayer?.stop();
-                                            _model.soundPlayer?.dispose();
 
                                             setState(() {
                                               _model.audioPlaying = false;
@@ -472,28 +470,16 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       }
                                                       _model.soundPlayer!
                                                           .setVolume(1.0);
-                                                      _model.soundPlayer!
+                                                      _model.duration = (await _model.soundPlayer!
                                                           .setUrl(
                                                               'https://verses.quran.com/${getJsonField(
                                                             (_model.audioJSON
                                                                     ?.jsonBody ??
                                                                 ''),
                                                             r'''$.audio_files[:].url''',
-                                                          ).toString()}')
-                                                          .then((_) => _model
-                                                              .soundPlayer!
-                                                              .play());
-
-                                                      _model.duration =
-                                                          await actions
-                                                              .getAudioLength(
-                                                        'https://verses.quran.com/${getJsonField(
-                                                          (_model.audioJSON
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                          r'''$.audio_files[:].url''',
-                                                        ).toString()}',
-                                                      );
+                                                          ).toString()}'))!.inMilliseconds / 1000.0;
+                                                      
+                                                      _model.soundPlayer!.play();
                                                       setState(() {
                                                         _model.audioDuration =
                                                             _model.duration;
@@ -587,8 +573,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                     onTap: () async {
                                                       _model.soundPlayer
                                                           ?.stop();
-                                                      _model.soundPlayer
-                                                          ?.dispose();
+                                                 
                                                       setState(() {
                                                         _model.audioPlaying =
                                                             false;
@@ -685,10 +670,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                           onTap: () async {
                                                             if (_model
                                                                 .audioPlaying) {
-                                                              _model.soundPlayer
-                                                                  ?.stop();
-                                                              _model.soundPlayer
-                                                                  ?.dispose();
+                                                              _model.soundPlayer?.dispose();
                                                             }
 
                                                             context.pushNamed(
@@ -1167,8 +1149,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                       if (_model.audioPlaying) {
                                                         _model.soundPlayer
                                                             ?.stop();
-                                                        _model.soundPlayer
-                                                          ?.dispose();
                                                       }
                                                     },
                                             ),
@@ -1306,7 +1286,6 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                 });
                                                 if (_model.audioPlaying) {
                                                   _model.soundPlayer?.stop();
-                                                  _model.soundPlayer?.dispose();
                                                 }
                                               },
                                             ),

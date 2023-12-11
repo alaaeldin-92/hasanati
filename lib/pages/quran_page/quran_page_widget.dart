@@ -173,8 +173,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          if (_model.audioPlaying) {
-                                            _model.soundPlayer?.stop();
+                                          if (_model.audioPlaying) { 
                                             _model.soundPlayer?.dispose();
                                           }
 
@@ -343,7 +342,6 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                         onTap: () async {
                                           if (_model.audioPlaying) {
                                             _model.soundPlayer?.stop();
-                                            _model.soundPlayer?.dispose();
                                             setState(() {
                                               _model.audioPlaying = false;
                                               _model.timeCounter = 0.0;
@@ -470,6 +468,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                                   FFAppState()
                                                                       .reciterID,
                                                             );
+
                                                             _model.totalDuration =
                                                                 await actions
                                                                     .getTotalAudioLength(
@@ -522,30 +521,14 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                                   .soundPlayer!
                                                                   .setVolume(
                                                                       1.0);
-                                                              _model
-                                                                  .soundPlayer!
-                                                                  .setUrl(
+                                                              _model.durationSingle = (await _model.soundPlayer!.setUrl(
                                                                       'https://verses.quran.com/${functions.getValueFromJsonArray(getJsonField(
                                                                             (_model.audioPageJSON?.jsonBody ??
                                                                                 ''),
                                                                             r'''$.audio_files''',
                                                                             true,
-                                                                          )!, _model.audioIndexForPage, 'url')}')
-                                                                  .then((_) => _model
-                                                                      .soundPlayer!
-                                                                      .play());
-
-                                                              _model.durationSingle =
-                                                                  await actions
-                                                                      .getAudioLength(
-                                                                'https://verses.quran.com/${functions.getValueFromJsonArray(getJsonField(
-                                                                      (_model.audioPageJSON
-                                                                              ?.jsonBody ??
-                                                                          ''),
-                                                                      r'''$.audio_files''',
-                                                                      true,
-                                                                    )!, _model.audioIndexForPage, 'url')}',
-                                                              );
+                                                                          )!, _model.audioIndexForPage, 'url')}'))!.inMilliseconds / 1000.0;
+                                                              _model.soundPlayer!.play();
                                                               setState(() {
                                                                 _model.audioSingleDuration =
                                                                     _model
@@ -719,7 +702,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                         if (_model
                                                             .audioPlaying) {
                                                           _model.soundPlayer
-                                                              ?.stop();
+                                                              ?.dispose();
                                                         }
 
                                                         context.pushNamed(
@@ -1082,7 +1065,6 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                 });
                                                 if (_model.audioPlaying) {
                                                   _model.soundPlayer?.stop();
-                                                  _model.soundPlayer?.dispose();
                                                 }
                                               },
                                             ),
