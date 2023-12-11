@@ -487,7 +487,7 @@ final firestore = FirebaseFirestore.instance;
                                                                           ].divide(SizedBox(width: 5.0)),
                                                                         ),
                                                                         Text(
-                                                                          '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesRead, 6236)!, 100.0)!, 1).toString()}% completed',
+                                                                          '${functions.truncateToDecimalPlaces(functions.multiply(functions.divide(FFAppState().quranVersesMemorized.length, 6236)!, 100.0)!, 1).toString()}% completed',
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(

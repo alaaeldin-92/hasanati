@@ -492,13 +492,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                             child: Padding(
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
-                                              child: Container(
-                                                height:
-                                                    MediaQuery.sizeOf(context)
-                                                            .height *
-                                                        1.0,
-                                                child: ReciterWidget(),
-                                              ),
+                                              child: ReciterWidget(),
                                             ),
                                           ));
                                         },
