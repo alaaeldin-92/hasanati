@@ -557,11 +557,15 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                   ),
                                                 if (_model.audioPlaying)
                                                   CircularPercentIndicator(
-                                                    percent:
-                                                        functions.divideDouble(
+                                                    percent: _model
+                                                                .timeCounter! <
+                                                            _model
+                                                                .audioDuration!
+                                                        ? functions.divideDouble(
                                                             _model.timeCounter!,
                                                             _model
-                                                                .audioDuration!),
+                                                                .audioDuration!)
+                                                        : 100.0,
                                                     radius: 22.5,
                                                     lineWidth: 5.0,
                                                     animation: false,

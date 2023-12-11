@@ -1,5 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -53,46 +51,68 @@ class _NavbarWidgetState extends State<NavbarWidget> {
 
     return Align(
       alignment: AlignmentDirectional(0.00, 1.00),
-      child: FutureBuilder<int>(
-        future: queryFriendRequestNotificationRecordCount(
-          queryBuilder: (friendRequestNotificationRecord) =>
-              friendRequestNotificationRecord.where(
-            'receiver',
-            isEqualTo: currentUserUid,
-          ),
+      child: Container(
+        width: MediaQuery.sizeOf(context).width * 1.0,
+        height: 70.0,
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).primaryBackground,
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 14.0,
+              color: Color(0x33000000),
+              offset: Offset(0.0, 2.0),
+            )
+          ],
         ),
-        builder: (context, snapshot) {
-          // Customize what your widget looks like when it's loading.
-          if (!snapshot.hasData) {
-            return Center(
-              child: SizedBox(
-                width: 45.0,
-                height: 45.0,
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(
-                    Color(0xFF009BDF),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                context.goNamed(
+                  'Home',
+                  extra: <String, dynamic>{
+                    kTransitionInfoKey: TransitionInfo(
+                      hasTransition: true,
+                      transitionType: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 0),
+                    ),
+                  },
+                );
+              },
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.home,
+                    color: widget.selectedIndex == 1
+                        ? FFAppState().LightPrimary
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 20.0,
                   ),
-                ),
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'udp76wvq' /* Home */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          color: widget.selectedIndex == 1
+                              ? FFAppState().LightPrimary
+                              : FlutterFlowTheme.of(context).secondaryText,
+                          fontSize: 10.0,
+                        ),
+                  ),
+                ].divide(SizedBox(height: 5.0)),
               ),
-            );
-          }
-          int containerCount = snapshot.data!;
-          return Container(
-            width: MediaQuery.sizeOf(context).width * 1.0,
-            height: 70.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 14.0,
-                  color: Color(0x33000000),
-                  offset: Offset(0.0, 2.0),
-                )
-              ],
             ),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Stack(
+              alignment: AlignmentDirectional(1.0, -1.0),
               children: [
                 InkWell(
                   splashColor: Colors.transparent,
@@ -100,186 +120,32 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.goNamed(
-                      'Home',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
+                    context.pushNamed('Friends');
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FaIcon(
-                        FontAwesomeIcons.home,
-                        color: widget.selectedIndex == 1
-                            ? FFAppState().LightPrimary
-                            : FlutterFlowTheme.of(context).secondaryText,
-                        size: 20.0,
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'udp76wvq' /* Home */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: widget.selectedIndex == 1
-                                  ? FFAppState().LightPrimary
-                                  : FlutterFlowTheme.of(context).secondaryText,
-                              fontSize: 10.0,
-                            ),
-                      ),
-                    ].divide(SizedBox(height: 5.0)),
-                  ),
-                ),
-                Stack(
-                  alignment: AlignmentDirectional(1.0, -1.0),
-                  children: [
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        context.pushNamed('Friends');
-                      },
-                      child: Column(
+                      Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              FaIcon(
-                                FontAwesomeIcons.userFriends,
-                                color: widget.selectedIndex == 2
-                                    ? FFAppState().LightPrimary
-                                    : FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                size: 20.0,
-                              ),
-                            ],
+                          FaIcon(
+                            FontAwesomeIcons.userFriends,
+                            color: widget.selectedIndex == 2
+                                ? FFAppState().LightPrimary
+                                : FlutterFlowTheme.of(context).secondaryText,
+                            size: 20.0,
                           ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'i588fetq' /* Friends */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: widget.selectedIndex == 2
-                                      ? FFAppState().LightPrimary
-                                      : FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                  fontSize: 10.0,
-                                ),
-                          ),
-                        ].divide(SizedBox(height: 5.0)),
-                      ),
-                    ),
-                    if (!valueOrDefault<bool>(
-                            currentUserDocument?.notificationsRead, false) &&
-                        (containerCount > 0))
-                      AuthUserStreamWidget(
-                        builder: (context) => Container(
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).error,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                5.0, 5.0, 5.0, 5.0),
-                            child: Text(
-                              '${containerCount.toString()}',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                  ),
-                            ),
-                          ),
-                        ),
-                      ),
-                  ],
-                ),
-                InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed('Leaderboard');
-                  },
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.trophy,
-                        color: widget.selectedIndex == 3
-                            ? FFAppState().LightPrimary
-                            : FlutterFlowTheme.of(context).secondaryText,
-                        size: 20.0,
+                        ],
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'hksep5su' /* Ranking */,
+                          'i588fetq' /* Friends */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
-                              color: widget.selectedIndex == 3
-                                  ? FFAppState().LightPrimary
-                                  : FlutterFlowTheme.of(context).secondaryText,
-                              fontSize: 10.0,
-                            ),
-                      ),
-                    ].divide(SizedBox(height: 5.0)),
-                  ),
-                ),
-                InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.goNamed(
-                      'Settings',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
-                  },
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.cog,
-                        color: widget.selectedIndex == 4
-                            ? FFAppState().LightPrimary
-                            : FlutterFlowTheme.of(context).secondaryText,
-                        size: 20.0,
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'pa68ha39' /* Settings */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: widget.selectedIndex == 4
+                              color: widget.selectedIndex == 2
                                   ? FFAppState().LightPrimary
                                   : FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 10.0,
@@ -290,8 +156,85 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                 ),
               ],
             ),
-          );
-        },
+            InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                context.pushNamed('Leaderboard');
+              },
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.trophy,
+                    color: widget.selectedIndex == 3
+                        ? FFAppState().LightPrimary
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 20.0,
+                  ),
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'hksep5su' /* Ranking */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          color: widget.selectedIndex == 3
+                              ? FFAppState().LightPrimary
+                              : FlutterFlowTheme.of(context).secondaryText,
+                          fontSize: 10.0,
+                        ),
+                  ),
+                ].divide(SizedBox(height: 5.0)),
+              ),
+            ),
+            InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                context.goNamed(
+                  'Settings',
+                  extra: <String, dynamic>{
+                    kTransitionInfoKey: TransitionInfo(
+                      hasTransition: true,
+                      transitionType: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 0),
+                    ),
+                  },
+                );
+              },
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.cog,
+                    color: widget.selectedIndex == 4
+                        ? FFAppState().LightPrimary
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 20.0,
+                  ),
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'pa68ha39' /* Settings */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          color: widget.selectedIndex == 4
+                              ? FFAppState().LightPrimary
+                              : FlutterFlowTheme.of(context).secondaryText,
+                          fontSize: 10.0,
+                        ),
+                  ),
+                ].divide(SizedBox(height: 5.0)),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

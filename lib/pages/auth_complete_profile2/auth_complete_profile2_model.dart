@@ -57,6 +57,19 @@ class AuthCompleteProfile2Model
   FocusNode? fullNameFocusNode;
   TextEditingController? fullNameController;
   String? Function(BuildContext, String?)? fullNameControllerValidator;
+  String? _fullNameControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'axi2r87b' /* Field is required */,
+      );
+    }
+
+    if (!RegExp('').hasMatch(val)) {
+      return 'Invalid text';
+    }
+    return null;
+  }
+
   // State field(s) for age widget.
   FocusNode? ageFocusNode;
   TextEditingController? ageController;
@@ -69,7 +82,9 @@ class AuthCompleteProfile2Model
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    fullNameControllerValidator = _fullNameControllerValidator;
+  }
 
   void dispose() {
     unfocusNode.dispose();
