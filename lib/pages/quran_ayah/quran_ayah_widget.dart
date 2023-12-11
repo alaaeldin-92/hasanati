@@ -565,7 +565,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                             _model.timeCounter!,
                                                             _model
                                                                 .audioDuration!)
-                                                        : 100.0,
+                                                        : 1.0,
                                                     radius: 22.5,
                                                     lineWidth: 5.0,
                                                     animation: false,
