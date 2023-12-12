@@ -705,7 +705,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         if (_model
-                                                            .audioPlaying) {
+                                                            .audioPlaying || _model.audioLoading) {
                                                           _model.soundPlayer
                                                               ?.dispose();
                                                         }

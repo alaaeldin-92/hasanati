@@ -676,7 +676,7 @@ class _QuranAyahWidgetState extends State<QuranAyahWidget> {
                                                               .transparent,
                                                           onTap: () async {
                                                             if (_model
-                                                                .audioPlaying) {
+                                                                .audioPlaying || _model.audioLoading) {
                                                               _model.soundPlayer?.dispose();
                                                             }
 
