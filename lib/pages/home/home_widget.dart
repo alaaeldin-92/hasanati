@@ -620,7 +620,7 @@ final firestore = FirebaseFirestore.instance;
                                         );
                                       },
                                       child: Container(
-                                        height: 65.0,
+                                        height: 70.0,
                                         decoration: BoxDecoration(
                                           color: Color(0xFF009BDD),
                                         ),
@@ -762,7 +762,7 @@ final firestore = FirebaseFirestore.instance;
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 1.0,
-                                        height: 65.0,
+                                        height: 70.0,
                                         decoration: BoxDecoration(
                                           color: (FFAppState()
                                                           .quranLastReadPage !=

@@ -39,9 +39,9 @@ void main() async {
     child: MyApp(),
   ));
 
-   SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.immersive,
-  );
+  //  SystemChrome.setEnabledSystemUIMode(
+  //     SystemUiMode.immersive,
+  // );
 }
 
 class MyApp extends StatefulWidget {
