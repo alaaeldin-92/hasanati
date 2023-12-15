@@ -26,8 +26,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   algolia: 1.1.1
+<<<<<<< HEAD
   http: ^0.13.4
   flutter_local_notifications: ^15.1.1
+=======
+>>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
   connectivity: ^3.0.0
   audio_session: 0.1.16
   audioplayers: ^5.2.1
@@ -86,12 +89,18 @@ dependencies:
   google_sign_in_ios: 5.6.4
   google_sign_in_platform_interface: 2.4.2
   google_sign_in_web: 0.12.1
+
   image_picker: 1.0.4
   image_picker_android: 0.8.8
   image_picker_for_web: 3.0.1
   image_picker_ios: 0.8.8+2
   image_picker_platform_interface: 2.9.1
+<<<<<<< HEAD
   infinite_scroll_pagination:
+=======
+  infinite_scroll_pagination: 
+
+>>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
     git:
       url: https://github.com/FlutterFlow/infinite_scroll_pagination.git
       ref: develop
