@@ -203,26 +203,6 @@ class _AuthCompleteProfile2WidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-<<<<<<< HEAD
-                                    0.0, 20.0, 5.0, 0.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Color(0xFF009BDD),
-                                    ),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 10.0, 10.0, 10.0),
-                                    child: FaIcon(
-                                      FontAwesomeIcons.edit,
-                                      color: Color(0xFF009BDD),
-                                      size: 20.0,
-                                    ),
-=======
                                     5.0, 20.0, 0.0, 0.0),
                                 child: FlutterFlowIconButton(
                                   borderColor: FlutterFlowTheme.of(context)
@@ -237,7 +217,6 @@ class _AuthCompleteProfile2WidgetState
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     size: 18.0,
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
                                   ),
                                   onPressed: () {
                                     print('IconButton pressed ...');

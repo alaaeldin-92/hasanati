@@ -80,49 +80,6 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-<<<<<<< HEAD
-                            Stack(
-                              alignment: AlignmentDirectional(1.0, -1.0),
-                              children: [
-                                AuthUserStreamWidget(
-                                  builder: (context) => Container(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.network(
-                                      currentUserPhoto != null &&
-                                              currentUserPhoto != ''
-                                          ? currentUserPhoto
-                                          : 'https://firebasestorage.googleapis.com/v0/b/ubereats-234aa.appspot.com/o/b6a18f0ffd345b22cd219ef0e73ea5fe-removebg-preview.png?alt=media&token=b86b0e86-098a-46fa-b379-521772d3f11c&_gl=1*1jz5afi*_ga*MTE0NzczNDMuMTY5NTg4MzM0OQ..*_ga_CW55HF8NVT*MTY5NzU2MDIxOS45Mi4xLjE2OTc1NjQ4NzguNTIuMC4w',
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                                if (false)
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: Color(0xFF009BDD),
-                                      ),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          5.0, 5.0, 5.0, 5.0),
-                                      child: Icon(
-                                        Icons.edit_rounded,
-                                        color: Color(0xFF009BDD),
-                                        size: 14.0,
-                                      ),
-                                    ),
-                                  ),
-                              ],
-=======
                             AuthUserStreamWidget(
                               builder: (context) => Container(
                                 width: 60.0,
@@ -139,7 +96,6 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
                             ),
                             Expanded(
                               child: Column(

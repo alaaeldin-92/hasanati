@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
-
+import 'package:connectivity/connectivity.dart'; 
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
@@ -390,12 +390,22 @@ class FFRoute {
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
         name: name,
         path: path,
-        redirect: (context, state) {
+        redirect: (context, state) async {
           if (appStateNotifier.shouldRedirect) {
             final redirectLocation = appStateNotifier.getRedirectLocation();
             appStateNotifier.clearRedirectLocation();
             return redirectLocation;
           }
+
+           var connectivityResult =  await (Connectivity().checkConnectivity());
+          bool internetConnected = connectivityResult == ConnectivityResult.mobile ||
+            connectivityResult == ConnectivityResult.wifi;
+
+          if(!internetConnected){
+            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            return '/network';
+          }
+
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);

@@ -7,17 +7,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
-<<<<<<< HEAD
 import 'auth/firebase_auth/auth_util.dart'; 
 import 'package:flutter/services.dart';
 import 'package:hasanati/backend/backend.dart'; 
-=======
-import 'auth/firebase_auth/auth_util.dart';
-
-import 'package:flutter/services.dart';
-import 'package:hasanati/backend/backend.dart';
-
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
 import 'backend/push_notifications/push_notifications_util.dart';
 import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
@@ -46,16 +38,10 @@ void main() async {
     create: (context) => appState,
     child: MyApp(),
   ));
-<<<<<<< HEAD
 
   //  SystemChrome.setEnabledSystemUIMode(
   //     SystemUiMode.immersive,
   // );
-=======
-  
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
-
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
 }
 
 class MyApp extends StatefulWidget {
@@ -245,35 +231,16 @@ WidgetsBinding.instance.addObserver(this);
   Future < void > didChangeAppLifecycleState(AppLifecycleState state) async {
     if (currentUser?.loggedIn == true) {
 
-<<<<<<< HEAD
 // latest one
 
-=======
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
       final firestore = FirebaseFirestore.instance;
       switch (state) {
         case AppLifecycleState.resumed:
         //Execute code here when user come back to the app.
-<<<<<<< HEAD
-=======
-
-        // if(currentUser?.displayName == null && currentUser?.loggedIn == true){
-        //   Navigator.push(
-        //     this as BuildContext,
-        //     MaterialPageRoute(builder: (context) => AuthCompleteProfile1Widget()),
-        //   );
-        // }else {
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
          FFAppState().stopTimers=false;
           await firestore.collection('users').doc(currentUser?.uid).update({
             'online': true,
           });
-<<<<<<< HEAD
-=======
-          checkAndUpdateDB();
-          // }
-
->>>>>>> parent of 78db57f (Updating to latest FlutterFlow output.)
           break;
 
         case AppLifecycleState.paused:
