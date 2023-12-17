@@ -391,13 +391,8 @@ class FFRoute {
         name: name,
         path: path,
         redirect: (context, state) async {
-          if (appStateNotifier.shouldRedirect) {
-            final redirectLocation = appStateNotifier.getRedirectLocation();
-            appStateNotifier.clearRedirectLocation();
-            return redirectLocation;
-          }
-
-           var connectivityResult =  await (Connectivity().checkConnectivity());
+          
+          var connectivityResult =  await (Connectivity().checkConnectivity());
           bool internetConnected = connectivityResult == ConnectivityResult.mobile ||
             connectivityResult == ConnectivityResult.wifi;
 
@@ -406,6 +401,11 @@ class FFRoute {
             return '/network';
           }
 
+          if (appStateNotifier.shouldRedirect) {
+            final redirectLocation = appStateNotifier.getRedirectLocation();
+            appStateNotifier.clearRedirectLocation();
+            return redirectLocation;
+          }
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
