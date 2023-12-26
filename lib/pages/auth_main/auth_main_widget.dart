@@ -78,7 +78,7 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.00, 0.00),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: SingleChildScrollView(
@@ -95,8 +95,7 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                           borderRadius: BorderRadius.circular(50.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              5.0, 5.0, 5.0, 5.0),
+                          padding: EdgeInsets.all(5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -168,7 +167,7 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.00, 0.00),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Stack(
                         alignment: AlignmentDirectional(0.0, -1.0),
                         children: [
@@ -344,12 +343,8 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         fillColor:
                                                             Color(0xFFEEEEEE),
                                                         contentPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0),
+                                                            EdgeInsets.all(
+                                                                20.0),
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -465,12 +460,8 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         fillColor:
                                                             Color(0xFFEEEEEE),
                                                         contentPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0),
+                                                            EdgeInsets.all(
+                                                                20.0),
                                                         suffixIcon: InkWell(
                                                           onTap: () => setState(
                                                             () => _model
@@ -518,9 +509,7 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                               color: Color(0xFFFFCEC7),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 15.0, 15.0, 15.0),
+                                              padding: EdgeInsets.all(15.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -964,12 +953,8 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         fillColor:
                                                             Color(0xFFEEEEEE),
                                                         contentPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0),
+                                                            EdgeInsets.all(
+                                                                20.0),
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -1085,12 +1070,8 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         fillColor:
                                                             Color(0xFFEEEEEE),
                                                         contentPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0),
+                                                            EdgeInsets.all(
+                                                                20.0),
                                                         suffixIcon: InkWell(
                                                           onTap: () => setState(
                                                             () => _model
@@ -1225,12 +1206,8 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                                         fillColor:
                                                             Color(0xFFEEEEEE),
                                                         contentPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0,
-                                                                    20.0),
+                                                            EdgeInsets.all(
+                                                                20.0),
                                                         suffixIcon: InkWell(
                                                           onTap: () => setState(
                                                             () => _model
@@ -1278,9 +1255,7 @@ class _AuthMainWidgetState extends State<AuthMainWidget> {
                                               color: Color(0xFFFFCEC7),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 15.0, 15.0, 15.0),
+                                              padding: EdgeInsets.all(15.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [

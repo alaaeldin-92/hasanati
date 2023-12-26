@@ -93,7 +93,7 @@ class _AuthCompleteProfile2WidgetState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.00, 0.00),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Stack(
                       alignment: AlignmentDirectional(0.0, -1.0),
                       children: [
@@ -233,8 +233,7 @@ class _AuthCompleteProfile2WidgetState
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 10.0, 10.0, 10.0),
+                                    padding: EdgeInsets.all(10.0),
                                     child: FaIcon(
                                       FontAwesomeIcons.edit,
                                       color: Color(0xFF009BDD),
@@ -376,12 +375,7 @@ class _AuthCompleteProfile2WidgetState
                                                     fillColor:
                                                         Color(0xFFEEEEEE),
                                                     contentPadding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                20.0,
-                                                                20.0,
-                                                                20.0,
-                                                                20.0),
+                                                        EdgeInsets.all(20.0),
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -473,9 +467,7 @@ class _AuthCompleteProfile2WidgetState
                                                   filled: true,
                                                   fillColor: Color(0xFFEEEEEE),
                                                   contentPadding:
-                                                      EdgeInsetsDirectional
-                                                          .fromSTEB(20.0, 20.0,
-                                                              20.0, 20.0),
+                                                      EdgeInsets.all(20.0),
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -573,9 +565,7 @@ class _AuthCompleteProfile2WidgetState
                                                           7.5),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          5.0, 5.0, 5.0, 5.0),
+                                                  padding: EdgeInsets.all(5.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
@@ -614,7 +604,7 @@ class _AuthCompleteProfile2WidgetState
                                                             ),
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Padding(
                                                               padding:
                                                                   EdgeInsetsDirectional
@@ -671,7 +661,7 @@ class _AuthCompleteProfile2WidgetState
                                                             ),
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Padding(
                                                               padding:
                                                                   EdgeInsetsDirectional
@@ -808,7 +798,7 @@ class _AuthCompleteProfile2WidgetState
                     Opacity(
                       opacity: 0.5,
                       child: Align(
-                        alignment: AlignmentDirectional(0.00, 0.00),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -849,7 +839,7 @@ class _AuthCompleteProfile2WidgetState
                                 decoration: BoxDecoration(
                                   color: Color(0xFFEEEEEE),
                                 ),
-                                alignment: AlignmentDirectional(0.00, 0.00),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),

@@ -175,13 +175,11 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.00, -1.00),
+                                              AlignmentDirectional(0.0, -1.0),
                                           child: Container(
                                             decoration: BoxDecoration(),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 10.0, 10.0, 10.0),
+                                              padding: EdgeInsets.all(10.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:

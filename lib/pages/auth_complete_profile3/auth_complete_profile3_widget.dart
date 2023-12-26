@@ -65,7 +65,7 @@ class _AuthCompleteProfile3WidgetState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Stack(
                   alignment: AlignmentDirectional(0.0, -1.0),
                   children: [

@@ -263,12 +263,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      8.0,
-                                                                      8.0,
-                                                                      8.0),
+                                                              EdgeInsets.all(
+                                                                  8.0),
                                                           child: Icon(
                                                             Icons
                                                                 .notifications_rounded,
@@ -529,11 +525,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            5.0,
-                                                                            5.0,
-                                                                            5.0,
+                                                                    EdgeInsets
+                                                                        .all(
                                                                             5.0),
                                                                 child:
                                                                     ClipRRect(
@@ -619,9 +612,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                padding: EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -646,12 +637,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5),
+                                                                EdgeInsets.all(
+                                                                    3.5),
                                                             child: Icon(
                                                               Icons.restore,
                                                               color: Color(
@@ -769,9 +756,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                padding: EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -796,12 +781,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5),
+                                                                EdgeInsets.all(
+                                                                    3.5),
                                                             child: Icon(
                                                               Icons.restore,
                                                               color: Color(
@@ -1248,12 +1229,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0),
+                                                              EdgeInsets.all(
+                                                                  6.0),
                                                           child: Icon(
                                                             Icons.arrow_upward,
                                                             color: FlutterFlowTheme
@@ -1294,12 +1271,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0),
+                                                              EdgeInsets.all(
+                                                                  6.0),
                                                           child: Icon(
                                                             Icons
                                                                 .arrow_downward,
@@ -1339,12 +1312,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                               surahListIndex];
                                                       return Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    5.0,
-                                                                    5.0,
-                                                                    5.0,
-                                                                    5.0),
+                                                            EdgeInsets.all(5.0),
                                                         child: Stack(
                                                           alignment:
                                                               AlignmentDirectional(
@@ -1377,12 +1345,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                     .rectangle,
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10.0,
-                                                                        10.0,
-                                                                        10.0,
-                                                                        10.0),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .all(
+                                                                            10.0),
                                                                 child: InkWell(
                                                                   splashColor:
                                                                       Colors
@@ -1911,7 +1877,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                   children: [
                                                                                     if (!_model.verseOfTheDayAudioPlaying && !_model.audioLoading)
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.00, -1.00),
+                                                                                        alignment: AlignmentDirectional(0.0, -1.0),
                                                                                         child: InkWell(
                                                                                           splashColor: Colors.transparent,
                                                                                           focusColor: Colors.transparent,
@@ -1971,7 +1937,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+                                                                                              padding: EdgeInsets.all(5.0),
                                                                                               child: Icon(
                                                                                                 Icons.play_arrow,
                                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
