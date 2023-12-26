@@ -46,7 +46,7 @@ class _UploadProfileWidgetState extends State<UploadProfileWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.00, 1.00),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
         height: MediaQuery.sizeOf(context).height * 0.4,
@@ -63,7 +63,7 @@ class _UploadProfileWidgetState extends State<UploadProfileWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+          padding: EdgeInsets.all(25.0),
           child: ListView(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.vertical,
@@ -101,8 +101,7 @@ class _UploadProfileWidgetState extends State<UploadProfileWidget> {
                         shape: BoxShape.circle,
                       ),
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+                        padding: EdgeInsets.all(5.0),
                         child: Icon(
                           Icons.close,
                           color: FlutterFlowTheme.of(context).secondaryText,
@@ -187,8 +186,7 @@ class _UploadProfileWidgetState extends State<UploadProfileWidget> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            15.0, 15.0, 15.0, 15.0),
+                        padding: EdgeInsets.all(15.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'eaokj8cd' /* Take Photo */,
@@ -210,8 +208,7 @@ class _UploadProfileWidgetState extends State<UploadProfileWidget> {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          15.0, 15.0, 15.0, 15.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'mzr7utpe' /* Choose from library */,
@@ -230,8 +227,7 @@ class _UploadProfileWidgetState extends State<UploadProfileWidget> {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          15.0, 15.0, 15.0, 15.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [

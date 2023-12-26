@@ -250,9 +250,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 20.0, 20.0, 20.0),
+                                          padding: EdgeInsets.all(20.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -275,12 +273,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    7.5,
-                                                                    7.5,
-                                                                    7.5,
-                                                                    7.5),
+                                                            EdgeInsets.all(7.5),
                                                         child: FaIcon(
                                                           FontAwesomeIcons
                                                               .medal,
@@ -454,12 +447,8 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      7.5,
-                                                                      7.5,
-                                                                      7.5,
-                                                                      7.5),
+                                                              EdgeInsets.all(
+                                                                  7.5),
                                                           child: FaIcon(
                                                             FontAwesomeIcons
                                                                 .userFriends,
@@ -803,8 +792,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                   BorderRadius.circular(100.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(5.0, 5.0, 5.0, 5.0),
+                                              padding: EdgeInsets.all(5.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -1176,7 +1164,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1202,7 +1190,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1228,7 +1216,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1254,7 +1242,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1280,7 +1268,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1306,7 +1294,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1334,7 +1322,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                                 child: Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -12931,7 +12919,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.00, 1.00),
+                              alignment: AlignmentDirectional(0.0, 1.0),
                               child: Container(
                                 height: 120.0,
                                 child: Stack(
@@ -13061,7 +13049,7 @@ class _PrayerWidgetState extends State<PrayerWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.00, 0.00),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(

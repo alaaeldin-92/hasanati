@@ -25,6 +25,7 @@ class VerseAudioCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -44,6 +45,7 @@ class QuranSearchCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -65,6 +67,7 @@ class VerseKeyCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -85,6 +88,7 @@ class QuranFontImlaeiCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -106,6 +110,7 @@ class QuranTranslationCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -136,14 +141,19 @@ class QuranLeaderboardHasanatCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  static dynamic thirdUser(dynamic response) => getJsonField(
+  static List<String>? thirdUser(dynamic response) => (getJsonField(
         response,
         r'''$.hits[2].user''',
         true,
-      );
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class PrayerTimesCall {
@@ -166,6 +176,7 @@ class PrayerTimesCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -186,17 +197,19 @@ class GEOAddressCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 
-  static dynamic countryISO(dynamic response) => getJsonField(
+  static String? countryISO(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$.results[-1].address_components[0].short_name''',
-      );
-  static dynamic city(dynamic response) => getJsonField(
+      ));
+  static String? city(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$.results[-2].address_components[0].long_name''',
-      );
+      ));
 }
 
 class AzkarHisnmuslimCall {
@@ -214,6 +227,7 @@ class AzkarHisnmuslimCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: true,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -244,6 +258,7 @@ class SearchFriendsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -263,6 +278,7 @@ class QuranFontImlaeiPageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -283,6 +299,7 @@ class VerseAudioPageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -303,6 +320,7 @@ class QuranTranslationPageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -334,6 +352,7 @@ class InAppNotificationCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -364,6 +383,7 @@ class QuranLeaderboardVersesCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -394,6 +414,7 @@ class QuranLeaderboardTimeCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -415,6 +436,7 @@ class QuranVerseTafsirCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -435,6 +457,7 @@ class QuranPageTafsirCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }

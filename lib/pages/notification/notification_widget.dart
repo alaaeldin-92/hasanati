@@ -260,8 +260,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             ),
                                           ),
                                           child: Align(
-                                            alignment: AlignmentDirectional(
-                                                0.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
@@ -295,7 +295,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                         Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  1.00, 1.00),
+                                                                  1.0, 1.0),
                                                           child: Container(
                                                             width: 30.0,
                                                             height: 30.0,
@@ -815,7 +815,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         decoration: BoxDecoration(),
-                        alignment: AlignmentDirectional(0.00, 0.00),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),

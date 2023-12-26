@@ -285,12 +285,8 @@ final firestore = FirebaseFirestore.instance;
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      8.0,
-                                                                      8.0,
-                                                                      8.0),
+                                                              EdgeInsets.all(
+                                                                  8.0),
                                                           child: Icon(
                                                             Icons
                                                                 .notifications_rounded,
@@ -551,11 +547,8 @@ final firestore = FirebaseFirestore.instance;
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            5.0,
-                                                                            5.0,
-                                                                            5.0,
+                                                                    EdgeInsets
+                                                                        .all(
                                                                             5.0),
                                                                 child:
                                                                     ClipRRect(
@@ -641,9 +634,7 @@ final firestore = FirebaseFirestore.instance;
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                padding: EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -668,12 +659,8 @@ final firestore = FirebaseFirestore.instance;
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5),
+                                                                EdgeInsets.all(
+                                                                    3.5),
                                                             child: Icon(
                                                               Icons.restore,
                                                               color: Color(
@@ -791,9 +778,7 @@ final firestore = FirebaseFirestore.instance;
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                padding: EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -818,12 +803,8 @@ final firestore = FirebaseFirestore.instance;
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5,
-                                                                        3.5),
+                                                                EdgeInsets.all(
+                                                                    3.5),
                                                             child: Icon(
                                                               Icons.restore,
                                                               color: Color(
@@ -1270,12 +1251,8 @@ final firestore = FirebaseFirestore.instance;
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0),
+                                                              EdgeInsets.all(
+                                                                  6.0),
                                                           child: Icon(
                                                             Icons.arrow_upward,
                                                             color: FlutterFlowTheme
@@ -1316,12 +1293,8 @@ final firestore = FirebaseFirestore.instance;
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0,
-                                                                      6.0),
+                                                              EdgeInsets.all(
+                                                                  6.0),
                                                           child: Icon(
                                                             Icons
                                                                 .arrow_downward,
@@ -1361,12 +1334,7 @@ final firestore = FirebaseFirestore.instance;
                                                               surahListIndex];
                                                       return Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    5.0,
-                                                                    5.0,
-                                                                    5.0,
-                                                                    5.0),
+                                                            EdgeInsets.all(5.0),
                                                         child: Stack(
                                                           alignment:
                                                               AlignmentDirectional(
@@ -1399,12 +1367,10 @@ final firestore = FirebaseFirestore.instance;
                                                                     .rectangle,
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10.0,
-                                                                        10.0,
-                                                                        10.0,
-                                                                        10.0),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .all(
+                                                                            10.0),
                                                                 child: InkWell(
                                                                   splashColor:
                                                                       Colors
@@ -1933,7 +1899,7 @@ final firestore = FirebaseFirestore.instance;
                                                                                   children: [
                                                                                     if (!_model.verseOfTheDayAudioPlaying && !_model.audioLoading)
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.00, -1.00),
+                                                                                        alignment: AlignmentDirectional(0.0, -1.0),
                                                                                         child: InkWell(
                                                                                           splashColor: Colors.transparent,
                                                                                           focusColor: Colors.transparent,
@@ -1994,7 +1960,7 @@ final firestore = FirebaseFirestore.instance;
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+                                                                                              padding: EdgeInsets.all(5.0),
                                                                                               child: Icon(
                                                                                                 Icons.play_arrow,
                                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
