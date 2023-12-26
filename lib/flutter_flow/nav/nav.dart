@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
-
+import 'package:connectivity/connectivity.dart'; 
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
@@ -42,7 +42,7 @@ class AppStateNotifier extends ChangeNotifier {
   bool notifyOnAuthChange = true;
 
   bool get loading => user == null || showSplashImage;
-  bool get loggedIn => user?.loggedIn ?? false;
+  bool get loggedIn => user?.loggedIn ?? false; 
   bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
   bool get shouldRedirect => loggedIn && _redirectLocation != null;
 
@@ -81,13 +81,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomeWidget() : OnboardingWidget(),
+          !appStateNotifier.loggedIn ? OnboardingWidget() : HomeWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomeWidget() : OnboardingWidget(),
+            !appStateNotifier.loggedIn ? OnboardingWidget() : HomeWidget(),
         ),
         FFRoute(
           name: 'Home',
@@ -390,7 +390,17 @@ class FFRoute {
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
         name: name,
         path: path,
-        redirect: (context, state) {
+        redirect: (context, state) async {
+          
+          var connectivityResult =  await (Connectivity().checkConnectivity());
+          bool internetConnected = connectivityResult == ConnectivityResult.mobile ||
+            connectivityResult == ConnectivityResult.wifi;
+
+          if(!internetConnected){
+            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            return '/network';
+          }
+
           if (appStateNotifier.shouldRedirect) {
             final redirectLocation = appStateNotifier.getRedirectLocation();
             appStateNotifier.clearRedirectLocation();

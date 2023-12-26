@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -13,7 +14,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'auth_complete_profile2_model.dart';
@@ -189,43 +189,33 @@ class _AuthCompleteProfile2WidgetState
                           child: Stack(
                             alignment: AlignmentDirectional(1.0, -1.0),
                             children: [
-                              Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  Container(
-                                    width: 190.0,
-                                    height: 190.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.network(
-                                      _model.imageURL,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Transform.scale(
-                                    scaleX: 4.0,
-                                    scaleY: 4.0,
-                                    child: Visibility(
-                                      visible: _model.isDataUploading,
-                                      child: Lottie.asset(
-                                        'assets/lottie_animations/Animation_-_1701617942129.json',
-                                        width: 45.0,
-                                        height: 45.0,
-                                        fit: BoxFit.contain,
-                                        animate: false,
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                              Container(
+                                width: 190.0,
+                                height: 190.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.network(
+                                  _model.imageURL,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 20.0, 5.0, 0.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
+                                    5.0, 20.0, 0.0, 0.0),
+                                child: FlutterFlowIconButton(
+                                  borderColor: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  borderRadius: 80.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 50.0,
+                                  fillColor: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.pen,
                                     color: FlutterFlowTheme.of(context)
+
                                         .secondaryBackground,
                                     shape: BoxShape.circle,
                                     border: Border.all(
@@ -239,7 +229,11 @@ class _AuthCompleteProfile2WidgetState
                                       color: Color(0xFF009BDD),
                                       size: 20.0,
                                     ),
+
                                   ),
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
+                                  },
                                 ),
                               ),
                             ],

@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -14,7 +15,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 
@@ -42,7 +42,9 @@ class AuthCompleteProfile2Model
   String countryCode = 'sa';
 
   String imageURL =
-      'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/default.jpg?alt=media&token=fa8e6097-b224-4084-a3f2-5daaaf2bd732';
+      'https://firebasestorage.googleapis.com/v0/b/hasanati-85079.appspot.com/o/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg?alt=media';
+
+  FFUploadedFile? uploadedFile;
 
   ///  State fields for stateful widgets in this page.
 

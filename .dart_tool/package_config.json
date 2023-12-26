@@ -224,6 +224,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "cross_file",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.3+7",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
@@ -246,6 +252,12 @@
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "dbus",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "easy_debounce",
@@ -273,13 +285,37 @@
     },
     {
       "name": "file",
-      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.0",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "file_picker",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-6.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "file_selector_linux",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.2+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "file_selector_macos",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.3+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "file_selector_platform_interface",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "file_selector_windows",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -356,6 +392,24 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "firebase_storage",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage-11.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_storage_platform_interface",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage_platform_interface-4.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_storage_web",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage_web-3.6.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///C:/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -396,6 +450,24 @@
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_local_notifications",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications-15.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_local_notifications_linux",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_local_notifications_platform_interface",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_localizations",
@@ -626,6 +698,54 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "image_picker",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_android",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_for_web",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_ios",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.8+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_linux",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_macos",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.9.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_windows",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "infinite_scroll_pagination",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/git/infinite_scroll_pagination-3d3ce8574b2d8ecc954915c57a5e626b8f1cb2d4/",
       "packageUri": "lib/",
@@ -722,6 +842,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mime",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "mime_type",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/mime_type-1.0.0",
       "packageUri": "lib/",
@@ -742,6 +868,12 @@
     {
       "name": "octo_image",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "onesignal_flutter",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/onesignal_flutter-5.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -844,6 +976,12 @@
     {
       "name": "pointycastle",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.7.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "process",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/process-4.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -1028,6 +1166,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "timezone",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/timezone-0.9.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "tuple",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/tuple-2.0.2",
       "packageUri": "lib/",
@@ -1124,6 +1268,36 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "video_player",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/video_player-2.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "video_player_android",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_android-2.4.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "video_player_avfoundation",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_avfoundation-2.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "video_player_platform_interface",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_platform_interface-6.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "video_player_web",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_web-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "watcher",
       "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.0",
       "packageUri": "lib/",
@@ -1173,9 +1347,9 @@
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.3",
+      "rootUri": "file:///C:/Users/alaae/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-0.2.0+3",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "2.12"
     },
     {
       "name": "xml",
@@ -1196,7 +1370,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-12-05T02:57:54.989461Z",
+  "generated": "2023-12-08T05:52:24.166410Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }

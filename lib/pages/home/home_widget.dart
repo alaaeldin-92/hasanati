@@ -36,8 +36,30 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  void checkForIncompleteProfile() async{
+final firestore = FirebaseFirestore.instance;
+    QuerySnapshot querySnapshotUsers = await firestore
+          .collection('users')
+          .where('uid', isEqualTo: currentUser?.uid)
+          .get();
+    if(querySnapshotUsers.docs[0]['username'].isEmpty){
+      context.safePop();
+       context.pushNamed(
+          'AuthCompleteProfile1',
+        );
+    }else if(querySnapshotUsers.docs[0]['display_name'].isEmpty){
+        context.safePop();
+       context.pushNamed(
+          'AuthCompleteProfile2',
+        );
+    }
+  }
+
   @override
   void initState() {
+    
+    checkForIncompleteProfile();
+
     super.initState();
     _model = createModel(context, () => HomeModel());
 
@@ -230,7 +252,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                     if (_model
                                                         .verseOfTheDayAudioPlaying) {
                                                       _model.soundPlayer
-                                                          ?.stop();
+                                                          ?.dispose();
                                                     }
 
                                                     context.pushNamed(
@@ -577,7 +599,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         if (_model.verseOfTheDayAudioPlaying) {
-                                          _model.soundPlayer?.stop();
+                                          _model.soundPlayer?.dispose();
                                         }
 
                                         context.pushNamed(
@@ -591,7 +613,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                         );
                                       },
                                       child: Container(
-                                        height: 65.0,
+                                        height: 70.0,
                                         decoration: BoxDecoration(
                                           color: Color(0xFF009BDD),
                                         ),
@@ -685,7 +707,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         if (_model.verseOfTheDayAudioPlaying) {
-                                          _model.soundPlayer?.stop();
+                                          _model.soundPlayer?.dispose();
                                         }
 
                                         context.pushNamed(
@@ -727,7 +749,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 1.0,
-                                        height: 65.0,
+                                        height: 70.0,
                                         decoration: BoxDecoration(
                                           color: (FFAppState()
                                                           .quranLastReadPage !=
@@ -1903,6 +1925,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                               _model.verseOfTheDayAudioDuration = _model.duration!;
                                                                                               _model.verseOfTheDayAudioPlaying = true;
                                                                                               _model.audioLoading = false;
+                                                                                              _model.verseOfTheDayTimeCounter = 0;
                                                                                             });
                                                                                             setState(() => _model.loadingStatus = !_model.loadingStatus);
                                                                                             _model.soundPlayer ??= AudioPlayer();
@@ -1916,7 +1939,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                                   r'''$.audio_files[:].url''',
                                                                                                 ).toString()}')
                                                                                                 .then((_) => _model.soundPlayer!.play());
-
+                            
                                                                                             while (_model.verseOfTheDayTimeCounter < _model.duration!) {
                                                                                               await Future.delayed(const Duration(milliseconds: 1000));
                                                                                               setState(() {
@@ -1957,10 +1980,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                                           _model.soundPlayer?.stop();
                                                                                           setState(() {
                                                                                             _model.verseOfTheDayAudioPlaying = false;
-                                                                                          });
-                                                                                          setState(() {
-                                                                                            _model.verseOfTheDayTimeCounter = 0.0;
-                                                                                          });
+                                                                                            _model.verseOfTheDayTimeCounter = 0;
+                                                                                          }); 
                                                                                         },
                                                                                         child: Stack(
                                                                                           alignment: AlignmentDirectional(0.0, 0.0),
