@@ -46,7 +46,7 @@ class _SkeletonLinesWidgetState extends State<SkeletonLinesWidget> {
       mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,

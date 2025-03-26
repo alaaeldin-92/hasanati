@@ -43,7 +43,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.00, 1.00),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
         height: MediaQuery.sizeOf(context).height * 0.45,
@@ -57,7 +57,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+          padding: EdgeInsets.all(25.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[].divide(SizedBox(height: 20.0)),

@@ -70,7 +70,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
                       fit: BoxFit.fitWidth,
-                      alignment: Alignment(0.00, 0.00),
+                      alignment: Alignment(0.0, 0.0),
                     ),
                   ),
                 ],

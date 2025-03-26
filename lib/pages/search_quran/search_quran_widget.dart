@@ -639,7 +639,7 @@ class _SearchQuranWidgetState extends State<SearchQuranWidget> {
                                                 .secondaryBackground,
                                           ),
                                           alignment:
-                                              AlignmentDirectional(0.00, 0.00),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [

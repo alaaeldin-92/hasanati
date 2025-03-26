@@ -317,7 +317,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                             Container(
                               height: MediaQuery.sizeOf(context).height * 0.85,
                               decoration: BoxDecoration(),
-                              alignment: AlignmentDirectional(0.00, -1.00),
+                              alignment: AlignmentDirectional(0.0, -1.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
@@ -328,7 +328,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         (_model.searchResultJSON.length > 0))
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.00, -1.00),
+                                            AlignmentDirectional(0.0, -1.0),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -361,7 +361,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                         0.85,
                                                 decoration: BoxDecoration(),
                                                 alignment: AlignmentDirectional(
-                                                    0.00, -1.00),
+                                                    0.0, -1.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -381,8 +381,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00,
-                                                                    -1.00),
+                                                                    0.0, -1.0),
                                                             child: Builder(
                                                               builder:
                                                                   (context) {
@@ -460,7 +459,7 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                             children:
                                                                                 [
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                                                                   child: Row(
@@ -483,12 +482,12 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                                                                                 getJsonField(
                                                                                                   searchHitItem,
                                                                                                   r'''$.photo_url''',
-                                                                                                ),
+                                                                                                ).toString(),
                                                                                                 fit: BoxFit.cover,
                                                                                               ),
                                                                                             ),
                                                                                             Align(
-                                                                                              alignment: AlignmentDirectional(1.00, 1.00),
+                                                                                              alignment: AlignmentDirectional(1.0, 1.0),
                                                                                               child: Container(
                                                                                                 width: 25.0,
                                                                                                 height: 25.0,
@@ -729,14 +728,14 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                         (_model.searchResultJSON.length == 0))
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.00, 0.00),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
                                                   1.0,
                                           decoration: BoxDecoration(),
                                           alignment:
-                                              AlignmentDirectional(0.00, 0.00),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
@@ -850,14 +849,14 @@ class _FriendsWidgetState extends State<FriendsWidget> {
                                     if (false)
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.00, 0.00),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Stack(
                                           alignment:
                                               AlignmentDirectional(0.0, -1.0),
                                           children: [
                                             Align(
                                               alignment: AlignmentDirectional(
-                                                  0.00, 0.00),
+                                                  0.0, 0.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [

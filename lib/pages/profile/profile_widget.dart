@@ -222,11 +222,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                           10.0),
                                                 ),
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(10.0, 10.0,
-                                                          10.0, 10.0),
+                                                  padding: EdgeInsets.all(10.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -637,12 +635,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                       0)
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  10.0,
-                                                                  10.0,
-                                                                  10.0,
-                                                                  10.0),
+                                                          EdgeInsets.all(10.0),
                                                       child: PagedListView<
                                                           DocumentSnapshot<
                                                               Object?>?,
@@ -794,7 +787,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                                 ),
                                                                               ),
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(1.00, 1.00),
+                                                                                alignment: AlignmentDirectional(1.0, 1.0),
                                                                                 child: Container(
                                                                                   width: 30.0,
                                                                                   height: 30.0,
@@ -936,7 +929,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               ),
                                               Align(
                                                 alignment: AlignmentDirectional(
-                                                    1.00, 1.00),
+                                                    1.0, 1.0),
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(

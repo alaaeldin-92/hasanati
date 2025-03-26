@@ -219,9 +219,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                       children: [
                                         Expanded(
                                           child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5.0, 5.0, 5.0, 5.0),
+                                            padding: EdgeInsets.all(5.0),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -285,9 +283,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                         ),
                                         Expanded(
                                           child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5.0, 5.0, 5.0, 5.0),
+                                            padding: EdgeInsets.all(5.0),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -453,9 +449,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                         ),
                                         Expanded(
                                           child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5.0, 5.0, 5.0, 5.0),
+                                            padding: EdgeInsets.all(5.0),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -681,9 +675,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                         ),
                                         Expanded(
                                           child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5.0, 5.0, 5.0, 5.0),
+                                            padding: EdgeInsets.all(5.0),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -856,15 +848,14 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                             .width *
                                                         1.0,
                                                 fit: BoxFit.cover,
-                                                alignment:
-                                                    Alignment(0.00, -1.00),
+                                                alignment: Alignment(0.0, -1.0),
                                               ),
                                             ),
                                           ),
                                           if (_model.top3JSON.length > 0)
                                             Align(
                                               alignment: AlignmentDirectional(
-                                                  0.00, -1.00),
+                                                  0.0, -1.0),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -984,7 +975,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(1.00, 1.00),
+                                                                                AlignmentDirectional(1.0, 1.0),
                                                                             child:
                                                                                 ClipRRect(
                                                                               borderRadius: BorderRadius.circular(100.0),
@@ -1182,8 +1173,8 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                         ),
                                                                         Align(
                                                                           alignment: AlignmentDirectional(
-                                                                              1.00,
-                                                                              1.00),
+                                                                              1.0,
+                                                                              1.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -1399,7 +1390,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(1.00, 1.00),
+                                                                                AlignmentDirectional(1.0, 1.0),
                                                                             child:
                                                                                 ClipRRect(
                                                                               borderRadius: BorderRadius.circular(100.0),
@@ -1550,12 +1541,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    7.5,
-                                                                    7.5,
-                                                                    7.5,
-                                                                    7.5),
+                                                            EdgeInsets.all(7.5),
                                                         child: Text(
                                                           '#${valueOrDefault<String>(
                                                             _model.userRank
@@ -1617,8 +1603,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(0.00, -1.00),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 380.0, 0.0, 0.0),
@@ -1817,7 +1802,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   functions.positionInPagination(displayedJSONItemIndex, _model.currentPage, _model.hitsPerPage).toString(),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium,
@@ -1846,7 +1831,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Align(
-                                                                                      alignment: AlignmentDirectional(1.00, 1.00),
+                                                                                      alignment: AlignmentDirectional(1.0, 1.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -2005,9 +1990,10 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                                                                     ),
                                                                     child:
                                                                         Align(
-                                                                      alignment: AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                      alignment:
+                                                                          AlignmentDirectional(
+                                                                              0.0,
+                                                                              0.0),
                                                                       child:
                                                                           Text(
                                                                         getJsonField(

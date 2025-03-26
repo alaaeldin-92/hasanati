@@ -43,7 +43,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.00, 1.00),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
         height: MediaQuery.sizeOf(context).height * 0.45,
@@ -60,7 +60,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+          padding: EdgeInsets.all(25.0),
           child: ListView(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.vertical,
@@ -107,8 +107,7 @@ class _ReciterWidgetState extends State<ReciterWidget> {
                         shape: BoxShape.circle,
                       ),
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+                        padding: EdgeInsets.all(5.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -289,8 +288,7 @@ Al-Afasy */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -351,8 +349,7 @@ Al-Shatri */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -413,8 +410,7 @@ an Sudais */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -474,8 +470,7 @@ an Sudais */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -535,8 +530,7 @@ an Sudais */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -596,8 +590,7 @@ an Sudais */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -657,8 +650,7 @@ Ar-Rifai */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,
@@ -718,8 +710,7 @@ Shuraym */
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  3.0, 3.0, 3.0, 3.0),
+                              padding: EdgeInsets.all(3.0),
                               child: Container(
                                 width: 60.0,
                                 height: 60.0,

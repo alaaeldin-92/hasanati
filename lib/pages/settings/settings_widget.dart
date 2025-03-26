@@ -88,6 +88,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
+
                                 child: Image.network(
                                   currentUserPhoto != null &&
                                           currentUserPhoto != ''

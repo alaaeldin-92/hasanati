@@ -62,7 +62,7 @@ class _NetworkWidgetState extends State<NetworkWidget> {
             height: MediaQuery.sizeOf(context).height * 1.0,
             decoration: BoxDecoration(),
             child: Align(
-              alignment: AlignmentDirectional(0.00, 0.00),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [

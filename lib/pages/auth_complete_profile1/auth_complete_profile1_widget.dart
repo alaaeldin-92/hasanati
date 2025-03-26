@@ -71,7 +71,7 @@ class _AuthCompleteProfile1WidgetState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Stack(
                   alignment: AlignmentDirectional(0.0, -1.0),
                   children: [
@@ -226,9 +226,7 @@ class _AuthCompleteProfile1WidgetState
                                                 filled: true,
                                                 fillColor: Color(0xFFEEEEEE),
                                                 contentPadding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(20.0, 20.0,
-                                                            20.0, 20.0),
+                                                    EdgeInsets.all(20.0),
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)

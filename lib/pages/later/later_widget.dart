@@ -65,7 +65,7 @@ class _LaterWidgetState extends State<LaterWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+            padding: EdgeInsets.all(20.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -581,7 +581,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     topRight: Radius.circular(0.0),
                                   ),
                                 ),
-                                alignment: AlignmentDirectional(0.00, 0.00),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.alarm,
                                   color: Color(0xFF57458F),
@@ -716,7 +716,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     topRight: Radius.circular(0.0),
                                   ),
                                 ),
-                                alignment: AlignmentDirectional(0.00, 0.00),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.wb_sunny_outlined,
                                   color: Color(0xFF57458F),
@@ -954,7 +954,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                             itemBuilder: (context, tasabihIndex, _) {
                               final tasabihItem = tasabih[tasabihIndex];
                               return Align(
-                                alignment: AlignmentDirectional(0.00, -1.00),
+                                alignment: AlignmentDirectional(0.0, -1.0),
                                 child: Container(
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -971,8 +971,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 10.0, 10.0, 10.0),
+                                    padding: EdgeInsets.all(10.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -1036,7 +1035,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                 height: 150.0,
                                                 decoration: BoxDecoration(),
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: SingleChildScrollView(
                                                   child: Column(
                                                     mainAxisSize:
@@ -1114,7 +1113,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Icon(
                                                               Icons
                                                                   .diamond_rounded,
@@ -1697,8 +1696,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                 itemBuilder: (context, tasabihIndex, _) {
                                   final tasabihItem = tasabih[tasabihIndex];
                                   return Align(
-                                    alignment:
-                                        AlignmentDirectional(0.00, -1.00),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Container(
                                       height:
                                           MediaQuery.sizeOf(context).height *
@@ -1718,8 +1716,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
+                                        padding: EdgeInsets.all(10.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -1786,7 +1783,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                     decoration: BoxDecoration(),
                                                     alignment:
                                                         AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child:
                                                         SingleChildScrollView(
                                                       child: Column(
@@ -1868,8 +1865,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                               Align(
                                                                 alignment:
                                                                     AlignmentDirectional(
-                                                                        0.00,
-                                                                        0.00),
+                                                                        0.0,
+                                                                        0.0),
                                                                 child: Icon(
                                                                   Icons
                                                                       .diamond_rounded,
@@ -2065,7 +2062,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.00, 0.00),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Stack(
                       alignment: AlignmentDirectional(0.0, -1.0),
                       children: [
@@ -2090,7 +2087,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.00, 0.00),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -2166,8 +2163,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 20.0, 20.0, 20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -2184,9 +2180,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                               BorderRadius.circular(100.0),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  7.5, 7.5, 7.5, 7.5),
+                                          padding: EdgeInsets.all(7.5),
                                           child: FaIcon(
                                             FontAwesomeIcons.graduationCap,
                                             color: Color(0xFF009BDF),
@@ -2263,9 +2257,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                         100.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        7.5, 7.5, 7.5, 7.5),
+                                                padding: EdgeInsets.all(7.5),
                                                 child: FaIcon(
                                                   FontAwesomeIcons.userFriends,
                                                   color: Color(0xFF009BDF),
@@ -2457,8 +2449,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                       children: [
                         if (false)
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 20.0, 20.0, 20.0),
+                            padding: EdgeInsets.all(20.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -2471,8 +2462,7 @@ class _LaterWidgetState extends State<LaterWidget> {
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          15.0, 15.0, 15.0, 15.0),
+                                      padding: EdgeInsets.all(15.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
@@ -2836,11 +2826,8 @@ class _LaterWidgetState extends State<LaterWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            7.5,
-                                                                            7.5,
-                                                                            7.5,
+                                                                    EdgeInsets
+                                                                        .all(
                                                                             7.5),
                                                                 child: FaIcon(
                                                                   FontAwesomeIcons

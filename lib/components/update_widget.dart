@@ -45,7 +45,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.00, 1.00),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
         constraints: BoxConstraints(
@@ -61,7 +61,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+          padding: EdgeInsets.all(25.0),
           child: ListView(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.vertical,
@@ -122,8 +122,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                5.0, 5.0, 5.0, 5.0),
+                            padding: EdgeInsets.all(5.0),
                             child: Icon(
                               Icons.close,
                               color: FlutterFlowTheme.of(context).secondaryText,
@@ -147,7 +146,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
                 options: FFButtonOptions(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 40.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsets.all(0.0),
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: Color(0xFF009BDF),

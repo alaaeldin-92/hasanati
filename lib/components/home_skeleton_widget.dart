@@ -110,9 +110,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                               BorderRadius.circular(100.0),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  8.0, 8.0, 8.0, 8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Icon(
                                             Icons.notifications_rounded,
                                             color: FlutterFlowTheme.of(context)
@@ -256,9 +254,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  15.0, 15.0, 15.0, 15.0),
+                                          padding: EdgeInsets.all(15.0),
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: Color(0xFFEEEEEE),
@@ -570,9 +566,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  6.0, 6.0, 6.0, 6.0),
+                                          padding: EdgeInsets.all(6.0),
                                           child: Icon(
                                             Icons.arrow_upward,
                                             color: FlutterFlowTheme.of(context)
@@ -586,9 +580,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  6.0, 6.0, 6.0, 6.0),
+                                          padding: EdgeInsets.all(6.0),
                                           child: Icon(
                                             Icons.arrow_downward,
                                             color: FlutterFlowTheme.of(context)
@@ -607,8 +599,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          5.0, 5.0, 5.0, 5.0),
+                                      padding: EdgeInsets.all(5.0),
                                       child: Stack(
                                         alignment:
                                             AlignmentDirectional(1.0, -1.0),
@@ -631,9 +622,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                               shape: BoxShape.rectangle,
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 10.0, 10.0, 10.0),
+                                              padding: EdgeInsets.all(10.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -729,8 +718,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          5.0, 5.0, 5.0, 5.0),
+                                      padding: EdgeInsets.all(5.0),
                                       child: Stack(
                                         alignment:
                                             AlignmentDirectional(1.0, -1.0),
@@ -753,9 +741,7 @@ class _HomeSkeletonWidgetState extends State<HomeSkeletonWidget> {
                                               shape: BoxShape.rectangle,
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 10.0, 10.0, 10.0),
+                                              padding: EdgeInsets.all(10.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:

@@ -70,12 +70,12 @@ class _LeaderboardSkeletonContainerWidgetState
                               'assets/images/Group_7.svg',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               fit: BoxFit.cover,
-                              alignment: Alignment(0.00, -1.00),
+                              alignment: Alignment(0.0, -1.0),
                             ),
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.00, -1.00),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 80.0, 0.0, 0.0),
@@ -262,7 +262,7 @@ class _LeaderboardSkeletonContainerWidgetState
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.00, -1.00),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 380.0, 0.0, 0.0),

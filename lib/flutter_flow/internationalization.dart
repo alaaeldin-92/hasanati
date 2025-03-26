@@ -1456,7 +1456,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Miscellaneous
   {
     'crf9sbfs': {
-      'en': '',
+      'en':
+          'In order to search neraby, this app requires access to your current location.',
+      'ar': '',
+    },
+    'feuj3eu7': {
+      'en':
+          'In order to take a picture or video, this app requires permission to access the camera.',
+      'ar': '',
+    },
+    '3179jk0w': {
+      'en':
+          'In order to upload data, this app requires permisission to access the photo library',
       'ar': '',
     },
     'uyuhjzoo': {

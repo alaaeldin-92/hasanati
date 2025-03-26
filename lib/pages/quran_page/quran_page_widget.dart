@@ -235,9 +235,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                               BorderRadius.circular(10.0),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10.0, 10.0, 10.0, 10.0),
+                                          padding: EdgeInsets.all(10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -590,12 +588,8 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          5.0,
-                                                                          5.0,
-                                                                          5.0,
-                                                                          5.0),
+                                                                  EdgeInsets
+                                                                      .all(5.0),
                                                               child: Icon(
                                                                 Icons
                                                                     .play_arrow,
@@ -687,9 +681,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                     BorderRadius.circular(50.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        5.0, 5.0, 5.0, 5.0),
+                                                padding: EdgeInsets.all(5.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
@@ -748,7 +740,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                         ),
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                0.00, 0.00),
+                                                                0.0, 0.0),
                                                         child: Padding(
                                                           padding:
                                                               EdgeInsetsDirectional
@@ -781,7 +773,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                                       ),
                                                       alignment:
                                                           AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
@@ -1101,7 +1093,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.00, 0.00),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -1288,7 +1280,7 @@ class _QuranPageWidgetState extends State<QuranPageWidget> {
                                               decoration: BoxDecoration(),
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Text(
                                                   '+${functions.hasanatCalculator(functions.concatenateVersesText(quranPageQuranFontImlaeiPageResponse.jsonBody)).toString()}',
                                                   style: FlutterFlowTheme.of(

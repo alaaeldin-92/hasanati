@@ -87,7 +87,7 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.fitWidth,
-                              alignment: Alignment(0.00, 0.00),
+                              alignment: Alignment(0.0, 0.0),
                             ),
                           ),
                           Padding(
@@ -125,7 +125,7 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.00, 1.00),
+                      alignment: AlignmentDirectional(0.0, 1.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         height: MediaQuery.sizeOf(context).height * 0.53,
@@ -281,12 +281,8 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                             fillColor: Color(
                                                                 0xFFEEEEEE),
                                                             contentPadding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        24.0,
-                                                                        24.0,
-                                                                        24.0,
-                                                                        24.0),
+                                                                EdgeInsets.all(
+                                                                    24.0),
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -411,12 +407,8 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                             fillColor: Color(
                                                                 0xFFEEEEEE),
                                                             contentPadding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        24.0,
-                                                                        24.0,
-                                                                        24.0,
-                                                                        24.0),
+                                                                EdgeInsets.all(
+                                                                    24.0),
                                                             suffixIcon: InkWell(
                                                               onTap: () =>
                                                                   setState(
@@ -710,8 +702,8 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                               borderRadius:
                                                   BorderRadius.circular(5.0),
                                             ),
-                                            alignment: AlignmentDirectional(
-                                                0.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -775,7 +767,7 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                     BorderRadius.circular(5.0),
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  0.00, 0.00),
+                                                  0.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -859,9 +851,7 @@ class _AuthMain2WidgetState extends State<AuthMain2Widget> {
                                                         1.0,
                                                     height: 50.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 0.0),
+                                                        EdgeInsets.all(0.0),
                                                     iconPadding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
